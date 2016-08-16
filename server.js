@@ -8,6 +8,8 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
 app.get('/', function (request, respond) {
+    var loggedIn = true
+    
     ejs.renderFile('index.ejs', {data: 'testing 123'}, {}, function(err, html) {
         response.send(html)
     })
