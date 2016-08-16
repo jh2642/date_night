@@ -6,10 +6,28 @@ app.set('port', (process.env.PORT || 8080))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
+var knex = require('knex') ( {
+    client: 'pg',
+    connection: 'postgres://localhost/jh2642',
+    searchPath: 'knex,public'
+})
+app.get('/install', function( request, response) {
+    knex.schema.createTable('users', function (table) {
+      table.increments();
+      table.string('name');
+      table.timestamps();
+        })
+        .then(function() {
+            console.log('created table')
+        })
+
+        response.send('Finished')
+})
+
 app.get('/', function (request, response) {
     var loggedIn = request.query.loggedin === 'yes'
 
-    response.render('index', {loggedIn: loggedIn})
+    response.render('template', {loggedIn: loggedIn})
 })
 
 app.use(express.static(__dirname + '/public'))
