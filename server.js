@@ -1,5 +1,4 @@
 var express = require('express')
-var ejs = require('ejs')
 var app = express()
 
 
@@ -8,11 +7,9 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
 app.get('/', function (request, respond) {
-    var loggedIn = true
-    
-    ejs.renderFile('index.ejs', {data: 'testing 123'}, {}, function(err, html) {
-        response.send(html)
-    })
+    var loggedIn = request.query.loggedIn
+
+    response.render('index', {loggedIn: loggedIn})
 })
 
 app.use(express.static(__dirname + '/public'))
