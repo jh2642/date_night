@@ -1,20 +1,26 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com">
-    <title>Date Night</title>
-
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Playball" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
-    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <a href="/googlecalendar.html" class="btn btn-primary text-center">Google Calendar Testing Link</a>
+    <a href="#" onclick="signOut();">Sign out</a>
 
-</head>
-<body>
-    <h2 class="text-center">header goes here</h2>
+    <div class="profilePic">
+        <p id="googlePic"></p>
+        <p id="googleName"></p>
+        <p id="googleEmail"></p>
+
+    </div>
+
+
+    <script src="js/googlesignin.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

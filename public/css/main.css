@@ -1,0 +1,60 @@
+* {
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+* h1 {
+  font-family: "Playball", cursive;
+  font-size: 100px;
+}
+
+body {
+  background-image: url("/assets/datenight-backdrop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.g-signin2 {
+  margin-right: 40px;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  width: 125px;
+  background: transparent;
+  border: 1px white solid;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: white;
+  color: black;
+}
+
+.profileTopper {
+  margin-top: 30px;
+}
+
+.profilePic {
+  border: 3px #33383b solid;
+  padding: 10px;
+}
+
+.searchResultBox {
+  margin-top: 20px;
+}
+
+.establishment {
+  margin: 5px;
+  padding: 5px;
+  background-image: url("/assets/datenight-backdrop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radiusMessage {
+  color: white;
+}

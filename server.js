@@ -1,33 +1,37 @@
 var express = require('express')
 var app = express()
+var https = require('request')
 
 
 app.set('port', (process.env.PORT || 8080))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
-var knex = require('knex') ( {
-    client: 'pg',
-    connection: (process.env.PG_CONNECTION_STRING || 'postgres://localhost/jh2642'),
-    searchPath: 'knex,public'
-})
-app.get('/install', function( request, response) {
-    knex.schema.createTable('users', function (table) {
-      table.increments();
-      table.string('name');
-      table.timestamps();
-        })
-        .then(function() {
-            console.log('created table')
+// var knex = require('knex') ( {
+//     client: 'pg',
+//     connection: (process.env.PG_CONNECTION_STRING || 'postgres://localhost/jh2642'),
+//     searchPath: 'knex,public'
+// })
+
+app.get('/api/v1/geoloc', function (request, response) {
+    https.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + request.query.address +  '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
+        response.json(JSON.parse(body));
+        data.on('data', (d) => {
+            response.json(d)
         })
 
-        response.send('Finished')
+    })
 })
 
-app.get('/', function (request, response) {
-    var loggedIn = request.query.loggedin === 'yes'
+//this is the api to get google places data//
+app.get('/api/v1/places', function (request, response) {
+    https.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + request.query.location + '&radius=16094&type=' + request.query.type + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
+        response.json(JSON.parse(body));
+        data.on('data', (d) => {
+            response.json(d)
+        })
 
-    response.render('template', {loggedIn: loggedIn})
+    })
 })
 
 app.use(express.static(__dirname + '/public'))
