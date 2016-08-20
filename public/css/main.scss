@@ -8,6 +8,9 @@ $mainFont:'Oswald', sans-serif;
         font-family: $headlineFont;
         font-size: 100px;
     }
+    h3 {
+        font-family: $headlineFont;
+    }
 }
 
 body {
@@ -17,13 +20,23 @@ body {
     // background-color: black;
 }
 
+.mainPage {
+    margin-top: 30px;
+}
+
+.motto {
+    color: red;
+    font-style: italic;
+}
 .jumbotron {
+    margin-top: 90px;
     background-color: transparent;
 }
 
 .g-signin2 {
     margin-right: 40px;
     margin-bottom: 5px;
+    color: black;
 }
 
 .btn-primary {
@@ -50,6 +63,36 @@ body {
     margin-top: 20px;
 }
 
+.modalBox {
+    background-image: url('/assets/datenight-backdrop.jpg');
+    border: 2px red solid;
+    a {
+        color:red;
+    }
+    .mapURLbox {
+        margin-bottom: 120px;
+        color: red;
+    }
+}
+
+.reviewAuthor {
+    border-bottom: 2px rgb(181, 180, 177) solid;
+}
+
+.mapURLbox {
+    margin-bottom: 120px;
+    color: red;
+}
+
+.modal-header {
+        border: none;
+        height: 10px;
+}
+
+.modal-footer {
+    border: none;
+}
+
 .establishment {
     margin: 5px;
     padding: 5px;
@@ -60,4 +103,8 @@ body {
 
 .radiusMessage {
     color: white;
+}
+
+.googleLogo {
+    margin-top: 200px;
 }
