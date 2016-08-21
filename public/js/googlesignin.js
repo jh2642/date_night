@@ -7,13 +7,14 @@ function onSignIn(googleUser) {
 
 var featureImage = document.createElement('img')
     featureImage.setAttribute('src', profile.getImageUrl())
-    featureImage.classList.add('img-rounded')
-    document.getElementById('googlePic').appendChild(featureImage)
+    featureImage.classList.add('img-circle')
 var individualName = document.getElementById('googleName')
       individualName.innerHTML = 'Name: ' + profile.getName()
 var individualEmail = document.getElementById('googleEmail')
     individualEmail.innerHTML = 'Email: ' + profile.getEmail()
 
+document.getElementById('googlePic').innerHTML = ''
+document.getElementById('googlePic').appendChild(featureImage)
 }
 
 function signOut() {

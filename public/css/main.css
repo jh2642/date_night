@@ -22,8 +22,12 @@ body {
   margin-top: 30px;
 }
 
+.signInButton {
+  margin-right: 20px;
+}
+
 .motto {
-  color: red;
+  color: #006BA5;
   font-style: italic;
 }
 
@@ -54,7 +58,6 @@ body {
 }
 
 .profilePic {
-  border: 3px #33383b solid;
   padding: 10px;
 }
 
@@ -64,16 +67,16 @@ body {
 
 .modalBox {
   background-image: url("/assets/datenight-backdrop.jpg");
-  border: 2px red solid;
+  border: 2px #006BA5 solid;
 }
 
 .modalBox a {
-  color: red;
+  color: #006BA5;
 }
 
 .modalBox .mapURLbox {
   margin-bottom: 120px;
-  color: red;
+  color: #006BA5;
 }
 
 .reviewAuthor {
@@ -82,7 +85,7 @@ body {
 
 .mapURLbox {
   margin-bottom: 120px;
-  color: red;
+  color: #006BA5;
 }
 
 .modal-header {

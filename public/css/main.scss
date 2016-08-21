@@ -24,10 +24,15 @@ body {
     margin-top: 30px;
 }
 
+.signInButton {
+    margin-right: 20px;
+}
+
 .motto {
-    color: red;
+    color: #006BA5;
     font-style: italic;
 }
+
 .jumbotron {
     margin-top: 90px;
     background-color: transparent;
@@ -55,7 +60,8 @@ body {
 }
 
 .profilePic {
-    border: 3px #33383b solid;
+    // border: 3px #33383b solid;
+    // border: 2px #006BA5 solid;
     padding: 10px;
 }
 
@@ -65,13 +71,13 @@ body {
 
 .modalBox {
     background-image: url('/assets/datenight-backdrop.jpg');
-    border: 2px red solid;
+    border: 2px #006BA5 solid;
     a {
-        color:red;
+        color:#006BA5;
     }
     .mapURLbox {
         margin-bottom: 120px;
-        color: red;
+        color: #006BA5;
     }
 }
 
@@ -81,7 +87,7 @@ body {
 
 .mapURLbox {
     margin-bottom: 120px;
-    color: red;
+    color: #006BA5;
 }
 
 .modal-header {
