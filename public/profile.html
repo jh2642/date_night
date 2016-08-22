@@ -21,25 +21,25 @@
                 </div>
                 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
             </div>
-            <div class="col-md-4 calendarBox">
+            <div class="col-md-5 calendarBox">
                 <h4>CALENDAR WILL GO HERE</h4>
             </div>
-            <div class="col-md-5 text-right">
+            <div class="col-md-4 text-right">
                 <a type="button" href="#" onclick="signOut();"><button class="btn btn-primary">Sign out</button></a>
                 <a href="/googlecalendar.html" class="btn btn-primary" role="button">Calendar</a>
                 <a href="/index.html" class="btn btn-primary" role="button">Landing</a>
 
                 <form class="form-inline">
-                    <div class="form-group">
                         <input type="text" class="form-control" id="address" placeholder="address, city or zip">
-                        <input type="text" class="form-control priceBox" id="price" placeholder="min pricing">
-                        <input type="text" class="form-control priceBox" id="price2" placeholder="max pricing">
-                    </div>
-                    <button type="button" id="getDetails" class="btn btn-primary">get details</button>
+                    </form>
+                    <div>
+                    <button type="button" id="getDetails" class="btn btn-primary">search</button>
                     <h5 class="radiusMessage">*Search locations are within a 10 mile radius</h5>
-                    <h5 class="priceMessage">*Price(0 = least expensive to 4 = most expensive)</h5>
-
-                </form>
+                    <form class="form-inline">
+                        <input type="text" class="form-control eventDate text-center" id="eventDate" placeholder="date of the date">
+                    </form>
+                    <button type="button" id="scheduleDate" class="btn btn-primary">schedule date</button>
+                </div>
             </div>
         </div>
         <div class="row searchResultBox">

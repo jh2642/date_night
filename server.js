@@ -12,6 +12,13 @@ app.set('view engine', 'ejs')
 //     connection: (process.env.PG_CONNECTION_STRING || 'postgres://localhost/jh2642'),
 //     searchPath: 'knex,public'
 // })
+
+app.get('/googlesignin', function (request, response) {
+    https.get('https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=' + request.query.id_token, function (err, data, body) {
+        response.json(JSON.parse(body));
+    })
+})
+
 //this locates the lat and long of an address
 app.get('/api/v1/geoloc', function (request, response) {
     https.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + request.query.address +  '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
@@ -26,24 +33,21 @@ app.get('/api/v1/geoloc', function (request, response) {
 //this is the api to get google places data//
 app.get('/api/v1/places', function (request, response) {
     https.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + request.query.location + '&radius=16094&type=' + request.query.type + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
-        response.json(JSON.parse(body));
-        data.on('data', (d) => {
-            response.json(d)
+        var body = JSON.parse(body)
+        body.results = body.results.filter(function(place) {
+            return (
+                !place.name.includes('Subway') &&
+                !place.name.includes('McDonalds')
+            )
         })
+        response.json(body);
+        // data.on('data', (d) => {
+        //     response.json(d)
+        // })
 
     })
 })
 
-//this is the api to get restaurant data with prices//
-// app.get('/api/v2/places', function (request, response) {
-//     https.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + request.query.location + '&radius=16094' + '&type=' + request.query.type + '&minprice=' + request.query.priceReq + '&maxprice=' + request.query.priceReq2 + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
-//         response.json(JSON.parse(body));
-//         data.on('data', (d) => {
-//             response.json(d)
-//         })
-//
-//     })
-// })
 
 //this is the api to get the details of a specific location
 app.get('/api/v1/details', function (request, response) {
@@ -55,6 +59,7 @@ app.get('/api/v1/details', function (request, response) {
         })
     })
 })
+
 
 app.use(express.static(__dirname + '/public'))
 

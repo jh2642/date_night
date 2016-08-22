@@ -8,9 +8,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeOne = "movie_theater"
     var typeTwo = "restaurant"
     var typeThree = "bar"
-    var priceReq = document.getElementById('price').value
-    var priceReq2 = document.getElementById('price2').value
-
 
     fetch('/api/v1/geoloc?address=' + address , {
         method: 'GET'
@@ -33,7 +30,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
-
+                document.getElementById('movieTheater').innerHTML = ''
                 response.results.forEach(function(item) {
                     if (item.types[0] === typeOne) {
                     var div = document.createElement('div')
@@ -47,8 +44,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     checkbox.type = 'checkbox';
                     checkbox.name = 'checkboxDetail';
                     checkbox.value = item.place_id;
-                    checkbox.id = 'id';
-                    checkbox.classList = 'toggle btn';
+                    checkbox.classList = 'toggle btn selectDetail';
                     var label = document.createElement('label')
                     label.htmlFor = 'checkbox-id';
                     label.appendChild(document.createTextNode('Select for Date'));
@@ -82,9 +78,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
 
         //restaurant fetch
-        // fetch('/api/v2/places?type=' + typeTwo + '&location=' + newAddress + '&minprice=' + priceReq + '&maxprice=' + priceReq2 , {
-        //     method: 'GET'
-        // })
+
         fetch('/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
             method: 'GET'
         })
@@ -94,7 +88,8 @@ document.getElementById('getDetails').addEventListener('click', function() {
         .then(function(response) {
             // console.log(response.results[0].types[0])
             // if (response.results[0].types[0] === typeTwo) {
-            console.log(priceReq, priceReq2)
+            // console.log(priceReq, priceReq2)
+            document.getElementById('localRestaurants').innerHTML = ''
                 response.results.forEach(function(item) {
                     if (item.types[0] === typeTwo) {
                     var div = document.createElement('div')
@@ -108,8 +103,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     checkbox.type = 'checkbox';
                     checkbox.name = 'checkboxDetail';
                     checkbox.value = item.place_id;
-                    checkbox.id = 'checkbox-id';
-                    checkbox.classList = 'toggle btn';
+                    checkbox.classList = 'toggle btn selectDetail';
                     var label = document.createElement('label')
                     label.htmlFor = 'id';
                     label.appendChild(document.createTextNode('Select for Date'));
@@ -155,6 +149,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
             // console.log(response.results[0].types[0])
             //this pulls the 1st type in the location.
             // if (response.results[0].types[0] === typeThree) {
+            document.getElementById('localBar').innerHTML = ''
                 response.results.forEach(function(item) {
                     if (item.types[0] === typeThree) {
                     var div = document.createElement('div')
@@ -164,16 +159,11 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     img.setAttribute('src', item.icon)
                     div.appendChild(img)
 
-                    // var toggleBox = document.createElement('input')
-                    // img.setAttribute('checked data-toggle', 'toggle')
-                    // div.appendChild(toggleBox)
-
                     var checkbox = document.createElement('input');
                     checkbox.type = 'checkbox';
                     checkbox.name = 'checkboxDetail';
                     checkbox.value = item.place_id;
-                    checkbox.id = 'checkbox-id';
-                    checkbox.classList = 'toggle btn';
+                    checkbox.classList = 'toggle btn selectDetail';
                     var label = document.createElement('label')
                     label.htmlFor = 'id';
                     label.appendChild(document.createTextNode('Select for Date'));
@@ -266,3 +256,15 @@ document.getElementById('getDetails').addEventListener('click', function() {
         }) //closing modal
     })
 })
+
+function getSelectedDetails() {
+    var checkboxes = document.querySelectorAll('.selectDetail:checked')
+    console.log(checkboxes)
+}
+
+
+// $('body').on('click', '.scheduleDate', function(){
+//     getSelectedDetails()
+//         console.log(checkboxes)
+// })
+// }
