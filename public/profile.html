@@ -7,6 +7,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -29,11 +30,12 @@
                 <form class="form-inline">
                     <div class="form-group">
                         <input type="text" class="form-control" id="address" placeholder="address, city or zip">
-                        <!-- <input type="text" class="form-control" id="price" placeholder="price (enter 1-4)"> -->
+                        <input type="text" class="form-control" id="price" placeholder="minimum pricing">
+                        <input type="text" class="form-control" id="price2" placeholder="maximum pricing">
                     </div>
                     <button type="button" id="getDetails" class="btn btn-primary">get details</button>
                     <h5 class="radiusMessage">*Search locations are within a 10 mile radius</h5>
-                    <!-- <h5 class="radiusMessage">*Price(1 = least expensive to 4 = most expensive)</h5> -->
+                    <h5 class="priceMessage">*Price(0 = least expensive to 4 = most expensive)</h5>
 
                 </form>
             </div>
@@ -77,6 +79,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <script src="js/gmail.js"></script>
 <script src="js/googlesignin.js"></script>
 <script src="js/googlecalendar.js"></script>

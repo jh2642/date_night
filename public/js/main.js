@@ -8,6 +8,9 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeOne = "movie_theater"
     var typeTwo = "restaurant"
     var typeThree = "bar"
+    var priceReq = document.getElementById('price').value
+    var priceReq2 = document.getElementById('price2').value
+
 
     fetch('/api/v1/geoloc?address=' + address , {
         method: 'GET'
@@ -16,7 +19,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
         return response.json()
     })
     .then(function(response) {
-        // console.log(response)
+        // console.log(priceReq)
         latitude = response.results[0].geometry.location.lat
         longitude = response.results[0].geometry.location.lng
 
@@ -30,9 +33,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
-            // console.log(response)
-            console.log(response.results[0].types[0])
-            // if (response.results[0].types[0] === typeOne) {
+
                 response.results.forEach(function(item) {
                     if (item.types[0] === typeOne) {
                     var div = document.createElement('div')
@@ -47,8 +48,9 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     checkbox.name = 'checkboxDetail';
                     checkbox.value = item.place_id;
                     checkbox.id = 'id';
+                    checkbox.classList = 'toggle btn';
                     var label = document.createElement('label')
-                    label.htmlFor = 'id';
+                    label.htmlFor = 'checkbox-id';
                     label.appendChild(document.createTextNode('Select for Date'));
                     div.appendChild(checkbox);
                     div.appendChild(label);
@@ -80,16 +82,16 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
 
         //restaurant fetch
-        fetch('/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
+        fetch('/api/v2/places?type=' + typeTwo + '&location=' + newAddress + '&minprice=' + priceReq + '&maxprice=' + priceReq2 , {
             method: 'GET'
         })
         .then(function(response) {
             return response.json()
         })
         .then(function(response) {
-            console.log(response.results[0].types[0])
+            // console.log(response.results[0].types[0])
             // if (response.results[0].types[0] === typeTwo) {
-
+            console.log(priceReq, priceReq2)
                 response.results.forEach(function(item) {
                     if (item.types[0] === typeTwo) {
                     var div = document.createElement('div')
@@ -103,7 +105,8 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     checkbox.type = 'checkbox';
                     checkbox.name = 'checkboxDetail';
                     checkbox.value = item.place_id;
-                    checkbox.id = 'id';
+                    checkbox.id = 'checkbox-id';
+                    checkbox.classList = 'toggle btn';
                     var label = document.createElement('label')
                     label.htmlFor = 'id';
                     label.appendChild(document.createTextNode('Select for Date'));
@@ -146,7 +149,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
-            console.log(response.results[0].types[0])
+            // console.log(response.results[0].types[0])
             //this pulls the 1st type in the location.
             // if (response.results[0].types[0] === typeThree) {
                 response.results.forEach(function(item) {
@@ -158,11 +161,16 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     img.setAttribute('src', item.icon)
                     div.appendChild(img)
 
+                    // var toggleBox = document.createElement('input')
+                    // img.setAttribute('checked data-toggle', 'toggle')
+                    // div.appendChild(toggleBox)
+
                     var checkbox = document.createElement('input');
                     checkbox.type = 'checkbox';
                     checkbox.name = 'checkboxDetail';
                     checkbox.value = item.place_id;
-                    checkbox.id = 'id';
+                    checkbox.id = 'checkbox-id';
+                    checkbox.classList = 'toggle btn';
                     var label = document.createElement('label')
                     label.htmlFor = 'id';
                     label.appendChild(document.createTextNode('Select for Date'));
@@ -196,17 +204,14 @@ document.getElementById('getDetails').addEventListener('click', function() {
             })
         })
 
-
-
-
-
+//this is the modal information
         $(document).ready(function(){
             $('body').on('click', '.location-id', function(){
 
                 $("#location-id").modal('show');
 
                 var id = $(this).attr('location-id')
-                console.log(id)
+                // console.log(id)
                 //details fetch
                 fetch('/api/v1/details?placeid=' + id, {
                     method: 'GET'
@@ -215,7 +220,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     return response.json()
                 })
                 .then(function(response) {
-                    console.log(response.result)
+                    // console.log(response.result)
                     var div = document.createElement('div')
                     div.classList.add('modalEstablishment')
 
@@ -242,6 +247,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                         var review = document.createElement('p')
                         review.classList.add('reviewText')
                         review.innerHTML = reviewArray.text
+
                         var reviewAuthor = document.createElement('p')
                         reviewAuthor.classList.add('reviewAuthor', 'text-right')
                         reviewAuthor.innerHTML = reviewArray.author_name
@@ -254,6 +260,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
                 })
             })
-        })
+        }) //closing modal
     })
 })
