@@ -57,12 +57,26 @@ body {
   margin-top: 30px;
 }
 
+.profileBox {
+  padding-left: 50px;
+}
+
 .profilePic {
   padding: 10px;
 }
 
-.searchResultBox {
+.searchResultBox,
+.form-inline {
   margin-top: 20px;
+}
+
+.priceBox {
+  max-width: 100px;
+}
+
+.calendarBox {
+  background: #b5b4b1;
+  height: 225px;
 }
 
 .modalBox {

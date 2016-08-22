@@ -59,14 +59,28 @@ body {
     margin-top: 30px;
 }
 
+.profileBox {
+    padding-left: 50px;
+}
+
 .profilePic {
     // border: 3px #33383b solid;
     // border: 2px #006BA5 solid;
     padding: 10px;
 }
 
-.searchResultBox {
+.searchResultBox,
+.form-inline {
     margin-top: 20px;
+}
+
+.priceBox {
+    max-width: 100px;
+}
+
+.calendarBox {
+    background: rgb(181, 180, 177);
+    height: 225px;
 }
 
 .modalBox {

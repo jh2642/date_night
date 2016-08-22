@@ -82,7 +82,10 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
 
         //restaurant fetch
-        fetch('/api/v2/places?type=' + typeTwo + '&location=' + newAddress + '&minprice=' + priceReq + '&maxprice=' + priceReq2 , {
+        // fetch('/api/v2/places?type=' + typeTwo + '&location=' + newAddress + '&minprice=' + priceReq + '&maxprice=' + priceReq2 , {
+        //     method: 'GET'
+        // })
+        fetch('/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
             method: 'GET'
         })
         .then(function(response) {
