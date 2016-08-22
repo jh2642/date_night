@@ -35,15 +35,15 @@ app.get('/api/v1/places', function (request, response) {
 })
 
 //this is the api to get restaurant data with prices//
-app.get('/api/v2/places', function (request, response) {
-    https.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + request.query.location + '&radius=16094' + '&type=' + request.query.type + '&minprice=' + request.query.priceReq + '&maxprice=' + request.query.priceReq2 + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
-        response.json(JSON.parse(body));
-        data.on('data', (d) => {
-            response.json(d)
-        })
-
-    })
-})
+// app.get('/api/v2/places', function (request, response) {
+//     https.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + request.query.location + '&radius=16094' + '&type=' + request.query.type + '&minprice=' + request.query.priceReq + '&maxprice=' + request.query.priceReq2 + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
+//         response.json(JSON.parse(body));
+//         data.on('data', (d) => {
+//             response.json(d)
+//         })
+//
+//     })
+// })
 
 //this is the api to get the details of a specific location
 app.get('/api/v1/details', function (request, response) {
