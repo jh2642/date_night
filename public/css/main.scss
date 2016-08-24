@@ -29,7 +29,7 @@ body {
 }
 
 .motto {
-    color: red;
+    color: blue;
     font-style: italic;
 }
 
@@ -65,7 +65,7 @@ body {
 
 .profilePic {
     // border: 3px #33383b solid;
-    // border: 2px #006BA5 solid;
+    // border: 2px blue solid;
     padding: 10px;
 }
 
@@ -85,13 +85,13 @@ body {
 
 .modalBox {
     background-image: url('/assets/datenight-backdrop.jpg');
-    border: 2px #006BA5 solid;
+    border: 2px blue solid;
     a {
-        color:#006BA5;
+        color:blue;
     }
     .mapURLbox {
         margin-bottom: 120px;
-        color: #006BA5;
+        color: blue;
     }
 }
 
@@ -101,7 +101,7 @@ body {
 
 .mapURLbox {
     margin-bottom: 120px;
-    color: #006BA5;
+    color: blue;
 }
 
 .modal-header {
@@ -127,4 +127,8 @@ body {
 
 .googleLogo {
     margin-top: 200px;
+}
+
+.inputBox {
+    background-color: blue;
 }

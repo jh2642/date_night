@@ -41,8 +41,8 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(img)
 
                     var checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.name = 'checkboxDetail';
+                    checkbox.type = 'radio';
+                    checkbox.name = typeOne;
                     checkbox.value = item.place_id;
                     checkbox.classList = 'toggle btn selectDetail';
                     var label = document.createElement('label')
@@ -100,8 +100,8 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(img)
 
                     var checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.name = 'checkboxDetail';
+                    checkbox.type = 'radio';
+                    checkbox.name = typeTwo;
                     checkbox.value = item.place_id;
                     checkbox.classList = 'toggle btn selectDetail';
                     var label = document.createElement('label')
@@ -160,8 +160,8 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(img)
 
                     var checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.name = 'checkboxDetail';
+                    checkbox.type = 'radio';
+                    checkbox.name = typeThree;
                     checkbox.value = item.place_id;
                     checkbox.classList = 'toggle btn selectDetail';
                     var label = document.createElement('label')
@@ -257,14 +257,34 @@ document.getElementById('getDetails').addEventListener('click', function() {
     })
 })
 
-function getSelectedDetails() {
-    var checkboxes = document.querySelectorAll('.selectDetail:checked')
-    console.log(checkboxes)
-}
 
+document.getElementById('locationInformation').addEventListener('click', function() {
 
-// $('body').on('click', '.scheduleDate', function(){
-//     getSelectedDetails()
-//         console.log(checkboxes)
-// })
-// }
+        // var emailDate = document.getElementById('dateEmail').value
+        // var eventDate = document.getElementById('eventDate').value
+        // var eventTime = document.getElementById('eventTime').value
+        var checkboxes = document.querySelectorAll('.selectDetail:checked')
+
+        // console.log(emailDate, eventDate, eventTime)
+
+        checkboxes.forEach(function(id) {
+            var eventPlaces = id.value
+
+            fetch('/api/v1/details?placeid=' + eventPlaces, {
+                method: 'GET'
+            })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(response) {
+                var name = response.result.name
+                var address = response.result.formatted_address
+                var phoneNumber = response.result.formatted_phone_number
+                var url = response.result.url
+                console.log(name, address, phoneNumber, url)
+            })
+        })
+    })
+
+    // var moment = require('moment');
+    // moment().format();
