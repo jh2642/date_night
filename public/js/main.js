@@ -265,7 +265,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 })
 
 
-document.getElementById('locationInformation').addEventListener('click', function() {
+document.getElementById('createEvents').addEventListener('click', function() {
 
         var checkboxes = document.querySelectorAll('.selectDetail:checked')
 
@@ -279,7 +279,7 @@ document.getElementById('locationInformation').addEventListener('click', functio
                 return response.json()
             })
             .then(function(selectedVenue) {
-                console.log(selectedVenue)
+                // console.log(selectedVenue)
                 locationType = selectedVenue.result.types[0]
                 locationName = selectedVenue.result.name
                 locationAddress = selectedVenue.result.formatted_address
@@ -287,11 +287,11 @@ document.getElementById('locationInformation').addEventListener('click', functio
                 locationUrl = selectedVenue.result.url
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
-                // console.log(eachLoc)
+                console.log(eachLoc)
             })
         })
     })
-
+document.getElementById("startTime").flatpickr();
 
     // var moment = require('moment');
     // moment().format();

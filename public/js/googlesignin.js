@@ -24,7 +24,7 @@ function onSignIn(googleUser) {
     //   console.log('Signed in as: ' + xhr.responseText);
     };
     xhr.send();
-    
+
 }
 
 function signOut() {

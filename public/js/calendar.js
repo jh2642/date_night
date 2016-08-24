@@ -114,28 +114,30 @@ function checkAuth() {
 
         //create event here
         function createEvents() {
-            //var startTime = moment...
+            var startTime = moment(document.getElementById('startTime').value)
             //var endTime = moment...
-            var startTime = '2016-08-24T21:00:00+00:00';
-            var endTime = '2016-08-24T21:30:00+00:00';
-            var dateEmail = document.getElementById('dateEmail').value;
+            var newStartTime = startTime;
+            var endTime = '2016-08-30T21:30:00+00:00';
+            // var dateEmail = document.getElementById('dateEmail').value;
+            var yourEmail = 'hildreth.james@gmail.com'
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
             var descriptionDate = selectedVenue;
             // var attachmentHere = locationUrl
+            console.log(newStartTime)
 
             var request2 = gapi.client.calendar.events.insert({
                 calendarId: 'primary',
                 start: {
-                    dateTime: startTime
+                    dateTime: newStartTime
                 },
                 end: {
                     dateTime: endTime
                 },
                   attendees: [
                       {
-                        email: dateEmail,
-                        email: 'hildreth.james@gmail.com'
+                        // email: dateEmail,
+                        email: yourEmail,
                       }
                   ],
                 //   attachments: [

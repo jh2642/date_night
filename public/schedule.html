@@ -6,8 +6,10 @@
     <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript" src="js/calendar.js"></script>
+    <script src="js/moment.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </head>
@@ -29,7 +31,10 @@
                 <div>
                     <button type="button" id="getDetails" class="btn btn-primary">search</button>
                     <h5 class="radiusMessage">*Search locations are within a 10 mile radius</h5>
-                    <button type="button" id="locationInformation" class="btn btn-primary">grab loc details</button>
+                    <!-- <button type="button" id="locationInformation" class="btn btn-primary">grab loc details</button> -->
+                    <input type="text" class="form-control" id="startTime" data-enable-time=true placeholder="select date and time">
+                    <button type="button" id="createEvents" class="btn btn-primary">schedule date</button>
+
                 </div>
             </div>
             <div class="col-md-4 profileBox ">
@@ -48,30 +53,18 @@
         </div>
         <div class="row searchResultBox">
             <div class="col-md-4">
-                <h3>Dinner @</h3>
+                <p class="headersSearch">dinner @</p>
                 <p id="localRestaurants"></p>
             </div>
             <div class="col-md-4">
-                <h3>Movie @</h3>
+                <p class="headersSearch">movie @</p>
                 <p id="movieTheater"></p>
             </div>
             <div class="col-md-4">
-                <h3>Drinks @</h3>
+                <p class="headersSearch">drinks @</p>
                 <p id="localBar"></p>
             </div>
         </div>
-        <div>
-            <button type="button" id="showEvents" class="btn btn-primary">show 5 cal</button>
-        </div>
-        <form class="inputBox">
-            <div class="form-group">
-                <input type="text" class="form-control" id="startTime" placeholder="default start time">
-                <!-- <input type="text" class="form-control" id="endTime" placeholder="end datetime"> -->
-                <input type="email" class="form-control" id="dateEmail" placeholder="default email">
-                <input type="text" class="form-control" id="dateLoc" placeholder="location (selected above)">
-            </div>
-            <button type="button" id="createEvents" class="btn btn-primary">create a date</button>
-        </form>
         <form class="inputBox">
             <div class="form-group">
                 <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
@@ -106,11 +99,10 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/gmail.js"></script>
     <script src="js/googlesignin.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/flatpickr.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -22,6 +22,11 @@ body {
   margin-top: 30px;
 }
 
+.headersSearch {
+  font-family: "Playball", cursive;
+  font-size: 25px;
+}
+
 .signInButton {
   margin-right: 20px;
 }
