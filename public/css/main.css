@@ -27,7 +27,7 @@ body {
 }
 
 .motto {
-  color: blue;
+  color: #11a4d2;
   font-style: italic;
 }
 
@@ -81,16 +81,16 @@ body {
 
 .modalBox {
   background-image: url("/assets/datenight-backdrop.jpg");
-  border: 2px blue solid;
+  border: 2px #11a4d2 solid;
 }
 
 .modalBox a {
-  color: blue;
+  color: #11a4d2;
 }
 
 .modalBox .mapURLbox {
   margin-bottom: 120px;
-  color: blue;
+  color: #11a4d2;
 }
 
 .reviewAuthor {
@@ -99,7 +99,7 @@ body {
 
 .mapURLbox {
   margin-bottom: 120px;
-  color: blue;
+  color: #11a4d2;
 }
 
 .modal-header {
@@ -114,9 +114,7 @@ body {
 .establishment {
   margin: 5px;
   padding: 5px;
-  background-image: url("/assets/datenight-backdrop.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: black;
 }
 
 .radiusMessage {
@@ -128,5 +126,5 @@ body {
 }
 
 .inputBox {
-  background-color: blue;
+  background-color: #11a4d2;
 }

@@ -12,74 +12,25 @@
 <body>
     <div class=container-fluid>
         <div class="row profileTopper">
-            <div class="col-md-4 profileBox">
+            <div class="col-md-4 col-md-offset-2 profileBox ">
                 <div class="profilePic">
                     <p id="googlePic"></p>
                     <p id="googleName"></p>
                     <p id="googleEmail"></p>
                 </div>
                 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                <a type="button" href="/index.html" onclick="signOut();"><button class="btn btn-primary">Sign out</button></a>
-                <!-- <a href="/googlecalendar.html" class="btn btn-primary" role="button">Calendar</a> -->
-                <!-- <a href="/index.html" class="btn btn-primary" role="button">Landing</a> -->
+                <a type="button" href="/index.html" onclick="signOut();"><button class="btn btn-primary">sign out</button></a>
+                <a href="/schedule.html" class="btn btn-primary" role="button">schedule Date</a>
+                <a href="/index.html" class="btn btn-primary" role="button">landing</a>
             </div>
             <div class="col-md-4 calendarBox text-center">
                 <h3>calendar goes here</h3>
-            </div>
-            <div class="col-md-4 text-center">
-                <form class="form-inline">
-                        <input type="text" class="form-control" id="address" placeholder="address, city or zip">
-                    </form>
-                    <div>
-                    <button type="button" id="getDetails" class="btn btn-primary">search</button>
-                    <h5 class="radiusMessage">*Search locations are within a 10 mile radius</h5>
-                    <!-- <form class="form-inline">
-                        <input type="text" class="form-control eventDate text-center" id="eventDate" placeholder="date of the date">
-                        <input type="text" class="form-control eventDate text-center" id="eventTime" placeholder="time of the date">
-                        <input type="text" class="form-control dateEmail text-center" id="dateEmail" placeholder="date's email">
-                    </form> -->
-                    <button type="button" id="locationInformation" class="btn btn-primary">grab loc details</button>
-                    <a href="/googlecalendar.html" class="btn btn-primary text-center signInButton">calendar</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="row searchResultBox">
-            <div class="col-md-4">
-                <h3>Dinner @</h3>
-                <p id="localRestaurants"></p>
-            </div>
-            <div class="col-md-4">
-                <h3>Movie @</h3>
-                <p id="movieTheater"></p>
-            </div>
-            <div class="col-md-4">
-                <h3>Drinks @</h3>
-                <p id="localBar"></p>
             </div>
         </div>
     </div>
     <!-- <footer class="text-center">
     <img src="assets/powered_by_google_on_non_white.png">
 </footer> -->
-
-<!-- Modal -->
-<div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content modalBox">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body" id="detailModal">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

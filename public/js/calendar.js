@@ -1,8 +1,10 @@
+
+
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com';
 
-var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
+var SCOPES = ["https://www.googleapis.com/auth/calendar"];
 
 /**
 * Check if current user has authorized this application.
@@ -92,7 +94,7 @@ function checkAuth() {
             request.execute(function(resp) {
                 var events = resp.items;
                 console.log(events)
-                appendPre('Upcoming events:');
+                // appendPre('Upcoming events:');
 
                 if (events.length > 0) {
                     for (i = 0; i < events.length; i++) {
@@ -101,10 +103,10 @@ function checkAuth() {
                         if (!when) {
                             when = event.start.date;
                         }
-                        appendPre(event.summary + ' (' + when + ')')
+                        // appendPre(event.summary + ' (' + when + ')')
                     }
                 } else {
-                    appendPre('No upcoming events found.');
+                    // appendPre('No upcoming events found.');
                 }
 
             });
@@ -117,8 +119,10 @@ function checkAuth() {
             var startTime = '2016-08-24T21:00:00+00:00';
             var endTime = '2016-08-24T21:30:00+00:00';
             var dateEmail = document.getElementById('dateEmail').value;
-            var dateLoc = document.getElementById('dateLoc').value;
-            var dateSum = document.getElementById('dateSum').value;
+            var dateLoc = eachLoc;
+            var dateSum = 'Date Night';
+            var descriptionDate = selectedVenue;
+            // var attachmentHere = locationUrl
 
             var request2 = gapi.client.calendar.events.insert({
                 calendarId: 'primary',
@@ -131,9 +135,16 @@ function checkAuth() {
                   attendees: [
                       {
                         email: dateEmail,
+                        email: 'hildreth.james@gmail.com'
                       }
                   ],
+                //   attachments: [
+                //       {
+                //         fileUrl: attachmentHere
+                //       }
+                //   ],
                 location: dateLoc,
+                description: descriptionDate,
                 reminders: {
                     useDefault: false
                 },
@@ -143,6 +154,7 @@ function checkAuth() {
 
             request2.execute(function(resp2) {
                 // var events2 = resp2.items;
+                idToDelete = resp2.id
                 console.log(resp2.id)
             });
         }
@@ -172,13 +184,12 @@ function checkAuth() {
             var endTime2 = '2016-08-24T21:30:00+00:00';
             var dateEmail2 = document.getElementById('dateEmail2').value;
             var dateLoc2 = document.getElementById('dateLoc2').value;
-            var dateSum2 = document.getElementById('dateSum2').value;
+            var dateSum2 = 'Date Night';
             var eventId2 = document.getElementById('eventId2').value;
 
             var request3 = gapi.client.calendar.events.update({
                 calendarId: 'primary',
                 eventId: eventId2,
-                calendarId: 'primary',
                 start: {
                     dateTime: startTime2
                 },
@@ -207,8 +218,8 @@ function checkAuth() {
         *
         * @param {string} message Text to be placed in pre element.
         */
-        function appendPre(message) {
-            var pre = document.getElementById('output');
-            var textContent = document.createTextNode(message + '\n');
-            pre.appendChild(textContent);
-        }
+        // function appendPre(message) {
+        //     var pre = document.getElementById('output');
+        //     var textContent = document.createTextNode(message + '\n');
+        //     pre.appendChild(textContent);
+        // }

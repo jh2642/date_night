@@ -1,6 +1,13 @@
 var latitude
 var longitude
 var id
+var locationName
+var locationAddress
+var locationPhoneNumber
+var locationUrl
+var eachLoc
+var selectedVenue
+
 
 document.getElementById('getDetails').addEventListener('click', function() {
 
@@ -260,12 +267,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
 document.getElementById('locationInformation').addEventListener('click', function() {
 
-        // var emailDate = document.getElementById('dateEmail').value
-        // var eventDate = document.getElementById('eventDate').value
-        // var eventTime = document.getElementById('eventTime').value
         var checkboxes = document.querySelectorAll('.selectDetail:checked')
-
-        // console.log(emailDate, eventDate, eventTime)
 
         checkboxes.forEach(function(id) {
             var eventPlaces = id.value
@@ -276,15 +278,20 @@ document.getElementById('locationInformation').addEventListener('click', functio
             .then(function(response) {
                 return response.json()
             })
-            .then(function(response) {
-                var name = response.result.name
-                var address = response.result.formatted_address
-                var phoneNumber = response.result.formatted_phone_number
-                var url = response.result.url
-                console.log(name, address, phoneNumber, url)
+            .then(function(selectedVenue) {
+                console.log(selectedVenue)
+                locationType = selectedVenue.result.types[0]
+                locationName = selectedVenue.result.name
+                locationAddress = selectedVenue.result.formatted_address
+                locationPhoneNumber = selectedVenue.result.formatted_phone_number
+                locationUrl = selectedVenue.result.url
+
+                eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
+                // console.log(eachLoc)
             })
         })
     })
+
 
     // var moment = require('moment');
     // moment().format();

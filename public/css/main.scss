@@ -29,7 +29,7 @@ body {
 }
 
 .motto {
-    color: blue;
+    color: rgb(17, 164, 210);
     font-style: italic;
 }
 
@@ -65,7 +65,7 @@ body {
 
 .profilePic {
     // border: 3px #33383b solid;
-    // border: 2px blue solid;
+    // border: 2px rgb(17, 164, 210) solid;
     padding: 10px;
 }
 
@@ -85,13 +85,13 @@ body {
 
 .modalBox {
     background-image: url('/assets/datenight-backdrop.jpg');
-    border: 2px blue solid;
+    border: 2px rgb(17, 164, 210) solid;
     a {
-        color:blue;
+        color:rgb(17, 164, 210);
     }
     .mapURLbox {
         margin-bottom: 120px;
-        color: blue;
+        color: rgb(17, 164, 210);
     }
 }
 
@@ -101,7 +101,7 @@ body {
 
 .mapURLbox {
     margin-bottom: 120px;
-    color: blue;
+    color: rgb(17, 164, 210);
 }
 
 .modal-header {
@@ -116,9 +116,10 @@ body {
 .establishment {
     margin: 5px;
     padding: 5px;
-    background-image: url('/assets/datenight-backdrop.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+    // background-image: url('/assets/datenight-backdrop.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    background-color: black;
 }
 
 .radiusMessage {
@@ -130,5 +131,5 @@ body {
 }
 
 .inputBox {
-    background-color: blue;
+    background-color: rgb(17, 164, 210);
 }

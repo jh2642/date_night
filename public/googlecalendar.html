@@ -8,61 +8,105 @@
     <script type="text/javascript" src="js/calendar.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="flatpickr/dist/flatpickr.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </head>
 <body>
-
-    <div id="authorize-div" style="display: none">
+    <div id="authorize-div col-md-4" style="display: none">
         <span>Authorize access to Google Calendar API</span>
         <!--Button for the user to click to initiate auth sequence -->
         <button id="authorize-button" onclick="handleAuthClick(event)">
             Authorize
         </button>
     </div>
-    <div class="container mainPage">
-        <a href="/profile.html" class="btn btn-primary text-center signInButton">profile</a>
-        <a href="/index.html" class="btn btn-primary text-center">landing</a>
-        <div>
-        <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-        <a href="/index.html">Return to Index</a>
-        <a type="button" href="#" onclick="signOut();"><button class="btn btn-primary">Sign out</button></a> -->
-        <button type="button" id="showEvents" class="btn btn-primary">show</button>
+    <div class="container mainPage ">
+        <div class="row">
+            <a href="/profile.html" class="btn btn-primary text-center signInButton">profile</a>
+            <a href="/index.html" class="btn btn-primary text-center">landing</a>
+            <div class="col-md-4 text-center">
+                <form class="form-inline">
+                    <input type="text" class="form-control" id="address" placeholder="address, city or zip">
+                </form>
+                <div>
+                    <button type="button" id="getDetails" class="btn btn-primary">search</button>
+                    <h5 class="radiusMessage">*Search locations are within a 10 mile radius</h5>
+                <button type="button" id="locationInformation" class="btn btn-primary">grab loc details</button>
+            </div>
         </div>
-        <form class="inputBox">
-            <div class="form-group">
-                <input type="text" class="form-control" id="startTime" placeholder="start time">
-                <input type="text" class="form-control" id="endTime" placeholder="end time">
-                <input type="email" class="form-control" id="dateEmail" placeholder="date's email">
-                <input type="text" class="form-control" id="dateLoc" placeholder="location">
-                <input type="text" class="form-control" id="dateSum" placeholder="summary">
-            </div>
-            <button type="button" id="createEvents" class="btn btn-primary">create</button>
-        </form>
-        <form class="inputBox">
-            <div class="form-group">
-                <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
-            </div>
-            <button type="button" id="deleteEvents" class="btn btn-primary">delete</button>
-        </form>
-        <form class="inputBox">
-            <div class="form-group">
-                <input type="text" class="form-control" id="startTime2" placeholder="start time">
-                <input type="text" class="form-control" id="endTime2" placeholder="end time">
-                <input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
-                <input type="text" class="form-control" id="dateLoc2" placeholder="location">
-                <input type="text" class="form-control" id="dateSum2" placeholder="summary">
-            </div>
-            <button type="button" id="updateEvents" class="btn btn-primary">update</button>
-        </form>
-        <footer class="text-center">
-            <img src="assets/powered_by_google_on_non_white.png">
-        </footer>
+        
     </div>
+    <div class="row searchResultBox">
+        <div class="col-md-4">
+            <h3>Dinner @</h3>
+            <p id="localRestaurants"></p>
+        </div>
+        <div class="col-md-4">
+            <h3>Movie @</h3>
+            <p id="movieTheater"></p>
+        </div>
+        <div class="col-md-4">
+            <h3>Drinks @</h3>
+            <p id="localBar"></p>
+        </div>
+    </div>
+    <div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <!-- <a href="/index.html">Return to Index</a> -->
+        <a type="button" href="#" onclick="signOut();"><button class="btn btn-primary">Sign out</button></a>
+        <button type="button" id="showEvents" class="btn btn-primary">show 5 cal</button>
+    </div>
+    <form class="inputBox">
+        <div class="form-group">
+            <input type="text" class="form-control" id="startTime" placeholder="start datetime">
+            <input type="text" class="form-control" id="endTime" placeholder="end datetime">
+            <input type="email" class="form-control" id="dateEmail" placeholder="date's email">
+            <input type="text" class="form-control" id="dateLoc" placeholder="location">
+        </div>
+        <button type="button" id="createEvents" class="btn btn-primary">create a date</button>
+    </form>
+    <form class="inputBox">
+        <div class="form-group">
+            <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
+        </div>
+        <button type="button" id="deleteEvents" class="btn btn-primary">delete a date</button>
+    </form>
+    <form class="inputBox">
+        <div class="form-group">
+            <input type="text" class="form-control" id="startTime2" placeholder="start datetime">
+            <input type="text" class="form-control" id="endTime2" placeholder="end datetime">
+            <input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
+            <input type="text" class="form-control" id="dateLoc2" placeholder="location">
+        </div>
+        <button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
+    </form>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modalBox">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="detailModal">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- <script src="js/main.js"></script> -->
+<!-- <footer class="text-center">
+<img src="assets/powered_by_google_on_non_white.png">
+</footer> -->
+
+<script src="js/main.js"></script>
 <script src="js/gmail.js"></script>
 <script src="js/googlesignin.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
