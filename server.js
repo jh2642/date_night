@@ -28,9 +28,14 @@ var knex = require('knex') ( {
 })
 
 app.get('/googlesignin', function (request, response) {
-    https.get('https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=' + request.query.id_token, function (err, data, body) {
-        response.json(JSON.parse(body));
-    })
+    try {
+        https.get('https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=' + request.query.id_token, function (err, data, body) {
+            response.json(JSON.parse(body));
+        })
+    }
+    catch(e) {
+        response.send(e)
+    }
 })
 
 //this locates the lat and long of an address
