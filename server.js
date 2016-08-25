@@ -3,9 +3,11 @@ var app = express()
 var bodyParser = require('body-parser')
 var cors = require('cors')
 var https = require('request')
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 app.use(cors())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+
 
 
 app.set('port', (process.env.PORT || 8080))
@@ -67,7 +69,8 @@ app.get('/api/v1/details', function (request, response) {
 })
 
 app.post('/users/create', function (request, response) {
-    response.json(request.body)
+    console.log(request.body)
+    response.json(request.body.name)
 })
 
 app.use(express.static(__dirname + '/public'))
