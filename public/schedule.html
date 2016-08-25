@@ -27,10 +27,12 @@
         <div class="row">
             <div class="col-md-4 text-left">
                 <form class="form-inline">
+                    <h3>where</h3>
                     <input type="text" class="form-control" id="address" placeholder="address, city or zip">
                     <h5 class="radiusMessage">*venue will be within a 10 mile radius</h5>
                 </form>
                 <div>
+                    <h3>when</h3>
                     <input type="text" class="form-control" id="startTime" data-enable-time=true placeholder="select date and time">
                     <button type="button" id="getDetails" class="btn btn-primary">search venues</button>
                     <button type="button" id="grabDetails" data-toggle="modal" data-target="#confirmModal" class="btn btn-primary">confirm plans</button>
@@ -65,82 +67,82 @@
             </div>
         </div>
         <!-- <form class="inputBox">
-            <h2>DEV PURPOSES</h2>
-            <div class="form-group">
-                <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
-            </div>
-            <button type="button" id="deleteEvents" class="btn btn-primary">delete a date</button>
-        </form>
-        <form class="inputBox">
-            <h2>DEV PURPOSES</h2>
-            <div class="form-group">
-                <input type="text" class="form-control" id="startTime2" placeholder="default start time">
-                <input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
-                <input type="text" class="form-control" id="dateLoc2" placeholder="location">
-            </div>
-            <button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
-        </form> -->
+        <h2>DEV PURPOSES</h2>
+        <div class="form-group">
+        <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
     </div>
-    <!-- Details Modal -->
-    <div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content modalBox">
-                <div class="modal-header">
-                    <button type="button" class="close modalX" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="detailModal">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+    <button type="button" id="deleteEvents" class="btn btn-primary">delete a date</button>
+</form>
+<form class="inputBox">
+<h2>DEV PURPOSES</h2>
+<div class="form-group">
+<input type="text" class="form-control" id="startTime2" placeholder="default start time">
+<input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
+<input type="text" class="form-control" id="dateLoc2" placeholder="location">
+</div>
+<button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
+</form> -->
+</div>
+<!-- Details Modal -->
+<div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modalBox">
+            <div class="modal-header">
+                <button type="button" class="close modalX" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="detailModal">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!--  Confirmation Modal -->
-    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h1 class="modal-title" id="myModalLabel">you're all set</h1>
-                </div>
-                <div class="modal-body container-fluid">
-                    <div class="row">
-                        <div class="col-md-5 detailsForDate">
-                            <p>you'll be going to...</p>
-                            <p id="dateLoc"></p>
-                            <p>@</p>
-                            <p id="dateTime"></p>
-                            <!-- <p>optional location 2 here</p>
-                            <p>optional location 3 here</p> -->
+<!--  Confirmation Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="modal-title" id="myModalLabel">you're all set</h1>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-md-5 detailsForDate">
+                        <p>you'll be going to...</p>
+                        <p id="dateLoc"></p>
+                        <p>@</p>
+                        <p id="dateTime"></p>
+                        <!-- <p>optional location 2 here</p>
+                        <p>optional location 3 here</p> -->
                     </div>
                     <div class="col-md-5">
                         <h4>how will you meet your date ?</h4>
-                            <p><input type="radio" id="pickUp" name="meetDate">pick them up</p>
-                            <p><input type="radio" id="meetRestaurant" name="meetDate">meet @ restaurant</p>
-                            <p><input type="radio" id="meetTheater" name="meetDate">meet @ movie theater</p>
-                            <p><input type="radio" id="meetPub" name="meetDate">meet @ the pub</p>
+                        <p><input type="radio" id="pickUp" name="meetDate">pick them up</p>
+                        <p><input type="radio" id="meetRestaurant" name="meetDate">meet @ restaurant</p>
+                        <p><input type="radio" id="meetTheater" name="meetDate">meet @ movie theater</p>
+                        <p><input type="radio" id="meetPub" name="meetDate">meet @ the pub</p>
                     </div>
                 </div>
-                    <div class="row text-center">
-                        <input type="text" class="text-center messageToDate" id="messageBox" placeholder="message to your date">
-                    </div>
-                    <div class="modal-footer row">
-                        <button type="button" class="btn" data-dismiss="modal">cancel</button>
-                        <button type="button" id="createEvents" data-dismiss="modal" class="btn">send invite</button>
-                    </div>
+                <div class="row text-center">
+                    <input type="text" class="text-center messageToDate" id="messageBox" placeholder="message to your date">
+                </div>
+                <div class="modal-footer row">
+                    <button type="button" class="btn" data-dismiss="modal">cancel</button>
+                    <button type="button" id="createEvents" data-dismiss="modal" class="btn">send invite</button>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="js/googlesignin.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/flatpickr.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+<script src="js/googlesignin.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/flatpickr.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
