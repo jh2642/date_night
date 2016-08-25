@@ -1,3 +1,5 @@
+var api = 'https://serene-hamlet-75445.herokuapp.com'
+
 function onSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
   var profile = googleUser.getBasicProfile();
@@ -24,6 +26,18 @@ function onSignIn(googleUser) {
     //   console.log('Signed in as: ' + xhr.responseText);
     };
     xhr.send();
+
+    fetch(api+'/users/create', {
+        method: 'POST',
+        body: JSON.stringify({
+            name: profile.getName(),
+            image_url: profile.getImageUrl(),
+            email: profile.getEmail()
+        })
+    })
+        .then(function(response) {
+            console.log(response.json())
+        })
 
 }
 

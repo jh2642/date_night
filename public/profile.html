@@ -13,31 +13,52 @@
 <body>
     <div class=container-fluid>
         <div class="row profileTopper">
-            <div class="col-md-4 col-md-offset-2 profileBox ">
+            <div class="col-md-5 text-center profileBox ">
                 <div class="profilePic">
                     <p id="googlePic"></p>
                     <p id="googleName"></p>
                     <p id="googleEmail"></p>
                 </div>
+            </div>
+            <div class="col-md-5 calendarBox text-center">
+                <h1 id="calendarEvents">upcoming events....</h1>
+                blah....
+                blah.....
+                blah......
+            </div>
+            <div class="col-md-2">
                 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                 <a type="button" href="/index.html" onclick="signOut();"><button class="btn btn-primary">sign out</button></a>
                 <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>
                 <a href="/index.html" class="btn btn-primary" role="button">landing</a>
             </div>
-            <div class="col-md-4 calendarBox text-center">
-                <h3>calendar goes here</h3>
-            </div>
+        </div>
+
+        <div class="row updateBox">
+            <div class="col-md-6 col-md-offset-2">
+            <h4>under construction</h4>
+            <h2>add your date's info:</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control addToProfile" id="datesName" placeholder="your date's name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control addToProfile" id="datesEmail" placeholder="your date's email">
+                </div>
+                <!-- <button type="submit" id="addDateInfo" class="btn btn-default">add to your profile</button> -->
+                <a type="button"><button class="btn btn-primary" id="addDateInfo">add to your profile</button></a>
+        </div>
         </div>
     </div>
+
     <!-- <footer class="text-center">
     <img src="assets/powered_by_google_on_non_white.png">
 </footer> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/gmail.js"></script>
 <script src="js/googlesignin.js"></script>
-<!-- <script src="js/calendar.js"></script> -->
-<script src="js/main.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/profile.js"></script>
+<!-- <script src="js/main.js"></script> -->
 </body>
 </html>

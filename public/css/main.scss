@@ -7,7 +7,6 @@ $mainFont:'Oswald', sans-serif;
     font-size: 16px;
     h1 {
         font-family: $headlineFont;
-        font-size: 100px;
     }
     h3 {
         font-family: $headlineFont;
@@ -43,6 +42,10 @@ body {
 .jumbotron {
     margin-top: 90px;
     background-color: transparent;
+    h1 {
+        font-family: $headlineFont;
+        font-size: 100px;
+    }
 }
 
 .g-signin2 {
@@ -96,7 +99,7 @@ body {
 }
 
 .calendarBox {
-    background: rgb(181, 180, 177);
+    // background: rgb(181, 180, 177);
     height: 225px;
 }
 
@@ -150,4 +153,12 @@ body {
 
 .inputBox {
     background-color: rgb(17, 164, 210);
+}
+
+.addToProfile {
+    max-width: 200px;
+}
+
+.updateBox {
+    margin-top: 50px;
 }

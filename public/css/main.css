@@ -6,7 +6,6 @@
 
 * h1 {
   font-family: "Playball", cursive;
-  font-size: 100px;
 }
 
 * h3 {
@@ -40,6 +39,11 @@ body {
 .jumbotron {
   margin-top: 90px;
   background-color: transparent;
+}
+
+.jumbotron h1 {
+  font-family: "Playball", cursive;
+  font-size: 100px;
 }
 
 .g-signin2 {
@@ -87,7 +91,6 @@ body {
 }
 
 .calendarBox {
-  background: #b5b4b1;
   height: 225px;
 }
 
@@ -141,4 +144,12 @@ body {
 
 .inputBox {
   background-color: #11a4d2;
+}
+
+.addToProfile {
+  max-width: 200px;
+}
+
+.updateBox {
+  margin-top: 50px;
 }

@@ -81,36 +81,37 @@ function checkAuth() {
         * the authorized user's calendar. If no events are found an
         * appropriate message is printed.
         */
-        function listUpcomingEvents() {
-            var request = gapi.client.calendar.events.list({
-                'calendarId': 'primary',
-                'timeMin': (new Date()).toISOString(),
-                'showDeleted': false,
-                'singleEvents': true,
-                'maxResults': 5,
-                'orderBy': 'startTime'
-            });
-
-            request.execute(function(resp) {
-                var events = resp.items;
-                console.log(events)
-                // appendPre('Upcoming events:');
-
-                if (events.length > 0) {
-                    for (i = 0; i < events.length; i++) {
-                        var event = events[i];
-                        var when = event.start.dateTime;
-                        if (!when) {
-                            when = event.start.date;
-                        }
-                        // appendPre(event.summary + ' (' + when + ')')
-                    }
-                } else {
-                    // appendPre('No upcoming events found.');
-                }
-
-            });
-        }
+        // function listUpcomingEvents() {
+        //     var request = gapi.client.calendar.events.list({
+        //         'calendarId': 'primary',
+        //         'timeMin': (new Date()).toISOString(),
+        //         'showDeleted': false,
+        //         'singleEvents': true,
+        //         'maxResults': 5,
+        //         'orderBy': 'startTime'
+        //     });
+        //
+        //     request.execute(function(resp) {
+        //         var events = resp.items;
+        //         console.log(events)
+        //         // document.getElementById('calendarEvents').innerHTML = events
+        //         appendPre('Upcoming events:');
+        //
+        //         if (events.length > 0) {
+        //             for (i = 0; i < events.length; i++) {
+        //                 var event = events[i];
+        //                 var when = event.start.dateTime;
+        //                 if (!when) {
+        //                     when = event.start.date;
+        //                 }
+        //                 appendPre(event.summary + ' (' + when + ')')
+        //             }
+        //         } else {
+        //             appendPre('No upcoming events found.');
+        //         }
+        //
+        //     });
+        // }
 
         //create event here
         function createEvents() {
@@ -124,7 +125,7 @@ function checkAuth() {
             var dateSum = 'Date Night';
             var descriptionDate = selectedVenue;
             // var attachmentHere = locationUrl
-    
+
 
             var request2 = gapi.client.calendar.events.insert({
                 calendarId: 'primary',
@@ -163,10 +164,9 @@ function checkAuth() {
 
         //delete event here
         function deleteEvents() {
-            //var startTime = moment...
-            //var endTime = moment...
-            var deleteId = document.getElementById('deleteId').value;
 
+            var deleteId = document.getElementById('deleteId').value;
+            
             var request3 = gapi.client.calendar.events.delete({
                 calendarId: 'primary',
                 eventId: deleteId,
@@ -180,8 +180,7 @@ function checkAuth() {
 
         //update event here
         function updateEvents() {
-            //var startTime = moment...
-            //var endTime = moment...
+
             var startTime2 = '2016-08-24T21:00:00+00:00';
             var endTime2 = '2016-08-24T21:30:00+00:00';
             var dateEmail2 = document.getElementById('dateEmail2').value;

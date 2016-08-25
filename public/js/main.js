@@ -17,7 +17,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeThree = "bar"
     var getId1 = "localRestaurants"
 
-    fetch('/api/v1/geoloc?address=' + address , {
+    fetch(api+'/api/v1/geoloc?address=' + address , {
         method: 'GET'
     })
     .then(function(response) {
@@ -31,7 +31,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
         var newAddress = latitude + ',' + longitude
 
         //movie fetch
-        fetch('/api/v1/places?type=' + typeOne + '&location=' + newAddress , {
+        fetch(api+'/api/v1/places?type=' + typeOne + '&location=' + newAddress , {
             method: 'GET'
         })
         .then(function(response) {
@@ -85,7 +85,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
 
         //restaurant fetch
-        fetch('/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
+        fetch(api+'/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
             method: 'GET'
         })
         .then(function(response) {
@@ -136,7 +136,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
         })
 
         //bar fetch
-        fetch('/api/v1/places?type=' + typeThree + '&location=' + newAddress , {
+        fetch(api+'/api/v1/places?type=' + typeThree + '&location=' + newAddress , {
             method: 'GET'
         })
         .then(function(response) {
@@ -195,7 +195,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 var id = $(this).attr('location-id')
                 // console.log(id)
                 //details fetch
-                fetch('/api/v1/details?placeid=' + id, {
+                fetch(api+'/api/v1/details?placeid=' + id, {
                     method: 'GET'
                 })
                 .then(function(response) {
@@ -253,7 +253,7 @@ document.getElementById('createEvents').addEventListener('click', function() {
         checkboxes.forEach(function(id) {
             var eventPlaces = id.value
 
-            fetch('/api/v1/details?placeid=' + eventPlaces, {
+            fetch(api+'/api/v1/details?placeid=' + eventPlaces, {
                 method: 'GET'
             })
             .then(function(response) {
@@ -272,5 +272,6 @@ document.getElementById('createEvents').addEventListener('click', function() {
             })
         })
     })
+
 
 document.getElementById("startTime").flatpickr();
