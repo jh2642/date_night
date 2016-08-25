@@ -15,9 +15,8 @@ $mainFont:'Oswald', sans-serif;
 
 body {
     background-image: url('/assets/datenight-backdrop.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    background-color: black;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .mainPage {
@@ -37,15 +36,15 @@ body {
 .motto {
     color: rgb(17, 164, 210);
     font-style: italic;
+    font-size: 50px;
 }
 
 .jumbotron {
-    margin-top: 90px;
+    margin-top: 150px;
     background-color: transparent;
-    h1 {
-        font-family: $headlineFont;
-        font-size: 100px;
-    }
+    font-family: $headlineFont;
+    font-size: 150px;
+
 }
 
 .g-signin2 {

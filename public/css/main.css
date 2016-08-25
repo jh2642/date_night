@@ -14,7 +14,8 @@
 
 body {
   background-image: url("/assets/datenight-backdrop.jpg");
-  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mainPage {
@@ -34,16 +35,14 @@ body {
 .motto {
   color: #11a4d2;
   font-style: italic;
+  font-size: 50px;
 }
 
 .jumbotron {
-  margin-top: 90px;
+  margin-top: 150px;
   background-color: transparent;
-}
-
-.jumbotron h1 {
   font-family: "Playball", cursive;
-  font-size: 100px;
+  font-size: 150px;
 }
 
 .g-signin2 {
