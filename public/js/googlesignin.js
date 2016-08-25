@@ -36,7 +36,10 @@ function onSignIn(googleUser) {
         })
     })
         .then(function(response) {
-            console.log(response.json())
+            return response.json()
+        })
+        .then(function(response) {
+            console.log(response)
         })
 
 }

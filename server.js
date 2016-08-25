@@ -3,6 +3,7 @@ var app = express()
 var bodyParser = require('body-parser')
 var cors = require('cors')
 var https = require('request')
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 
