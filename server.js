@@ -85,7 +85,7 @@ app.post('/users/create', function (request, response) {
         if(rows.length) {
             // request.session.user_id=rows[0].id
             // request.session.save(function() {
-                response.json(true)
+                response.json(rows[0].id)
             // })
         }
         else {
