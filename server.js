@@ -97,7 +97,6 @@ app.post('/users/create', function (request, response) {
             })
         }
     })
-    response.json(request.body)
 })
 
 app.use(express.static(__dirname + '/public'))
