@@ -69,8 +69,7 @@ app.get('/api/v1/details', function (request, response) {
 })
 
 app.post('/users/create', function (request, response) {
-    console.log(request.body)
-    response.json(request.body.name)
+    response.json(request.body)
 })
 
 app.use(express.static(__dirname + '/public'))
