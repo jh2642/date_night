@@ -93,16 +93,19 @@ body {
   height: 225px;
 }
 
-.modalBox {
+.modalBox,
+.modal-content {
   background-image: url("/assets/datenight-backdrop.jpg");
   border: 2px #11a4d2 solid;
 }
 
-.modalBox a {
+.modalBox a,
+.modal-content a {
   color: #11a4d2;
 }
 
-.modalBox .mapURLbox {
+.modalBox .mapURLbox,
+.modal-content .mapURLbox {
   margin-bottom: 120px;
   color: #11a4d2;
 }
@@ -151,4 +154,13 @@ body {
 
 .updateBox {
   margin-top: 50px;
+}
+
+.detailsForDate {
+  margin-top: 30px;
+}
+
+.messageToDate {
+  color: black;
+  min-width: 400px;
 }

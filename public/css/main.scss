@@ -102,7 +102,8 @@ body {
     height: 225px;
 }
 
-.modalBox {
+.modalBox,
+.modal-content {
     background-image: url('/assets/datenight-backdrop.jpg');
     border: 2px rgb(17, 164, 210) solid;
     a {
@@ -160,4 +161,12 @@ body {
 
 .updateBox {
     margin-top: 50px;
+}
+
+.detailsForDate {
+    margin-top: 30px;
+}
+.messageToDate {
+    color: black;
+    min-width: 400px;
 }

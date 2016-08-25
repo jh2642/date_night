@@ -28,12 +28,12 @@
             <div class="col-md-4 text-left">
                 <form class="form-inline">
                     <input type="text" class="form-control" id="address" placeholder="address, city or zip">
-                    <button type="button" id="getDetails" class="btn btn-primary">search</button>
-                    <h5 class="radiusMessage">*Search locations are within a 10 mile radius</h5>
+                    <h5 class="radiusMessage">*venue will be within a 10 mile radius</h5>
                 </form>
                 <div>
                     <input type="text" class="form-control" id="startTime" data-enable-time=true placeholder="select date and time">
-                    <button type="button" id="createEvents" class="btn btn-primary">schedule date</button>
+                    <button type="button" id="getDetails" class="btn btn-primary">search venues</button>
+                    <button type="button" id="grabDetails" data-toggle="modal" data-target="#confirmModal" class="btn btn-primary">confirm plans</button>
                 </div>
             </div>
             <div class="col-md-4 profileBox">
@@ -81,7 +81,7 @@
             <button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
         </form> -->
     </div>
-    <!-- Modal -->
+    <!-- Details Modal -->
     <div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content modalBox">
@@ -94,6 +94,44 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Confirmation Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="myModalLabel">you're all set</h1>
+                </div>
+                <div class="modal-body container-fluid">
+                    <div class="row">
+                        <div class="col-md-5 detailsForDate">
+                            <p>you'll be going to...</p>
+                            <p id="dateLoc"></p>
+                            <p>@</p>
+                            <p id="dateTime"></p>
+                            <!-- <p>optional location 2 here</p>
+                            <p>optional location 3 here</p> -->
+                    </div>
+                    <div class="col-md-5">
+                        <h4>how will you meet your date ?</h4>
+                            <p><input type="radio" id="pickUp" name="meetDate">pick them up</p>
+                            <p><input type="radio" id="meetRestaurant" name="meetDate">meet @ restaurant</p>
+                            <p><input type="radio" id="meetTheater" name="meetDate">meet @ movie theater</p>
+                            <p><input type="radio" id="meetPub" name="meetDate">meet @ the pub</p>
+                    </div>
+                </div>
+                    <div class="row text-center">
+                        <input type="text" class="text-center messageToDate" id="messageBox" placeholder="message to your date">
+                    </div>
+                    <div class="modal-footer row">
+                        <button type="button" class="btn" data-dismiss="modal">cancel</button>
+                        <button type="button" id="createEvents" data-dismiss="modal" class="btn">send invite</button>
+                    </div>
                 </div>
             </div>
         </div>

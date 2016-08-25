@@ -123,7 +123,7 @@ function checkAuth() {
             var yourEmail = 'hildreth.james@gmail.com'
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
-            var descriptionDate = selectedVenue;
+            var descriptionDate = document.getElementById('messageBox').value
             // var attachmentHere = locationUrl
 
 
@@ -166,7 +166,7 @@ function checkAuth() {
         function deleteEvents() {
 
             var deleteId = document.getElementById('deleteId').value;
-            
+
             var request3 = gapi.client.calendar.events.delete({
                 calendarId: 'primary',
                 eventId: deleteId,

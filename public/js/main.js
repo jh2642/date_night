@@ -246,7 +246,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 })
 
 
-document.getElementById('createEvents').addEventListener('click', function() {
+document.getElementById('grabDetails').addEventListener('click', function() {
 
         var checkboxes = document.querySelectorAll('.selectDetail:checked')
 
@@ -269,6 +269,9 @@ document.getElementById('createEvents').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
                 console.log(eachLoc)
+                document.getElementById('dateLoc').innerHTML = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber;
+                document.getElementById('dateTime').innerHTML = document.getElementById('startTime').value;
+
             })
         })
     })
