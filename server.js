@@ -69,6 +69,16 @@ app.get('/api/v1/details', function (request, response) {
 })
 
 app.post('/users/create', function (request, response) {
+    knex('users').where('email', request.body.email).select('id').then(function(rows) {
+        if(rows.length) {
+            response.json(true)
+        }
+        else {
+            knex('users').insert(request.body).then(function(ids) {
+                response.json(ids[0])
+            })
+        }
+    })
     response.json(request.body)
 })
 
