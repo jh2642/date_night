@@ -60,12 +60,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     // pricing.innerHTML = "Price: " + item.price
                     // div.appendChild(pricing)
 
-                    var details = document.createElement('button')
-                    details.setAttribute('location-id', item.place_id)
-                    details.classList.add('btn', 'btn-primary', 'location-id')
-                    details.innerHTML = 'reviews'
-                    div.appendChild(details)
-
                     var checkbox = document.createElement('input');
                     checkbox.type = 'radio';
                     checkbox.name = typeOne;
@@ -78,6 +72,12 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(checkbox);
                     div.appendChild(label);
                     document.getElementById('movieTheater').appendChild(div)
+
+                    var details = document.createElement('button')
+                    details.setAttribute('location-id', item.place_id)
+                    details.classList.add('btn', 'location-id')
+                    details.innerHTML = 'reviews'
+                    div.appendChild(details)
                 }
             })
         })
@@ -113,12 +113,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 rating.innerHTML = "Rating: " + item.rating
                 div.appendChild(rating)
 
-                var details = document.createElement('button')
-                details.setAttribute('location-id', item.place_id)
-                details.classList.add('btn', 'btn-primary', 'location-id')
-                details.innerHTML = 'reviews'
-                div.appendChild(details)
-
                 var checkbox = document.createElement('input');
                 checkbox.type = 'radio';
                 checkbox.name = typeTwo;
@@ -131,6 +125,12 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 div.appendChild(checkbox);
                 div.appendChild(label);
                 document.getElementById('localRestaurants').appendChild(div)
+
+                var details = document.createElement('button')
+                details.setAttribute('location-id', item.place_id)
+                details.classList.add('btn', 'location-id')
+                details.innerHTML = 'reviews'
+                div.appendChild(details)
                 }
             })
         })
@@ -164,12 +164,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 rating.innerHTML = "Rating: " + item.rating
                 div.appendChild(rating)
 
-                var details = document.createElement('button')
-                details.setAttribute('location-id', item.place_id)
-                details.classList.add('btn', 'btn-primary', 'location-id')
-                details.innerHTML = 'reviews'
-                div.appendChild(details)
-
                 var checkbox = document.createElement('input');
                 checkbox.type = 'radio';
                 checkbox.name = typeThree;
@@ -182,6 +176,12 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 div.appendChild(checkbox);
                 div.appendChild(label);
                 document.getElementById('localBar').appendChild(div)
+
+                var details = document.createElement('button')
+                details.setAttribute('location-id', item.place_id)
+                details.classList.add('btn', 'location-id')
+                details.innerHTML = 'reviews'
+                div.appendChild(details)
                 }
             })
         })
