@@ -1,4 +1,5 @@
 var express = require('express')
+var session = require('express-session')
 var app = express()
 var bodyParser = require('body-parser')
 var cors = require('cors')
@@ -8,7 +9,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 
-
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}))
 
 app.set('port', (process.env.PORT || 8080))
 app.set('views', __dirname + '/views')
@@ -71,11 +78,17 @@ app.get('/api/v1/details', function (request, response) {
 app.post('/users/create', function (request, response) {
     knex('users').where('email', request.body.email).select('id').then(function(rows) {
         if(rows.length) {
-            response.json(true)
+            request.session.user_id=rows[0].id
+            request.session.save(function() {
+                response.json(true)
+            })
         }
         else {
             knex('users').insert(request.body).then(function(ids) {
-                response.json(ids[0])
+                request.session.user_id=ids[0]
+                request.session.save(function() {
+                    response.json(ids[0])
+                })
             })
         }
     })

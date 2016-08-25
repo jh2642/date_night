@@ -29,6 +29,7 @@ function onSignIn(googleUser) {
 
     fetch(api+'/users/create', {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
         },
