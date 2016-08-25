@@ -1,6 +1,7 @@
 * {
   font-family: "Oswald", sans-serif;
   color: white;
+  font-size: 16px;
 }
 
 * h1 {
@@ -14,8 +15,7 @@
 
 body {
   background-image: url("/assets/datenight-backdrop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
 }
 
 .mainPage {
@@ -24,7 +24,8 @@ body {
 
 .headersSearch {
   font-family: "Playball", cursive;
-  font-size: 25px;
+  font-size: 40px;
+  color: #11a4d2;
 }
 
 .signInButton {
@@ -47,10 +48,20 @@ body {
   color: black;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-secondary {
   width: 125px;
   background: transparent;
   border: 1px white solid;
+  font-size: 16px;
+  padding: 0px;
+  padding: 2px;
+  margin: 5px;
+}
+
+.selectLabel {
+  color: #11a4d2;
+  margin-left: 5px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
@@ -60,10 +71,6 @@ body {
 
 .profileTopper {
   margin-top: 30px;
-}
-
-.profileBox {
-  padding-left: 50px;
 }
 
 .profilePic {
@@ -119,7 +126,9 @@ body {
 .establishment {
   margin: 5px;
   padding: 5px;
-  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
 }
 
 .radiusMessage {

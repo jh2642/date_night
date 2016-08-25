@@ -10,9 +10,9 @@ function onSignIn(googleUser) {
         featureImage.setAttribute('src', profile.getImageUrl())
         featureImage.classList.add('img-circle')
     var individualName = document.getElementById('googleName')
-          individualName.innerHTML = 'Name: ' + profile.getName()
+          individualName.innerHTML = profile.getName()
     var individualEmail = document.getElementById('googleEmail')
-        individualEmail.innerHTML = 'Email: ' + profile.getEmail()
+        individualEmail.innerHTML = profile.getEmail()
 
     document.getElementById('googlePic').innerHTML = ''
     document.getElementById('googlePic').appendChild(featureImage)

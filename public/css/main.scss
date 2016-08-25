@@ -4,6 +4,7 @@ $mainFont:'Oswald', sans-serif;
 * {
     font-family: $mainFont;
     color: white;
+    font-size: 16px;
     h1 {
         font-family: $headlineFont;
         font-size: 100px;
@@ -15,9 +16,9 @@ $mainFont:'Oswald', sans-serif;
 
 body {
     background-image: url('/assets/datenight-backdrop.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-color: black;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color: black;
 }
 
 .mainPage {
@@ -26,8 +27,8 @@ body {
 
 .headersSearch {
     font-family: $headlineFont;
-    font-size: 25px;
-
+    font-size: 40px;
+    color: rgb(17, 164, 210);
 }
 
 .signInButton {
@@ -50,10 +51,20 @@ body {
     color: black;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-secondary {
     width: 125px;
     background: transparent;
     border: 1px white solid;
+    font-size: 16px;
+    padding: 0px;
+    padding: 2px;
+    margin: 5px;
+}
+
+.selectLabel {
+    color: rgb(17, 164, 210);
+    margin-left: 5px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
@@ -65,9 +76,9 @@ body {
     margin-top: 30px;
 }
 
-.profileBox {
-    padding-left: 50px;
-}
+// .profileBox {
+//     padding-left: 50px;
+// }
 
 .profilePic {
     // border: 3px #33383b solid;
@@ -123,9 +134,10 @@ body {
     margin: 5px;
     padding: 5px;
     // background-image: url('/assets/datenight-backdrop.jpg');
-    // background-repeat: no-repeat;
-    // background-position: center;
-    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    // background-color: black;
 }
 
 .radiusMessage {

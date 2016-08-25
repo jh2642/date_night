@@ -9,7 +9,8 @@
     <script src="js/moment.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Playball" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/flatpickr.dark.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </head>
@@ -24,21 +25,19 @@
     </div>
     <div class="container mainPage ">
         <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-left">
                 <form class="form-inline">
                     <input type="text" class="form-control" id="address" placeholder="address, city or zip">
-                </form>
-                <div>
                     <button type="button" id="getDetails" class="btn btn-primary">search</button>
                     <h5 class="radiusMessage">*Search locations are within a 10 mile radius</h5>
-                    <!-- <button type="button" id="locationInformation" class="btn btn-primary">grab loc details</button> -->
+                </form>
+                <div>
                     <input type="text" class="form-control" id="startTime" data-enable-time=true placeholder="select date and time">
                     <button type="button" id="createEvents" class="btn btn-primary">schedule date</button>
-
                 </div>
             </div>
-            <div class="col-md-4 profileBox ">
-                <div class="profilePic">
+            <div class="col-md-4 profileBox">
+                <div class="profilePic text-center">
                     <p id="googlePic"></p>
                     <p id="googleName"></p>
                     <p id="googleEmail"></p>
@@ -65,28 +64,29 @@
                 <p id="localBar"></p>
             </div>
         </div>
-        <form class="inputBox">
+        <!-- <form class="inputBox">
+            <h2>DEV PURPOSES</h2>
             <div class="form-group">
                 <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
             </div>
             <button type="button" id="deleteEvents" class="btn btn-primary">delete a date</button>
         </form>
         <form class="inputBox">
+            <h2>DEV PURPOSES</h2>
             <div class="form-group">
                 <input type="text" class="form-control" id="startTime2" placeholder="default start time">
-                <!-- <input type="text" class="form-control" id="endTime2" placeholder="end datetime"> -->
                 <input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
                 <input type="text" class="form-control" id="dateLoc2" placeholder="location">
             </div>
             <button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
-        </form>
+        </form> -->
     </div>
     <!-- Modal -->
     <div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content modalBox">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close modalX" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>

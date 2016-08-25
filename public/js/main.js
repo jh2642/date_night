@@ -15,6 +15,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeOne = "movie_theater"
     var typeTwo = "restaurant"
     var typeThree = "bar"
+    var getId1 = "localRestaurants"
 
     fetch('/api/v1/geoloc?address=' + address , {
         method: 'GET'
@@ -23,7 +24,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
         return response.json()
     })
     .then(function(response) {
-        // console.log(priceReq)
+
         latitude = response.results[0].geometry.location.lat
         longitude = response.results[0].geometry.location.lng
 
@@ -43,22 +44,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     var div = document.createElement('div')
                     div.classList.add('establishment')
 
-                    var img = document.createElement('img')
-                    img.setAttribute('src', item.icon)
-                    div.appendChild(img)
-
-                    var checkbox = document.createElement('input');
-                    checkbox.type = 'radio';
-                    checkbox.name = typeOne;
-                    checkbox.value = item.place_id;
-                    checkbox.classList = 'toggle btn selectDetail';
-                    var label = document.createElement('label')
-                    label.htmlFor = 'checkbox-id';
-                    label.appendChild(document.createTextNode('Select for Date'));
-                    div.appendChild(checkbox);
-                    div.appendChild(label);
-
-                    var name = document.createElement('p')
+                    var name = document.createElement('h2')
                     name.innerHTML = item.name
                     div.appendChild(name)
 
@@ -70,14 +56,28 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     rating.innerHTML = "Rating: " + item.rating
                     div.appendChild(rating)
 
+                    // var pricing = document.createElement('p')
+                    // pricing.innerHTML = "Price: " + item.price
+                    // div.appendChild(pricing)
+
                     var details = document.createElement('button')
                     details.setAttribute('location-id', item.place_id)
                     details.classList.add('btn', 'btn-primary', 'location-id')
-                    details.innerHTML = 'details'
+                    details.innerHTML = 'reviews'
                     div.appendChild(details)
 
+                    var checkbox = document.createElement('input');
+                    checkbox.type = 'radio';
+                    checkbox.name = typeOne;
+                    checkbox.value = item.place_id;
+                    checkbox.classList = 'selectDetail';
+                    var label = document.createElement('label')
+                    label.htmlFor = 'checkbox-id';
+                    label.classList = 'selectLabel';
+                    label.appendChild(document.createTextNode('select for date'));
+                    div.appendChild(checkbox);
+                    div.appendChild(label);
                     document.getElementById('movieTheater').appendChild(div)
-
                 }
             })
         })
@@ -85,7 +85,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
 
         //restaurant fetch
-
         fetch('/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
             method: 'GET'
         })
@@ -97,50 +96,41 @@ document.getElementById('getDetails').addEventListener('click', function() {
             // if (response.results[0].types[0] === typeTwo) {
             // console.log(priceReq, priceReq2)
             document.getElementById('localRestaurants').innerHTML = ''
-                response.results.forEach(function(item) {
-                    if (item.types[0] === typeTwo) {
-                    var div = document.createElement('div')
-                    div.classList.add('establishment')
+            response.results.forEach(function(item) {
+                if (item.types[0] === typeTwo) {
+                var div = document.createElement('div')
+                div.classList.add('establishment')
 
-                    var img = document.createElement('img')
-                    img.setAttribute('src', item.icon)
-                    div.appendChild(img)
+                var name = document.createElement('h2')
+                name.innerHTML = item.name
+                div.appendChild(name)
 
-                    var checkbox = document.createElement('input');
-                    checkbox.type = 'radio';
-                    checkbox.name = typeTwo;
-                    checkbox.value = item.place_id;
-                    checkbox.classList = 'toggle btn selectDetail';
-                    var label = document.createElement('label')
-                    label.htmlFor = 'id';
-                    label.appendChild(document.createTextNode('Select for Date'));
-                    div.appendChild(checkbox);
-                    div.appendChild(label);
+                var address = document.createElement('p')
+                address.innerHTML = item.vicinity
+                div.appendChild(address)
 
-                    var name = document.createElement('p')
-                    name.innerHTML = item.name
-                    div.appendChild(name)
+                var rating = document.createElement('p')
+                rating.innerHTML = "Rating: " + item.rating
+                div.appendChild(rating)
 
-                    var address = document.createElement('p')
-                    address.innerHTML = item.vicinity
-                    div.appendChild(address)
+                var details = document.createElement('button')
+                details.setAttribute('location-id', item.place_id)
+                details.classList.add('btn', 'btn-primary', 'location-id')
+                details.innerHTML = 'reviews'
+                div.appendChild(details)
 
-                    var price = document.createElement('p')
-                    price.innerHTML = "Price Level: " + item.price_level
-                    div.appendChild(price)
-
-                    var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
-                    div.appendChild(rating)
-
-                    var details = document.createElement('button')
-                    details.setAttribute('location-id', item.place_id)
-                    details.classList.add('btn', 'btn-primary', 'location-id')
-                    details.innerHTML = 'details'
-                    div.appendChild(details)
-
-                    document.getElementById('localRestaurants').appendChild(div)
-
+                var checkbox = document.createElement('input');
+                checkbox.type = 'radio';
+                checkbox.name = typeTwo;
+                checkbox.value = item.place_id;
+                checkbox.classList = 'selectDetail';
+                var label = document.createElement('label')
+                label.htmlFor = 'checkbox-id';
+                label.classList = 'selectLabel';
+                label.appendChild(document.createTextNode('select for date'));
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                document.getElementById('localRestaurants').appendChild(div)
                 }
             })
         })
@@ -157,49 +147,41 @@ document.getElementById('getDetails').addEventListener('click', function() {
             //this pulls the 1st type in the location.
             // if (response.results[0].types[0] === typeThree) {
             document.getElementById('localBar').innerHTML = ''
-                response.results.forEach(function(item) {
-                    if (item.types[0] === typeThree) {
-                    var div = document.createElement('div')
-                    div.classList.add('establishment')
+            response.results.forEach(function(item) {
+                if (item.types[0] === typeThree) {
+                var div = document.createElement('div')
+                div.classList.add('establishment')
 
-                    var img = document.createElement('img')
-                    img.setAttribute('src', item.icon)
-                    div.appendChild(img)
+                var name = document.createElement('h2')
+                name.innerHTML = item.name
+                div.appendChild(name)
 
-                    var checkbox = document.createElement('input');
-                    checkbox.type = 'radio';
-                    checkbox.name = typeThree;
-                    checkbox.value = item.place_id;
-                    checkbox.classList = 'toggle btn selectDetail';
-                    var label = document.createElement('label')
-                    label.htmlFor = 'id';
-                    label.appendChild(document.createTextNode('Select for Date'));
-                    div.appendChild(checkbox);
-                    div.appendChild(label);
+                var address = document.createElement('p')
+                address.innerHTML = item.vicinity
+                div.appendChild(address)
 
-                    var name = document.createElement('p')
-                    name.innerHTML = item.name
-                    div.appendChild(name)
+                var rating = document.createElement('p')
+                rating.innerHTML = "Rating: " + item.rating
+                div.appendChild(rating)
 
-                    var address = document.createElement('p')
-                    address.innerHTML = item.vicinity
-                    div.appendChild(address)
+                var details = document.createElement('button')
+                details.setAttribute('location-id', item.place_id)
+                details.classList.add('btn', 'btn-primary', 'location-id')
+                details.innerHTML = 'reviews'
+                div.appendChild(details)
 
-                    var price = document.createElement('p')
-                    price.innerHTML = "Price Level: " + item.price_level
-                    div.appendChild(price)
-
-                    var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
-                    div.appendChild(rating)
-
-                    var details = document.createElement('button')
-                    details.setAttribute('location-id', item.place_id)
-                    details.classList.add('btn', 'btn-primary', 'location-id')
-                    details.innerHTML = 'details'
-                    div.appendChild(details)
-
-                    document.getElementById('localBar').appendChild(div)
+                var checkbox = document.createElement('input');
+                checkbox.type = 'radio';
+                checkbox.name = typeThree;
+                checkbox.value = item.place_id;
+                checkbox.classList = 'selectDetail';
+                var label = document.createElement('label')
+                label.htmlFor = 'checkbox-id';
+                label.classList = 'selectLabel';
+                label.appendChild(document.createTextNode('select for date'));
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                document.getElementById('localBar').appendChild(div)
                 }
             })
         })
@@ -224,7 +206,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     var div = document.createElement('div')
                     div.classList.add('modalEstablishment')
 
-                    var name = document.createElement('h3')
+                    var name = document.createElement('h2')
                     name.innerHTML = response.result.name
                     div.appendChild(name)
 
@@ -257,7 +239,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
                     document.getElementById('detailModal').innerHTML = ''
                     document.getElementById('detailModal').appendChild(div)
-
                 })
             })
         }) //closing modal
@@ -291,7 +272,5 @@ document.getElementById('createEvents').addEventListener('click', function() {
             })
         })
     })
-document.getElementById("startTime").flatpickr();
 
-    // var moment = require('moment');
-    // moment().format();
+document.getElementById("startTime").flatpickr();

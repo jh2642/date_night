@@ -37,11 +37,11 @@ function checkAuth() {
         }
     }
 
-    /**
-    * Initiate auth flow in response to user clicking authorize button.
-    *
-    * @param {Event} event Button click event.
-    */
+    // /**
+    // * Initiate auth flow in response to user clicking authorize button.
+    // *
+    // * @param {Event} event Button click event.
+    // */
     function handleAuthClick(event) {
         gapi.auth.authorize(
             {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
@@ -55,10 +55,10 @@ function checkAuth() {
         */
 
         function loadCalendarApi() {
-            document.getElementById('showEvents').addEventListener('click', function() {
-                console.log('showEvents')
-                gapi.client.load('calendar', 'v3', listUpcomingEvents);
-            });
+            // document.getElementById('showEvents').addEventListener('click', function() {
+            //     console.log('showEvents')
+            //     gapi.client.load('calendar', 'v3', listUpcomingEvents);
+            // });
             document.getElementById('createEvents').addEventListener('click', function() {
                 console.log('createEvents')
                 gapi.client.load('calendar', 'v3', createEvents);
@@ -114,7 +114,7 @@ function checkAuth() {
 
         //create event here
         function createEvents() {
-            var startTime = moment(document.getElementById('startTime').value)
+            var startTime = moment(document.getElementById('startTime').value);
             //var endTime = moment...
             var newStartTime = startTime;
             var endTime = '2016-08-30T21:30:00+00:00';
@@ -124,7 +124,7 @@ function checkAuth() {
             var dateSum = 'Date Night';
             var descriptionDate = selectedVenue;
             // var attachmentHere = locationUrl
-            console.log(newStartTime)
+    
 
             var request2 = gapi.client.calendar.events.insert({
                 calendarId: 'primary',
