@@ -127,7 +127,7 @@ app.get('/users/profile', function (request, response) {
             console.log(d)
         })
     })
-})
+
 
 
 app.use(express.static(__dirname + '/public'))
