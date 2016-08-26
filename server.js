@@ -118,18 +118,15 @@ app.patch('/users/update', function (request, response) {
     })
 })
 
-//my attempt to get progile information
-//this is the api to get the details of a specific location
+//my attempt to get profile information
 app.get('/users/profile', function (request, response) {
-        response.json(JSON.parse(body));
-        data.on('data', (d) => {
-            response.json(d)
-            console.log(d)
-        })
+    knex('users')
+    .where('id', request.body.id)
+    .then(function(ids) {
+        response.json(id[0])
     })
-
-
-
+})
+    
 app.use(express.static(__dirname + '/public'))
 
 app.listen(app.get('port'), function () {
