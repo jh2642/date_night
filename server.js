@@ -101,7 +101,7 @@ app.post('/users/create', function (request, response) {
 
 //my attempt to patch a date email and name to existing user
 app.patch('/users/update', function (request, response) {
-    if (!request.body.ddate_name.length) {
+    if (!request.body.date_name.length) {
         delete request.body.date_name
     }
     else if (!request.body.date_email.length) {
@@ -117,8 +117,8 @@ app.patch('/users/update', function (request, response) {
         .then(function(ids) {
             response.json(id[0])
         })
-        }
-    })
+    }
+})
 
 
 app.use(express.static(__dirname + '/public'))
