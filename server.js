@@ -124,7 +124,7 @@ app.get('/users/profile', function (request, response) {
     knex('users')
     .where('id', request.body.id)
     .then(function(details) {
-        response.json(detail[0])
+        response.json(details)
     })
 })
 

@@ -42,11 +42,3 @@ fetch(api+'/users/profile', {
     .then(function(response) {
         console.log('you did it')
     })
-
-    fetch(api).then(function(response) { 
-	// Convert to JSON
-	return response.json();
-}).then(function(j) {
-	// Yay, `j` is a JavaScript object
-	console.log(j);
-});
