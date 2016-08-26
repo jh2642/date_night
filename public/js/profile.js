@@ -31,10 +31,10 @@ fetch(api+'/users/update', {
 //get profile information from db
 fetch(api+'/users/profile', {
     method: 'GET',
-    credentials: 'include',
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    // credentials: 'include',
+    // headers: {
+    //   'Content-Type': 'application/json'
+    // }
 })
     .then(function(response) {
         return response.json()
