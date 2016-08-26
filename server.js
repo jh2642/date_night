@@ -109,10 +109,10 @@ app.patch('/users/update', function (request, response) {
             // })
         }
         else {
-            knex('users').insert(request.body).then(function(id) {
+            knex('users').update(request.body).then(function(dateInfo) {
                 // request.session.user_id=ids[0]
                 // request.session.save(function() {
-                    response.json(id[0])
+                    response.json(dateInfo[0])
                 // })
             })
         }
