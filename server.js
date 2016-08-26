@@ -105,7 +105,7 @@ app.patch('/users/update', function (request, response) {
         if(id.length) {
             // request.session.user_id=rows[0].id
             // request.session.save(function() {
-                response.json(id[0].id)
+                response.json(id[0])
             // })
         }
         else {
