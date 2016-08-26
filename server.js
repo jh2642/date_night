@@ -99,6 +99,26 @@ app.post('/users/create', function (request, response) {
     })
 })
 
+//my attempt to patch a date email and name to existing user
+app.patch('/users/update', function (request, response) {
+    knex('users').where('id', request.body.id).update('id').then(function(id) {
+        if(id.length) {
+            // request.session.user_id=rows[0].id
+            // request.session.save(function() {
+                response.json(id[0].id)
+            // })
+        }
+        else {
+            knex('users').insert(request.body).then(function(id) {
+                // request.session.user_id=ids[0]
+                // request.session.save(function() {
+                    response.json(id[0])
+                // })
+            })
+        }
+    })
+})
+
 app.use(express.static(__dirname + '/public'))
 
 app.listen(app.get('port'), function () {
