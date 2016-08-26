@@ -116,9 +116,10 @@ app.patch('/users/update', function (request, response) {
         .update(request.body)
         .then(function(ids) {
             response.json(id[0])
+        })
         }
     })
-})
+
 
 app.use(express.static(__dirname + '/public'))
 
