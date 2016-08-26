@@ -11,7 +11,7 @@ document.getElementById('addDateInfo').addEventListener('click', function() {
 //my attempt to patch a date email and name to existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
 fetch(api+'/users/update', {
-    method: 'PATCH',
+    method: 'POST',
     credentials: 'include',
     headers: {
       'Content-Type': 'application/json'
