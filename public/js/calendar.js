@@ -158,6 +158,7 @@ function checkAuth() {
             request2.execute(function(resp2) {
                 // var events2 = resp2.items;
                 idToDelete = resp2.id
+                //fetch to my api to add this event to the event db (post)
                 console.log(resp2.id)
             });
         }
