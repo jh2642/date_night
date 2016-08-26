@@ -103,18 +103,20 @@ app.post('/users/create', function (request, response) {
 app.patch('/users/update', function (request, response) {
     if (!request.body.ddate_name.length) {
         delete request.body.date_name
-    };
+    }
     else if (!request.body.date_email.length) {
         delete request.body.date_email
-    };
+    }
     else if (!request.body.date_phone_number.length) {
         delete request.body.date_phone_number
-    };
-    knex('users')
-    .where('id', request.body.id)
-    .update(request.body)
-    .then(function(ids) {
-        response.json(id[0])
+    }
+    else if {
+        knex('users')
+        .where('id', request.body.id)
+        .update(request.body)
+        .then(function(ids) {
+            response.json(id[0])
+        }
     })
 })
 
