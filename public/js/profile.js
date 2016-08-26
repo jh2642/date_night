@@ -29,16 +29,16 @@ fetch(api+'/users/update', {
 })
 
 //get profile information from db
-fetch(api+'/users/profile', {
+fetch(api+'/users/profile?id=' + user_id, {
     method: 'GET',
-    // credentials: 'include',
-    // headers: {
-    //   'Content-Type': 'application/json'
-    // }
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    }
 })
     .then(function(response) {
         return response.json()
     })
     .then(function(response) {
-        console.log('you did it')
+        console.log(response)
     })

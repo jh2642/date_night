@@ -122,7 +122,8 @@ app.patch('/users/update', function (request, response) {
 //get profile information from db
 app.get('/users/profile', function (request, response) {
     knex('users')
-    .where('id', request.body.id)
+    .select()
+    .where('id', request.query.id)
     .then(function(details) {
         response.json(detail[0])
     })
