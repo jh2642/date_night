@@ -101,14 +101,14 @@ app.post('/users/create', function (request, response) {
 
 //my attempt to patch a date email and name to existing user
 app.patch('/users/update', function (request, response) {
-    if (!request.body.date_name.length) {
-        delete request.body.date_name
+    if (!request.body.datesName.length) {
+        delete request.body.datesName
     }
-    else if (!request.body.date_email.length) {
-        delete request.body.date_email
+    else if (!request.body.datesEmail.length) {
+        delete request.body.datesEmail
     }
-    else if (!request.body.date_phone_number.length) {
-        delete request.body.date_phone_number
+    else if (!request.body.datesPhone.length) {
+        delete request.body.datesPhone
     }
     else {
         knex('users')
