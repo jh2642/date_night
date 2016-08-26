@@ -11,13 +11,13 @@ document.getElementById('addDateInfo').addEventListener('click', function() {
 //my attempt to patch a date email and name to existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
 fetch(api+'/users/update', {
-    method: 'PATCH',
+    method: 'POST',
     credentials: 'include',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-        // user_id: 1,
+        user_id: ,
         date_name: document.getElementById('datesName').value,
         date_email: document.getElementById('datesEmail').value
     })
