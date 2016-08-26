@@ -115,7 +115,7 @@ app.patch('/users/update', function (request, response) {
     .where('id', request.body.id)
     .update(request.body)
     .then(function(ids) {
-        response.json(id[0])
+        response.json(ids[0])
     })
 })
 
@@ -125,7 +125,7 @@ app.get('/users/profile', function (request, response) {
     .select()
     .where('id', request.query.id)
     .then(function(details) {
-        response.json(detail[0])
+        response.json(details[0])
     })
 })
 
