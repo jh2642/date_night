@@ -42,6 +42,7 @@ window.addEventListener('googlesignin', function() {
     })
     .then(function(response) {
         console.log(response)
+        document.getElementById('dateInformation').innerHTML = response.date_name
     })
 
 })
