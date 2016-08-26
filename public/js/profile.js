@@ -43,7 +43,7 @@ fetch(api+'/users/profile', {
         console.log('you did it')
     })
 
-    fetch(api+'/users/profile').then(function(response) { 
+    fetch(api).then(function(response) { 
 	// Convert to JSON
 	return response.json();
 }).then(function(j) {
