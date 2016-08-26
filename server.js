@@ -101,6 +101,9 @@ app.post('/users/create', function (request, response) {
 
 //my attempt to patch a date email and name to existing user
 app.patch('/users/update', function (request, response) {
+    // if (!request.body.name.length) {
+    //     delete request.body.name
+    // }
     knex('users')
     .where('id', request.body.id)
     .update(request.body)
