@@ -99,7 +99,7 @@ app.post('/users/create', function (request, response) {
     })
 })
 
-//my attempt to patch a date email and name to existing user
+//change info for existing user
 app.patch('/users/update', function (request, response) {
     if (!request.body.date_name.length) {
         delete request.body.date_name
@@ -118,7 +118,7 @@ app.patch('/users/update', function (request, response) {
     })
 })
 
-//my attempt to get profile information
+//get profile information from db
 app.get('/users/profile', function (request, response) {
     knex('users')
     .where('id', request.body.id)
@@ -126,7 +126,7 @@ app.get('/users/profile', function (request, response) {
         response.json(id[0])
     })
 })
-    
+
 app.use(express.static(__dirname + '/public'))
 
 app.listen(app.get('port'), function () {
