@@ -25,7 +25,7 @@
     </div>
     <div class="container mainPage ">
         <div class="row">
-            <div class="col-md-4 text-left">
+            <div class="col-sm-4 text-left">
                 <form class="form-inline">
                     <h3>where</h3>
                     <input type="text" class="form-control" id="address" placeholder="address, city or zip">
@@ -38,14 +38,14 @@
                     <button type="button" id="grabDetails" data-toggle="modal" data-target="#confirmModal" class="btn btn-primary">confirm plans</button>
                 </div>
             </div>
-            <div class="col-md-4 profileBox">
+            <div class="col-sm-4 profileBox">
                 <div class="profilePic text-center">
                     <p id="googlePic"></p>
                     <p id="googleName"></p>
                     <p id="googleEmail"></p>
                 </div>
             </div>
-            <div class="col-md-2 col-md-offset-2">
+            <div class="col-sm-2 col-sm-offset-2">
                 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                 <a href="/index.html" onclick="signOut();"><button class="btn btn-primary" type="button">sign out</button></a>
                 <a href="/profile.html" class="btn btn-primary text-center signInButton">profile</a>
@@ -53,15 +53,15 @@
             </div>
         </div>
         <div class="row searchResultBox">
-            <div class="col-md-4">
+            <div class="col-sm-4">
                 <p class="headersSearch">dinner @</p>
                 <p id="localRestaurants"></p>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-4">
                 <p class="headersSearch">movie @</p>
                 <p id="movieTheater"></p>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-4">
                 <p class="headersSearch">drinks @</p>
                 <p id="localBar"></p>
             </div>
@@ -111,7 +111,7 @@
             </div>
             <div class="modal-body container-fluid">
                 <div class="row">
-                    <div class="col-md-5 detailsForDate">
+                    <div class="col-sm-5 detailsForDate">
                         <p>you'll be going to...</p>
                         <p id="dateLoc"></p>
                         <p>@</p>
@@ -119,7 +119,7 @@
                         <!-- <p>optional location 2 here</p>
                         <p>optional location 3 here</p> -->
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-sm-5">
                         <h4>how will you meet your date ?</h4>
                         <p><input type="radio" id="pickUp" name="meetDate">pick them up</p>
                         <p><input type="radio" id="meetRestaurant" name="meetDate">meet @ restaurant</p>
