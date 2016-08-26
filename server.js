@@ -110,7 +110,7 @@ app.patch('/users/update', function (request, response) {
     else if (!request.body.date_phone_number.length) {
         delete request.body.date_phone_number
     }
-    else if {
+    else {
         knex('users')
         .where('id', request.body.id)
         .update(request.body)
