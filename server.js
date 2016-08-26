@@ -101,23 +101,23 @@ app.post('/users/create', function (request, response) {
 
 //my attempt to patch a date email and name to existing user
 app.patch('/users/update', function (request, response) {
-    // if (!request.body.ddate_name.length) {
-    //     delete request.body.date_name
-    // }
-    // else if (!request.body.date_email.length) {
-    //     delete request.body.date_email
-    // }
-    // else if (!request.body.date_phone_number.length) {
-    //     delete request.body.date_phone_number
-    // }
-    // else if {
+    if (!request.body.ddate_name.length) {
+        delete request.body.date_name
+    }
+    else if (!request.body.date_email.length) {
+        delete request.body.date_email
+    }
+    else if (!request.body.date_phone_number.length) {
+        delete request.body.date_phone_number
+    }
+    else if {
         knex('users')
         .where('id', request.body.id)
         .update(request.body)
         .then(function(ids) {
             response.json(id[0])
         }
-    // })
+    })
 })
 
 app.use(express.static(__dirname + '/public'))
