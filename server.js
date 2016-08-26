@@ -101,21 +101,11 @@ app.post('/users/create', function (request, response) {
 
 //my attempt to patch a date email and name to existing user
 app.patch('/users/update', function (request, response) {
-    knex('users').where('id', request.body.id).update('id').then(function(id) {
-        if(id.length) {
-            // request.session.user_id=rows[0].id
-            // request.session.save(function() {
-                response.json(id[0])
-            // })
-        }
-        else {
-            knex('users').update(request.body).then(function(dateInfo) {
-                // request.session.user_id=ids[0]
-                // request.session.save(function() {
-                    response.json(dateInfo[0])
-                // })
-            })
-        }
+    knex('users')
+    .where('id', request.body.id)
+    .update(request.body)
+    .then(function(ids) {
+        response.json(id[0])
     })
 })
 

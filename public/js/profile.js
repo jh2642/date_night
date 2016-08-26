@@ -17,7 +17,7 @@ fetch(api+'/users/update', {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-        // user_id: 1,
+        id: user_id,
         date_name: document.getElementById('datesName').value,
         date_email: document.getElementById('datesEmail').value
     })
@@ -26,6 +26,6 @@ fetch(api+'/users/update', {
         return response.json()
     })
     .then(function(response) {
-        date_name=response
+        console.log('you did it')
     })
 })
