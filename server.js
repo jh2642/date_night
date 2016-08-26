@@ -80,6 +80,7 @@ app.get('/api/v1/details', function (request, response) {
     })
 })
 
+//creates user once they log in with google
 app.post('/users/create', function (request, response) {
     knex('users').where('email', request.body.email).select('id').then(function(rows) {
         if(rows.length) {
