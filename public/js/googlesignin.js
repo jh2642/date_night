@@ -1,5 +1,6 @@
 var api = 'https://serene-hamlet-75445.herokuapp.com'
 var user_id = null
+var googlesignin = new Event('googlesignin')
 
 function onSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
@@ -45,6 +46,7 @@ function onSignIn(googleUser) {
         })
         .then(function(response) {
             user_id=response
+            window.dispatchEvent(googlesignin)
         })
 
 }
