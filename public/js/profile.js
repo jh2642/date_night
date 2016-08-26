@@ -46,7 +46,8 @@ fetch(api+'/users/profile', {
 })
     .then(function(response) {
         return response.json()
+        console.log('you did it')
     })
     .then(function(response) {
-        console.log('you did it')
+        console.log('you did it 2')
     })
