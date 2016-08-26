@@ -33,10 +33,10 @@ fetch(api+'/users/update', {
 
 fetch(api+'/users/profile', {
     method: 'GET',
-    credentials: 'include',
-    headers: {
-      'Content-Type': 'application/json'
-    },
+    // credentials: 'include',
+    // headers: {
+    //   'Content-Type': 'application/json'
+    // },
     // body: JSON.stringify({
     //     id: user_id,
     //     date_name: document.getElementById('datesName').value,
