@@ -260,9 +260,13 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 return response.json()
             })
             .then(function(response) {
-                return Array.from(response);
+                return Array.from(response)
+            })
+            .then(function(response) {
+                console.log(response.result)
+            })
                     // response.results.forEach(function(item) {
-                        console.log(response.result)
+
                         // console.log(selectedVenue) //returns objects
 
                 // locationType = selectedVenue.result.types[0]
@@ -278,7 +282,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             // })
             })
         })
-    })
+
 
 
 document.getElementById("startTime").flatpickr();
