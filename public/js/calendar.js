@@ -159,14 +159,18 @@ function checkAuth() {
                 return response.json()
             })
             .then(function(response) {
-            var startTime = moment(document.getElementById('startTime').value);
+            var d = new Date(document.getElementById('startTime').value);
+            var startTime = d.toISOString();
+            var d2 = new Date(document.getElementById('endTime').value);
+            var endTime = d2.toISOString();
             var endTime = '2016-08-30T21:30:00+00:00';
             var dateEmail = response.date_email;
             var yourEmail = response.email;
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
             var descriptionDate = document.getElementById('messageBox').value
-            // var attachmentHere = locationUrl
+
+
 
             var request2 = gapi.client.calendar.events.insert({
                 calendarId: 'primary',
