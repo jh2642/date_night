@@ -269,7 +269,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
-                return Array.from(selectedVenue)
+                return Array.from(selectedVenue.result)
 
 
                 })
