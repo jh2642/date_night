@@ -250,23 +250,23 @@ function checkAuth() {
             return response.json()
         })
         .then(function(response) {
-        var startTime = moment(document.getElementById('dateReminder').value);
-        // var startTime = moment(document.getElementById('dateReminder').value);
-        var yourEmail = 'hildreth.james@gmail.com';
-        var dateSum = 'Schedule a Date Night';
+        var startTime3 = moment(document.getElementById('dateReminder').value);
+        console.log(startTime3)
+        var yourEmail3 = 'hildreth.james@gmail.com';
+        var dateSum3 = 'Schedule a Date Night';
 
 
         var request2 = gapi.client.calendar.events.insert({
             calendarId: 'primary',
             start: {
-                dateTime: startTime
+                dateTime: startTime3
             },
-            end: {
-                dateTime: endTime
-            },
+            // end: {
+            //     dateTime: endTime
+            // },
               attendees: [
                   {
-                    email: dateEmail
+                    email: yourEmail3
                 },
               ],
             recurrence: [
@@ -275,7 +275,7 @@ function checkAuth() {
             reminders: {
                 useDefault: false
             },
-            summary: dateSum,
+            summary: dateSum3,
             //   send-notification: 'true',
         })
 
