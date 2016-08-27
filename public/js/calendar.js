@@ -54,17 +54,16 @@ function checkAuth() {
                     document.getElementById('googlePic').innerHTML = ''
                     document.getElementById('googlePic').appendChild(featureImage)
                     document.getElementById('dateName').innerHTML = response.date_name
+
+                    loadCalendarApi();
                 })
             })
-        };
-        if {
-            loadCalendarApi();
-        };
+        }
         else {
             // Show auth UI, allowing the user to initiate authorization by
             // clicking authorize button.
             authorizeDiv.style.display = 'inline';
-        };
+        }
     }
 
     // /**
