@@ -258,6 +258,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(response) {
                 return response.json()
+                console.log(response)
             })
             .then(function(selectedVenue) {
                 console.log(selectedVenue)
