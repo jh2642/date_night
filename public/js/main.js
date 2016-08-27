@@ -258,11 +258,10 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(response) {
                 return response.json()
-                console.log(response.json)
             })
-            .then(function(selectedVenue) {
-                console.log(selectedVenue)
-                selectedVenue.forEach(function(result) {
+            .then(function(response) {
+                console.log(response)
+                response.results.forEach(function(result) {
                   var div = document.createElement('div')
                   div.classList.add('establishment')
 
