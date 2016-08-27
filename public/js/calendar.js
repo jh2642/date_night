@@ -165,6 +165,7 @@ function checkAuth() {
             // var endTime = d2.toISOString();
             var endTime = '2016-08-30T21:30:00+00:00';
             var dateEmail = response.date_email;
+            var dateName = response.date_name;
             var yourEmail = response.email;
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
