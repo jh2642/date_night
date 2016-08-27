@@ -259,9 +259,11 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             .then(function(response) {
                 return response.json()
             })
-            .then(function(selectedVenue) {
-                return Array.from(selectedVenue);
-                    // console.log(selectedVenue) //returns objects
+            .then(function(response) {
+                return Array.from(response.results);
+                    response.results.forEach(function(item) {
+                        console.log(item)
+                        // console.log(selectedVenue) //returns objects
 
                 // locationType = selectedVenue.result.types[0]
                 // locationName = selectedVenue.result.name
@@ -272,11 +274,8 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 // eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
                 // console.log(eachLoc)
                 // document.getElementById('dateLoc1').innerHTML = eachLoc;
-                document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
-
+                // document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
             })
-            .then(function(selectedVenue) {
-                console.log(selectedVenue)
             })
         })
     })
