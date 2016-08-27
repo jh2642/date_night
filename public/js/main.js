@@ -249,7 +249,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 document.getElementById('grabDetails').addEventListener('click', function() {
 
         var checkboxes = document.querySelectorAll('.selectDetail:checked')
-        console.log(checkboxes)
+
         checkboxes.forEach(function(id) {
             var eventPlaces = id.value
 
@@ -260,7 +260,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 return response.json()
             })
             .then(function(selectedVenue) {
-                // console.log(selectedVenue.result) //returns objects
+                console.log(selectedVenue) //returns objects
                 locationType = selectedVenue.result.types[0]
                 locationName = selectedVenue.result.name
                 locationAddress = selectedVenue.result.formatted_address
