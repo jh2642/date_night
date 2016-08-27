@@ -307,7 +307,7 @@ function checkAuth() {
         //update event here
         function updateEvents() {
 
-            var startTime2 = '2016-08-24T21:00:00+00:00';
+            var startTime2 = '2016-08-28T21:00:00+00:00';
             var endTime2 = '2016-08-24T21:30:00+00:00';
             var dateEmail2 = document.getElementById('dateEmail2').value;
             var dateLoc2 = document.getElementById('dateLoc2').value;
