@@ -270,7 +270,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
                 var dateNight = eachLoc
-                console.log(dateNight)
+                console.log(dateNight.locationName)
                 document.getElementById('dateLoc1').innerHTML = dateNight;
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
