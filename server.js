@@ -139,8 +139,8 @@ app.post('/events/datenight', function (request, response) {
     })
 })
 
-//remove date from events db
-app.post('/events/datenight', function (request, response) {
+//get data from events db
+app.get('/events/datenight', function (request, response) {
     knex('events')
     .select()
     .where('id', request.query.id)
