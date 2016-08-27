@@ -259,33 +259,22 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             .then(function(response) {
                 return response.json()
             })
-            // .then(function(response) {
-            //     return Array.from(response)
-            // })
-            .then(function(response) {
-                Object.values(response)
-            })
-            .then(function(response) {
-                console.log(response)
-            })
-                    // response.results.forEach(function(item) {
+            .then(function(selectedVenue) {
+                console.log(selectedVenue.result) //returns objects
+                locationType = selectedVenue.result.types[0]
+                locationName = selectedVenue.result.name
+                locationAddress = selectedVenue.result.formatted_address
+                locationPhoneNumber = selectedVenue.result.formatted_phone_number
+                locationUrl = selectedVenue.result.url
 
-                        // console.log(selectedVenue) //returns objects
+                eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
+                console.log(eachLoc)
+                document.getElementById('dateLoc1').innerHTML = eachLoc;
+                document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
-                // locationType = selectedVenue.result.types[0]
-                // locationName = selectedVenue.result.name
-                // locationAddress = selectedVenue.result.formatted_address
-                // locationPhoneNumber = selectedVenue.result.formatted_phone_number
-                // locationUrl = selectedVenue.result.url
-                //
-                // eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
-                // console.log(eachLoc)
-                // document.getElementById('dateLoc1').innerHTML = eachLoc;
-                // document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
-            // })
             })
         })
-
+    })
 
 
 document.getElementById("startTime").flatpickr();
