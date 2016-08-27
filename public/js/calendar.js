@@ -161,7 +161,7 @@ function checkAuth() {
                 },
                 summary: dateSum,
                 //   send-notification: 'true',
-            });
+            })
         } //close out function to schedule cal event
 
             request2.execute(function(resp2) {
