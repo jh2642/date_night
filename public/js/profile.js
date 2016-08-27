@@ -56,3 +56,5 @@ window.addEventListener('googlesignin', function() {
     })
 
 })
+
+document.getElementById("dateReminder").flatpickr();

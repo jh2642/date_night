@@ -250,7 +250,7 @@ function checkAuth() {
             return response.json()
         })
         .then(function(response) {
-        var startTime = '2016-08-28T21:00:00+00:00';
+        var startTime = moment(document.getElementById('dateReminder').value);
         // var startTime = moment(document.getElementById('dateReminder').value);
         var yourEmail = 'hildreth.james@gmail.com';
         var dateSum = 'Schedule a Date Night';
