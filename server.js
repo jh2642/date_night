@@ -129,13 +129,23 @@ app.get('/users/profile', function (request, response) {
     })
 })
 
-//add date to db
+//add date to events db
 app.post('/events/datenight', function (request, response) {
     knex('events').insert(request.body).then(function(ids) {
         // request.session.user_id=ids[0]
         // request.session.save(function() {
             response.json(ids[0])
         // })
+    })
+})
+
+//remove date from events db
+app.post('/events/datenight', function (request, response) {
+    knex('events')
+    .select()
+    .where('id', request.query.id)
+    .then(function(details) {
+        response.json(details[0])
     })
 })
 

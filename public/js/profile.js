@@ -57,4 +57,21 @@ window.addEventListener('googlesignin', function() {
 
 })
 
+//retrieve data from db
+document.getElementById('retrieveEvent').addEventListener('click', function() {
+    fetch(api+'/events/datenight?id=' + user_id, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(response) {
+        console.log(response)
+    }
+})
+
 // document.getElementById("dateReminder").flatpickr();
