@@ -261,7 +261,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(selectedVenue) {
                 // console.log(selectedVenue)
-                selectedVenue.items.forEach(function(item) {
+                selectedVenue.forEach(function(item) {
                   var div = document.createElement('div')
                   div.classList.add('establishment')
 
