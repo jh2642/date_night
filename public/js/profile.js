@@ -43,6 +43,11 @@ window.addEventListener('googlesignin', function() {
     .then(function(response) {
         console.log(response)
         document.getElementById('dateInformation').innerHTML = response.date_name
+        document.getElementById('dateInformation').innerHTML = response.date_name
+        document.getElementById('googleEmail').innerHTML = response.email
+        document.getElementById('googleName').innerHTML = response.name
+        document.getElementById('googlePic').innerHTML = response.image_url
+
     })
 
 })
