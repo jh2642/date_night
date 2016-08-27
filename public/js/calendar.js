@@ -205,9 +205,31 @@ function checkAuth() {
 
             request2.execute(function(resp2) {
                 // var events2 = resp2.items;
-                idToDelete = resp2.id
+                idForEvent = resp2.id
                 //fetch to my api to add this event to the event db (post)
-                console.log(idToDelete)
+                fetch(api+'/events/datenight', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        address: locationAddress,
+                        lat: latitude,
+                        long: longitude,
+                        event_at: startTime,
+                        user_id: user_id,
+                        date_name: dateName,
+                        rest_id: locationId,
+                        date_email: dateEmail,
+                        special_comments: descriptionDate,
+                        calendar_id: idForEvent
+                    })
+                })
+                    .then(function(response) {
+                        return response.json()
+                    })
+                console.log(idForEvent)
                 console.log(locationAddress)
                 console.log(latitude)
                 console.log(longitude)
