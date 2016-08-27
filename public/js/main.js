@@ -269,7 +269,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
                 console.log(eachLoc)
-                document.getElementById('dateLoc').innerHTML = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber;
+                document.getElementById('dateLoc').innerHTML = eachLoc
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
             })
