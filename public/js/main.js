@@ -283,7 +283,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
             // })
         })
-    // })
+    })
 
 
 document.getElementById("startTime").flatpickr();
