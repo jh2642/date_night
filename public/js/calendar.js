@@ -55,6 +55,7 @@ function checkAuth() {
         */
 
         function loadCalendarApi() {
+            window.dispatchEvent(googlesignin)
             // document.getElementById('showEvents').addEventListener('click', function() {
             //     console.log('showEvents')
             //     gapi.client.load('calendar', 'v3', listUpcomingEvents);
