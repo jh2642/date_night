@@ -89,13 +89,13 @@ function checkAuth() {
             //     console.log('showEvents')
             //     gapi.client.load('calendar', 'v3', listUpcomingEvents);
             // });
-            // document.getElementById('createEvents').addEventListener('click', function() {
-            //     console.log('createEvents')
-            //     gapi.client.load('calendar', 'v3', createEvents);
-            // });
-            document.getElementById('scheduleReminder').addEventListener('click', function() {
-                gapi.client.load('calendar', 'v3', scheduleReminder);
+            document.getElementById('createEvents').addEventListener('click', function() {
+                console.log('createEvents')
+                gapi.client.load('calendar', 'v3', createEvents);
             });
+            // document.getElementById('scheduleReminder').addEventListener('click', function() {
+            //     gapi.client.load('calendar', 'v3', scheduleReminder);
+            // });
             // document.getElementById('deleteEvents').addEventListener('click', function() {
             //     console.log('deleteEvents')
             //     gapi.client.load('calendar', 'v3', deleteEvents);
