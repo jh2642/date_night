@@ -122,6 +122,10 @@ function checkAuth() {
                 console.log('createEvents')
                 gapi.client.load('calendar', 'v3', createEvents);
             });
+            document.getElementById('addDateReminders').addEventListener('click', function() {
+                console.log('addDateReminders')
+                gapi.client.load('calendar', 'v3', addDateReminders);
+            });
             // document.getElementById('deleteEvents').addEventListener('click', function() {
             //     console.log('deleteEvents')
             //     gapi.client.load('calendar', 'v3', deleteEvents);
@@ -232,6 +236,58 @@ function checkAuth() {
             });
         }) //close out function to schedule cal event
     } //close out createEvents
+
+    //create reminder here
+    function createEvents() {
+        fetch(api+'/users/profile?id=' + user_id, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(response) {
+        var startTime = moment(document.getElementById('dateReminder').value);
+        var yourEmail = response.email;
+        var dateSum = 'Schedule a Date Night';
+
+
+        var request2 = gapi.client.calendar.events.insert({
+            calendarId: 'primary',
+            start: {
+                dateTime: startTime
+            },
+            end: {
+                dateTime: endTime
+            },
+              attendees: [
+                  {
+                    email: dateEmail
+                },
+              ],
+            recurrence: [
+                {
+                    'weekly'
+                }
+            ],
+            reminders: {
+                useDefault: false
+            },
+            summary: dateSum,
+            //   send-notification: 'true',
+        })
+
+
+        request4.execute(function(resp4) {
+            // idToDelete = resp4.id
+            //fetch to my api to add this event to the event db (post)
+            console.log(resp4)
+        });
+    }) //close out function to schedule cal reminders
+} //close out sched reminder
 
 
         //delete event here
