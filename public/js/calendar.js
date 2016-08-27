@@ -147,7 +147,7 @@ function checkAuth() {
                       {
                         email: dateEmail
                     },
-                        {email: yourEmail,
+                        {email: yourEmail
                       },
                   ],
                 //   attachments: [
