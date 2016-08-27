@@ -259,9 +259,9 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             .then(function(response) {
                 return response.json()
             })
-            .then(function(response) {
-                return Array.from(response)
-            })
+            // .then(function(response) {
+            //     return Array.from(response)
+            // })
             .then(function(response) {
                 console.log(response)
             })
