@@ -56,6 +56,7 @@ function checkAuth() {
 
         function loadCalendarApi() {
             //get profile information from db
+            window.addEventListener('googlesignin', function() {
                 fetch(api+'/users/profile?id=' + user_id, {
                     method: 'GET',
                     credentials: 'include',
@@ -81,7 +82,7 @@ function checkAuth() {
                     document.getElementById('googlePic').appendChild(featureImage)
                 })
 
-            }
+            })
 
             // document.getElementById('showEvents').addEventListener('click', function() {
             //     console.log('showEvents')
