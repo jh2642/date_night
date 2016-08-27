@@ -223,7 +223,7 @@ function checkAuth() {
         .then(function(response) {
         var startTime3 = moment(document.getElementById('dateReminder').value);
         console.log(startTime3)
-        var endTime3 = moment(document.getElementById('dateReminder').value);
+        var endTime3 = '2016-08-28T21:30:00+00:00';
         var yourEmail3 = 'hildreth.james@gmail.com';
         var dateSum3 = 'Schedule a Date Night';
 
@@ -234,9 +234,9 @@ function checkAuth() {
             start: {
                 dateTime: startTime3
             },
-            // end: {
-            //     dateTime: endTime3
-            // },
+            end: {
+                dateTime: endTime3
+            },
               attendees: [
                   {
                     email: yourEmail3
