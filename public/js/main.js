@@ -7,6 +7,7 @@ var locationPhoneNumber
 var locationUrl
 var eachLoc
 var selectedVenue
+var locationId
 
 
 document.getElementById('getDetails').addEventListener('click', function() {
@@ -263,6 +264,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 console.log(selectedVenue) //returns objects
                 locationType = selectedVenue.result.types[0]
                 locationName = selectedVenue.result.name
+                locationId = selectedVenue.result.id
                 locationAddress = selectedVenue.result.formatted_address
                 locationPhoneNumber = selectedVenue.result.formatted_phone_number
                 locationUrl = selectedVenue.result.url

@@ -56,7 +56,5 @@ window.addEventListener('googlesignin', function() {
     })
 
 })
-// document.getElementById('scheduleReminder').addEventListener('click', function() {
-//     console.log('profile.js')
-// })
-document.getElementById("dateReminder").flatpickr();
+
+// document.getElementById("dateReminder").flatpickr();

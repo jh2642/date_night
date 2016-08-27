@@ -90,7 +90,7 @@ function checkAuth() {
             //     gapi.client.load('calendar', 'v3', listUpcomingEvents);
             // });
             document.getElementById('createEvents').addEventListener('click', function() {
-                console.log('createEvents')
+                // console.log('createEvents')
                 gapi.client.load('calendar', 'v3', createEvents);
             });
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
@@ -202,7 +202,17 @@ function checkAuth() {
                 // var events2 = resp2.items;
                 idToDelete = resp2.id
                 //fetch to my api to add this event to the event db (post)
-                console.log(resp2)
+                console.log(idToDelete)
+                console.log(locationAddress)
+                console.log(latitude)
+                console.log(longitude)
+                console.log(startTime)
+                console.log(id)
+                console.log(dateName)
+                console.log(locationId)
+                console.log(dateEmail)
+                console.log(descriptionDate)
+
             });
         }) //close out function to schedule cal event
     } //close out createEvents
@@ -257,7 +267,7 @@ function checkAuth() {
 
 
         request4.execute(function(resp4) {
-            idToDelete = resp4.id
+            idToDelete2 = resp4.id
             //fetch to my api to add this event to the event db (post)
             console.log(resp4)
         });
