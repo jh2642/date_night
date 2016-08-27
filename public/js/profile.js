@@ -43,11 +43,16 @@ window.addEventListener('googlesignin', function() {
     .then(function(response) {
         console.log(response)
         document.getElementById('dateInformation').innerHTML = response.date_name
-        document.getElementById('dateInformation').innerHTML = response.date_name
-        document.getElementById('googleEmail').innerHTML = response.email
-        document.getElementById('googleName').innerHTML = response.name
-        document.getElementById('googlePic').innerHTML = response.image_url
+        var featureImage = document.createElement('img')
+            featureImage.setAttribute('src', response.image_url)
+            featureImage.classList.add('img-circle')
+        var individualName = document.getElementById('googleName')
+              individualName.innerHTML = response.name
+        var individualEmail = document.getElementById('googleEmail')
+            individualEmail.innerHTML = response.email
 
+        document.getElementById('googlePic').innerHTML = ''
+        document.getElementById('googlePic').appendChild(featureImage)
     })
 
 })
