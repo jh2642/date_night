@@ -161,9 +161,9 @@ function checkAuth() {
             .then(function(response) {
             var d = new Date(document.getElementById('startTime').value);
             var startTime = d.toISOString();
-            var d2 = new Date(document.getElementById('endTime').value);
-            var endTime = d2.toISOString();
-            // var endTime = '2016-08-30T21:30:00+00:00';
+            // var d2 = new Date(document.getElementById('endTime').value);
+            // var endTime = d2.toISOString();
+            var endTime = '2016-08-30T21:30:00+00:00';
             var dateEmail = response.date_email;
             var yourEmail = response.email;
             var dateLoc = eachLoc;
@@ -211,7 +211,7 @@ function checkAuth() {
                 console.log(latitude)
                 console.log(longitude)
                 console.log(startTime)
-                console.log(id)
+                console.log(user_id)
                 console.log(dateName)
                 console.log(locationId)
                 console.log(dateEmail)

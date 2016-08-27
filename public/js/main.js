@@ -8,6 +8,7 @@ var locationUrl
 var eachLoc
 var selectedVenue
 var locationId
+var dateName
 
 
 document.getElementById('getDetails').addEventListener('click', function() {
