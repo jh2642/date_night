@@ -263,7 +263,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             //     return Array.from(response)
             // })
             .then(function(response) {
-                console.log(response)
+                console.log(Object.values(response))
             })
                     // response.results.forEach(function(item) {
 
