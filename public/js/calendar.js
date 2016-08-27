@@ -242,9 +242,9 @@ function checkAuth() {
                     email: yourEmail3
                 },
               ],
-            // recurrence: [
-            //         'weekly'
-            // ],
+            recurrence: [
+                    'weekly'
+            ],
             reminders: {
                 useDefault: false
             },
