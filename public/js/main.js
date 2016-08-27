@@ -269,9 +269,9 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
-                var dateNight = (eachLoc)
-                console.log(eachLoc)
-                document.getElementById('dateLoc1').innerHTML = eachLoc;
+                var dateNight = eachLoc
+                console.log(dateNight)
+                document.getElementById('dateLoc1').innerHTML = dateNight;
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
             })
