@@ -115,7 +115,7 @@ function checkAuth() {
 
         //create event here
         function createEvents() {
-            var startTime = moment(document.getElementById('startTime').value;
+            var startTime = moment(document.getElementById('startTime')).value;
             //var endTime = moment...
             var newStartTime = startTime;
             var endTime = '2016-08-30T21:30:00+00:00';
