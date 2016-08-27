@@ -260,7 +260,10 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 return response.json()
             })
             .then(function(selectedVenue) {
-                console.log(selectedVenue.result) //returns objects
+                selectedVenue.result.forEach(function(item) {
+                    console.log(item)
+                })
+                // console.log(selectedVenue.result) //returns objects
                 locationType = selectedVenue.result.types[0]
                 locationName = selectedVenue.result.name
                 locationAddress = selectedVenue.result.formatted_address
@@ -268,7 +271,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 locationUrl = selectedVenue.result.url
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
-                console.log(eachLoc)
+                // console.log(eachLoc)
                 document.getElementById('dateLoc1').innerHTML = eachLoc;
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
