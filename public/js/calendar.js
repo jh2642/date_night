@@ -28,33 +28,6 @@ function checkAuth() {
         if (authResult && !authResult.error) {
             // Hide auth UI, then load client library.
             authorizeDiv.style.display = 'none';
-            loadCalendarApi();
-        }
-        else {
-            // Show auth UI, allowing the user to initiate authorization by
-            // clicking authorize button.
-            authorizeDiv.style.display = 'inline';
-        }
-    }
-
-    // /**
-    // * Initiate auth flow in response to user clicking authorize button.
-    // *
-    // * @param {Event} event Button click event.
-    // */
-    function handleAuthClick(event) {
-        gapi.auth.authorize(
-            {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
-            handleAuthResult);
-            return false;
-        }
-
-        /**
-        * Load Google Calendar client library. List upcoming events
-        * once client library is loaded.
-        */
-
-        function loadCalendarApi() {
             //get profile information from db
             window.addEventListener('googlesignin', function() {
                 fetch(api+'/users/profile?id=' + user_id, {
@@ -84,6 +57,64 @@ function checkAuth() {
                 })
 
             })
+        }
+        if {
+            loadCalendarApi();
+        }
+        else {
+            // Show auth UI, allowing the user to initiate authorization by
+            // clicking authorize button.
+            authorizeDiv.style.display = 'inline';
+        }
+    }
+
+    // /**
+    // * Initiate auth flow in response to user clicking authorize button.
+    // *
+    // * @param {Event} event Button click event.
+    // */
+    function handleAuthClick(event) {
+        gapi.auth.authorize(
+            {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+            handleAuthResult);
+            return false;
+        }
+
+        /**
+        * Load Google Calendar client library. List upcoming events
+        * once client library is loaded.
+        */
+
+        function loadCalendarApi() {
+            // //get profile information from db
+            // window.addEventListener('googlesignin', function() {
+            //     fetch(api+'/users/profile?id=' + user_id, {
+            //         method: 'GET',
+            //         credentials: 'include',
+            //         headers: {
+            //             'Content-Type': 'application/json'
+            //         }
+            //     })
+            //     .then(function(response) {
+            //         return response.json()
+            //     })
+            //     .then(function(response) {
+            //         console.log(response)
+            //         // document.getElementById('dateInformation').innerHTML = response.date_name
+            //         var featureImage = document.createElement('img')
+            //             featureImage.setAttribute('src', response.image_url)
+            //             featureImage.classList.add('img-circle')
+            //         var individualName = document.getElementById('googleName')
+            //               individualName.innerHTML = response.name
+            //         var individualEmail = document.getElementById('googleEmail')
+            //             individualEmail.innerHTML = response.email
+            //
+            //         document.getElementById('googlePic').innerHTML = ''
+            //         document.getElementById('googlePic').appendChild(featureImage)
+            //         document.getElementById('dateName').innerHTML = response.date_name
+            //     })
+            //
+            // })
 
             // document.getElementById('showEvents').addEventListener('click', function() {
             //     console.log('showEvents')
@@ -145,21 +176,21 @@ function checkAuth() {
 
         //create event here
         function createEvents() {
-            // fetch(api+'/users/profile?id=' + user_id, {
-            //     method: 'GET',
-            //     credentials: 'include',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     }
-            // })
-            // .then(function(response) {
-            //     return response.json()
-            // })
-            // .then(function(response) {
+            fetch(api+'/users/profile?id=' + user_id, {
+                method: 'GET',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(response) {
             var startTime = moment(document.getElementById('startTime').value);
             var endTime = '2016-08-30T21:30:00+00:00';
-            var dateEmail = date_email;
-            var yourEmail = email;
+            var dateEmail = response.date_email;
+            var yourEmail = response.email;
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
             var descriptionDate = document.getElementById('messageBox').value
@@ -201,7 +232,7 @@ function checkAuth() {
                 //fetch to my api to add this event to the event db (post)
                 console.log(resp2)
             });
-        // }) //close out function to schedule cal event
+        }) //close out function to schedule cal event
     } //close out createEvents
 
 
