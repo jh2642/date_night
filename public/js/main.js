@@ -261,15 +261,15 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(selectedVenue) {
                 console.log(selectedVenue.result) //returns objects
-                locationType = selectedVenue.result.types[0]
-                locationName = selectedVenue.result.name
-                locationAddress = selectedVenue.result.formatted_address
-                locationPhoneNumber = selectedVenue.result.formatted_phone_number
-                locationUrl = selectedVenue.result.url
-
-                eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
-                console.log(eachLoc)
-                document.getElementById('dateLoc1').innerHTML = eachLoc;
+                // locationType = selectedVenue.result.types[0]
+                // locationName = selectedVenue.result.name
+                // locationAddress = selectedVenue.result.formatted_address
+                // locationPhoneNumber = selectedVenue.result.formatted_phone_number
+                // locationUrl = selectedVenue.result.url
+                //
+                // eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
+                // console.log(eachLoc)
+                // document.getElementById('dateLoc1').innerHTML = eachLoc;
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
             })
