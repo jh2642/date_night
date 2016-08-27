@@ -221,7 +221,9 @@ function checkAuth() {
             return response.json()
         })
         .then(function(response) {
-        var startTime3 = '2016-08-28T21:00:00+00:00';
+            var d = new Date(document.getElementById('dateReminder').value);
+            var startTime3 = d.toISOString();
+        // var startTime3 = '2016-08-28T21:00:00+00:00';
         // moment(document.getElementById('dateReminder').value);
         console.log(startTime3)
         var endTime3 = '2016-08-28T21:30:00+00:00';
