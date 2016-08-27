@@ -238,7 +238,7 @@ function checkAuth() {
     } //close out createEvents
 
     //create reminder here
-    function createEvents() {
+    function addDateReminders() {
         fetch(api+'/users/profile?id=' + user_id, {
             method: 'GET',
             credentials: 'include',
@@ -250,7 +250,8 @@ function checkAuth() {
             return response.json()
         })
         .then(function(response) {
-        var startTime = moment(document.getElementById('dateReminder').value);
+        var startTime = '2016-08-28T21:00:00+00:00'
+        // var startTime = moment(document.getElementById('dateReminder').value);
         var yourEmail = response.email;
         var dateSum = 'Schedule a Date Night';
 
