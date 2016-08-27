@@ -249,7 +249,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 document.getElementById('grabDetails').addEventListener('click', function() {
 
         var checkboxes = document.querySelectorAll('.selectDetail:checked')
-
+        console.log(checkboxes)
         checkboxes.forEach(function(id) {
             var eventPlaces = id.value
 
@@ -270,7 +270,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
                 var dateNight = eachLoc
-                console.log(dateNight)
+                // console.log(dateNight)
                 document.getElementById('dateLoc1').innerHTML = dateNight;
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 

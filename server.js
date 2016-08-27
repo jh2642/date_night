@@ -129,6 +129,16 @@ app.get('/users/profile', function (request, response) {
     })
 })
 
+//add date to db
+app.post('/events/date', function (request, response) {
+    knex('events')
+    .where('id', request.body.id)
+    .update(request.body)
+    .then(function(ids) {
+        response.json(ids[0])
+    })
+})
+
 app.use(express.static(__dirname + '/public'))
 
 app.listen(app.get('port'), function () {
