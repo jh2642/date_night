@@ -269,18 +269,21 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
-                eachLoc.forEach(function(result) {
-                    console.log(result)
+                return Array.from(eachLoc)
 
+
+                })
+                .then(function(response) {
+                    console.log(response)
                 })
 
                 // console.log(eachLoc)
-                document.getElementById('dateLoc1').innerHTML = eachLoc;
-                document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
+                // document.getElementById('dateLoc1').innerHTML = eachLoc;
+                // document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
-            })
+            // })
         })
-    })
+    // })
 
 
 document.getElementById("startTime").flatpickr();
