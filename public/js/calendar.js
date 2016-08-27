@@ -115,15 +115,25 @@ function checkAuth() {
 
         //create event here
         function createEvents() {
+            fetch(api+'/users/profile?id=' + user_id, {
+                method: 'GET',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(response) {
             var startTime = moment(document.getElementById('startTime').value);
             var endTime = '2016-08-30T21:30:00+00:00';
-            var dateEmail = date_email;
-            var yourEmail = email
+            var dateEmail = response.date_email;
+            var yourEmail = response.email;
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
             var descriptionDate = document.getElementById('messageBox').value
             // var attachmentHere = locationUrl
-
 
             var request2 = gapi.client.calendar.events.insert({
                 calendarId: 'primary',
@@ -159,7 +169,9 @@ function checkAuth() {
                 //fetch to my api to add this event to the event db (post)
                 console.log(resp2.id)
             });
-        }
+        } //close out function to schedule cal event
+    } //close out createEvents
+
 
         //delete event here
         function deleteEvents() {
