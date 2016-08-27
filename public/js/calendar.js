@@ -271,7 +271,7 @@ function checkAuth() {
             recurrence: [
                 {
                     'weekly'
-                }
+                },
             ],
             reminders: {
                 useDefault: false
