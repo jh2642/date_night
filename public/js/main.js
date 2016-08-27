@@ -261,8 +261,8 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(response) {
                 return Array.from(response);
-                    response.results.forEach(function(item) {
-                        console.log(item)
+                    // response.results.forEach(function(item) {
+                        console.log(response)
                         // console.log(selectedVenue) //returns objects
 
                 // locationType = selectedVenue.result.types[0]
@@ -275,7 +275,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 // console.log(eachLoc)
                 // document.getElementById('dateLoc1').innerHTML = eachLoc;
                 // document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
-            })
+            // })
             })
         })
     })
