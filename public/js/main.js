@@ -262,7 +262,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             .then(function(response) {
                 return Array.from(response);
                     // response.results.forEach(function(item) {
-                        console.log(response)
+                        console.log(response.result)
                         // console.log(selectedVenue) //returns objects
 
                 // locationType = selectedVenue.result.types[0]
