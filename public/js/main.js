@@ -288,9 +288,9 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 //   label.appendChild(document.createTextNode('select for date'));
                 //   div.appendChild(checkbox);
                 //   div.appendChild(label);
-                  document.getElementById('dateLoc1').appendChild(div)
-
-                })
+                //   document.getElementById('dateLoc1').appendChild(div)
+                //
+                // })
                 // locationType = selectedVenue.result.types[0]
                 // locationName = selectedVenue.result.name
                 // locationAddress = selectedVenue.result.formatted_address
@@ -305,7 +305,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
             })
-        })
+        // })
     })
 
 
