@@ -10,13 +10,13 @@ function onSignIn(googleUser) {
   // console.log('Image URL: ' + profile.getImageUrl());
   // console.log('Email: ' + profile.getEmail());
 
-    // var featureImage = document.createElement('img')
-    //     featureImage.setAttribute('src', profile.getImageUrl())
-    //     featureImage.classList.add('img-circle')
-    // var individualName = document.getElementById('googleName')
-    //       individualName.innerHTML = profile.getName()
-    // var individualEmail = document.getElementById('googleEmail')
-    //     individualEmail.innerHTML = profile.getEmail()
+    var featureImage = document.createElement('img')
+        featureImage.setAttribute('src', profile.getImageUrl())
+        featureImage.classList.add('img-circle')
+    var individualName = document.getElementById('googleName')
+          individualName.innerHTML = profile.getName()
+    var individualEmail = document.getElementById('googleEmail')
+        individualEmail.innerHTML = profile.getEmail()
     //
     // document.getElementById('googlePic').innerHTML = ''
     // document.getElementById('googlePic').appendChild(featureImage)
