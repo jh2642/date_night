@@ -162,7 +162,7 @@ function checkAuth() {
                 summary: dateSum,
                 //   send-notification: 'true',
             })
-        }) //close out function to schedule cal event
+
 
             request2.execute(function(resp2) {
                 // var events2 = resp2.items;
@@ -170,7 +170,8 @@ function checkAuth() {
                 //fetch to my api to add this event to the event db (post)
                 console.log(resp2.id)
             });
-        } //close out createEvents
+        }) //close out function to schedule cal event
+    } //close out createEvents
 
 
         //delete event here
