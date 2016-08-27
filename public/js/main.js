@@ -275,8 +275,8 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
             })
-            .then(function(results) {
-                console.log(results)
+            .then(function(selectedVenue) {
+                console.log(selectedVenue)
             })
         })
     })
