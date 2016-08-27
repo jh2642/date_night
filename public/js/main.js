@@ -261,7 +261,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(selectedVenue) {
                 // console.log(selectedVenue)
-                selectedVenue.forEach(function(item) {
+                selectedVenue.result.forEach(function(item) {
                   var div = document.createElement('div')
                   div.classList.add('establishment')
 
@@ -270,8 +270,12 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                   div.appendChild(name)
 
                   var address = document.createElement('p')
-                  address.innerHTML = item.vicinity
+                  address.innerHTML = item.formatted_address
                   div.appendChild(address)
+
+                  var phone = document.createElement('p')
+                  phone.innerHTML = item.formatted_phone_number
+                  div.appendChild(phone)
 
                   var checkbox = document.createElement('input');
                   checkbox.type = 'radio';
