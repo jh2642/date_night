@@ -129,7 +129,7 @@ function checkAuth() {
             var startTime = moment(document.getElementById('startTime').value);
             var endTime = '2016-08-30T21:30:00+00:00';
             var dateEmail = response.date_email;
-            // var yourEmail = response.email;
+            var yourEmail = response.email;
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
             var descriptionDate = document.getElementById('messageBox').value
@@ -146,7 +146,7 @@ function checkAuth() {
                   attendees: [
                       {
                         email: dateEmail,
-                        // email: yourEmail,
+                        email: yourEmail,
                       }
                   ],
                 //   attachments: [
