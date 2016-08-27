@@ -268,7 +268,13 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 locationUrl = selectedVenue.result.url
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
-                console.log(eachLoc)
+
+                eachLoc.results.forEach(function(result) {
+                    console.log(result)
+
+                })
+
+                // console.log(eachLoc)
                 document.getElementById('dateLoc1').innerHTML = eachLoc;
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
