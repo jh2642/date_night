@@ -62,6 +62,7 @@ function checkAuth() {
             document.getElementById('createEvents').addEventListener('click', function() {
                 console.log('createEvents')
                 gapi.client.load('calendar', 'v3', createEvents);
+                window.dispatchEvent(googlesignin)
             });
             document.getElementById('deleteEvents').addEventListener('click', function() {
                 console.log('deleteEvents')
