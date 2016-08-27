@@ -211,53 +211,53 @@ function checkAuth() {
     //create reminder here
     function scheduleReminder() {
         console.log('you clicked me')
-        fetch(api+'/users/profile?id=' + user_id, {
-            method: 'GET',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(response) {
-        var startTime3 = moment(document.getElementById('dateReminder').value);
-        console.log(startTime3)
-        var yourEmail3 = 'hildreth.james@gmail.com';
-        var dateSum3 = 'Schedule a Date Night';
-
-
-        var request2 = gapi.client.calendar.events.insert({
-            calendarId: 'primary',
-            start: {
-                dateTime: startTime3
-            },
-            // end: {
-            //     dateTime: endTime
-            // },
-              attendees: [
-                  {
-                    email: yourEmail3
-                },
-              ],
-            recurrence: [
-                    'weekly'
-            ],
-            reminders: {
-                useDefault: false
-            },
-            summary: dateSum3,
-            //   send-notification: 'true',
-        })
-
-
-        request4.execute(function(resp4) {
-            // idToDelete = resp4.id
-            //fetch to my api to add this event to the event db (post)
-            console.log(resp4)
-        });
-    }) //close out function to schedule cal reminders
+    //     fetch(api+'/users/profile?id=' + user_id, {
+    //         method: 'GET',
+    //         credentials: 'include',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     })
+    //     .then(function(response) {
+    //         return response.json()
+    //     })
+    //     .then(function(response) {
+    //     var startTime3 = moment(document.getElementById('dateReminder').value);
+    //     console.log(startTime3)
+    //     var yourEmail3 = 'hildreth.james@gmail.com';
+    //     var dateSum3 = 'Schedule a Date Night';
+    //
+    //
+    //     var request2 = gapi.client.calendar.events.insert({
+    //         calendarId: 'primary',
+    //         start: {
+    //             dateTime: startTime3
+    //         },
+    //         // end: {
+    //         //     dateTime: endTime
+    //         // },
+    //           attendees: [
+    //               {
+    //                 email: yourEmail3
+    //             },
+    //           ],
+    //         recurrence: [
+    //                 'weekly'
+    //         ],
+    //         reminders: {
+    //             useDefault: false
+    //         },
+    //         summary: dateSum3,
+    //         //   send-notification: 'true',
+    //     })
+    //
+    //
+    //     request4.execute(function(resp4) {
+    //         // idToDelete = resp4.id
+    //         //fetch to my api to add this event to the event db (post)
+    //         console.log(resp4)
+    //     });
+    // }) //close out function to schedule cal reminders
 } //close out sched reminder
 
 
