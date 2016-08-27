@@ -269,19 +269,12 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
-                return Array.from(selectedVenue.result)
+                var dateNight = (eachLoc)
+                console.log(eachLoc)
+                document.getElementById('dateLoc1').innerHTML = eachLoc;
+                document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
-
-                })
-                .then(function(response) {
-                    console.log(response)
-                })
-
-                // console.log(eachLoc)
-                // document.getElementById('dateLoc1').innerHTML = eachLoc;
-                // document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
-
-            // })
+            })
         })
     })
 
