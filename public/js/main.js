@@ -260,7 +260,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 return response.json()
             })
             .then(function(selectedVenue) {
-                console.log(selectedVenue)
+                console.log(selectedVenue.results) //returns objects
                 locationType = selectedVenue.result.types[0]
                 locationName = selectedVenue.result.name
                 locationAddress = selectedVenue.result.formatted_address
