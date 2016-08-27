@@ -29,6 +29,7 @@ function checkAuth() {
             // Hide auth UI, then load client library.
             authorizeDiv.style.display = 'none';
             //get profile information from db
+            window.addEventListener('googlesignin', function() {
                 fetch(api+'/users/profile?id=' + user_id, {
                     method: 'GET',
                     credentials: 'include',
@@ -56,6 +57,7 @@ function checkAuth() {
 
                     loadCalendarApi();
                 })
+            })
         }
         else {
             // Show auth UI, allowing the user to initiate authorization by
