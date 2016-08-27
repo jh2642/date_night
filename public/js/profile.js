@@ -1,12 +1,12 @@
 var api = 'https://serene-hamlet-75445.herokuapp.com'
 var user_id = null
 
-document.getElementById('addDateInfo').addEventListener('click', function() {
-
-    var datesName = document.getElementById('datesName').value
-    var datesEmail = document.getElementById('datesEmail').value
-    console.log(datesName, datesEmail)
-})
+// document.getElementById('addDateInfo').addEventListener('click', function() {
+//
+//     var datesName = document.getElementById('datesName').value
+//     var datesEmail = document.getElementById('datesEmail').value
+//     console.log(datesName, datesEmail)
+// })
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
@@ -71,6 +71,11 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
     })
     .then(function(response) {
         console.log(response)
+        response.results.forEach(function(item) {
+            // var div = document.createElement('div')
+            // div.classList.add('dateNights')
+            console.log(item)
+        })
     })
 })
 
