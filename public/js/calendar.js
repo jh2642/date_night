@@ -53,7 +53,7 @@ function checkAuth() {
 
                     document.getElementById('googlePic').innerHTML = ''
                     document.getElementById('googlePic').appendChild(featureImage)
-                    document.getElementById('dateName').innerHTML = response.date_name
+                    document.getElementById('dateName').innerHTML = response.date_name + '@' + response.date_email
 
                     loadCalendarApi();
                 })
