@@ -260,7 +260,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 return response.json()
             })
             .then(function(response) {
-                return Array.from(response.results);
+                return Array.from(response);
                     response.results.forEach(function(item) {
                         console.log(item)
                         // console.log(selectedVenue) //returns objects
