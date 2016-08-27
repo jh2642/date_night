@@ -71,7 +71,7 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
     })
     .then(function(response) {
         console.log(response)
-    }
+    })
 })
 
 // document.getElementById("dateReminder").flatpickr();
