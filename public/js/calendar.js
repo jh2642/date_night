@@ -80,7 +80,7 @@ function checkAuth() {
 
                     document.getElementById('googlePic').innerHTML = ''
                     document.getElementById('googlePic').appendChild(featureImage)
-                    document.getElementById('dateName').innerHTML = response.date_email
+                    document.getElementById('dateName').innerHTML = response.date_name
                 })
 
             })
@@ -145,17 +145,17 @@ function checkAuth() {
 
         //create event here
         function createEvents() {
-            fetch(api+'/users/profile?id=' + user_id, {
-                method: 'GET',
-                credentials: 'include',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(response) {
+            // fetch(api+'/users/profile?id=' + user_id, {
+            //     method: 'GET',
+            //     credentials: 'include',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     }
+            // })
+            // .then(function(response) {
+            //     return response.json()
+            // })
+            // .then(function(response) {
             var startTime = moment(document.getElementById('startTime').value);
             var endTime = '2016-08-30T21:30:00+00:00';
             var dateEmail = response.date_email;
@@ -201,7 +201,7 @@ function checkAuth() {
                 //fetch to my api to add this event to the event db (post)
                 console.log(resp2)
             });
-        }) //close out function to schedule cal event
+        // }) //close out function to schedule cal event
     } //close out createEvents
 
 
