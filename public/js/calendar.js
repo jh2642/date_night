@@ -94,7 +94,6 @@ function checkAuth() {
             //     gapi.client.load('calendar', 'v3', createEvents);
             // });
             document.getElementById('scheduleReminder').addEventListener('click', function() {
-                console.log('scheduleReminder')
                 gapi.client.load('calendar', 'v3', scheduleReminder);
             });
             // document.getElementById('deleteEvents').addEventListener('click', function() {
@@ -243,9 +242,9 @@ function checkAuth() {
                     email: yourEmail3
                 },
               ],
-            recurrence: [
-                    'weekly'
-            ],
+            // recurrence: [
+            //         'weekly'
+            // ],
             reminders: {
                 useDefault: false
             },
