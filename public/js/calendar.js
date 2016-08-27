@@ -229,7 +229,7 @@ function checkAuth() {
 
 
 
-        var request2 = gapi.client.calendar.events.insert({
+        var request4 = gapi.client.calendar.events.insert({
             calendarId: 'primary',
             start: {
                 dateTime: startTime3
