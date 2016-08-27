@@ -261,33 +261,33 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(selectedVenue) {
                 // console.log(selectedVenue)
-                selectedVenue.result.forEach(function(item) {
+                selectedVenue.forEach(function(result) {
                   var div = document.createElement('div')
                   div.classList.add('establishment')
 
                   var name = document.createElement('h2')
-                  name.innerHTML = item.name
+                  name.innerHTML = result.name
                   div.appendChild(name)
 
                   var address = document.createElement('p')
-                  address.innerHTML = item.formatted_address
+                  address.innerHTML = result.formatted_address
                   div.appendChild(address)
 
                   var phone = document.createElement('p')
-                  phone.innerHTML = item.formatted_phone_number
+                  phone.innerHTML = result.formatted_phone_number
                   div.appendChild(phone)
 
-                  var checkbox = document.createElement('input');
-                  checkbox.type = 'radio';
-                  checkbox.name = typeThree;
-                  checkbox.value = item.place_id;
-                  checkbox.classList = 'selectDetail';
-                  var label = document.createElement('label')
-                  label.htmlFor = 'checkbox-id';
-                  label.classList = 'selectLabel';
-                  label.appendChild(document.createTextNode('select for date'));
-                  div.appendChild(checkbox);
-                  div.appendChild(label);
+                //   var checkbox = document.createElement('input');
+                //   checkbox.type = 'radio';
+                //   checkbox.name = typeThree;
+                //   checkbox.value = item.place_id;
+                //   checkbox.classList = 'selectDetail';
+                //   var label = document.createElement('label')
+                //   label.htmlFor = 'checkbox-id';
+                //   label.classList = 'selectLabel';
+                //   label.appendChild(document.createTextNode('select for date'));
+                //   div.appendChild(checkbox);
+                //   div.appendChild(label);
                   document.getElementById('dateLoc1').appendChild(div)
 
                 })
