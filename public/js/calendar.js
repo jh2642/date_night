@@ -255,7 +255,7 @@ function checkAuth() {
 
 
         request4.execute(function(resp4) {
-            // idToDelete = resp4.id
+            idToDelete = resp4.id
             //fetch to my api to add this event to the event db (post)
             console.log(resp4)
         });
