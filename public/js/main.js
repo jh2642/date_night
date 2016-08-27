@@ -261,7 +261,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(response) {
                 console.log(response)
-                response.results.forEach(function(result) {
+                response.forEach(function(result) {
                   var div = document.createElement('div')
                   div.classList.add('establishment')
 
