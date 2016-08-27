@@ -261,21 +261,21 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             })
             .then(function(selectedVenue) {
                 console.log(selectedVenue)
-                // selectedVenue.forEach(function(result) {
-                //   var div = document.createElement('div')
-                //   div.classList.add('establishment')
-                //
-                //   var name = document.createElement('h2')
-                //   name.innerHTML = result.name
-                //   div.appendChild(name)
-                //
-                //   var address = document.createElement('p')
-                //   address.innerHTML = result.formatted_address
-                //   div.appendChild(address)
-                //
-                //   var phone = document.createElement('p')
-                //   phone.innerHTML = result.formatted_phone_number
-                //   div.appendChild(phone)
+                selectedVenue.forEach(function(result) {
+                  var div = document.createElement('div')
+                  div.classList.add('establishment')
+
+                  var name = document.createElement('h2')
+                  name.innerHTML = result.name
+                  div.appendChild(name)
+
+                  var address = document.createElement('p')
+                  address.innerHTML = result.formatted_address
+                  div.appendChild(address)
+
+                  var phone = document.createElement('p')
+                  phone.innerHTML = result.formatted_phone_number
+                  div.appendChild(phone)
 
                 //   var checkbox = document.createElement('input');
                 //   checkbox.type = 'radio';
@@ -288,9 +288,9 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 //   label.appendChild(document.createTextNode('select for date'));
                 //   div.appendChild(checkbox);
                 //   div.appendChild(label);
-                //   document.getElementById('dateLoc1').appendChild(div)
-                //
-                // })
+                  document.getElementById('dateLoc1').appendChild(div)
+
+                })
                 // locationType = selectedVenue.result.types[0]
                 // locationName = selectedVenue.result.name
                 // locationAddress = selectedVenue.result.formatted_address
@@ -305,7 +305,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
             })
-        // })
+        })
     })
 
 
