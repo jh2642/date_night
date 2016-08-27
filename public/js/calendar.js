@@ -145,8 +145,8 @@ function checkAuth() {
                 },
                   attendees: [
                       {
-                        // email: dateEmail,
-                        email: yourEmail,
+                        email: dateEmail,
+                        // email: yourEmail,
                       }
                   ],
                 //   attachments: [
