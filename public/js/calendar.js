@@ -226,7 +226,7 @@ function checkAuth() {
         // var startTime3 = '2016-08-28T21:00:00+00:00';
         // moment(document.getElementById('dateReminder').value);
         console.log(startTime3)
-        var endTime3 = '2016-08-28T21:30:00+00:00';
+        var endTime3 = '2016-08-27T16:00:00.000Z';
         var yourEmail3 = 'hildreth.james@gmail.com';
         var dateSum3 = 'Schedule a Date Night';
 
