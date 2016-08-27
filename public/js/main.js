@@ -269,9 +269,9 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
                 console.log(eachLoc)
-                document.getElementById('dateLoc1').innerHTML = eachLoc[0];
-                document.getElementById('dateLoc2').innerHTML = eachLoc[1];
-                document.getElementById('dateLoc3').innerHTML = eachLoc[2];
+                document.getElementById('dateLoc1').innerHTML = eachLoc[];
+                document.getElementById('dateLoc2').innerHTML = eachLoc[];
+                document.getElementById('dateLoc3').innerHTML = eachLoc[];
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
             })
