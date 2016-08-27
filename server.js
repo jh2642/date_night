@@ -145,7 +145,7 @@ app.get('/events/datenight', function (request, response) {
     .select()
     .where('id', request.query.id)
     .then(function(details) {
-        response.json(details[0])
+        response.json(details)
     })
 })
 
