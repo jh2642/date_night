@@ -122,7 +122,7 @@ function checkAuth() {
                 console.log('createEvents')
                 gapi.client.load('calendar', 'v3', createEvents);
             });
-            document.getElementById('addDateReminders').addEventListener('click', function() {
+            document.getElementById('scheduleReminder').addEventListener('click', function() {
                 console.log('addDateReminders')
                 gapi.client.load('calendar', 'v3', addDateReminders);
             });
