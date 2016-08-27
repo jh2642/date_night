@@ -84,35 +84,6 @@ function checkAuth() {
         */
 
         function loadCalendarApi() {
-            // //get profile information from db
-            // window.addEventListener('googlesignin', function() {
-            //     fetch(api+'/users/profile?id=' + user_id, {
-            //         method: 'GET',
-            //         credentials: 'include',
-            //         headers: {
-            //             'Content-Type': 'application/json'
-            //         }
-            //     })
-            //     .then(function(response) {
-            //         return response.json()
-            //     })
-            //     .then(function(response) {
-            //         console.log(response)
-            //         // document.getElementById('dateInformation').innerHTML = response.date_name
-            //         var featureImage = document.createElement('img')
-            //             featureImage.setAttribute('src', response.image_url)
-            //             featureImage.classList.add('img-circle')
-            //         var individualName = document.getElementById('googleName')
-            //               individualName.innerHTML = response.name
-            //         var individualEmail = document.getElementById('googleEmail')
-            //             individualEmail.innerHTML = response.email
-            //
-            //         document.getElementById('googlePic').innerHTML = ''
-            //         document.getElementById('googlePic').appendChild(featureImage)
-            //         document.getElementById('dateName').innerHTML = response.date_name
-            //     })
-            //
-            // })
 
             // document.getElementById('showEvents').addEventListener('click', function() {
             //     console.log('showEvents')
@@ -123,8 +94,8 @@ function checkAuth() {
                 gapi.client.load('calendar', 'v3', createEvents);
             });
             document.getElementById('scheduleReminder').addEventListener('click', function() {
-                console.log('addDateReminders')
-                gapi.client.load('calendar', 'v3', addDateReminders);
+                console.log('scheduleReminder')
+                gapi.client.load('calendar', 'v3', scheduleReminder);
             });
             // document.getElementById('deleteEvents').addEventListener('click', function() {
             //     console.log('deleteEvents')
@@ -238,7 +209,7 @@ function checkAuth() {
     } //close out createEvents
 
     //create reminder here
-    function addDateReminders() {
+    function scheduleReminder() {
         console.log('you clicked me')
     //     fetch(api+'/users/profile?id=' + user_id, {
     //         method: 'GET',
