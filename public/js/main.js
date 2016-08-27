@@ -269,7 +269,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
-                eachLoc.results.forEach(function(result) {
+                eachLoc.forEach(function(result) {
                     console.log(result)
 
                 })
