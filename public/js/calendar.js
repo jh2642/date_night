@@ -234,9 +234,9 @@ function checkAuth() {
             start: {
                 dateTime: startTime3
             },
-            end: {
-                dateTime: endTime3
-            },
+            // end: {
+            //     dateTime: endTime3
+            // },
               attendees: [
                   {
                     email: yourEmail3
