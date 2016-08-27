@@ -224,8 +224,10 @@ function checkAuth() {
         .then(function(response) {
         var startTime3 = moment(document.getElementById('dateReminder').value);
         console.log(startTime3)
+        var endTime3 = moment(document.getElementById('dateReminder').value);
         var yourEmail3 = 'hildreth.james@gmail.com';
         var dateSum3 = 'Schedule a Date Night';
+
 
 
         var request2 = gapi.client.calendar.events.insert({
@@ -233,9 +235,9 @@ function checkAuth() {
             start: {
                 dateTime: startTime3
             },
-            // end: {
-            //     dateTime: endTime
-            // },
+            end: {
+                dateTime: endTime3
+            },
               attendees: [
                   {
                     email: yourEmail3
