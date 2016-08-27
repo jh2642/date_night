@@ -132,7 +132,7 @@ app.get('/users/profile', function (request, response) {
 //add date to db
 app.post('/events/datenight', function (request, response) {
     knex('events')
-    .where('id', request.body.id)
+    // .where('id', request.body.id)
     .update(request.body)
     .then(function(ids) {
         response.json(ids[0])
