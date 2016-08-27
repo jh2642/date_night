@@ -122,14 +122,14 @@ function checkAuth() {
                 console.log('createEvents')
                 gapi.client.load('calendar', 'v3', createEvents);
             });
-            document.getElementById('deleteEvents').addEventListener('click', function() {
-                console.log('deleteEvents')
-                gapi.client.load('calendar', 'v3', deleteEvents);
-            });
-            document.getElementById('updateEvents').addEventListener('click', function() {
-                console.log('updateEvents')
-                gapi.client.load('calendar', 'v3', updateEvents);
-            });
+            // document.getElementById('deleteEvents').addEventListener('click', function() {
+            //     console.log('deleteEvents')
+            //     gapi.client.load('calendar', 'v3', deleteEvents);
+            // });
+            // document.getElementById('updateEvents').addEventListener('click', function() {
+            //     console.log('updateEvents')
+            //     gapi.client.load('calendar', 'v3', updateEvents);
+            // });
 
         }
 
