@@ -158,8 +158,8 @@ function checkAuth() {
             // .then(function(response) {
             var startTime = moment(document.getElementById('startTime').value);
             var endTime = '2016-08-30T21:30:00+00:00';
-            var dateEmail = response.date_email;
-            var yourEmail = response.email;
+            var dateEmail = date_email;
+            var yourEmail = email;
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
             var descriptionDate = document.getElementById('messageBox').value
