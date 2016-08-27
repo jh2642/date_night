@@ -129,7 +129,7 @@ function checkAuth() {
             var startTime = moment(document.getElementById('startTime').value);
             var endTime = '2016-08-30T21:30:00+00:00';
             var dateEmail = response.date_email;
-            var yourEmail = response.email;
+            // var yourEmail = response.email;
             var dateLoc = eachLoc;
             var dateSum = 'Date Night';
             var descriptionDate = document.getElementById('messageBox').value
@@ -145,7 +145,7 @@ function checkAuth() {
                 },
                   attendees: [
                       {
-                        email: dateEmail,
+                        // email: dateEmail,
                         email: yourEmail,
                       }
                   ],
@@ -168,7 +168,7 @@ function checkAuth() {
                 // var events2 = resp2.items;
                 idToDelete = resp2.id
                 //fetch to my api to add this event to the event db (post)
-                console.log(resp2.id)
+                console.log(resp2)
             });
         }) //close out function to schedule cal event
     } //close out createEvents
