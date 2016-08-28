@@ -118,7 +118,7 @@ $(document).ready(function(){
         .then(function (count) {
           console.log(count);
         })
-        .finally(function () {
+        .then(function () {
           knex.destroy();
         })
     })
