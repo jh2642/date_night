@@ -5,8 +5,8 @@ var calId
 
 document.getElementById('addDateInfo').addEventListener('click', function() {
 
-    var datesNameUpdate = document.getElementById('datesName').value
-    var datesEmailUpdate = document.getElementById('datesEmail').value
+    var datesNameUpdate = document.getElementById('datesNameUpdate').value
+    var datesEmailUpdate = document.getElementById('datesEmailUpdate').value
     console.log(datesNameUpdate, datesNameUpdate)
 })
 
@@ -20,9 +20,9 @@ document.getElementById('addDateInfo').addEventListener('click', function() {
         },
         body: JSON.stringify({
             id: user_id,
-            date_name: document.getElementById('datesName').value,
-            date_email: document.getElementById('datesEmail').value,
-            date_phone_number: document.getElementById('datesPhone').value
+            date_name: document.getElementById('datesNameUpdate').value,
+            date_email: document.getElementById('datesEmailUpdate').value,
+            date_phone_number: document.getElementById('datesPhoneUpdate').value
         })
     })
     .then(function(response) {
