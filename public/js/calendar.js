@@ -119,7 +119,7 @@ function checkAuth() {
                 var startTime = d.toISOString();
                 // var d2 = new Date(document.getElementById('endTime').value);
                 // var endTime = d2.toISOString();
-                var endTime = moment().add( 2, 'hours' ).toISOString();
+                var endTime = moment(startTime).add( 2, 'hours' ).toISOString();
                 // var endTime = '2016-08-30T21:30:00+00:00';
                 var dateEmail = response.date_email;
                 var dateName = response.date_name;
