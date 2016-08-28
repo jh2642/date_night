@@ -58,23 +58,50 @@ window.addEventListener('googlesignin', function() {
 })
 
 //retrieve data from events db
-document.getElementById('retrieveEvent').addEventListener('click', function() {
-    fetch(api+'/events/datenight?id=' + user_id, {
-        method: 'GET',
-        credentials: 'include',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(response) {
-        // console.log(response)
-        response.forEach(function(result) {
-            console.log(result)
-        })
-    })
+// document.getElementById('retrieveEvent').addEventListener('click', function() {
+fetch(api+'/events/datenight?id=' + user_id, {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+        'Content-Type': 'application/json'
+    }
 })
+.then(function(response) {
+    return response.json()
+})
+.then(function(response) {
+    // console.log(response)
+    response.forEach(function(item) {
+
+        var div = document.createElement('div')
+        div.classList.add('dateNightEvent')
+
+        var name = document.createElement('h2')
+        name.innerHTML = item.event_at
+        div.appendChild(name)
+
+        var address = document.createElement('p')
+        address.innerHTML = item.locationAddress
+        div.appendChild(address)
+
+        var dateAttendee = document.createElement('p')
+        dateAttendee.innerHTML = item.date_name
+        div.appendChild(dateAttendee)
+
+        var checkbox = document.createElement('input');
+        checkbox.type = 'radio';
+        checkbox.name = typeOne;
+        checkbox.value = item.calendarId;
+        checkbox.classList = 'selectDetail';
+        var label = document.createElement('label')
+        label.htmlFor = 'calendar-id';
+        label.classList = 'calLabel';
+        label.appendChild(document.createTextNode('select to delete'));
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        document.getElementById('calendarEventsDb').appendChild(div)
+    }
+})
+
 
 // document.getElementById("dateReminder").flatpickr();
