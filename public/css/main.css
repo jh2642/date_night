@@ -1,5 +1,4 @@
-/* Coolors Exported Palette - coolors.co/4c5454-ff715b-ffffff-1ea896-523f38 */
-/* HSL */
+/* Coolors Exported Palette - coolors.co/fde8e9-e3bac6-bc9ec1-596475-1f2232 */
 /* RGB */
 * {
   font-family: "Open Sans", sans-serif;
@@ -28,7 +27,7 @@ body {
 .headersSearch {
   font-family: "Syncopate", sans-serif;
   font-size: 40px;
-  color: #11a4d2;
+  color: #596475;
 }
 
 .signInButton {
@@ -36,7 +35,7 @@ body {
 }
 
 .motto {
-  color: #11a4d2;
+  color: #fde8e9;
   font-style: italic;
   font-size: 50px;
 }
@@ -56,7 +55,6 @@ body {
 
 .btn-primary,
 .btn-secondary {
-  width: 125px;
   background: transparent;
   border: 1px white solid;
   font-size: 16px;

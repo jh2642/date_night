@@ -8,21 +8,14 @@ $mainFont: 'Open Sans', sans-serif;
 // font-family: 'Open Sans', sans-serif;
 
 
-/* Coolors Exported Palette - coolors.co/4c5454-ff715b-ffffff-1ea896-523f38 */
-
-/* HSL */
-$color1: hsla(180%, 5%, 31%, 1);
-$color2: hsla(8%, 100%, 68%, 1);
-$color3: hsla(0%, 0%, 100%, 1);
-$color4: hsla(172%, 70%, 39%, 1);
-$color5: hsla(16%, 19%, 27%, 1);
+/* Coolors Exported Palette - coolors.co/fde8e9-e3bac6-bc9ec1-596475-1f2232 */
 
 /* RGB */
-$color1: rgba(76, 84, 84, 1);
-$color2: rgba(255, 113, 91, 1);
-$color3: rgba(255, 255, 255, 1);
-$color4: rgba(30, 168, 150, 1);
-$color5: rgba(82, 63, 56, 1);
+$color1: rgba(253, 232, 233, 1);
+$color2: rgba(227, 186, 198, 1);
+$color3: rgba(188, 158, 193, 1);
+$color4: rgba(89, 100, 117, 1);
+$color5: rgba(31, 34, 50, 1);
 
 * {
     font-family: $mainFont;
@@ -50,7 +43,7 @@ body {
 .headersSearch {
     font-family: $headlineFont;
     font-size: 40px;
-    color: rgb(17, 164, 210);
+    color: $color4;
 }
 
 .signInButton {
@@ -58,7 +51,7 @@ body {
 }
 
 .motto {
-    color: rgb(17, 164, 210);
+    color: $color1;
     font-style: italic;
     font-size: 50px;
 }
@@ -79,7 +72,7 @@ body {
 
 .btn-primary,
 .btn-secondary {
-    width: 125px;
+    // width: 125px;
     background: transparent;
     border: 1px white solid;
     font-size: 16px;
