@@ -24,6 +24,10 @@ body {
   margin-top: 30px;
 }
 
+.profilePage {
+  background-color: #1f2232;
+}
+
 .headersSearch {
   font-family: "Syncopate", sans-serif;
   font-size: 40px;
