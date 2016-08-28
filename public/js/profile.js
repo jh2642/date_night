@@ -58,7 +58,7 @@ window.addEventListener('googlesignin', function() {
 })
 
 //retrieve data from events db
-document.getElementById('retrieveEvent').addEventListener('click', function() {
+// document.getElementById('retrieveEvent').addEventListener('click', function() {
     fetch(api+'/events/datenight?id=' + user_id, {
         method: 'GET',
         credentials: 'include',
@@ -98,7 +98,7 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
             console.log(item.calendar_id)
         })
     })
-})
+// })
 
 
 // document.getElementById("dateReminder").flatpickr();
