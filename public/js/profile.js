@@ -2,14 +2,6 @@ var api = 'https://serene-hamlet-75445.herokuapp.com'
 var user_id = null
 var calId
 
-
-// document.getElementById('addDateInfo').addEventListener('click', function() {
-//
-//     var datesNameUpdate = document.getElementById('datesNameUpdate').value
-//     var datesEmailUpdate = document.getElementById('datesEmailUpdate').value
-//     console.log(datesNameUpdate, datesEmailUpdate)
-// })
-
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
     fetch(api+'/users/update', {
@@ -103,27 +95,27 @@ window.addEventListener('googlesignin', function() {
     })
 })
 
-// $(document).ready(function(){
-//     $('body').on('click', '.calendar-id', function(){
-//
-//         calId = $(this).attr('calendar-id')
-//         console.log(calId)
-//
-//         fetch(api+'/events/deletedatenight?user_id=' + user_id, {
-//             method: 'DELETE',
-//             credentials: 'include',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({
-//                 calendar_id: calId,
-//             })
-//         })
-//         .then(function (count) {
-//           console.log(count);
-//         })
-//     })
-// })
+$(document).ready(function(){
+    $('body').on('click', '.calendar-id', function(){
+
+        calId = $(this).attr('calendar-id')
+        console.log(calId)
+
+        fetch(api+'/events/deletedatenight?user_id=' + user_id, {
+            method: 'DELETE',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                calendar_id: calId,
+            })
+        })
+        .then(function (count) {
+          console.log(count);
+        })
+    })
+})
 
 //retrieve data from events db
 // document.getElementById('retrieveEvent').addEventListener('click', function() {
@@ -167,6 +159,5 @@ window.addEventListener('googlesignin', function() {
 //     })
 // })
 // })
-
 
 // document.getElementById("dateReminder").flatpickr();

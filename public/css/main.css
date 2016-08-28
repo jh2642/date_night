@@ -146,6 +146,11 @@ body {
   border: none;
 }
 
+.dateNightEvent {
+  margin: 30px;
+  border: 2px #11a4d2 solid;
+}
+
 .establishment {
   margin: 5px;
   padding: 5px;
