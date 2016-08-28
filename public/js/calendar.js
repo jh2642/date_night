@@ -170,7 +170,7 @@ function checkAuth() {
                 var yourEmail = response.email;
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
-                var descriptionDate = document.getElementById('messageBox').value
+                // var descriptionDate = document.getElementById('messageBox').value
                 var meetingDate = document.getElementsByName('meetDate').value
 
                 console.log(meetingDate)
