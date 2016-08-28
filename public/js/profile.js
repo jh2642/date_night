@@ -96,6 +96,13 @@ window.addEventListener('googlesignin', function() {
     })
 })
 
+document.getElementById('calendar-id').addEventListener('click', function() {
+
+    var calId = document.getElementById('calendar-id').value
+
+    console.log(calId)
+})
+
 //retrieve data from events db
 // document.getElementById('retrieveEvent').addEventListener('click', function() {
     // fetch(api+'/events/datenight?id=' + user_id, {
