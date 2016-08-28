@@ -154,8 +154,8 @@ app.delete('/events/deletedatenight', function (request, response) {
     knex('events')
     .del()
     .where('calendar_id', request.body.calId)
-    .then(function (count) {
-      console.log(count);
+    .then(function(details) {
+        response.json(details)
     })
 })
 

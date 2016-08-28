@@ -113,7 +113,7 @@ $(document).ready(function(){
             },
             body: JSON.stringify({
                 calendar_id: calId,
-            }),
+            })
         })
         .then(function (count) {
           console.log(count);
