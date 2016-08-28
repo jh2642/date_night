@@ -105,7 +105,8 @@
 
 .modalBox,
 .modal-content {
-  background-image: url("/assets/datenight-backdrop.jpg");
+  background-color: #bc9ec1;
+  color: #596475;
   border: 2px #11a4d2 solid;
 }
 

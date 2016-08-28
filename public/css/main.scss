@@ -130,7 +130,8 @@ $color5: rgba(31, 34, 50, 1);
 
 .modalBox,
 .modal-content {
-    background-image: url('/assets/datenight-backdrop.jpg');
+    background-color: $color3;
+    color: $color4;
     border: 2px rgb(17, 164, 210) solid;
     a {
         color:rgb(17, 164, 210);
