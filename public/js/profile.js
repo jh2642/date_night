@@ -10,19 +10,19 @@ var user_id = null
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
-fetch(api+'/users/update', {
-    method: 'PATCH',
-    credentials: 'include',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        id: user_id,
-        date_name: document.getElementById('datesName').value,
-        date_email: document.getElementById('datesEmail').value,
-        date_phone_number: document.getElementById('datesPhone').value
+    fetch(api+'/users/update', {
+        method: 'PATCH',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            id: user_id,
+            date_name: document.getElementById('datesName').value,
+            date_email: document.getElementById('datesEmail').value,
+            date_phone_number: document.getElementById('datesPhone').value
+        })
     })
-})
     .then(function(response) {
         return response.json()
     })
@@ -44,12 +44,12 @@ window.addEventListener('googlesignin', function() {
         console.log(response)
         document.getElementById('dateInformation').innerHTML = response.date_name
         var featureImage = document.createElement('img')
-            featureImage.setAttribute('src', response.image_url)
-            featureImage.classList.add('img-circle')
+        featureImage.setAttribute('src', response.image_url)
+        featureImage.classList.add('img-circle')
         var individualName = document.getElementById('googleName')
-              individualName.innerHTML = response.name
+        individualName.innerHTML = response.name
         var individualEmail = document.getElementById('googleEmail')
-            individualEmail.innerHTML = response.email
+        individualEmail.innerHTML = response.email
 
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
@@ -59,30 +59,49 @@ window.addEventListener('googlesignin', function() {
 
 //retrieve data from events db
 document.getElementById('retrieveEvent').addEventListener('click', function() {
-fetch(api+'/events/datenight?id=' + user_id, {
-    method: 'GET',
-    credentials: 'include',
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
-.then(function(response) {
-    return response.json()
-})
-.then(function(response) {
-    // console.log(response)
-    response.forEach(function(item) {
-
-        var div = document.createElement('div')
-        div.classList.add('dateNightEvent')
-
-        var name = document.createElement('h2')
-        name.innerHTML = item.event_at
-        div.appendChild(name)
-
-        document.getElementById('calendarEventsDb').appendChild(div)
+    fetch(api+'/events/datenight?id=' + user_id, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
-})
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(response) {
+        // console.log(response)
+        response.forEach(function(item) {
+
+            var div = document.createElement('div')
+            div.classList.add('dateNightEvent')
+
+            var name = document.createElement('h2')
+            name.innerHTML = item.event_at
+            div.appendChild(name)
+
+            var address = document.createElement('p')
+            address.innerHTML = item.locationAddress
+            div.appendChild(address)
+
+            var dateAttendee = document.createElement('p')
+            dateAttendee.innerHTML = item.date_name
+            div.appendChild(dateAttendee)
+
+            var checkbox = document.createElement('input');
+            checkbox.type = 'radio';
+            checkbox.name = typeOne;
+            checkbox.value = item.calendarId;
+            checkbox.classList = 'selectDetail';
+            var label = document.createElement('label')
+            label.htmlFor = 'calendar-id';
+            label.classList = 'calLabel';
+            label.appendChild(document.createTextNode('select to delete'));
+            div.appendChild(checkbox);
+            div.appendChild(label);
+            document.getElementById('calendarEventsDb').appendChild(div)
+        })
+    })
 })
 
 
