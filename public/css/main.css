@@ -14,7 +14,7 @@
   font-family: "Syncopate", sans-serif;
 }
 
-.indexPage {
+body {
   background-image: url("/assets/background-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
