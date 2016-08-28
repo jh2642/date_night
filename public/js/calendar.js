@@ -28,36 +28,36 @@ function checkAuth() {
         if (authResult && !authResult.error) {
             // Hide auth UI, then load client library.
             authorizeDiv.style.display = 'none';
-            //get profile information from db
-            window.addEventListener('googlesignin', function() {
-                fetch(api+'/users/profile?id=' + user_id, {
-                    method: 'GET',
-                    credentials: 'include',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(function(response) {
-                    return response.json()
-                })
-                .then(function(response) {
-                    console.log(response)
-                    // document.getElementById('dateInformation').innerHTML = response.date_name
-                    var featureImage = document.createElement('img')
-                    featureImage.setAttribute('src', response.image_url)
-                    featureImage.classList.add('img-circle')
-                    var individualName = document.getElementById('googleName')
-                    individualName.innerHTML = response.name
-                    var individualEmail = document.getElementById('googleEmail')
-                    individualEmail.innerHTML = response.email
-
-                    document.getElementById('googlePic').innerHTML = ''
-                    document.getElementById('googlePic').appendChild(featureImage)
-                    document.getElementById('dateName').innerHTML = response.date_name
 
                     loadCalendarApi();
+
+                    //get profile information from db
+                        fetch(api+'/users/profile?id=' + user_id, {
+                            method: 'GET',
+                            credentials: 'include',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        })
+                        .then(function(response) {
+                            return response.json()
+                        })
+                        .then(function(response) {
+                            console.log(response)
+                            // document.getElementById('dateInformation').innerHTML = response.date_name
+                            var featureImage = document.createElement('img')
+                            featureImage.setAttribute('src', response.image_url)
+                            featureImage.classList.add('img-circle')
+                            var individualName = document.getElementById('googleName')
+                            individualName.innerHTML = response.name
+                            var individualEmail = document.getElementById('googleEmail')
+                            individualEmail.innerHTML = response.email
+
+                            document.getElementById('googlePic').innerHTML = ''
+                            document.getElementById('googlePic').appendChild(featureImage)
+                            document.getElementById('dateName').innerHTML = response.date_name
+
                 })
-            })
         }
         else {
             // Show auth UI, allowing the user to initiate authorization by
