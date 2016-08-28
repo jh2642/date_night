@@ -103,27 +103,27 @@ window.addEventListener('googlesignin', function() {
     })
 })
 
-$(document).ready(function(){
-    $('body').on('click', '.calendar-id', function(){
-
-        calId = $(this).attr('calendar-id')
-        console.log(calId)
-
-        fetch(api+'/events/deletedatenight?user_id=' + user_id, {
-            method: 'DELETE',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                calendar_id: calId,
-            })
-        })
-        .then(function (count) {
-          console.log(count);
-        })
-    })
-})
+// $(document).ready(function(){
+//     $('body').on('click', '.calendar-id', function(){
+//
+//         calId = $(this).attr('calendar-id')
+//         console.log(calId)
+//
+//         fetch(api+'/events/deletedatenight?user_id=' + user_id, {
+//             method: 'DELETE',
+//             credentials: 'include',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({
+//                 calendar_id: calId,
+//             })
+//         })
+//         .then(function (count) {
+//           console.log(count);
+//         })
+//     })
+// })
 
 //retrieve data from events db
 // document.getElementById('retrieveEvent').addEventListener('click', function() {
