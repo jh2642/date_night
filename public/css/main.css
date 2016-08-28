@@ -5,11 +5,11 @@
 }
 
 * h1 {
-  font-family: "Damion", cursive;
+  font-family: "Syncopate", sans-serif;
 }
 
 * h3 {
-  font-family: "Damion", cursive;
+  font-family: "Syncopate", sans-serif;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 }
 
 .headersSearch {
-  font-family: "Damion", cursive;
+  font-family: "Syncopate", sans-serif;
   font-size: 40px;
   color: #11a4d2;
 }
@@ -41,7 +41,7 @@ body {
 .jumbotron {
   margin-top: 150px;
   background-color: transparent;
-  font-family: "Damion", cursive;
+  font-family: "Syncopate", sans-serif;
   font-size: 150px;
 }
 
