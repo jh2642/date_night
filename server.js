@@ -150,7 +150,7 @@ app.get('/events/datenight', function (request, response) {
 })
 
 //delete event from events db
-app.patch('/events/deletedatenight', function (request, response) {
+app.delete('/events/deletedatenight', function (request, response) {
     knex('events')
     .del()
     .where('calendar_id', request.body.calId)
