@@ -125,8 +125,8 @@ function checkAuth() {
                 var yourEmail = response.email;
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
-                var descriptionDate = document.getElementById('messageBox').value
-                
+                // var descriptionDate = document.getElementById('messageBox').value
+
 
                 var request2 = gapi.client.calendar.events.insert({
                     calendarId: 'primary',
@@ -144,7 +144,7 @@ function checkAuth() {
                         },
                     ],
                     location: dateLoc,
-                    description: descriptionDate,
+                    // description: descriptionDate,
                     reminders: {
                         useDefault: false
                     },
