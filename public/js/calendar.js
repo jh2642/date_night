@@ -96,7 +96,7 @@ function checkAuth() {
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
-            document.getElementById('deleteEvents').addEventListener('click', function() {
+            document.getElementById('calendar-id').addEventListener('click', function() {
                 console.log('deleteEvents')
                 gapi.client.load('calendar', 'v3', deleteEvents);
             });
