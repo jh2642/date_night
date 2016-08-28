@@ -174,7 +174,7 @@ function checkAuth() {
                             rest_id: locationId,
                             rest_name: locationName,
                             date_email: dateEmail,
-                            special_comments: descriptionDate,
+                            // special_comments: descriptionDate,
                             calendar_id: idForEvent
                         })
                     })
@@ -246,7 +246,7 @@ function checkAuth() {
         //delete event here
         function deleteEvents() {
 
-            var deleteId = document.getElementById('calendar-id').value;
+            var deleteId = document.getElementById('deleteId').value;
 
             var request3 = gapi.client.calendar.events.delete({
                 calendarId: 'primary',
