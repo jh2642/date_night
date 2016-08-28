@@ -44,12 +44,12 @@ function checkAuth() {
                     console.log(response)
                     // document.getElementById('dateInformation').innerHTML = response.date_name
                     var featureImage = document.createElement('img')
-                        featureImage.setAttribute('src', response.image_url)
-                        featureImage.classList.add('img-circle')
+                    featureImage.setAttribute('src', response.image_url)
+                    featureImage.classList.add('img-circle')
                     var individualName = document.getElementById('googleName')
-                          individualName.innerHTML = response.name
+                    individualName.innerHTML = response.name
                     var individualEmail = document.getElementById('googleEmail')
-                        individualEmail.innerHTML = response.email
+                    individualEmail.innerHTML = response.email
 
                     document.getElementById('googlePic').innerHTML = ''
                     document.getElementById('googlePic').appendChild(featureImage)
@@ -96,10 +96,10 @@ function checkAuth() {
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
-            // document.getElementById('deleteEvents').addEventListener('click', function() {
-            //     console.log('deleteEvents')
-            //     gapi.client.load('calendar', 'v3', deleteEvents);
-            // });
+            document.getElementById('deleteEvents').addEventListener('click', function() {
+                console.log('deleteEvents')
+                gapi.client.load('calendar', 'v3', deleteEvents);
+            });
             // document.getElementById('updateEvents').addEventListener('click', function() {
             //     console.log('updateEvents')
             //     gapi.client.load('calendar', 'v3', updateEvents);
@@ -159,153 +159,137 @@ function checkAuth() {
                 return response.json()
             })
             .then(function(response) {
-            var d = new Date(document.getElementById('startTime').value);
-            var startTime = d.toISOString();
-            // var d2 = new Date(document.getElementById('endTime').value);
-            // var endTime = d2.toISOString();
-            var endTime = '2016-08-30T21:30:00+00:00';
-            var dateEmail = response.date_email;
-            var dateName = response.date_name;
-            var yourEmail = response.email;
-            var dateLoc = eachLoc;
-            var dateSum = 'Date Night';
-            var descriptionDate = document.getElementById('messageBox').value
+                var d = new Date(document.getElementById('startTime').value);
+                var startTime = d.toISOString();
+                // var d2 = new Date(document.getElementById('endTime').value);
+                // var endTime = d2.toISOString();
+                var endTime = '2016-08-30T21:30:00+00:00';
+                var dateEmail = response.date_email;
+                var dateName = response.date_name;
+                var yourEmail = response.email;
+                var dateLoc = eachLoc;
+                var dateSum = 'Date Night';
+                var descriptionDate = document.getElementById('messageBox').value
 
 
 
-            var request2 = gapi.client.calendar.events.insert({
-                calendarId: 'primary',
-                start: {
-                    dateTime: startTime
-                },
-                end: {
-                    dateTime: endTime
-                },
-                  attendees: [
-                      {
-                        email: dateEmail
+                var request2 = gapi.client.calendar.events.insert({
+                    calendarId: 'primary',
+                    start: {
+                        dateTime: startTime
                     },
+                    end: {
+                        dateTime: endTime
+                    },
+                    attendees: [
+                        {
+                            email: dateEmail
+                        },
                         {email: yourEmail
-                      },
-                  ],
-                //   attachments: [
-                //       {
-                //         fileUrl: attachmentHere
-                //       }
-                //   ],
-                location: dateLoc,
-                description: descriptionDate,
-                reminders: {
-                    useDefault: false
-                },
-                summary: dateSum,
-                //   send-notification: 'true',
-            })
-
-
-            request2.execute(function(resp2) {
-                // var events2 = resp2.items;
-                idForEvent = resp2.id
-                //fetch to my api to add this event to the event db (post)
-                fetch(api+'/events/datenight', {
-                    method: 'POST',
-                    credentials: 'include',
-                    headers: {
-                      'Content-Type': 'application/json'
+                        },
+                    ],
+                    location: dateLoc,
+                    description: descriptionDate,
+                    reminders: {
+                        useDefault: false
                     },
-                    body: JSON.stringify({
-                        address: locationAddress,
-                        lat: latitude,
-                        long: longitude,
-                        event_at: startTime,
-                        user_id: user_id,
-                        date_name: dateName,
-                        rest_id: locationId,
-                        date_email: dateEmail,
-                        special_comments: descriptionDate,
-                        calendar_id: idForEvent
-                    })
+                    summary: dateSum,
+                    //   send-notification: 'true',
                 })
+
+
+                request2.execute(function(resp2) {
+                    // var events2 = resp2.items;
+                    idForEvent = resp2.id
+                    //fetch to my api to add this event to the event db (post)
+                    fetch(api+'/events/datenight', {
+                        method: 'POST',
+                        credentials: 'include',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            address: locationAddress,
+                            lat: latitude,
+                            long: longitude,
+                            event_at: startTime,
+                            user_id: user_id,
+                            date_name: dateName,
+                            rest_id: locationId,
+                            date_email: dateEmail,
+                            special_comments: descriptionDate,
+                            calendar_id: idForEvent
+                        })
+                    })
                     .then(function(response) {
                         return response.json()
                     })
-                console.log(idForEvent)
-                console.log(locationAddress)
-                console.log(latitude)
-                console.log(longitude)
-                console.log(startTime)
-                console.log(user_id)
-                console.log(dateName)
-                console.log(locationId)
-                console.log(dateEmail)
-                console.log(descriptionDate)
+                });
+            }) //close out function to schedule cal event
+        } //close out createEvents
 
-            });
-        }) //close out function to schedule cal event
-    } //close out createEvents
-
-    //create reminder here
-    function scheduleReminder() {
-        console.log('you clicked me')
-        fetch(api+'/users/profile?id=' + user_id, {
-            method: 'GET',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(response) {
-            var d = new Date(document.getElementById('dateReminder').value);
-            var startTime3 = d.toISOString();
-        // var startTime3 = '2016-08-28T21:00:00+00:00';
-        // moment(document.getElementById('dateReminder').value);
-        console.log(startTime3)
-        var endTime3 = '2016-08-27T16:00:00.000Z';
-        var yourEmail3 = 'hildreth.james@gmail.com';
-        var dateSum3 = 'Schedule a Date Night';
+        //create reminder here
+        function scheduleReminder() {
+            console.log('you clicked me')
+            fetch(api+'/users/profile?id=' + user_id, {
+                method: 'GET',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(response) {
+                var d = new Date(document.getElementById('dateReminder').value);
+                var startTime3 = d.toISOString();
+                // var startTime3 = '2016-08-28T21:00:00+00:00';
+                // moment(document.getElementById('dateReminder').value);
+                console.log(startTime3)
+                var endTime3 = '2016-08-27T16:00:00.000Z';
+                var yourEmail3 = 'hildreth.james@gmail.com';
+                var dateSum3 = 'Schedule a Date Night';
 
 
 
-        var request4 = gapi.client.calendar.events.insert({
-            calendarId: 'primary',
-            start: {
-                dateTime: startTime3
-            },
-            end: {
-                dateTime: endTime3
-            },
-              attendees: [
-                  {
-                    email: yourEmail3
-                },
-              ],
-            // recurrence: [
-            //         'weekly'
-            // ],
-            reminders: {
-                useDefault: false
-            },
-            summary: dateSum3,
-            //   send-notification: 'true',
-        })
+                var request4 = gapi.client.calendar.events.insert({
+                    calendarId: 'primary',
+                    start: {
+                        dateTime: startTime3
+                    },
+                    end: {
+                        dateTime: endTime3
+                    },
+                    attendees: [
+                        {
+                            email: yourEmail3
+                        },
+                    ],
+                    // recurrence: [
+                    //         'weekly'
+                    // ],
+                    reminders: {
+                        useDefault: false
+                    },
+                    summary: dateSum3,
+                    //   send-notification: 'true',
+                })
 
 
-        request4.execute(function(resp4) {
-            idToDelete2 = resp4.id
-            //fetch to my api to add this event to the event db (post)
-            console.log(resp4)
-        });
-    }) //close out function to schedule cal reminders
-} //close out sched reminder
+                request4.execute(function(resp4) {
+                    idToDelete2 = resp4.id
+                    //fetch to my api to add this event to the event db (post)
+                    console.log(resp4)
+                });
+            }) //close out function to schedule cal reminders
+        } //close out sched reminder
 
 
         //delete event here
         function deleteEvents() {
-
-            var deleteId = document.getElementById('deleteId').value;
+            var deleteId = $(this).attr('calendar-id');
+            // var deleteId = document.getElementById('calendar-id').value;
 
             var request3 = gapi.client.calendar.events.delete({
                 calendarId: 'primary',
@@ -314,7 +298,8 @@ function checkAuth() {
 
             request3.execute(function(resp3) {
                 // var events2 = resp2.items;
-                console.log(resp3)
+                // console.log(resp3)
+                console.log('deleted')
             });
         }
 
@@ -337,11 +322,11 @@ function checkAuth() {
                 end: {
                     dateTime: endTime2
                 },
-                  attendees: [
-                      {
+                attendees: [
+                    {
                         email: dateEmail2,
-                      }
-                  ],
+                    }
+                ],
                 location: dateLoc2,
                 summary: dateSum2,
             });
