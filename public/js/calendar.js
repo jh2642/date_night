@@ -217,7 +217,7 @@ function checkAuth() {
                             user_id: user_id,
                             date_name: dateName,
                             rest_id: locationId,
-                            rest_name: selectedVenue,
+                            rest_name: locationName,
                             date_email: dateEmail,
                             special_comments: descriptionDate,
                             calendar_id: idForEvent
