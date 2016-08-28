@@ -88,11 +88,11 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
             dateAttendee.innerHTML = 'with: ' + item.date_name
             div.appendChild(dateAttendee)
 
-            var details = document.createElement('button')
-            details.setAttribute('calendar-id', item.calendar_id)
-            details.classList.add('btn', 'calendar-id')
-            details.innerHTML = 'delete event'
-            div.appendChild(details)
+            var eventDetails = document.createElement('button')
+            eventDetails.setAttribute('calendar-id', item.calendar_id)
+            eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
+            eventDetails.innerHTML = 'delete event'
+            div.appendChild(eventDetails)
 
             document.getElementById('calendarEventsDb').appendChild(div)
             console.log(item.calendar_id)
