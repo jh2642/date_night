@@ -70,10 +70,10 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
         return response.json()
     })
     .then(function(response) {
-        // console.log(response)
-        response.results.forEach(function(result) {
-            console.log(result)
-        })
+        console.log(response.locationAddress)
+        // response.results.forEach(function(result) {
+        //     console.log(result)
+        // })
     })
 })
 
