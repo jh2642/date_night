@@ -87,6 +87,10 @@ window.addEventListener('googlesignin', function() {
                 dateAttendee.innerHTML = 'with: ' + item.date_name
                 div.appendChild(dateAttendee)
 
+                var dateDate = document.createElement('p')
+                dateDate.innerHTML = 'on: ' + moment(item.event_at).format('LLLL')
+                div.appendChild(dateDate)
+
                 var eventDetails = document.createElement('button')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
                 eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
