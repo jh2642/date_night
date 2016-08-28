@@ -20,6 +20,11 @@
   background-size: cover;
 }
 
+.profilePage {
+  background-color: #596475;
+  color: #e3bac6;
+}
+
 .schedulePage {
   background-color: #1f2232;
 }
