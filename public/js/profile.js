@@ -57,7 +57,7 @@ window.addEventListener('googlesignin', function() {
 
 })
 
-//retrieve data from db
+//retrieve data from events db
 document.getElementById('retrieveEvent').addEventListener('click', function() {
     fetch(api+'/events/datenight?id=' + user_id, {
         method: 'GET',
