@@ -168,7 +168,7 @@ function checkAuth() {
                 var dateEmail = response.date_email;
                 var dateName = response.date_name;
                 var yourEmail = response.email;
-                var dateLoc = eachLoc;
+                var dateLoc = dateNight;
                 var dateSum = 'Date Night';
                 var descriptionDate = document.getElementById('messageBox').value
 
@@ -217,6 +217,7 @@ function checkAuth() {
                             user_id: user_id,
                             date_name: dateName,
                             rest_id: locationId,
+                            rest_name: selectedVenue,
                             date_email: dateEmail,
                             special_comments: descriptionDate,
                             calendar_id: idForEvent
