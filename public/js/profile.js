@@ -66,7 +66,7 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
-            // console.log(response)
+            console.log(response)
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
@@ -91,7 +91,6 @@ window.addEventListener('googlesignin', function() {
                 div.appendChild(eventDetails)
 
                 document.getElementById('calendarEventsDb').appendChild(div)
-                console.log(item.calendar_id)
             })
         })
     })
