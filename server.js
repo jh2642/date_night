@@ -157,7 +157,7 @@ app.delete('/events/deletedatenight', function (request, response) {
     .then(function (count) {
       console.log(count);
     })
-    .finally(function () {
+    .then(function () {
       knex.destroy();
     })
 })
