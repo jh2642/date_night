@@ -204,161 +204,162 @@ function checkAuth() {
                     var id = $(this).attr('calendar-id')
                     console.log(id)
                     gapi.client.load('calendar', 'v3', deleteEvents);
-            });
-            // document.getElementById('updateEvents').addEventListener('click', function() {
-            //     console.log('updateEvents')
-            //     gapi.client.load('calendar', 'v3', updateEvents);
-            // });
+                });
+                // document.getElementById('updateEvents').addEventListener('click', function() {
+                //     console.log('updateEvents')
+                //     gapi.client.load('calendar', 'v3', updateEvents);
+                // });
 
-        //create reminder here
-        // function scheduleReminder() {
-        //     console.log('you clicked me')
-        //     fetch(api+'/users/profile?id=' + user_id, {
-        //         method: 'GET',
-        //         credentials: 'include',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         }
-        //     })
-        //     .then(function(response) {
-        //         return response.json()
-        //     })
-        //     .then(function(response) {
-        //         var d = new Date(document.getElementById('dateReminder').value);
-        //         var startTime3 = d.toISOString();
-        //         // var startTime3 = '2016-08-28T21:00:00+00:00';
-        //         // moment(document.getElementById('dateReminder').value);
-        //         console.log(startTime3)
-        //         var endTime3 = '2016-08-27T16:00:00.000Z';
-        //         var yourEmail3 = 'hildreth.james@gmail.com';
-        //         var dateSum3 = 'Schedule a Date Night';
-        //
-        //
-        //
-        //         var request4 = gapi.client.calendar.events.insert({
-        //             calendarId: 'primary',
-        //             start: {
-        //                 dateTime: startTime3
-        //             },
-        //             end: {
-        //                 dateTime: endTime3
-        //             },
-        //             attendees: [
-        //                 {
-        //                     email: yourEmail3
-        //                 },
-        //             ],
-        //             // recurrence: [
-        //             //         'weekly'
-        //             // ],
-        //             reminders: {
-        //                 useDefault: false
-        //             },
-        //             summary: dateSum3,
-        //             //   send-notification: 'true',
-        //         })
-        //
-        //
-        //         request4.execute(function(resp4) {
-        //             idToDelete2 = resp4.id
-        //             //fetch to my api to add this event to the event db (post)
-        //             console.log(resp4)
-        //         });
-        //     }) //close out function to schedule cal reminders
-        // } //close out sched reminder
-
-
-        //delete event here
-        function deleteEvents() {
-
-            var request3 = gapi.client.calendar.events.delete({
-                calendarId: 'primary',
-                eventId: id,
-            });
-
-            request3.execute(function(resp3) {
-                // var events2 = resp2.items;
-                console.log(resp3)
-            });
-        }
-
-        //update event here
-        // function updateEvents() {
-        //
-        //     var startTime2 = '2016-08-28T21:00:00+00:00';
-        //     var endTime2 = '2016-08-24T21:30:00+00:00';
-        //     var dateEmail2 = document.getElementById('dateEmail2').value;
-        //     var dateLoc2 = document.getElementById('dateLoc2').value;
-        //     var dateSum2 = 'Date Night';
-        //     var eventId2 = document.getElementById('eventId2').value;
-        //
-        //     var request3 = gapi.client.calendar.events.update({
-        //         calendarId: 'primary',
-        //         eventId: eventId2,
-        //         start: {
-        //             dateTime: startTime2
-        //         },
-        //         end: {
-        //             dateTime: endTime2
-        //         },
-        //         attendees: [
-        //             {
-        //                 email: dateEmail2,
-        //             }
-        //         ],
-        //         location: dateLoc2,
-        //         summary: dateSum2,
-        //     });
-        //
-        //     request3.execute(function(resp3) {
-        //         // var events2 = resp2.items;
-        //         console.log(resp3)
-        //     });
-        // }
+                //create reminder here
+                // function scheduleReminder() {
+                //     console.log('you clicked me')
+                //     fetch(api+'/users/profile?id=' + user_id, {
+                //         method: 'GET',
+                //         credentials: 'include',
+                //         headers: {
+                //             'Content-Type': 'application/json'
+                //         }
+                //     })
+                //     .then(function(response) {
+                //         return response.json()
+                //     })
+                //     .then(function(response) {
+                //         var d = new Date(document.getElementById('dateReminder').value);
+                //         var startTime3 = d.toISOString();
+                //         // var startTime3 = '2016-08-28T21:00:00+00:00';
+                //         // moment(document.getElementById('dateReminder').value);
+                //         console.log(startTime3)
+                //         var endTime3 = '2016-08-27T16:00:00.000Z';
+                //         var yourEmail3 = 'hildreth.james@gmail.com';
+                //         var dateSum3 = 'Schedule a Date Night';
+                //
+                //
+                //
+                //         var request4 = gapi.client.calendar.events.insert({
+                //             calendarId: 'primary',
+                //             start: {
+                //                 dateTime: startTime3
+                //             },
+                //             end: {
+                //                 dateTime: endTime3
+                //             },
+                //             attendees: [
+                //                 {
+                //                     email: yourEmail3
+                //                 },
+                //             ],
+                //             // recurrence: [
+                //             //         'weekly'
+                //             // ],
+                //             reminders: {
+                //                 useDefault: false
+                //             },
+                //             summary: dateSum3,
+                //             //   send-notification: 'true',
+                //         })
+                //
+                //
+                //         request4.execute(function(resp4) {
+                //             idToDelete2 = resp4.id
+                //             //fetch to my api to add this event to the event db (post)
+                //             console.log(resp4)
+                //         });
+                //     }) //close out function to schedule cal reminders
+                // } //close out sched reminder
 
 
-//retrieve data from events db
-// document.getElementById('retrieveEvent').addEventListener('click', function() {
-    // fetch(api+'/events/datenight?id=' + user_id, {
-    //     method: 'GET',
-    //     credentials: 'include',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    // })
-    // .then(function(response) {
-    //     return response.json()
-    // })
-    // .then(function(response) {
-    //     // console.log(response)
-    //     response.forEach(function(item) {
-    //
-    //         var div = document.createElement('div')
-    //         div.classList.add('dateNightEvent')
-    //
-    //         var name = document.createElement('h2')
-    //         name.innerHTML = item.event_at
-    //         div.appendChild(name)
-    //
-    //         var address = document.createElement('p')
-    //         address.innerHTML = item.address
-    //         div.appendChild(address)
-    //
-    //         var dateAttendee = document.createElement('p')
-    //         dateAttendee.innerHTML = 'with: ' + item.date_name
-    //         div.appendChild(dateAttendee)
-    //
-    //         var eventDetails = document.createElement('button')
-    //         eventDetails.setAttribute('calendar-id', item.calendar_id)
-    //         eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
-    //         eventDetails.innerHTML = 'delete event'
-    //         div.appendChild(eventDetails)
-    //
-    //         document.getElementById('calendarEventsDb').appendChild(div)
-    //         console.log(item.calendar_id)
-    //     })
-    // })
-// })
+                //delete event here
+                function deleteEvents() {
+
+                    var request3 = gapi.client.calendar.events.delete({
+                        calendarId: 'primary',
+                        eventId: id,
+                    });
+
+                    request3.execute(function(resp3) {
+                        // var events2 = resp2.items;
+                        console.log(resp3)
+                    });
+                };
+            })
+
+                //update event here
+                // function updateEvents() {
+                //
+                //     var startTime2 = '2016-08-28T21:00:00+00:00';
+                //     var endTime2 = '2016-08-24T21:30:00+00:00';
+                //     var dateEmail2 = document.getElementById('dateEmail2').value;
+                //     var dateLoc2 = document.getElementById('dateLoc2').value;
+                //     var dateSum2 = 'Date Night';
+                //     var eventId2 = document.getElementById('eventId2').value;
+                //
+                //     var request3 = gapi.client.calendar.events.update({
+                //         calendarId: 'primary',
+                //         eventId: eventId2,
+                //         start: {
+                //             dateTime: startTime2
+                //         },
+                //         end: {
+                //             dateTime: endTime2
+                //         },
+                //         attendees: [
+                //             {
+                //                 email: dateEmail2,
+                //             }
+                //         ],
+                //         location: dateLoc2,
+                //         summary: dateSum2,
+                //     });
+                //
+                //     request3.execute(function(resp3) {
+                //         // var events2 = resp2.items;
+                //         console.log(resp3)
+                //     });
+                // }
 
 
-// document.getElementById("dateReminder").flatpickr();
+                //retrieve data from events db
+                // document.getElementById('retrieveEvent').addEventListener('click', function() {
+                // fetch(api+'/events/datenight?id=' + user_id, {
+                //     method: 'GET',
+                //     credentials: 'include',
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     }
+                // })
+                // .then(function(response) {
+                //     return response.json()
+                // })
+                // .then(function(response) {
+                //     // console.log(response)
+                //     response.forEach(function(item) {
+                //
+                //         var div = document.createElement('div')
+                //         div.classList.add('dateNightEvent')
+                //
+                //         var name = document.createElement('h2')
+                //         name.innerHTML = item.event_at
+                //         div.appendChild(name)
+                //
+                //         var address = document.createElement('p')
+                //         address.innerHTML = item.address
+                //         div.appendChild(address)
+                //
+                //         var dateAttendee = document.createElement('p')
+                //         dateAttendee.innerHTML = 'with: ' + item.date_name
+                //         div.appendChild(dateAttendee)
+                //
+                //         var eventDetails = document.createElement('button')
+                //         eventDetails.setAttribute('calendar-id', item.calendar_id)
+                //         eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
+                //         eventDetails.innerHTML = 'delete event'
+                //         div.appendChild(eventDetails)
+                //
+                //         document.getElementById('calendarEventsDb').appendChild(div)
+                //         console.log(item.calendar_id)
+                //     })
+                // })
+                // })
+
+
+                // document.getElementById("dateReminder").flatpickr();
