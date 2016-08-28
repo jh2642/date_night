@@ -106,20 +106,17 @@ $(document).ready(function(){
         console.log(calId)
 
         fetch(api+'/events/deletedatenight?user_id=' + user_id, {
-            method: 'DELETE',
+            method: 'POST',
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 calendar_id: calId,
-            })
+            }),
         })
         .then(function (count) {
           console.log(count);
-        })
-        .then(function () {
-          knex.destroy();
         })
     })
 })

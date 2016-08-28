@@ -157,9 +157,6 @@ app.delete('/events/deletedatenight', function (request, response) {
     .then(function (count) {
       console.log(count);
     })
-    .then(function () {
-      knex.destroy();
-    })
 })
 
 app.use(express.static(__dirname + '/public'))
