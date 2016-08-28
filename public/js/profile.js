@@ -81,7 +81,7 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
             div.appendChild(name)
 
             var address = document.createElement('p')
-            address.innerHTML = item.locationAddress
+            address.innerHTML = item.address
             div.appendChild(address)
 
             var dateAttendee = document.createElement('p')
@@ -91,7 +91,7 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
             var checkbox = document.createElement('input');
             checkbox.type = 'radio';
             // checkbox.name = typeOne;
-            checkbox.value = item.calendarId;
+            checkbox.value = item.calendar_id;
             checkbox.classList = 'selectDetail';
             var label = document.createElement('label')
             label.htmlFor = 'calendar-id';
