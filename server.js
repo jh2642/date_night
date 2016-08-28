@@ -149,6 +149,16 @@ app.get('/events/datenight', function (request, response) {
     })
 })
 
+//delete event from events db
+app.post('/events/deletedatenight', function (request, response) {
+    knex('events')
+    .del()
+    .where('calendar_id', request.body.calId)
+    .then(function(details) {
+        response.json(details)
+    })
+})
+
 app.use(express.static(__dirname + '/public'))
 
 app.listen(app.get('port'), function () {

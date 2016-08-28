@@ -336,7 +336,7 @@ function checkAuth() {
                 console.log(resp3)
             });
         }
-
+        
 
         /**
         * Append a pre element to the body containing the given message

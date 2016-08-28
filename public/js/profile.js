@@ -1,5 +1,6 @@
 var api = 'https://serene-hamlet-75445.herokuapp.com'
 var user_id = null
+var calId
 
 
 document.getElementById('addDateInfo').addEventListener('click', function() {
@@ -101,65 +102,70 @@ window.addEventListener('googlesignin', function() {
 $(document).ready(function(){
     $('body').on('click', '.calendar-id', function(){
 
-        var id = $(this).attr('calendar-id')
-        console.log(id)
-        //delete event here
-//         function deleteEvents() {
-// // https://www.googleapis.com/calendar/v3/calendars/primary/events/63ocp2bk46f1h8un03it2bu9lg?key={YOUR_API_KEY}
-//
-//             var request3 = 'https://www.googleapis.com/calendar/v3/calendars/primary/events/' + id + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4'
-//
-//
-//             request3.execute(function(resp3) {
-//                 // var events2 = resp2.items;
-//                 console.log(resp3)
-//             });
-//         }
+        calId = $(this).attr('calendar-id')
+        console.log(calId)
+
+        fetch(api+'/events/deletedatenight?id=' + user_id, {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                calendar_id: calId
+            })
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(response) {
+            console.log(response)
+
     })
 })
 
-                //retrieve data from events db
-                // document.getElementById('retrieveEvent').addEventListener('click', function() {
-                // fetch(api+'/events/datenight?id=' + user_id, {
-                //     method: 'GET',
-                //     credentials: 'include',
-                //     headers: {
-                //         'Content-Type': 'application/json'
-                //     }
-                // })
-                // .then(function(response) {
-                //     return response.json()
-                // })
-                // .then(function(response) {
-                //     // console.log(response)
-                //     response.forEach(function(item) {
-                //
-                //         var div = document.createElement('div')
-                //         div.classList.add('dateNightEvent')
-                //
-                //         var name = document.createElement('h2')
-                //         name.innerHTML = item.event_at
-                //         div.appendChild(name)
-                //
-                //         var address = document.createElement('p')
-                //         address.innerHTML = item.address
-                //         div.appendChild(address)
-                //
-                //         var dateAttendee = document.createElement('p')
-                //         dateAttendee.innerHTML = 'with: ' + item.date_name
-                //         div.appendChild(dateAttendee)
-                //
-                //         var eventDetails = document.createElement('button')
-                //         eventDetails.setAttribute('calendar-id', item.calendar_id)
-                //         eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
-                //         eventDetails.innerHTML = 'delete event'
-                //         div.appendChild(eventDetails)
-                //
-                //         document.getElementById('calendarEventsDb').appendChild(div)
-                //         console.log(item.calendar_id)
-                //     })
-                // })
-                // })
+//retrieve data from events db
+// document.getElementById('retrieveEvent').addEventListener('click', function() {
+// fetch(api+'/events/datenight?id=' + user_id, {
+//     method: 'GET',
+//     credentials: 'include',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     }
+// })
+// .then(function(response) {
+//     return response.json()
+// })
+// .then(function(response) {
+//     // console.log(response)
+//     response.forEach(function(item) {
+//
+//         var div = document.createElement('div')
+//         div.classList.add('dateNightEvent')
+//
+//         var name = document.createElement('h2')
+//         name.innerHTML = item.event_at
+//         div.appendChild(name)
+//
+//         var address = document.createElement('p')
+//         address.innerHTML = item.address
+//         div.appendChild(address)
+//
+//         var dateAttendee = document.createElement('p')
+//         dateAttendee.innerHTML = 'with: ' + item.date_name
+//         div.appendChild(dateAttendee)
+//
+//         var eventDetails = document.createElement('button')
+//         eventDetails.setAttribute('calendar-id', item.calendar_id)
+//         eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
+//         eventDetails.innerHTML = 'delete event'
+//         div.appendChild(eventDetails)
+//
+//         document.getElementById('calendarEventsDb').appendChild(div)
+//         console.log(item.calendar_id)
+//     })
+// })
+// })
 
 
-                // document.getElementById("dateReminder").flatpickr();
+// document.getElementById("dateReminder").flatpickr();
