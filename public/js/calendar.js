@@ -288,8 +288,8 @@ function checkAuth() {
 
         //delete event here
         function deleteEvents() {
-            var deleteId = $(this).attr('calendar-id');
-            // var deleteId = document.getElementById('calendar-id').value;
+            // var deleteId = $(this).attr('calendar-id');
+            var deleteId = document.getElementById('calendar-id').value;
 
             var request3 = gapi.client.calendar.events.delete({
                 calendarId: 'primary',
@@ -298,8 +298,7 @@ function checkAuth() {
 
             request3.execute(function(resp3) {
                 // var events2 = resp2.items;
-                // console.log(resp3)
-                console.log('deleted')
+                console.log(resp3)
             });
         }
 
