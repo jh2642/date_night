@@ -29,17 +29,15 @@
             <div class="text-center profileBox">
                 <div class="col-md-3 profilePicBox">
                     <p id="googlePic"></p>
-                </div>
-                <div class="col-md-3 userInfoBox">
                     <p id="googleName"></p>
                     <p id="googleEmail"></p>
                 </div>
                 <div class=" col-md-3 yourDateBox">
                     <h3>your date:</h3>
-                <p id="dateInformation"></p>
-                <p>@</p>
-                <p id="datesEmail"></p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update date info</button>
+                    <p id="dateInformation"></p>
+                    <p>@</p>
+                    <p id="datesEmail"></p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update date info</button>
                 </div>
             </div>
             <div class="col-md-3">
@@ -48,32 +46,33 @@
                 <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>
                 <a href="/index.html" class="btn btn-primary" role="button">landing</a>
             </div>
-            <div class="row calendarBox text-center">
-                <h1 id="calendarEvents">upcoming events....</h1>
-                <p id="calendarEventsDb"></p>
-            </div>
+        </div>
+        <div class="row calendarBox text-center">
+            <h1 id="calendarEvents">upcoming events....</h1>
+            <p id="calendarEventsDb"></p>
         </div>
 
+
         <!-- <div class="row updateBox">
-            <div class="col-md-6 col-md-offset-2">
-                <h4>under construction</h4>
-                <h2>add your date's info:</h2>
-                <div class="form-group">
-                    <input type="text" class="form-control addToProfile" id="datesNameUpdate" placeholder="your date's name">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control addToProfile" id="datesEmailUpdate" placeholder="your date's email">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control addToProfile" id="datesPhoneUpdate" placeholder="your date's phone #">
-                </div>
-                <a type="button"><button class="btn btn-primary" id="addDateInfo">add to your profile</button></a>
-            </div>
-        </div> -->
+        <div class="col-md-6 col-md-offset-2">
+        <h4>under construction</h4>
+        <h2>add your date's info:</h2>
+        <div class="form-group">
+        <input type="text" class="form-control addToProfile" id="datesNameUpdate" placeholder="your date's name">
+    </div>
+    <div class="form-group">
+    <input type="email" class="form-control addToProfile" id="datesEmailUpdate" placeholder="your date's email">
 </div>
-    <!-- Small modal -->
-    <div class="modal fade dateModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
+<div class="form-group">
+<input type="email" class="form-control addToProfile" id="datesPhoneUpdate" placeholder="your date's phone #">
+</div>
+<a type="button"><button class="btn btn-primary" id="addDateInfo">add to your profile</button></a>
+</div>
+</div> -->
+</div>
+<!-- Small modal -->
+<div class="modal fade dateModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content text-center">
             <h2>add/update your date's info:</h2>
             <div class="form-group">
@@ -88,27 +87,27 @@
             <button type="button" class="btn btn-primary" data-dismiss="modal">cancel</button>
             <a href="/profile.html" type="button"><button class="btn btn-primary" id="addDateInfo">add to your profile</button></a>
         </div>
-      </div>
     </div>
+</div>
 
-    <!-- <div class="row updateBox">
-        <div class="col-md-6 col-md-offset-2">
-            <h2>set up weekly reminder to schedule date night:</h2>
-                <input type="text" class="form-control" id="dateReminder" data-enable-time=true placeholder="select date and time">
-            <a type="button"><button class="btn btn-primary" id="scheduleReminder">schedule reminder</button></a>
-        </div>
-    </div> -->
+<!-- <div class="row updateBox">
+<div class="col-md-6 col-md-offset-2">
+<h2>set up weekly reminder to schedule date night:</h2>
+<input type="text" class="form-control" id="dateReminder" data-enable-time=true placeholder="select date and time">
+<a type="button"><button class="btn btn-primary" id="scheduleReminder">schedule reminder</button></a>
+</div>
+</div> -->
 
-    <!-- <div class="row updateBox">
-        <div class="col-md-6 col-md-offset-2">
-            <a type="button"><button class="btn btn-primary" id="retrieveEvent">retrieveEvent</button></a>
-        </div>
-    </div> -->
+<!-- <div class="row updateBox">
+<div class="col-md-6 col-md-offset-2">
+<a type="button"><button class="btn btn-primary" id="retrieveEvent">retrieveEvent</button></a>
+</div>
+</div> -->
 
 <!-- </div> -->
 
-    <!-- <footer class="text-center">
-    <img src="assets/powered_by_google_on_non_white.png">
+<!-- <footer class="text-center">
+<img src="assets/powered_by_google_on_non_white.png">
 </footer> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
