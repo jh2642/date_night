@@ -54,7 +54,7 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
     })
-    .then(function()) {
+    .then(function() {
         fetch(api+'/events/datenight?id=' + user_id, {
             method: 'GET',
             credentials: 'include',
