@@ -105,7 +105,7 @@ $(document).ready(function(){
         calId = $(this).attr('calendar-id')
         console.log(calId)
 
-        fetch(api+'/events/deletedatenight?id=' + user_id, {
+        fetch(api+'/events/deletedatenight?user_id=' + user_id, {
             method: 'PATCH',
             credentials: 'include',
             headers: {
