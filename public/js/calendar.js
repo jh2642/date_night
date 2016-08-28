@@ -91,10 +91,10 @@ function checkAuth() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
 
-            // document.getElementById('calendar-id').addEventListener('click', function() {
-            //     console.log('deleteEvents')
-            //     gapi.client.load('calendar', 'v3', deleteEvents);
-            // });
+            document.getElementById('deleteEvents').addEventListener('click', function() {
+                console.log('deleteEvents')
+                gapi.client.load('calendar', 'v3', deleteEvents);
+            });
             // document.getElementById('updateEvents').addEventListener('click', function() {
             //     console.log('updateEvents')
             //     gapi.client.load('calendar', 'v3', updateEvents);
@@ -126,7 +126,7 @@ function checkAuth() {
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
                 var descriptionDate = document.getElementById('messageBox').value
-                // var meetingDate = document.getElementsByName('meetDate')
+                
 
                 var request2 = gapi.client.calendar.events.insert({
                     calendarId: 'primary',
@@ -156,6 +156,7 @@ function checkAuth() {
                 request2.execute(function(resp2) {
                     // var events2 = resp2.items;
                     idForEvent = resp2.id
+                    console.log(idForEvent)
                     //fetch to my api to add this event to the event db (post)
                     fetch(api+'/events/datenight', {
                         method: 'POST',

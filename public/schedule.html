@@ -67,21 +67,21 @@
                 <p id="localBar"></p>
             </div>
         </div>
+        <form class="inputBox">
+            <h2>DEV PURPOSES</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
+            </div>
+            <button type="button" id="deleteEvents" class="btn btn-primary">delete a date</button>
+        </form>
         <!-- <form class="inputBox">
         <h2>DEV PURPOSES</h2>
         <div class="form-group">
-        <input type="text" class="form-control" id="deleteId" placeholder="calendar id to delete">
+        <input type="text" class="form-control" id="startTime2" placeholder="default start time">
+        <input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
+        <input type="text" class="form-control" id="dateLoc2" placeholder="location">
     </div>
-    <button type="button" id="deleteEvents" class="btn btn-primary">delete a date</button>
-</form>
-<form class="inputBox">
-<h2>DEV PURPOSES</h2>
-<div class="form-group">
-<input type="text" class="form-control" id="startTime2" placeholder="default start time">
-<input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
-<input type="text" class="form-control" id="dateLoc2" placeholder="location">
-</div>
-<button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
+    <button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
 </form> -->
 </div>
 <!-- Details Modal -->
@@ -122,22 +122,22 @@
                         <!-- <p>optional location 2 here</p>
                         <p>optional location 3 here</p> -->
                     </div>
-                    <div class="col-sm-5">
+                    <!-- <div class="col-sm-5">
                         <h4>pick a message to send with your invite:</h4>
                         <p><input type="radio" id="pickUp" name="meetDate">I'll pick you up.</p>
                         <p><input type="radio" id="meetRestaurant" name="meetDate">I'll meet you there.</p>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- <div class="row text-center">
-                    <input type="text" class="text-center messageToDate" id="messageBox" placeholder="message to your date">
-                </div> -->
-                <div class="modal-footer row">
-                    <button type="button" class="btn" data-dismiss="modal">cancel</button>
-                    <button type="button" id="createEvents" data-dismiss="modal" class="btn">send invite</button>
-                </div>
+                <input type="text" class="text-center messageToDate" id="messageBox" placeholder="message to your date">
+            </div> -->
+            <div class="modal-footer row">
+                <button type="button" class="btn" data-dismiss="modal">cancel</button>
+                <button type="button" id="createEvents" data-dismiss="modal" class="btn">send invite</button>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script src="js/googlesignin.js"></script>
