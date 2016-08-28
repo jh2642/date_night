@@ -3,12 +3,12 @@ var user_id = null
 var calId
 
 
-document.getElementById('addDateInfo').addEventListener('click', function() {
-
-    var datesNameUpdate = document.getElementById('datesNameUpdate').value
-    var datesEmailUpdate = document.getElementById('datesEmailUpdate').value
-    console.log(datesNameUpdate, datesEmailUpdate)
-})
+// document.getElementById('addDateInfo').addEventListener('click', function() {
+//
+//     var datesNameUpdate = document.getElementById('datesNameUpdate').value
+//     var datesEmailUpdate = document.getElementById('datesEmailUpdate').value
+//     console.log(datesNameUpdate, datesEmailUpdate)
+// })
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
