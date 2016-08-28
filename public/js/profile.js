@@ -100,7 +100,7 @@ fetch(api+'/events/datenight?id=' + user_id, {
         div.appendChild(checkbox);
         div.appendChild(label);
         document.getElementById('calendarEventsDb').appendChild(div)
-    }
+    })
 })
 
 
