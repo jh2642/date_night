@@ -220,7 +220,7 @@ function checkAuth() {
                             rest_id: locationId,
                             rest_name: locationName,
                             date_email: dateEmail,
-                            special_comments: descriptionDate,
+                            special_comments: meetingDate,
                             calendar_id: idForEvent
                         })
                     })
