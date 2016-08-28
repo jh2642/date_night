@@ -201,8 +201,6 @@ function checkAuth() {
             $(document).ready(function(){
                 $('body').on('click', '.calendar-id', function(){
 
-                    var id = $(this).attr('calendar-id')
-                    console.log(id)
                     gapi.client.load('calendar', 'v3', deleteEvents);
                 });
                 // document.getElementById('updateEvents').addEventListener('click', function() {
@@ -270,6 +268,8 @@ function checkAuth() {
 
                 //delete event here
                 function deleteEvents() {
+                    var id = $(this).attr('calendar-id')
+                    console.log(id)
 
                     var request3 = gapi.client.calendar.events.delete({
                         calendarId: 'primary',
@@ -282,7 +282,7 @@ function checkAuth() {
                     });
                 };
             })
-
+}
                 //update event here
                 // function updateEvents() {
                 //
