@@ -70,11 +70,9 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
         return response.json()
     })
     .then(function(response) {
-        console.log(response)
-        response.results.forEach(function(item) {
-            // var div = document.createElement('div')
-            // div.classList.add('dateNights')
-            console.log(item)
+        // console.log(response)
+        response.results.forEach(function(result) {
+            console.log(result)
         })
     })
 })
