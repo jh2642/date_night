@@ -1,3 +1,6 @@
+/* Coolors Exported Palette - coolors.co/4c5454-ff715b-ffffff-1ea896-523f38 */
+/* HSL */
+/* RGB */
 * {
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -13,9 +16,9 @@
 }
 
 body {
-  background-image: url("/assets/background-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #ff715b;
 }
 
 .mainPage {
