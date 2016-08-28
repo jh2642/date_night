@@ -115,11 +115,11 @@ $(document).ready(function(){
                 calendar_id: calId,
             })
         })
-        .then(function(response) {
-            return response.json()
+        .then(function (count) {
+          console.log(count);
         })
-        .then(function(response) {
-            console.log(response)
+        .finally(function () {
+          knex.destroy();
         })
     })
 })
