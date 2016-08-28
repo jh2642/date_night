@@ -59,10 +59,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     rating.innerHTML = "Rating: " + item.rating
                     div.appendChild(rating)
 
-                    // var pricing = document.createElement('p')
-                    // pricing.innerHTML = "Price: " + item.price
-                    // div.appendChild(pricing)
-
                     var checkbox = document.createElement('input');
                     checkbox.type = 'radio';
                     checkbox.name = typeOne;
@@ -95,9 +91,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
-            // console.log(response.results[0].types[0])
-            // if (response.results[0].types[0] === typeTwo) {
-            // console.log(priceReq, priceReq2)
+
             document.getElementById('localRestaurants').innerHTML = ''
             response.results.forEach(function(item) {
                 if (item.types[0] === typeTwo) {
@@ -146,9 +140,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
-            // console.log(response.results[0].types[0])
-            //this pulls the 1st type in the location.
-            // if (response.results[0].types[0] === typeThree) {
             document.getElementById('localBar').innerHTML = ''
             response.results.forEach(function(item) {
                 if (item.types[0] === typeThree) {
@@ -205,7 +196,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     return response.json()
                 })
                 .then(function(response) {
-                    // console.log(response.result)
+
                     var div = document.createElement('div')
                     div.classList.add('modalEstablishment')
 
@@ -274,7 +265,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
                 eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
                 dateNight = eachLoc
-                // console.log(dateNight)
+            
                 document.getElementById('dateLoc1').innerHTML = dateNight;
                 document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 

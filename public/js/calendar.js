@@ -1,5 +1,3 @@
-
-
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com';
@@ -29,35 +27,35 @@ function checkAuth() {
             // Hide auth UI, then load client library.
             authorizeDiv.style.display = 'none';
 
-                    loadCalendarApi();
+            loadCalendarApi();
 
-                    //get profile information from db
-                        fetch(api+'/users/profile?id=' + user_id, {
-                            method: 'GET',
-                            credentials: 'include',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
-                        })
-                        .then(function(response) {
-                            return response.json()
-                        })
-                        .then(function(response) {
-                            console.log(response)
-                            // document.getElementById('dateInformation').innerHTML = response.date_name
-                            var featureImage = document.createElement('img')
-                            featureImage.setAttribute('src', response.image_url)
-                            featureImage.classList.add('img-circle')
-                            var individualName = document.getElementById('googleName')
-                            individualName.innerHTML = response.name
-                            var individualEmail = document.getElementById('googleEmail')
-                            individualEmail.innerHTML = response.email
+            //get profile information from db
+            fetch(api+'/users/profile?id=' + user_id, {
+                method: 'GET',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(response) {
+                console.log(response)
+                // document.getElementById('dateInformation').innerHTML = response.date_name
+                var featureImage = document.createElement('img')
+                featureImage.setAttribute('src', response.image_url)
+                featureImage.classList.add('img-circle')
+                var individualName = document.getElementById('googleName')
+                individualName.innerHTML = response.name
+                var individualEmail = document.getElementById('googleEmail')
+                individualEmail.innerHTML = response.email
 
-                            document.getElementById('googlePic').innerHTML = ''
-                            document.getElementById('googlePic').appendChild(featureImage)
-                            document.getElementById('dateName').innerHTML = response.date_name
+                document.getElementById('googlePic').innerHTML = ''
+                document.getElementById('googlePic').appendChild(featureImage)
+                document.getElementById('dateName').innerHTML = response.date_name
 
-                })
+            })
         }
         else {
             // Show auth UI, allowing the user to initiate authorization by
@@ -85,10 +83,6 @@ function checkAuth() {
 
         function loadCalendarApi() {
 
-            // document.getElementById('showEvents').addEventListener('click', function() {
-            //     console.log('showEvents')
-            //     gapi.client.load('calendar', 'v3', listUpcomingEvents);
-            // });
             document.getElementById('createEvents').addEventListener('click', function() {
                 // console.log('createEvents')
                 gapi.client.load('calendar', 'v3', createEvents);
@@ -107,45 +101,6 @@ function checkAuth() {
             // });
 
         }
-
-
-
-        /**
-        * Print the summary and start datetime/date of the next ten events in
-        * the authorized user's calendar. If no events are found an
-        * appropriate message is printed.
-        */
-        // function listUpcomingEvents() {
-        //     var request = gapi.client.calendar.events.list({
-        //         'calendarId': 'primary',
-        //         'timeMin': (new Date()).toISOString(),
-        //         'showDeleted': false,
-        //         'singleEvents': true,
-        //         'maxResults': 5,
-        //         'orderBy': 'startTime'
-        //     });
-        //
-        //     request.execute(function(resp) {
-        //         var events = resp.items;
-        //         console.log(events)
-        //         // document.getElementById('calendarEvents').innerHTML = events
-        //         appendPre('Upcoming events:');
-        //
-        //         if (events.length > 0) {
-        //             for (i = 0; i < events.length; i++) {
-        //                 var event = events[i];
-        //                 var when = event.start.dateTime;
-        //                 if (!when) {
-        //                     when = event.start.date;
-        //                 }
-        //                 appendPre(event.summary + ' (' + when + ')')
-        //             }
-        //         } else {
-        //             appendPre('No upcoming events found.');
-        //         }
-        //
-        //     });
-        // }
 
         //create event here
         function createEvents() {
@@ -336,16 +291,3 @@ function checkAuth() {
                 console.log(resp3)
             });
         }
-
-
-        /**
-        * Append a pre element to the body containing the given message
-        * as its text node.
-        *
-        * @param {string} message Text to be placed in pre element.
-        */
-        // function appendPre(message) {
-        //     var pre = document.getElementById('output');
-        //     var textContent = document.createTextNode(message + '\n');
-        //     pre.appendChild(textContent);
-        // }
