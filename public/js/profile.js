@@ -88,17 +88,12 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
             dateAttendee.innerHTML = 'with: ' + item.date_name
             div.appendChild(dateAttendee)
 
-            var checkbox = document.createElement('input');
-            checkbox.type = 'radio';
-            // checkbox.name = typeOne;
-            checkbox.value = item.calendar_id;
-            checkbox.classList = 'selectDetail';
-            var label = document.createElement('label')
-            label.htmlFor = 'calendar-id';
-            label.classList = 'calLabel';
-            label.appendChild(document.createTextNode('select to delete'));
-            div.appendChild(checkbox);
-            div.appendChild(label);
+            var details = document.createElement('button')
+            details.setAttribute('calendar-id', item.calendar_id)
+            details.classList.add('btn', 'calendar-id')
+            details.innerHTML = 'delete event'
+            div.appendChild(details)
+
             document.getElementById('calendarEventsDb').appendChild(div)
             console.log(item.calendar_id)
         })
