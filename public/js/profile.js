@@ -281,7 +281,7 @@ function checkAuth() {
                         // var events2 = resp2.items;
                         console.log(resp3)
                     });
-                };
+                }
 
                 //update event here
                 // function updateEvents() {
