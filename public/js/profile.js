@@ -101,6 +101,18 @@ $(document).ready(function(){
 
         var id = $(this).attr('calendar-id')
         console.log(id)
+        //delete event here
+        function deleteEvents() {
+// https://www.googleapis.com/calendar/v3/calendars/primary/events/63ocp2bk46f1h8un03it2bu9lg?key={YOUR_API_KEY}
+
+            var request3 = 'https://www.googleapis.com/calendar/v3/calendars/primary/events/' + id + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4'
+
+
+            request3.execute(function(resp3) {
+                // var events2 = resp2.items;
+                console.log(resp3)
+            });
+        }
     })
 })
 

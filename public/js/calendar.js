@@ -97,10 +97,10 @@ function checkAuth() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
 
-            document.getElementById('calendar-id').addEventListener('click', function() {
-                console.log('deleteEvents')
-                gapi.client.load('calendar', 'v3', deleteEvents);
-            });
+            // document.getElementById('calendar-id').addEventListener('click', function() {
+            //     console.log('deleteEvents')
+            //     gapi.client.load('calendar', 'v3', deleteEvents);
+            // });
             // document.getElementById('updateEvents').addEventListener('click', function() {
             //     console.log('updateEvents')
             //     gapi.client.load('calendar', 'v3', updateEvents);
