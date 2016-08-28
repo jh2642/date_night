@@ -159,7 +159,8 @@ app.post('/events/deletedatenight', function (request, response) {
     })
     .finally(function () {
       knex.destroy();
-    });
+    })
+})
 
 app.use(express.static(__dirname + '/public'))
 
