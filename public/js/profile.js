@@ -80,25 +80,6 @@ fetch(api+'/events/datenight?id=' + user_id, {
         name.innerHTML = item.event_at
         div.appendChild(name)
 
-        var address = document.createElement('p')
-        address.innerHTML = item.locationAddress
-        div.appendChild(address)
-
-        var dateAttendee = document.createElement('p')
-        dateAttendee.innerHTML = item.date_name
-        div.appendChild(dateAttendee)
-
-        var checkbox = document.createElement('input');
-        checkbox.type = 'radio';
-        checkbox.name = typeOne;
-        checkbox.value = item.calendarId;
-        checkbox.classList = 'selectDetail';
-        var label = document.createElement('label')
-        label.htmlFor = 'calendar-id';
-        label.classList = 'calLabel';
-        label.appendChild(document.createTextNode('select to delete'));
-        div.appendChild(checkbox);
-        div.appendChild(label);
         document.getElementById('calendarEventsDb').appendChild(div)
     })
 })
