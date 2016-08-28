@@ -129,7 +129,7 @@ app.get('/users/profile', function (request, response) {
     })
 })
 
-//add date to events db
+//add a date to events db
 app.post('/events/datenight', function (request, response) {
     knex('events').insert(request.body).then(function(ids) {
         // request.session.user_id=ids[0]
@@ -150,14 +150,14 @@ app.get('/events/datenight', function (request, response) {
 })
 
 //delete event from events db
-// app.delete('/events/deletedatenight', function (request, response) {
-//     knex('events')
-//     .del()
-//     .where('calendar_id', request.body.calId)
-//     .then(function(details) {
-//         response.json(details)
-//     })
-// })
+app.delete('/events/deletedatenight', function (request, response) {
+    knex('events')
+    .del()
+    .where('calendar_id', request.body.calId)
+    .then(function(details) {
+        response.json(details)
+    })
+})
 
 app.use(express.static(__dirname + '/public'))
 

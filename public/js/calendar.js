@@ -170,10 +170,8 @@ function checkAuth() {
                 var yourEmail = response.email;
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
-                // var descriptionDate = document.getElementById('messageBox').value
-                var meetingDate = document.getElementsByName('meetDate')
-
-                console.log(meetingDate)
+                var descriptionDate = document.getElementById('messageBox').value
+                // var meetingDate = document.getElementsByName('meetDate')
 
                 var request2 = gapi.client.calendar.events.insert({
                     calendarId: 'primary',
@@ -191,7 +189,7 @@ function checkAuth() {
                         },
                     ],
                     location: dateLoc,
-                    description: meetingDate,
+                    description: descriptionDate,
                     reminders: {
                         useDefault: false
                     },
@@ -220,7 +218,7 @@ function checkAuth() {
                             rest_id: locationId,
                             rest_name: locationName,
                             date_email: dateEmail,
-                            special_comments: meetingDate,
+                            special_comments: descriptionDate,
                             calendar_id: idForEvent
                         })
                     })
