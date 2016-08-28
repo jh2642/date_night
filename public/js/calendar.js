@@ -42,7 +42,7 @@ function checkAuth() {
                 })
                 .then(function(response) {
                     console.log(response)
-                    // document.getElementById('dateInformation').innerHTML = response.date_name
+                    document.getElementById('dateInformation').innerHTML = response.date_name
                     var featureImage = document.createElement('img')
                     featureImage.setAttribute('src', response.image_url)
                     featureImage.classList.add('img-circle')
@@ -53,7 +53,7 @@ function checkAuth() {
 
                     document.getElementById('googlePic').innerHTML = ''
                     document.getElementById('googlePic').appendChild(featureImage)
-                    // document.getElementById('dateName').innerHTML = response.date_name
+                    document.getElementById('dateName').innerHTML = response.date_name
 
                     loadCalendarApi();
                 })
