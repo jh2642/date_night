@@ -112,7 +112,7 @@ app.patch('/users/update', function (request, response) {
         delete request.body.date_phone_number
     }
     knex('users')
-    .where('id', request.body.id)
+    .where('id', request.body.user_id)
     .update(request.body)
     .then(function(ids) {
         response.json(ids[0])
