@@ -96,11 +96,12 @@ window.addEventListener('googlesignin', function() {
     })
 })
 
-document.getElementById('calendar-id').addEventListener('click', function() {
+$(document).ready(function(){
+    $('body').on('click', '.calendar-id', function(){
 
-    var calId = document.getElementById('calendar-id').value
-
-    console.log(calId)
+        var id = $(this).attr('calendar-id')
+        console.log(id)
+    })
 })
 
 //retrieve data from events db
