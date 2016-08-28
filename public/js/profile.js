@@ -105,15 +105,12 @@ $(document).ready(function(){
         calId = $(this).attr('calendar-id')
         console.log(calId)
 
-        fetch(api+'/events/deletedatenight?id=' + user_id, {
+        fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
             method: 'POST',
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                calendar_id: calId
-            })
         })
         .then(function(response) {
             return response.json()
