@@ -37,10 +37,10 @@ $color5: rgba(82, 63, 56, 1);
 }
 
 body {
-    // background-image: url('/assets/background-1.jpeg');
+    background-image: url('/assets/background-1.jpeg');
     background-repeat: no-repeat;
     background-size:cover;
-    background-color: $color2;
+    // background-color: $color2;
 }
 
 .mainPage {
