@@ -210,6 +210,7 @@ function checkAuth() {
                 //     gapi.client.load('calendar', 'v3', updateEvents);
                 // });
             })
+        }
 
                 //create reminder here
                 // function scheduleReminder() {
