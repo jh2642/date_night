@@ -12,7 +12,7 @@ document.getElementById('addDateInfo').addEventListener('click', function() {
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
-    fetch(api+'/users/update', {
+    fetch(api+'/users/update?id=' + user_id, {
         method: 'PATCH',
         credentials: 'include',
         headers: {
