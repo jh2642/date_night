@@ -1,6 +1,7 @@
 var api = 'https://serene-hamlet-75445.herokuapp.com'
 var user_id = null
 
+
 document.getElementById('addDateInfo').addEventListener('click', function() {
 
     var datesName = document.getElementById('datesName').value
@@ -200,14 +201,15 @@ function checkAuth() {
 
             $(document).ready(function(){
                 $('body').on('click', '.calendar-id', function(){
-                    var id = $(this).attr('calendar-id')
-                    console.log(id)
+                    var calId = $(this).attr('calendar-id')
+                    console.log(calId)
                     gapi.client.load('calendar', 'v3', deleteEvents);
                 });
                 // document.getElementById('updateEvents').addEventListener('click', function() {
                 //     console.log('updateEvents')
                 //     gapi.client.load('calendar', 'v3', updateEvents);
                 // });
+            })
 
                 //create reminder here
                 // function scheduleReminder() {
@@ -272,7 +274,7 @@ function checkAuth() {
 
                     var request3 = gapi.client.calendar.events.delete({
                         calendarId: 'primary',
-                        eventId: id,
+                        eventId: calId,
                     });
 
                     request3.execute(function(resp3) {
@@ -281,7 +283,7 @@ function checkAuth() {
                     });
                 };
             })
-}
+
                 //update event here
                 // function updateEvents() {
                 //
