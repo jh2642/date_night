@@ -111,6 +111,9 @@ $(document).ready(function(){
             headers: {
                 'Content-Type': 'application/json'
             },
+            body: JSON.stringify({
+                calendar_id: calId,
+            })
         })
         .then(function(response) {
             return response.json()
