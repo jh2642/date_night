@@ -90,7 +90,7 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
 
             var checkbox = document.createElement('input');
             checkbox.type = 'radio';
-            checkbox.name = typeOne;
+            // checkbox.name = typeOne;
             checkbox.value = item.calendarId;
             checkbox.classList = 'selectDetail';
             var label = document.createElement('label')
