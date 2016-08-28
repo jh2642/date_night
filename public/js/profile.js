@@ -19,7 +19,7 @@ document.getElementById('addDateInfo').addEventListener('click', function() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            id: user_id,
+            id: id,
             date_name: document.getElementById('datesName').value,
             date_email: document.getElementById('datesEmail').value,
             date_phone_number: document.getElementById('datesPhone').value
