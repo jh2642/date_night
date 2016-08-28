@@ -171,7 +171,7 @@ function checkAuth() {
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
                 // var descriptionDate = document.getElementById('messageBox').value
-                var meetingDate = document.getElementsByName('meetDate').value
+                var meetingDate = document.getElementsByName('meetDate')
 
                 console.log(meetingDate)
 
