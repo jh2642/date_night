@@ -85,7 +85,7 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
             div.appendChild(address)
 
             var dateAttendee = document.createElement('p')
-            dateAttendee.innerHTML = item.date_name
+            dateAttendee.innerHTML = 'with: ' + item.date_name
             div.appendChild(dateAttendee)
 
             var checkbox = document.createElement('input');
@@ -100,6 +100,7 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
             div.appendChild(checkbox);
             div.appendChild(label);
             document.getElementById('calendarEventsDb').appendChild(div)
+            console.log(item.calendar_id)
         })
     })
 })
