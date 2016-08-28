@@ -70,10 +70,10 @@ document.getElementById('retrieveEvent').addEventListener('click', function() {
         return response.json()
     })
     .then(function(response) {
-        console.log(response.result.date_name)
-        // response.results.forEach(function(result) {
-        //     console.log(result)
-        // })
+        // console.log(response)
+        response.forEach(function(result) {
+            console.log(result)
+        })
     })
 })
 
