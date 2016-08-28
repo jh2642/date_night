@@ -37,8 +37,8 @@ $color5: rgba(31, 34, 50, 1);
 }
 
 .profilePage {
-    background-color: $color4;
-    color: $color2;
+    // background-color: $color4;
+    // color: $color2;
 }
 
 .schedulePage {
@@ -104,28 +104,10 @@ $color5: rgba(31, 34, 50, 1);
     margin-top: 30px;
 }
 
-.profileBox {
-    padding-left: 50px;
-    // border: 2px $color1 solid;
-}
-
 .profilePic {
     // border: 3px #33383b solid;
     // border: 2px rgb(17, 164, 210) solid;
     padding: 10px;
-}
-
-.profilePicBox {
-    // background-color: $color5;
-    padding: 30px;
-}
-
-.userIndoBox {
-    // background-color: $color3;
-}
-
-.yourDateBox {
-    // background-color: $color5;
 }
 
 .searchResultBox,
@@ -135,11 +117,6 @@ $color5: rgba(31, 34, 50, 1);
 
 .eventDate {
     max-width: 150px;
-}
-
-.calendarBox {
-    // background: rgb(181, 180, 177);
-    height: 225px;
 }
 
 .modalBox,

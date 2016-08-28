@@ -20,11 +20,6 @@
   background-size: cover;
 }
 
-.profilePage {
-  background-color: #596475;
-  color: #e3bac6;
-}
-
 .schedulePage {
   background-color: #1f2232;
 }
@@ -86,16 +81,8 @@
   margin-top: 30px;
 }
 
-.profileBox {
-  padding-left: 50px;
-}
-
 .profilePic {
   padding: 10px;
-}
-
-.profilePicBox {
-  padding: 30px;
 }
 
 .searchResultBox,
@@ -105,10 +92,6 @@
 
 .eventDate {
   max-width: 150px;
-}
-
-.calendarBox {
-  height: 225px;
 }
 
 .modalBox,
