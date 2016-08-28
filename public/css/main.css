@@ -147,8 +147,9 @@ body {
 }
 
 .dateNightEvent {
-  margin: 30px;
+  margin: 20px;
   border: 2px #11a4d2 solid;
+  background-color: #1f2232;
 }
 
 .establishment {
