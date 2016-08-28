@@ -153,7 +153,7 @@ app.get('/events/datenight', function (request, response) {
 app.post('/events/deletedatenight', function (request, response) {
     knex('events')
     .del()
-    .where('calendar_id', request.query.calId)
+    .where('calendar_id', request.body.calId)
     .then(function(details) {
         response.json(details)
     })
