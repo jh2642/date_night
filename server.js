@@ -154,10 +154,12 @@ app.post('/events/deletedatenight', function (request, response) {
     knex('events')
     .del()
     .where('calendar_id', request.body.calId)
-    .then(function(details) {
-        response.json(details)
+    .then(function (count) {
+      console.log(count);
     })
-})
+    .finally(function () {
+      knex.destroy();
+    });
 
 app.use(express.static(__dirname + '/public'))
 
