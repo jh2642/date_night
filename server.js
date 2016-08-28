@@ -114,9 +114,9 @@ app.patch('/users/update', function (request, response) {
     knex('users')
     .where('id', request.body.id)
     .update(request.body)
-    // .then(function(ids) {
-    //     response.json(ids[0])
-    // })
+    .then(function(ids) {
+        response.json(ids[0])
+    })
 })
 
 //get profile information from db
