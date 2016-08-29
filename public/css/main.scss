@@ -14,9 +14,6 @@ $color5: rgba(31, 34, 50, 1);
     font-family: $mainFont;
     color: white;
     font-size: 16px;
-    background-image: url('/assets/background-1.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
     h1 {
         font-family: $headlineFont;
     }
@@ -25,8 +22,22 @@ $color5: rgba(31, 34, 50, 1);
     }
 }
 
+.indexPage {
+    background-image: url('/assets/background-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .mainPage {
     margin-top: 30px;
+}
+
+.profilePage {
+    background-color: $color5;
+}
+
+.schedulePage {
+    background-color: $color4;
 }
 
 .headersSearch {
@@ -154,7 +165,7 @@ $color5: rgba(31, 34, 50, 1);
 }
 
 .dateNightEvent {
-    background-image: none;
+    // margin: 5px;
     border: 2px rgb(17, 164, 210) solid;
     background-color: $color5;
 }
@@ -165,7 +176,7 @@ $color5: rgba(31, 34, 50, 1);
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
-    background-color: $color5;
+    // background-color: black;
 }
 
 .radiusMessage {

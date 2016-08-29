@@ -4,9 +4,6 @@
   font-family: "Open Sans", sans-serif;
   color: white;
   font-size: 16px;
-  background-image: url("/assets/background-1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 * h1 {
@@ -17,8 +14,22 @@
   font-family: "Syncopate", sans-serif;
 }
 
+.indexPage {
+  background-image: url("/assets/background-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .mainPage {
   margin-top: 30px;
+}
+
+.profilePage {
+  background-color: #1f2232;
+}
+
+.schedulePage {
+  background-color: #596475;
 }
 
 .headersSearch {
@@ -144,7 +155,6 @@
 }
 
 .dateNightEvent {
-  background-image: none;
   border: 2px #11a4d2 solid;
   background-color: #1f2232;
 }
@@ -155,7 +165,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-color: #1f2232;
 }
 
 .radiusMessage {
