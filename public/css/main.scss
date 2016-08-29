@@ -154,7 +154,7 @@ $color5: rgba(31, 34, 50, 1);
 }
 
 .dateNightEvent {
-    // margin: 5px;
+    background-image: none;
     border: 2px rgb(17, 164, 210) solid;
     background-color: $color5;
 }
@@ -165,7 +165,7 @@ $color5: rgba(31, 34, 50, 1);
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
-    // background-color: black;
+    background-color: $color5;
 }
 
 .radiusMessage {
