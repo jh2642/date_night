@@ -3,10 +3,6 @@ var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
 
-function refreshPage(){
-    location.reload()
-}
-
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
     fetch(api+'/users/update', {
@@ -89,7 +85,7 @@ window.addEventListener('googlesignin', function() {
 
                 var eventDetails = document.createElement('button')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
-                eventDetails.setAttribute('onClick', 'refreshPage')
+                eventDetails.setAttribute('href', '/profile.html')
                 eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
                 eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)

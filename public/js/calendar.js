@@ -147,9 +147,8 @@ function checkAuth() {
 
 
                 request2.execute(function(resp2) {
-                    // var events2 = resp2.items;
                     idForEvent = resp2.id
-                    console.log(idForEvent)
+
                     //fetch to my api to add this event to the event db (post)
                     fetch(api+'/events/datenight', {
                         method: 'POST',
