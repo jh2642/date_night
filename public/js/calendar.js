@@ -124,9 +124,10 @@ function checkAuth() {
                 var nameInstead = document.getElementById('newName').value
                 var pickupInfo = document.getElementById('meetDate').value
                 var pickupInfo2 = document.getElementById('meetRestaurant').value
+                var meetingDate
 
                 if (!pickupInfo.length) {
-                    var pickupInfo = pickupInfo2
+                    var pickupInfo = "I'll meet you there !"
                 }
 
                 if (emailInstead.length) {
