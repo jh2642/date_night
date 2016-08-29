@@ -47,7 +47,7 @@ function onSignIn(googleUser) {
     .then(function(response) {
         user_id=response
         window.dispatchEvent(googlesignin)
-        // location="/profile.html"
+        location="/profile.html"
     })
 
 }
@@ -56,7 +56,8 @@ function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
         console.log('User signed out.');
-        location.reload()
+        // location.reload()
         //added to reload the page after the log out
+        location="/profile.html"
     });
 }
