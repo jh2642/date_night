@@ -86,7 +86,8 @@ window.addEventListener('googlesignin', function() {
 
                 var eventDetails = document.createElement('button')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
-                eventDetails.classList.add('btn', 'btn-primary', 'calendar-id', 'text-right')
+                eventDetails.setAttribute('href', '/profile.html')
+                eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
                 eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
 
