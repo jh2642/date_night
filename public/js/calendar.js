@@ -122,6 +122,7 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
+                var pickupInfo = document.getElementsByName('meetDate').value
 
                 if (emailInstead.length) {
                     var dateEmail = emailInstead
@@ -147,7 +148,7 @@ function checkAuth() {
                         },
                     ],
                     location: dateLoc,
-                    description: descriptionDate,
+                    description: pickupInfo + descriptionDate,
                     reminders: {
                         useDefault: false
                     },
