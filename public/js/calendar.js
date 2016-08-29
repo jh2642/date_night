@@ -88,10 +88,10 @@ function checkAuth() {
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
-            document.getElementById('calendar-id').addEventListener('click', function() {
-                console.log('calendar-id')
+            // document.getElementById('calendar-id').addEventListener('click', function() {
+            //     console.log('calendar-id')
                 gapi.client.load('calendar', 'v3', deleteEvents);
-            });
+            // });
             // document.getElementById('updateEvents').addEventListener('click', function() {
             //     console.log('updateEvents')
             //     gapi.client.load('calendar', 'v3', updateEvents);
