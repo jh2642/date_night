@@ -91,7 +91,8 @@ window.addEventListener('googlesignin', function() {
                 div.appendChild(eventDetails)
                 if(moment(item.event_at) >= moment()) {
                 document.getElementById('calendarEventsDb').appendChild(div)
-                if(moment(item.event_at) < moment()) {
+            }
+                else(moment(item.event_at) < moment()) {
                 document.getElementById('pastCalendarEventsDb').appendChild(div)
             }
         })
