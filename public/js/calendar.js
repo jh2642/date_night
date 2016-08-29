@@ -124,11 +124,11 @@ function checkAuth() {
 
                 if (emailInstead.length) {
                     var dateEmail = emailInstead
-                },
+                }
 
                 if (nameInstead.length) {
                     var dateName = nameInstead
-                },
+                }
 
                 var request2 = gapi.client.calendar.events.insert({
                     calendarId: 'primary',
