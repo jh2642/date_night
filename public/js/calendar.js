@@ -89,7 +89,7 @@ function checkAuth() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
 
-            document.getElementById('deleteEvents').addEventListener('click', function() {
+            document.getElementById('calendar-id').addEventListener('click', function() {
                 console.log('deleteEvents')
                 gapi.client.load('calendar', 'v3', deleteEvents);
             });
@@ -239,11 +239,11 @@ function checkAuth() {
         //delete event here
         function deleteEvents() {
 
-            var deleteId = document.getElementById('deleteId').value;
+            // var deleteId = document.getElementById('deleteId').value;
 
             var request3 = gapi.client.calendar.events.delete({
                 calendarId: 'primary',
-                eventId: deleteId,
+                eventId: calId,
             });
 
             request3.execute(function(resp3) {
