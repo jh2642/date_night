@@ -81,10 +81,10 @@ function checkAuth() {
         */
 
         function loadCalendarApi() {
-            document.getElementById('createEvents').addEventListener('click', function() {
-                // console.log('createEvents')
-                gapi.client.load('calendar', 'v3', createEvents);
-            });
+            // document.getElementById('createEvents').addEventListener('click', function() {
+            //     // console.log('createEvents')
+            //     gapi.client.load('calendar', 'v3', createEvents);
+            // });
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
