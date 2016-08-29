@@ -104,6 +104,7 @@ function checkAuth() {
 
         })
     })
+}
 
 
         //create event here
