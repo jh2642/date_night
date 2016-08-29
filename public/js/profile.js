@@ -103,7 +103,9 @@ $(document).ready(function(){
         console.log(calId)
         checkAuth();
         handleAuthClick(event);
-        loadCalendarApi();
+        loadCalendarApi() {
+            gapi.client.load('calendar', 'v3', deleteEvents);
+        };
         deleteEvents();
 
             fetch(api+'/events/deletedatenight?calendar_id=' + calId, {

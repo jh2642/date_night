@@ -1,4 +1,3 @@
-
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com';
@@ -81,16 +80,16 @@ function checkAuth() {
         */
 
         function loadCalendarApi() {
-            // document.getElementById('createEvents').addEventListener('click', function() {
-            //     // console.log('createEvents')
-            //     gapi.client.load('calendar', 'v3', createEvents);
-            // });
+            document.getElementById('createEvents').addEventListener('click', function() {
+                // console.log('createEvents')
+                gapi.client.load('calendar', 'v3', createEvents);
+            });
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
             // document.getElementById('calendar-id').addEventListener('click', function() {
             //     console.log('calendar-id')
-                gapi.client.load('calendar', 'v3', deleteEvents);
+            //     gapi.client.load('calendar', 'v3', deleteEvents);
             // });
             // document.getElementById('updateEvents').addEventListener('click', function() {
             //     console.log('updateEvents')
