@@ -122,7 +122,12 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
-                var pickupInfo = document.getElementsByName('meetDate').value
+                var pickupInfo = document.getElementById('meetDate').value
+                var pickupInfo2 = document.getElementById('meetRestaurant').value
+
+                if (!pickupInfo.length) {
+                    var pickupInfo = pickupInfo2
+                }
 
                 if (emailInstead.length) {
                     var dateEmail = emailInstead
