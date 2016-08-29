@@ -187,7 +187,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 $("#location-id").modal('show');
 
                 var id = $(this).attr('location-id')
-                // console.log(id)
+
                 //details fetch
                 fetch(api+'/api/v1/details?placeid=' + id, {
                     method: 'GET'
@@ -254,7 +254,6 @@ document.getElementById('grabDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(selectedVenue) {
-            console.log(selectedVenue) //returns objects
             locationType = selectedVenue.result.types[0]
             locationName = selectedVenue.result.name
             locationId = selectedVenue.result.id

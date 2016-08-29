@@ -245,16 +245,12 @@ function checkAuth() {
 
             request3.execute(function(resp3) {
                 // var events2 = resp2.items;
-                console.log(resp3)
                 fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
                     method: 'DELETE',
                     credentials: 'include',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                })
-                .then(function (count) {
-                    console.log(count);
                 })
             });
         }

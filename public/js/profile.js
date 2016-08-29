@@ -36,7 +36,6 @@ window.addEventListener('googlesignin', function() {
         return response.json()
     })
     .then(function(response) {
-        // console.log(response)
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
         var featureImage = document.createElement('img')
@@ -62,7 +61,6 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
-            // console.log(response)
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
