@@ -14,6 +14,9 @@ $color5: rgba(31, 34, 50, 1);
     font-family: $mainFont;
     color: white;
     font-size: 16px;
+    background-image: url('/assets/background-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
     h1 {
         font-family: $headlineFont;
     }
@@ -22,22 +25,8 @@ $color5: rgba(31, 34, 50, 1);
     }
 }
 
-.indexPage {
-    background-image: url('/assets/background-1.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .mainPage {
     margin-top: 30px;
-}
-
-.profilePage {
-    background-color: $color5;
-}
-
-.schedulePage {
-    background-color: $color4;
 }
 
 .headersSearch {

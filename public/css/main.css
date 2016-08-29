@@ -4,6 +4,9 @@
   font-family: "Open Sans", sans-serif;
   color: white;
   font-size: 16px;
+  background-image: url("/assets/background-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * h1 {
@@ -14,22 +17,8 @@
   font-family: "Syncopate", sans-serif;
 }
 
-.indexPage {
-  background-image: url("/assets/background-1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .mainPage {
   margin-top: 30px;
-}
-
-.profilePage {
-  background-color: #1f2232;
-}
-
-.schedulePage {
-  background-color: #596475;
 }
 
 .headersSearch {
