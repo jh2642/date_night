@@ -38,6 +38,7 @@ window.addEventListener('googlesignin', function() {
     .then(function(response) {
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
+        document.getElementById('dateEmail').innerHTML = response.date_email
         var featureImage = document.createElement('img')
         featureImage.setAttribute('src', response.image_url)
         featureImage.classList.add('img-circle')
