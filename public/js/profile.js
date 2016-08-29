@@ -103,7 +103,6 @@ $(document).ready(function(){
         console.log(calId)
         deleteEvents();
 
-        .then(function () {
             fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
             method: 'DELETE',
             credentials: 'include',
@@ -111,7 +110,6 @@ $(document).ready(function(){
                 'Content-Type': 'application/json'
             },
         })
-    })
         .then(function (count) {
             console.log(count);
         })
