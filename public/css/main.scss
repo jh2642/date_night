@@ -14,9 +14,6 @@ $color5: rgba(31, 34, 50, 1);
     font-family: $mainFont;
     color: white;
     font-size: 16px;
-    image {
-        width: 100%;
-    }
     h1 {
         font-family: $headlineFont;
     }
@@ -37,16 +34,10 @@ $color5: rgba(31, 34, 50, 1);
 
 .profilePage {
     background-color: $color5;
-    background-image: url('/assets/background-1.jpeg');
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .schedulePage {
     background-color: $color4;
-    background-image: url('/assets/background-1.jpeg');
-    background-repeat: no-repeat;
-    background-size: contain;;
 }
 
 .headersSearch {
