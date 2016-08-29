@@ -90,20 +90,19 @@ function checkAuth() {
             // });
             $(document).ready(function(){
                 $('body').on('click', '.calendar-id', function(){
-
                     calId = $(this).attr('calendar-id')
                     console.log(calId)
+                    gapi.client.load('calendar', 'v3', deleteEvents);
+                })
+            });
             // document.getElementById('calendar-id').addEventListener('click', function() {
             //     console.log('deleteEvents')
-                gapi.client.load('calendar', 'v3', deleteEvents);
+            //     gapi.client.load('calendar', 'v3', deleteEvents);
             // });
             // document.getElementById('updateEvents').addEventListener('click', function() {
             //     console.log('updateEvents')
             //     gapi.client.load('calendar', 'v3', updateEvents);
             // });
-
-        })
-    })
 }
 
 
