@@ -119,7 +119,16 @@ function checkAuth() {
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
                 var descriptionDate = document.getElementById('messageBox').value
+                var emailInstead = document.getElementById('newEmail').value
+                var nameInstead = document.getElementById('newName').value
 
+                if (emailInstead.length) {
+                    var dateEmail = emailInstead
+                },
+
+                if (nameInstead.length) {
+                    var dateName = nameInstead
+                },
 
                 var request2 = gapi.client.calendar.events.insert({
                     calendarId: 'primary',
