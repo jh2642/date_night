@@ -50,10 +50,6 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
 
-        if(response.date_email === '') {
-            document.getElementById('dateInformation').innerHTML = "vacant"
-            document.getElementById('datesEmail').innerHTML = 'what are you waiting for ?'
-        }
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
     })
