@@ -157,6 +157,7 @@
 .dateNightEvent {
   border: 2px #11a4d2 solid;
   background-color: #1f2232;
+  height: 300px;
 }
 
 .establishment {
