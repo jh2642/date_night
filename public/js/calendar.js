@@ -123,7 +123,7 @@ function checkAuth() {
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
-            
+
                 var meetingDate
 
                 if (emailInstead.length) {
@@ -183,9 +183,9 @@ function checkAuth() {
                             calendar_id: idForEvent
                         })
                     })
-                    .then(function(response) {
-                        return response.json()
-                    })
+                    // .then(function(response) {
+                    //     return response.json()
+                    // })
                 });
             }) //close out function to schedule cal event
         } //close out createEvents
