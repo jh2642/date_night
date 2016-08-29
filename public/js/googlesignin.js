@@ -47,6 +47,7 @@ function onSignIn(googleUser) {
     .then(function(response) {
         user_id=response
         window.dispatchEvent(googlesignin)
+        location="/profile.html"
     })
 
 }
