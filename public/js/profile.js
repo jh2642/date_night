@@ -85,7 +85,7 @@ window.addEventListener('googlesignin', function() {
 
                 var eventDetails = document.createElement('button')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
-                eventDetails.setAttribute('href', 'profile.html')
+                eventDetails.setAttribute('onClick', 'refreshPage')
                 eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
                 eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
@@ -121,6 +121,9 @@ $(document).ready(function(){
     })
 })
 
+function refreshPage(){
+    window.location.reload();
+} 
 //retrieve data from events db
 // document.getElementById('retrieveEvent').addEventListener('click', function() {
 // fetch(api+'/events/datenight?id=' + user_id, {
