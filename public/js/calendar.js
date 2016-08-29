@@ -123,7 +123,7 @@ function checkAuth() {
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
-                console.log(pickupInfo)
+            
                 var meetingDate
 
                 if (emailInstead.length) {
@@ -179,7 +179,7 @@ function checkAuth() {
                             rest_id: locationId,
                             rest_name: locationName,
                             date_email: dateEmail,
-                            special_comments: descriptionDate,
+                            special_comments: pickupInfo + descriptionDate,
                             calendar_id: idForEvent
                         })
                     })
