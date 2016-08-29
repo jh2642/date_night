@@ -121,7 +121,7 @@ function checkAuth() {
                 var yourEmail = response.email;
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
-                // var descriptionDate = document.getElementById('messageBox').value
+                var descriptionDate = document.getElementById('messageBox').value
 
 
                 var request2 = gapi.client.calendar.events.insert({
@@ -140,7 +140,7 @@ function checkAuth() {
                         },
                     ],
                     location: dateLoc,
-                    // description: descriptionDate,
+                    description: descriptionDate,
                     reminders: {
                         useDefault: false
                     },
@@ -170,7 +170,7 @@ function checkAuth() {
                             rest_id: locationId,
                             rest_name: locationName,
                             date_email: dateEmail,
-                            // special_comments: descriptionDate,
+                            special_comments: descriptionDate,
                             calendar_id: idForEvent
                         })
                     })
