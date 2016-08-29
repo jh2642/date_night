@@ -123,6 +123,7 @@ function checkAuth() {
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
+                console.log(pickupInfo)
                 var meetingDate
 
                 if (emailInstead.length) {
