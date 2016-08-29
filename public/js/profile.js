@@ -89,7 +89,7 @@ window.addEventListener('googlesignin', function() {
                 eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
                 eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
-                if(item.event_at > moment().format('LT')) {
+                if(item.event_at > moment().format('LLLL')) {
                 document.getElementById('calendarEventsDb').appendChild(div)
             }
         })
