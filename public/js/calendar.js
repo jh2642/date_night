@@ -183,9 +183,9 @@ function checkAuth() {
                             calendar_id: idForEvent
                         })
                     })
-                    // .then(function(response) {
-                    //     return response.json()
-                    // })
+                    .then(function() {
+                        location.reload()
+                    })
                 });
             }) //close out function to schedule cal event
         } //close out createEvents
