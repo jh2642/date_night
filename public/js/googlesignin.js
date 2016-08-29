@@ -46,8 +46,10 @@ function onSignIn(googleUser) {
     })
     .then(function(response) {
         user_id=response
-        location="/profile.html"
         window.dispatchEvent(googlesignin)
+    })
+    .then(function() {
+        location="/profile.html"
     })
 
 }
@@ -58,6 +60,6 @@ function signOut() {
         console.log('User signed out.');
         // location.reload()
         //added to reload the page after the log out
-        location="/profile.html"
+        location="/index.html"
     });
 }
