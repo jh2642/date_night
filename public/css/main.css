@@ -48,9 +48,11 @@
   font-size: 50px;
 }
 
-.titleMiddle {
-  margin-top: 150px;
+.jumbotron {
   background-color: transparent;
+}
+
+.titleMiddle {
   font-family: "Syncopate", sans-serif;
   font-size: 150px;
 }

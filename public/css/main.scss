@@ -56,9 +56,11 @@ $color5: rgba(31, 34, 50, 1);
     font-size: 50px;
 }
 
-.titleMiddle {
-    margin-top: 150px;
+.jumbotron {
     background-color: transparent;
+}
+
+.titleMiddle {
     font-family: $headlineFont;
     font-size: 150px;
 
