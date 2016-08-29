@@ -88,9 +88,13 @@ function checkAuth() {
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
             // });
+            $(document).ready(function(){
+                $('body').on('click', '.calendar-id', function(){
 
-            document.getElementById('calendar-id').addEventListener('click', function() {
-                console.log('deleteEvents')
+                    calId = $(this).attr('calendar-id')
+                    console.log(calId)
+            // document.getElementById('calendar-id').addEventListener('click', function() {
+            //     console.log('deleteEvents')
                 gapi.client.load('calendar', 'v3', deleteEvents);
             });
             // document.getElementById('updateEvents').addEventListener('click', function() {
@@ -99,6 +103,8 @@ function checkAuth() {
             // });
 
         }
+    })
+})
 
         //create event here
         function createEvents() {
@@ -249,6 +255,16 @@ function checkAuth() {
             request3.execute(function(resp3) {
                 // var events2 = resp2.items;
                 console.log(resp3)
+                fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
+                    method: 'DELETE',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                })
+                .then(function (count) {
+                    console.log(count);
+                })
             });
         }
 
