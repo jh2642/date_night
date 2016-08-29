@@ -34,10 +34,14 @@ $color5: rgba(31, 34, 50, 1);
 
 .profilePage {
     background-color: $color5;
+    background-image: url('/assets/background-1.jpeg');
+    background-repeat: no-repeat;
 }
 
 .schedulePage {
     background-color: $color4;
+    background-image: url('/assets/background-1.jpeg');
+    background-repeat: no-repeat;
 }
 
 .headersSearch {
