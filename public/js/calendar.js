@@ -184,7 +184,7 @@ function checkAuth() {
                         })
                     })
                     .then(function() {
-                        location.reload()
+                        location="/profile.html"
                     })
                 });
             }) //close out function to schedule cal event
