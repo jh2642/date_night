@@ -32,12 +32,14 @@
   background-color: #1f2232;
   background-image: url("/assets/background-1.jpeg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .schedulePage {
   background-color: #596475;
   background-image: url("/assets/background-1.jpeg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .headersSearch {

@@ -39,15 +39,15 @@ $color5: rgba(31, 34, 50, 1);
     background-color: $color5;
     background-image: url('/assets/background-1.jpeg');
     background-repeat: no-repeat;
-
+    background-size: contain;
 }
 
 .schedulePage {
     background-color: $color4;
     background-image: url('/assets/background-1.jpeg');
     background-repeat: no-repeat;
+    background-size: contain;;
 }
-
 
 .headersSearch {
     font-family: $headlineFont;
