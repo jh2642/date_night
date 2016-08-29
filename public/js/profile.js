@@ -101,6 +101,7 @@ $(document).ready(function(){
 
         calId = $(this).attr('calendar-id')
         console.log(calId)
+        checkAuth();
         deleteEvents();
 
             fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
