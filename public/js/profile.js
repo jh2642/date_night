@@ -61,6 +61,8 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
+            if(item.event_at >= moment().calendar() {
+
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
@@ -91,15 +93,17 @@ window.addEventListener('googlesignin', function() {
 
                 document.getElementById('calendarEventsDb').appendChild(div)
             })
+            })
         })
     })
 })
 
+//delete scheduled events
 $(document).ready(function(){
     $('body').on('click', '.calendar-id', function(){
 
         calId = $(this).attr('calendar-id')
-        console.log(calId)
+
         checkAuth();
         handleAuthClick(event);
         gapi.client.load('calendar', 'v3', deleteEvents);
@@ -111,9 +115,6 @@ $(document).ready(function(){
             headers: {
                 'Content-Type': 'application/json'
             },
-        })
-        .then(function (count) {
-            console.log(count);
         })
     })
 })
