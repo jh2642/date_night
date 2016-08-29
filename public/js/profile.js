@@ -3,6 +3,10 @@ var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
 
+function refreshPage(){
+    location.reload()
+}
+
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
     fetch(api+'/users/update', {
@@ -121,9 +125,6 @@ $(document).ready(function(){
     })
 })
 
-function refreshPage(){
-    window.location.reload();
-} 
 //retrieve data from events db
 // document.getElementById('retrieveEvent').addEventListener('click', function() {
 // fetch(api+'/events/datenight?id=' + user_id, {
