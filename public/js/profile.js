@@ -61,7 +61,7 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
-            if(item.event_at >= moment().calendar() {
+            if(item.event_at >= moment().calendar()) {
 
             response.forEach(function(item) {
 
@@ -93,7 +93,7 @@ window.addEventListener('googlesignin', function() {
 
                 document.getElementById('calendarEventsDb').appendChild(div)
             })
-            })
+            }
         })
     })
 })
