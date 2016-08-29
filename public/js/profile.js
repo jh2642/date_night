@@ -103,7 +103,7 @@ $(document).ready(function(){
         console.log(calId)
 
         fetch(api+'/events/deletedatenight?user_id=' + user_id, {
-            method: 'POST',
+            method: 'DELETE',
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
