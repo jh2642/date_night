@@ -61,7 +61,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
                     var checkbox = document.createElement('input');
                     checkbox.type = 'radio';
-                    checkbox.name = typeOne;
+                    checkbox.name = 'venueSelected';
                     checkbox.value = item.place_id;
                     checkbox.classList = 'selectDetail';
                     var label = document.createElement('label')
@@ -112,7 +112,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
                     var checkbox = document.createElement('input');
                     checkbox.type = 'radio';
-                    checkbox.name = typeTwo;
+                    checkbox.name = 'venueSelected';
                     checkbox.value = item.place_id;
                     checkbox.classList = 'selectDetail';
                     var label = document.createElement('label')
@@ -160,7 +160,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
                     var checkbox = document.createElement('input');
                     checkbox.type = 'radio';
-                    checkbox.name = typeThree;
+                    checkbox.name = 'venueSelected';
                     checkbox.value = item.place_id;
                     checkbox.classList = 'selectDetail';
                     var label = document.createElement('label')
