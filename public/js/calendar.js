@@ -122,7 +122,7 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
-                var pickupInfo = $('input[name="meetDate"]:checked').val();
+                var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
                 var meetingDate
 
                 if (emailInstead.length) {
