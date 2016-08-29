@@ -41,9 +41,9 @@ document.getElementById('getDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
-                document.getElementById('movieTheater').innerHTML = ''
-                response.results.forEach(function(item) {
-                    if (item.types[0] === typeOne) {
+            document.getElementById('movieTheater').innerHTML = ''
+            response.results.forEach(function(item) {
+                if (item.types[0] === typeOne) {
                     var div = document.createElement('div')
                     div.classList.add('establishment')
 
@@ -95,39 +95,39 @@ document.getElementById('getDetails').addEventListener('click', function() {
             document.getElementById('localRestaurants').innerHTML = ''
             response.results.forEach(function(item) {
                 if (item.types[0] === typeTwo) {
-                var div = document.createElement('div')
-                div.classList.add('establishment')
+                    var div = document.createElement('div')
+                    div.classList.add('establishment')
 
-                var name = document.createElement('h2')
-                name.innerHTML = item.name
-                div.appendChild(name)
+                    var name = document.createElement('h2')
+                    name.innerHTML = item.name
+                    div.appendChild(name)
 
-                var address = document.createElement('p')
-                address.innerHTML = item.vicinity
-                div.appendChild(address)
+                    var address = document.createElement('p')
+                    address.innerHTML = item.vicinity
+                    div.appendChild(address)
 
-                var rating = document.createElement('p')
-                rating.innerHTML = "Rating: " + item.rating
-                div.appendChild(rating)
+                    var rating = document.createElement('p')
+                    rating.innerHTML = "Rating: " + item.rating
+                    div.appendChild(rating)
 
-                var checkbox = document.createElement('input');
-                checkbox.type = 'radio';
-                checkbox.name = typeTwo;
-                checkbox.value = item.place_id;
-                checkbox.classList = 'selectDetail';
-                var label = document.createElement('label')
-                label.htmlFor = 'checkbox-id';
-                label.classList = 'selectLabel';
-                label.appendChild(document.createTextNode('select for date'));
-                div.appendChild(checkbox);
-                div.appendChild(label);
-                document.getElementById('localRestaurants').appendChild(div)
+                    var checkbox = document.createElement('input');
+                    checkbox.type = 'radio';
+                    checkbox.name = typeTwo;
+                    checkbox.value = item.place_id;
+                    checkbox.classList = 'selectDetail';
+                    var label = document.createElement('label')
+                    label.htmlFor = 'checkbox-id';
+                    label.classList = 'selectLabel';
+                    label.appendChild(document.createTextNode('select for date'));
+                    div.appendChild(checkbox);
+                    div.appendChild(label);
+                    document.getElementById('localRestaurants').appendChild(div)
 
-                var details = document.createElement('button')
-                details.setAttribute('location-id', item.place_id)
-                details.classList.add('btn', 'location-id')
-                details.innerHTML = 'reviews'
-                div.appendChild(details)
+                    var details = document.createElement('button')
+                    details.setAttribute('location-id', item.place_id)
+                    details.classList.add('btn', 'location-id')
+                    details.innerHTML = 'reviews'
+                    div.appendChild(details)
                 }
             })
         })
@@ -143,44 +143,44 @@ document.getElementById('getDetails').addEventListener('click', function() {
             document.getElementById('localBar').innerHTML = ''
             response.results.forEach(function(item) {
                 if (item.types[0] === typeThree) {
-                var div = document.createElement('div')
-                div.classList.add('establishment')
+                    var div = document.createElement('div')
+                    div.classList.add('establishment')
 
-                var name = document.createElement('h2')
-                name.innerHTML = item.name
-                div.appendChild(name)
+                    var name = document.createElement('h2')
+                    name.innerHTML = item.name
+                    div.appendChild(name)
 
-                var address = document.createElement('p')
-                address.innerHTML = item.vicinity
-                div.appendChild(address)
+                    var address = document.createElement('p')
+                    address.innerHTML = item.vicinity
+                    div.appendChild(address)
 
-                var rating = document.createElement('p')
-                rating.innerHTML = "Rating: " + item.rating
-                div.appendChild(rating)
+                    var rating = document.createElement('p')
+                    rating.innerHTML = "Rating: " + item.rating
+                    div.appendChild(rating)
 
-                var checkbox = document.createElement('input');
-                checkbox.type = 'radio';
-                checkbox.name = typeThree;
-                checkbox.value = item.place_id;
-                checkbox.classList = 'selectDetail';
-                var label = document.createElement('label')
-                label.htmlFor = 'checkbox-id';
-                label.classList = 'selectLabel';
-                label.appendChild(document.createTextNode('select for date'));
-                div.appendChild(checkbox);
-                div.appendChild(label);
-                document.getElementById('localBar').appendChild(div)
+                    var checkbox = document.createElement('input');
+                    checkbox.type = 'radio';
+                    checkbox.name = typeThree;
+                    checkbox.value = item.place_id;
+                    checkbox.classList = 'selectDetail';
+                    var label = document.createElement('label')
+                    label.htmlFor = 'checkbox-id';
+                    label.classList = 'selectLabel';
+                    label.appendChild(document.createTextNode('select for date'));
+                    div.appendChild(checkbox);
+                    div.appendChild(label);
+                    document.getElementById('localBar').appendChild(div)
 
-                var details = document.createElement('button')
-                details.setAttribute('location-id', item.place_id)
-                details.classList.add('btn', 'location-id')
-                details.innerHTML = 'reviews'
-                div.appendChild(details)
+                    var details = document.createElement('button')
+                    details.setAttribute('location-id', item.place_id)
+                    details.classList.add('btn', 'location-id')
+                    details.innerHTML = 'reviews'
+                    div.appendChild(details)
                 }
             })
         })
 
-//this is the modal information
+        //this is the modal information
         $(document).ready(function(){
             $('body').on('click', '.location-id', function(){
 
@@ -242,36 +242,36 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
 document.getElementById('grabDetails').addEventListener('click', function() {
 
-        var checkboxes = document.querySelectorAll('.selectDetail:checked')
+    var checkboxes = document.querySelectorAll('.selectDetail:checked')
 
-        checkboxes.forEach(function(id) {
-            var eventPlaces = id.value
+    checkboxes.forEach(function(id) {
+        var eventPlaces = id.value
 
-            fetch(api+'/api/v1/details?placeid=' + eventPlaces, {
-                method: 'GET'
-            })
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(selectedVenue) {
-                console.log(selectedVenue) //returns objects
-                locationType = selectedVenue.result.types[0]
-                locationName = selectedVenue.result.name
-                locationId = selectedVenue.result.id
-                locationAddress = selectedVenue.result.formatted_address
-                locationPhoneNumber = selectedVenue.result.formatted_phone_number
-                locationUrl = selectedVenue.result.url
+        fetch(api+'/api/v1/details?placeid=' + eventPlaces, {
+            method: 'GET'
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(selectedVenue) {
+            console.log(selectedVenue) //returns objects
+            locationType = selectedVenue.result.types[0]
+            locationName = selectedVenue.result.name
+            locationId = selectedVenue.result.id
+            locationAddress = selectedVenue.result.formatted_address
+            locationPhoneNumber = selectedVenue.result.formatted_phone_number
+            locationUrl = selectedVenue.result.url
 
-                eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
+            eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
 
-                dateNight = eachLoc
-            
-                document.getElementById('dateLoc1').innerHTML = dateNight;
-                document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
+            dateNight = eachLoc
 
-            })
+            document.getElementById('dateLoc1').innerHTML = dateNight;
+            document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
+
         })
     })
+})
 
 
 document.getElementById("startTime").flatpickr();

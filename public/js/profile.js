@@ -113,7 +113,7 @@ $(document).ready(function(){
             })
         })
         .then(function (count) {
-          console.log(count);
+            console.log(count);
         })
     })
 })
