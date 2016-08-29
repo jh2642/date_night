@@ -90,12 +90,12 @@ window.addEventListener('googlesignin', function() {
                 eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
                 if(moment(item.event_at) >= moment()) {
-                document.getElementById('calendarEventsDb').appendChild(div)
-            }
-                else(moment(item.event_at) < moment()) {
-                document.getElementById('pastCalendarEventsDb').appendChild(div)
-            }
-        })
+                    document.getElementById('calendarEventsDb').appendChild(div)
+                }
+                if(moment(item.event_at) < moment()) {
+                    document.getElementById('pastCalendarEventsDb').appendChild(div)
+                }
+            })
         })
     })
 })
@@ -111,7 +111,7 @@ $(document).ready(function(){
         gapi.client.load('calendar', 'v3', deleteEvents);
         deleteEvents();
 
-            fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
+        fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
             method: 'DELETE',
             credentials: 'include',
             headers: {
