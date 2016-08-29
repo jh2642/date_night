@@ -41,8 +41,6 @@ function checkAuth() {
                 return response.json()
             })
             .then(function(response) {
-                console.log(response)
-                // document.getElementById('dateInformation').innerHTML = response.date_name
                 var featureImage = document.createElement('img')
                 featureImage.setAttribute('src', response.image_url)
                 featureImage.classList.add('img-circle')
@@ -197,13 +195,10 @@ function checkAuth() {
                 return response.json()
             })
             .then(function(response) {
-                var d = new Date(document.getElementById('dateReminder').value);
-                var startTime3 = d.toISOString();
-                // var startTime3 = '2016-08-28T21:00:00+00:00';
-                // moment(document.getElementById('dateReminder').value);
-                console.log(startTime3)
-                var endTime3 = '2016-08-27T16:00:00.000Z';
-                var yourEmail3 = 'hildreth.james@gmail.com';
+                var d3 = new Date(document.getElementById('dateReminder').value);
+                var startTime3 = d3.toISOString();
+                var endTime3 = moment(startTime3).add( 1, 'hours' ).toISOString();
+                var yourEmail3 = response.email;
                 var dateSum3 = 'Schedule a Date Night';
 
 

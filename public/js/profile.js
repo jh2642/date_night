@@ -1,6 +1,7 @@
 var api = 'https://serene-hamlet-75445.herokuapp.com'
 var user_id = null
 var calId
+var googlesignin = new Event('googlesignin')
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
