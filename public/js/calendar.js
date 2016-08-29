@@ -52,6 +52,7 @@ function checkAuth() {
                 document.getElementById('googlePic').innerHTML = ''
                 document.getElementById('googlePic').appendChild(featureImage)
                 document.getElementById('dateName').innerHTML = response.date_name
+                document.getElementById('dateEmail').innerHTML = response.date_email
 
             })
         }
