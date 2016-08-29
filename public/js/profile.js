@@ -102,6 +102,7 @@ $(document).ready(function(){
         calId = $(this).attr('calendar-id')
         console.log(calId)
         checkAuth();
+        handleAuthClick(event);
         loadCalendarApi();
         deleteEvents();
 
