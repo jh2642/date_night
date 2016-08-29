@@ -3,6 +3,8 @@ var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
 
+
+
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
     fetch(api+'/users/update', {
@@ -36,6 +38,10 @@ window.addEventListener('googlesignin', function() {
         return response.json()
     })
     .then(function(response) {
+        if(response.date_name.value === '' && response.date_email.value === '') {
+            document.getElementById('dateInformation').innerHTML = "vacant"
+            document.getElementById('datesEmail').innerHTML = 'what are you waiting for ?'
+        }
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
         var featureImage = document.createElement('img')
