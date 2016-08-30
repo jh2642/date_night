@@ -52,10 +52,6 @@ function onSignIn(googleUser) {
     //   location="/profile.html"
       location.replace("/profile.html");
     })
-    .then(function() {
-     location.reload();
-    })
-
 }
 
 function signOut() {
