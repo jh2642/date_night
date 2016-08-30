@@ -23,13 +23,78 @@ $color5: rgba(31, 34, 50, 1);
 }
 
 .indexPage {
-    background-image: url('/assets/background-1.jpeg');
+    background-image: url('/assets/datenight-2016b.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.8;
 }
 
-.mainPage {
+.getStarted {
+    margin-top: 10px;
+}
+
+.navLinks {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.navbar-fixed-bottom {
+    padding-top: 0px;
+}
+.motto {
+    color: $color1;
+    font-style: italic;
+    font-size: 50px;
+}
+
+.contactInfo {
+    color: $color1;
+}
+
+.contactFooter {
     margin-top: 30px;
+}
+
+.jamesPic {
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 75px;
+}
+.header-distributed{
+	background-color: black;
+	width: 100%;
+    color:  $color5;
+}
+
+.footer-distributed{
+	background-color: black;
+	width: 100%;
+    color:  $color5;
+    padding-bottom: 10px;
+}
+
+/* Footer social icons */
+
+ .footer-icons{
+	margin-top: 30px;
+}
+
+ .footer-icons a{
+	display: inline-block;
+	border-radius: 2px;
+	font-size: 30px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
 }
 
 .profilePage {
@@ -49,21 +114,6 @@ $color5: rgba(31, 34, 50, 1);
 .signInButton {
     margin-right: 20px;
 }
-
-.motto {
-    color: $color1;
-    font-style: italic;
-    font-size: 50px;
-}
-
-.jumbotron {
-    background-color: transparent;
-    font-family: $headlineFont;
-    font-size: 150px;
-    margin-top: 150px;
-}
-
-
 
 .g-signin2 {
     margin-right: 40px;
@@ -86,13 +136,10 @@ $color5: rgba(31, 34, 50, 1);
     border: 1px white solid;
 }
 
-.contactInfo {
-    color: $color1;
-}
 
 .btn-primary,
 .btn-secondary {
-    // width: 125px;
+    width: 125px;
     background: transparent;
     border: 1px white solid;
     font-size: 16px;
@@ -114,11 +161,6 @@ $color5: rgba(31, 34, 50, 1);
     background-color: $color4;
     color: $color2;
 }
-
-// .searchTopper {
-//     background-color: $color5;
-//     color: $color2;
-// }
 
 .profilePic {
     padding: 10px;
