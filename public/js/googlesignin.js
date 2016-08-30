@@ -51,6 +51,10 @@ function onSignIn(googleUser) {
     .then(function() {
       location="/profile.html"
     })
+    .then(function() {
+    //   location="/profile.html"
+      location.replace("/profile.html");
+    })
 
 }
 
