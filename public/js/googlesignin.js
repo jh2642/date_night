@@ -49,11 +49,11 @@ function onSignIn(googleUser) {
         window.dispatchEvent(googlesignin)
     })
     .then(function() {
-      location="/profile.html"
-    })
-    .then(function() {
     //   location="/profile.html"
       location.replace("/profile.html");
+    })
+    .then(function() {
+     location.reload();
     })
 
 }
