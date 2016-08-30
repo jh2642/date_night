@@ -23,25 +23,36 @@ $color5: rgba(31, 34, 50, 1);
 }
 
 body {
-    background-image: url('/assets/date-night.jpeg');
+    // background-image: url('/assets/date-night.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.9;
+    background-color: $color4;
 }
 
-.getStarted {
-    margin-top: 10px;
+.headerRow {
+    margin-top: 20px;
 }
 
 .navLinks {
     margin-right: 30px;
     font-size: 20px;
+    color: $color5;
 }
 
 .navbar-fixed-bottom {
     padding-top: 0px;
 }
 
+.jumbotron {
+    h1 {
+        font-size: 150px;
+        color: $color5;
+    }
+    p {
+        font-size: 75px;
+    }
+}
 .motto {
     color: $color1;
     font-style: italic;
