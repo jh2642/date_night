@@ -136,7 +136,6 @@ body {
 
 .btn-primary,
 .btn-secondary {
-  width: 125px;
   background: transparent;
   border: 1px white solid;
   font-size: 16px;
