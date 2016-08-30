@@ -15,10 +15,9 @@
 }
 
 body {
-  background-image: url("/assets/datenight-2016b.jpg");
+  background-image: url("/assets/blurred_lines.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.8;
 }
 
 .getStarted {
@@ -38,6 +37,15 @@ body {
   color: #fde8e9;
   font-style: italic;
   font-size: 50px;
+}
+
+.jumbotron {
+  font-size: 50px;
+  font-weight: bolder;
+  font-size-adjust: auto;
+  background-color: transparent;
+  font-family: "Syncopate", sans-serif;
+  margin-top: 50px;
 }
 
 .contactInfo {
@@ -67,10 +75,6 @@ body {
 }
 
 /* Footer social icons */
-.footer-icons {
-  margin-top: 30px;
-}
-
 .footer-icons a {
   display: inline-block;
   border-radius: 2px;
@@ -78,7 +82,7 @@ body {
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-  margin-right: 20px;
+  margin: 20px;
   margin-bottom: 10px;
 }
 
