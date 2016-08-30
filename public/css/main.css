@@ -123,6 +123,10 @@ body {
   height: 60px;
 }
 
+.calendarEvents h1 {
+  color: #e94f37;
+}
+
 .schedulePage {
   background-color: #e94f37;
 }
