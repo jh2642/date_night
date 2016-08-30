@@ -22,11 +22,12 @@ $color5: rgba(31, 34, 50, 1);
     }
 }
 
-.indexPage {
+body {
     background-image: url('/assets/datenight-2016b.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.8;
+    
 }
 
 .getStarted {
@@ -56,7 +57,7 @@ $color5: rgba(31, 34, 50, 1);
 }
 
 .jamesPic {
-    margin-right: 10px;
+    // margin-right: 10px;
     margin-top: 10px;
     width: 75px;
 }
