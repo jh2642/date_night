@@ -66,7 +66,7 @@ window.addEventListener('googlesignin', function() {
 
             response.forEach(function(item) {
 
-                var div = document.createElement('div', 'col-md-4')
+                var div = document.createElement('div', 'col-md-3')
                 div.classList.add('dateNightEvent')
 
                 var name = document.createElement('h3')
