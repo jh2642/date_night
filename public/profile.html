@@ -33,42 +33,43 @@
             </div>
         </div>
         <div class="row">
-                <div class="col-md-10 calendarBox">
-                    <div class="col-md-10">
-                        <h1 id="calendarEvents">upcoming events...</h1>
-                        <p id="calendarEventsDb"></p>
-                    </div>
-                    <div class="col-md-10">
-                        <h1 id="calendarEvents">past events...</h1>
-                        <p id="pastCalendarEventsDb"></p>
-                    </div>
+            <div class="col-md-10 calendarBox">
+                <div class="col-md-10">
+                    <h1 id="calendarEvents">upcoming events...</h1>
+                    <p id="calendarEventsDb"></p>
                 </div>
-                <div class="col-md-2 profileTopper text-center">
-                    <h3>your info:</h3>
-                    <p id="googlePic"></p>
-                    <p id="googleName"></p>
-                    <p id="googleEmail"></p>
-
-                    <h3>your date info:</h3>
-                    <div class="dateInfoProfile">
-                        <p id="dateInformation"></p>
-                        <p>@</p>
-                        <p id="datesEmail"></p>
-                    </div>
-                    <div>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update date info</button>
-                    </div>
+                <div class="col-md-10">
+                    <h1 id="calendarEvents">past events...</h1>
+                    <p id="pastCalendarEventsDb"></p>
                 </div>
             </div>
-                <div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
-    </div>
-    <div class="row profileNav">
-        <div class="col-md-10">
-            <h1>date night</h1>
+            <div class="col-md-2 profileTopper text-center">
+                <h3>your info:</h3>
+                <p id="googlePic"></p>
+                <p id="googleName"></p>
+                <p id="googleEmail"></p>
+
+                <h3>your date info:</h3>
+                <div class="dateInfoProfile">
+                    <p id="dateInformation"></p>
+                    <p>@</p>
+                    <p id="datesEmail"></p>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update date info</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-2">
-            <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>
-            <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
+        <div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+        <div class="row profileNav">
+            <div class="col-md-10">
+                <h1>date night</h1>
+            </div>
+            <div class="col-md-2">
+                <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>
+                <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
+            </div>
         </div>
     </div>
     <!-- Small modal -->
