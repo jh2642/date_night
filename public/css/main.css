@@ -71,11 +71,6 @@ body {
   background-color: #1f2232;
 }
 
-.signUpModalBox {
-  background-image: url("/assets/date-night.jpeg");
-  color: #e3bac6;
-}
-
 .contactInfo {
   color: #fde8e9;
 }
@@ -144,14 +139,20 @@ body {
   color: black;
 }
 
-.btn-success {
-  background: #fde8e9;
+.btn-lg {
+  background: #1f2232;
   border: 1px white solid;
   font-size: 20px;
-  padding: 5px;
+  padding: 10px;
   margin: 5px;
-  color: #1f2232;
+  color: #e3bac6;
   margin-right: 30px;
+}
+
+.btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
+  background: #e3bac6;
+  color: #1f2232;
+  border: 1px white solid;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
@@ -164,7 +165,6 @@ body {
 .btn-secondary {
   background: transparent;
   border: 1px white solid;
-  font-size: 16px;
   padding: 5px;
   margin: 5px;
 }
@@ -199,8 +199,9 @@ body {
 
 .modalBox,
 .modal-content {
-  background-color: #596475;
-  color: #1f2232;
+  color: #e3bac6;
+  background-color: #1f2232;
+  font-family: "Open Sans", sans-serif;
   border: 2px #11a4d2 solid;
 }
 
