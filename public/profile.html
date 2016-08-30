@@ -23,15 +23,23 @@
         </button>
     </div>
     <div class=container-fluid>
-        <div class="row profileTopper">
-            <div class="text-center">
-                <div class="col-md-4">
+        <div class="row">
+                <div class="col-md-10 calendarBox">
+                    <div class="col-md-3 col-md-offset-3">
+                        <h1 id="calendarEvents" class="text-center">upcoming events...</h1>
+                        <p id="calendarEventsDb"></p>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 id="calendarEvents" class="text-center">previous events...</h1>
+                        <p id="pastCalendarEventsDb"></p>
+                    </div>
+                </div>
+                <div class="col-md-2 profileTopper">
                     <h3>your info:</h3>
                     <p id="googlePic"></p>
                     <p id="googleName"></p>
                     <p id="googleEmail"></p>
-                </div>
-                <div class="col-md-4">
+
                     <h3>your date info:</h3>
                     <div class="dateInfoProfile">
                         <p id="dateInformation"></p>
@@ -43,23 +51,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                 <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
                 <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>
                 <a href="/index.html" class="btn btn-primary" role="button">landing</a>
-            </div>
-        </div>
-        <div class="row calendarBox">
-            <div class="col-md-3 col-md-offset-3">
-                <h1 id="calendarEvents" class="text-center">upcoming events...</h1>
-                <p id="calendarEventsDb"></p>
-            </div>
-            <div class="col-md-3">
-                <h1 id="calendarEvents" class="text-center">previous events...</h1>
-                <p id="pastCalendarEventsDb"></p>
-            </div>
-        </div>
+            </div> -->
+
     </div>
     <!-- Small modal -->
     <div class="modal fade dateModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
