@@ -71,22 +71,9 @@ body {
   background-color: #1f2232;
 }
 
-blockquote p em {
-  font-size: 30px;
-}
-
-.howToBox {
-  height: 100px;
-  margin-top: 20px;
-}
-
-.howToBox h1 {
-  font-size: 80px;
-}
-
-.howToBox h3 {
-  font-size: 30px;
-  font-family: "Open Sans", sans-serif;
+.signUpHeader {
+  background-image: url("/assets/date-night.jpeg");
+  color: #e3bac6;
 }
 
 .contactInfo {

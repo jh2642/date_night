@@ -77,24 +77,9 @@ body {
     }
 }
 
-blockquote {
-p {
-    em {
-        font-size: 30px;
-    }
-};
-}
-
-.howToBox {
-    height: 100px;
-    margin-top: 20px;
-    h1 {
-        font-size: 80px;
-    }
-    h3 {
-        font-size: 30px;
-        font-family: $mainFont;
-    }
+.signUpHeader {
+    background-image: url('/assets/date-night.jpeg');
+    color: $color2;
 }
 
 
