@@ -53,6 +53,7 @@ body {
         font-size: 75px;
     }
 }
+
 .motto {
     color: $color1;
     font-style: italic;
@@ -68,6 +69,31 @@ body {
     font-family: $headlineFont;
     margin-top: 50px;
 }
+
+// blockquote {
+// p {
+//     em {
+//         font-size: 30px;
+//     }
+// };
+// }
+
+blockquote.style3 {
+  font: 18px/30px normal Tahoma, sans-serif;
+  padding-top: 22px;
+  margin: 5px;
+  background-image: url(assets/openquote3.gif);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 65px;
+  }
+  blockquote.style3 span {
+    display: block;
+    background-image: url(assets/closequote3.gif);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
 .contactInfo {
     color: $color1;
 }
@@ -78,8 +104,8 @@ body {
 
 .jamesPic {
     // margin-right: 10px;
-    margin-top: 10px;
-    width: 75px;
+    // margin-top: 10px;
+    // width: 75px;
 }
 .header-distributed{
 	background-color: black;
