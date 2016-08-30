@@ -99,7 +99,6 @@ body {
 /* Footer social icons */
 .footer-icons a {
   display: inline-block;
-  border-radius: 2px;
   font-size: 30px;
   color: #ffffff;
   text-align: center;
@@ -212,7 +211,6 @@ body {
   color: #2ec4b6;
   background-color: #393e41;
   font-family: "Open Sans", sans-serif;
-  border: 2px #11a4d2 solid;
 }
 
 .modalBox a,
@@ -245,7 +243,6 @@ body {
 }
 
 .dateNightEvent {
-  border: 2px #11a4d2 solid;
   background-color: #393e41;
 }
 
