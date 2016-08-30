@@ -3,6 +3,26 @@ var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
 
+//add date infor on sign up
+document.getElementById('addDateInfo2').addEventListener('click', function() {
+    fetch(api+'/users/update', {
+        method: 'PATCH',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            id: user_id,
+            date_name: document.getElementById('datesNameUpdate').value,
+            date_email: document.getElementById('datesEmailUpdate').value,
+            date_phone_number: document.getElementById('datesPhoneUpdate').value
+        })
+    })
+    .then(function(response) {
+        return response.json()
+    })
+})
+
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
     fetch(api+'/users/update', {
