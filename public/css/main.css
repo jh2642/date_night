@@ -206,6 +206,10 @@ body {
   padding: 10px;
 }
 
+.pastEventBox {
+  opacity: 0.6;
+}
+
 .searchResultBox,
 .form-inline {
   margin-top: 20px;
