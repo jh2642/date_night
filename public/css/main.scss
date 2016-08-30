@@ -23,7 +23,7 @@ $color5: rgba(31, 34, 50, 1);
 }
 
 body {
-    // background-image: url('/assets/date-night.jpeg');
+    background-image: url('/assets/date-night.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.9;
@@ -37,27 +37,11 @@ body {
 .navLinks {
     margin-right: 30px;
     font-size: 20px;
-    color: $color5;
+    color: $color1;
 }
 
 .navbar-fixed-bottom {
     padding-top: 0px;
-}
-
-.jumbotron {
-    h1 {
-        font-size: 150px;
-        color: $color5;
-    }
-    p {
-        font-size: 75px;
-    }
-}
-
-.motto {
-    color: $color1;
-    font-style: italic;
-    font-size: 50px;
 }
 
 .jumbotron {
@@ -67,7 +51,30 @@ body {
     background-color: transparent;
     // opacity: 0.8;
     font-family: $headlineFont;
+    margin-top: 70px;
+    h1 {
+        font-size: 170px;
+        color: $color1;
+    }
+    p {
+        font-size: 75px;
+    }
+    .motto {
+        color: $color3;
+        font-style: italic;
+        font-size: 45px;
+    }
+}
+
+.getStarted {
     margin-top: 50px;
+    a {
+        font-size: 40px;
+        color: $color2;
+        border: 2px $color3 solid;
+        // padding: 10px;
+        background-color: $color5;
+    }
 }
 
 blockquote {
@@ -77,6 +84,19 @@ p {
     }
 };
 }
+
+.howToBox {
+    height: 100px;
+    margin-top: 20px;
+    h1 {
+        font-size: 80px;
+    }
+    h3 {
+        font-size: 30px;
+        font-family: $mainFont;
+    }
+}
+
 
 .contactInfo {
     color: $color1;

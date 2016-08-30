@@ -15,6 +15,7 @@
 }
 
 body {
+  background-image: url("/assets/date-night.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -28,26 +29,11 @@ body {
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
-  color: #1f2232;
+  color: #fde8e9;
 }
 
 .navbar-fixed-bottom {
   padding-top: 0px;
-}
-
-.jumbotron h1 {
-  font-size: 150px;
-  color: #1f2232;
-}
-
-.jumbotron p {
-  font-size: 75px;
-}
-
-.motto {
-  color: #fde8e9;
-  font-style: italic;
-  font-size: 50px;
 }
 
 .jumbotron {
@@ -56,11 +42,51 @@ body {
   font-size-adjust: auto;
   background-color: transparent;
   font-family: "Syncopate", sans-serif;
+  margin-top: 70px;
+}
+
+.jumbotron h1 {
+  font-size: 170px;
+  color: #fde8e9;
+}
+
+.jumbotron p {
+  font-size: 75px;
+}
+
+.jumbotron .motto {
+  color: #bc9ec1;
+  font-style: italic;
+  font-size: 45px;
+}
+
+.getStarted {
   margin-top: 50px;
+}
+
+.getStarted a {
+  font-size: 40px;
+  color: #e3bac6;
+  border: 2px #bc9ec1 solid;
+  background-color: #1f2232;
 }
 
 blockquote p em {
   font-size: 30px;
+}
+
+.howToBox {
+  height: 100px;
+  margin-top: 20px;
+}
+
+.howToBox h1 {
+  font-size: 80px;
+}
+
+.howToBox h3 {
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .contactInfo {
