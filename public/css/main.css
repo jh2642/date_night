@@ -19,7 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
-  background-color: #596475;
+  background-color: #e94f37;
 }
 
 .headerRow {
@@ -29,7 +29,7 @@ body {
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
-  color: #fde8e9;
+  color: #011627;
 }
 
 .navbar-fixed-bottom {
@@ -47,7 +47,7 @@ body {
 
 .jumbotron h1 {
   font-size: 170px;
-  color: #fde8e9;
+  color: #011627;
 }
 
 .jumbotron p {
@@ -55,7 +55,7 @@ body {
 }
 
 .jumbotron .motto {
-  color: #bc9ec1;
+  color: #f6f7eb;
   font-style: italic;
   font-size: 45px;
 }
@@ -66,13 +66,13 @@ body {
 
 .getStarted a {
   font-size: 25px;
-  color: #e3bac6;
-  border: 2px #bc9ec1 solid;
-  background-color: #1f2232;
+  color: #2ec4b6;
+  border: 2px #f6f7eb solid;
+  background-color: #393e41;
 }
 
 .contactInfo {
-  color: #fde8e9;
+  color: #011627;
 }
 
 .contactFooter {
@@ -86,13 +86,13 @@ body {
 .header-distributed {
   background-color: black;
   width: 100%;
-  color: #1f2232;
+  color: #393e41;
 }
 
 .footer-distributed {
   background-color: black;
   width: 100%;
-  color: #1f2232;
+  color: #393e41;
   padding-bottom: 10px;
 }
 
@@ -116,17 +116,17 @@ body {
 }
 
 .profilePage {
-  background-color: #1f2232;
+  background-color: #393e41;
 }
 
 .schedulePage {
-  background-color: #596475;
+  background-color: #e94f37;
 }
 
 .headersSearch {
   font-family: "Syncopate", sans-serif;
   font-size: 40px;
-  color: #fde8e9;
+  color: #011627;
 }
 
 .signInButton {
@@ -140,25 +140,34 @@ body {
 }
 
 .btn-lg {
-  background: #1f2232;
+  background: #393e41;
   border: 1px white solid;
   font-size: 20px;
   padding: 10px;
   margin: 5px;
-  color: #e3bac6;
+  color: #2ec4b6;
   margin-right: 30px;
 }
 
 .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-  background: #e3bac6;
-  color: #1f2232;
+  background: #2ec4b6;
+  color: #393e41;
   border: 1px white solid;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
-  background: #1f2232;
-  color: #fde8e9;
+  background: #393e41;
+  color: #011627;
   border: 1px white solid;
+}
+
+.foodPic {
+  width: 100%;
+  margin: 10px;
+}
+
+.easySteps {
+  margin-bottom: 20px;
 }
 
 .btn-primary,
@@ -181,8 +190,8 @@ body {
 }
 
 .profileTopper {
-  background-color: #596475;
-  color: #e3bac6;
+  background-color: #e94f37;
+  color: #2ec4b6;
 }
 
 .profilePic {
@@ -200,8 +209,8 @@ body {
 
 .modalBox,
 .modal-content {
-  color: #e3bac6;
-  background-color: #1f2232;
+  color: #2ec4b6;
+  background-color: #393e41;
   font-family: "Open Sans", sans-serif;
   border: 2px #11a4d2 solid;
 }
@@ -237,7 +246,7 @@ body {
 
 .dateNightEvent {
   border: 2px #11a4d2 solid;
-  background-color: #1f2232;
+  background-color: #393e41;
 }
 
 .establishment {
