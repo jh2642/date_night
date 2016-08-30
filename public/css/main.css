@@ -15,9 +15,10 @@
 }
 
 body {
-  background-image: url("/assets/blurred_lines.jpeg");
+  background-image: url("/assets/date-night.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }
 
 .getStarted {
