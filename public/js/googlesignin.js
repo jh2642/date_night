@@ -48,10 +48,9 @@ function onSignIn(googleUser) {
         user_id=response
         window.dispatchEvent(googlesignin)
     })
-    .then(function() {
+    // .then(function() {
     //   location="/profile.html"
-      location.replace("/profile.html");
-    })
+    // })
 }
 
 function signOut() {
