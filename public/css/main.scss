@@ -161,27 +161,42 @@ body {
     color: black;
 }
 
-// .btn-lg {
-//     background: $color5;
-//     border: 1px white solid;
-//     font-size: 20px;
-//     padding: 10px;
-//     margin: 5px;
-//     color:$color2;
-//     margin-right: 30px;
-// }
+.btn-lg {
+    background: $color5;
+    border: 1px white solid;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    color:$color2;
+    margin-right: 30px;
+}
 
-// .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-//     background: $color2;
-//     color: $color5;
-//     border: 1px white solid;
-// }
-//
-// .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
-//     background: $color5;
-//     color: $color1;
-//     border: 1px white solid;
-// }
+.btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
+    background: $color2;
+    color: $color5;
+    border: 1px white solid;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
+    background: $color5;
+    color: $color1;
+    border: 1px white solid;
+}
+
+.btn-primary,
+.btn-secondary {
+    // width: 125px;
+    background: transparent;
+    border: 1px white solid;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: white;
+    color: black;
+}
 
 .foodPic {
     width: 100%;
@@ -192,25 +207,10 @@ body {
     margin-bottom: 20px;
 }
 
-// .btn-primary,
-// .btn-secondary {
-//     // width: 125px;
-//     background: transparent;
-//     border: 1px white solid;
-//     padding: 5px;
-//     margin: 5px;
-//     font-size: 16px;
-// }
-
 .selectLabel {
     color: rgb(17, 164, 210);
     margin-left: 5px;
 }
-
-// .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-//     background: white;
-//     color: black;
-// }
 
 .profileTopper {
     background-color: $color4;

@@ -146,6 +146,42 @@ body {
   color: black;
 }
 
+.btn-lg {
+  background: #393e41;
+  border: 1px white solid;
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px;
+  color: #2ec4b6;
+  margin-right: 30px;
+}
+
+.btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
+  background: #2ec4b6;
+  color: #393e41;
+  border: 1px white solid;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
+  background: #393e41;
+  color: #011627;
+  border: 1px white solid;
+}
+
+.btn-primary,
+.btn-secondary {
+  background: transparent;
+  border: 1px white solid;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: white;
+  color: black;
+}
+
 .foodPic {
   width: 100%;
   margin: 10px;
