@@ -211,11 +211,11 @@ body {
   background: transparent;
   border: none;
   font-size: 16px;
+  color: #e94f37;
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-primary {
-  background: #e94f37;
-  color: #f6f7eb;
+  color: #e94f37;
 }
 
 .foodPic {
