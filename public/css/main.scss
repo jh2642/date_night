@@ -194,11 +194,11 @@ body {
     font-family: $headlineFont;
     padding: 10px;
     margin: 5px;
-    color:$color1;
+    color:$color3;
 }
 
 .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-    background: $color2;
+    background: $color4;
     color: $color5;
     border: 1px $color3 solid;
 }
@@ -321,10 +321,10 @@ body {
     margin-top: 30px;
 }
 
-.dateNightEvent {
-    background-color: $color3;
-    color: $color1;
-}
+// .dateNightEvent {
+//     background-color: $color3;
+//     color: $color1;
+// }
 
 .location-id {
     border: none;

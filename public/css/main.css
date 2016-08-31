@@ -177,11 +177,11 @@ body {
   font-family: "Syncopate", sans-serif;
   padding: 10px;
   margin: 5px;
-  color: #011627;
+  color: #f6f7eb;
 }
 
 .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-  background: #2ec4b6;
+  background: #e94f37;
   color: #393e41;
   border: 1px #f6f7eb solid;
 }
@@ -301,11 +301,6 @@ body {
 
 .detailsForDate {
   margin-top: 30px;
-}
-
-.dateNightEvent {
-  background-color: #f6f7eb;
-  color: #011627;
 }
 
 .location-id {
