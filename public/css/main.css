@@ -152,14 +152,9 @@ body {
   color: #011627;
 }
 
-.signInButton {
-  margin-right: 20px;
-}
-
-.g-signin2 {
-  margin-right: 40px;
-  margin-bottom: 5px;
-  color: black;
+.confirmPlansBox {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-lg {
