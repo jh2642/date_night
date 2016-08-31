@@ -296,6 +296,10 @@ body {
   color: #f6f7eb;
 }
 
+.messageToDate {
+  margin-bottom: 15px;
+}
+
 .googleLogo {
   margin-top: 200px;
 }
