@@ -97,7 +97,7 @@ body {
 }
 
 .footer-distributed{
-	background-color: black;
+	background-color: $color1;
 	width: 100%;
     color:  $color5;
     padding-bottom: 10px;
@@ -158,6 +158,9 @@ body {
     margin-top: 20px;
 }
 
+.smIcons {
+    padding-top: 25px;
+}
 .calendarBox {
     overflow: scroll;
     height: 80vh;

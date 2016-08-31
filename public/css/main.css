@@ -89,7 +89,7 @@ body {
 }
 
 .footer-distributed {
-  background-color: black;
+  background-color: #011627;
   width: 100%;
   color: #393e41;
   padding-bottom: 10px;
@@ -142,6 +142,10 @@ body {
   opacity: 0.4;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.smIcons {
+  padding-top: 25px;
 }
 
 .calendarBox {
