@@ -1,4 +1,4 @@
-var api = 'https://serene-hamlet-75445.herokuapp.com'
+
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com';
@@ -129,25 +129,33 @@ function checkAuth() {
 
                 if (emailInstead.length) {
                     var dateEmail = emailInstead
+                    fetch(api+'/users/update', {
+                        method: 'PATCH',
+                        credentials: 'include',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: user_id,
+                            date_email: emailInstead,
+                        })
+                    })
                 }
 
                 if (nameInstead.length) {
                     var dateName = nameInstead
-                }
-
-                fetch(api+'/users/update', {
-                    method: 'PATCH',
-                    credentials: 'include',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        id: user_id,
-                        date_name: nameInstead,
-                        date_email: emailInstead,
-                        // date_phone_number: document.getElementById('datesPhoneUpdate').value
+                    fetch(api+'/users/update', {
+                        method: 'PATCH',
+                        credentials: 'include',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: user_id,
+                            date_name: nameInstead,
+                        })
                     })
-                })
+                }
 
                 var request2 = gapi.client.calendar.events.insert({
                     calendarId: 'primary',
