@@ -24,59 +24,68 @@
             Authorize
         </button>
     </div>
-    <div class="container mainPage">
+    <div class="container-fluid mainPage">
+        <div class="row profileNav">
+            <div class="col-md-10">
+                <h1>date night</h1>
+            </div>
+            <div class="col-md-2">
+                <a href="/profile.html" class="btn btn-primary text-center signInButton">profile</a>
+                <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
+            </div>
+        </div>
         <div class="row searchTopper">
-            <div class="col-sm-4 text-left">
-                <form class="form-inline">
+            <div class="col-md-10 col-md-offset-2">
+                <div class="col-md-4">
                     <h3>where</h3>
                     <input type="text" class="form-control" id="address" placeholder="address, city or zip">
                     <h5 class="radiusMessage">*venue will be within a 10 mile radius</h5>
-                </form>
-                <div>
+                </div>
+                <div class="col-md-4">
                     <h3>when</h3>
                     <input type="text" class="form-control" id="startTime" data-enable-time=true data-min-date=today placeholder="select date and time">
-                    <button type="button" id="getDetails" class="btn btn-primary">search venues</button>
-                    <button type="button" id="grabDetails" data-toggle="modal" data-target="#confirmModal" class="btn btn-primary">confirm plans</button>
+                </div>
+                    <div class="col-md-2 searchButtonSched">
+                        <button type="button" id="getDetails" class="btn btn-primary">search venues</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4 profileBox">
-                <div class="profilePic text-center">
-                    <p id="googlePic"></p>
-                    <p id="googleName"></p>
-                    <p id="googleEmail"></p>
-                </div>
-            </div>
-            <div class="col-sm-2 col-sm-offset-2">
-                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                <button href="/index.html" onclick="signOut();" class="btn btn-primary" type="button">sign out</button>
-                <a href="/profile.html" class="btn btn-primary text-center signInButton">profile</a>
-                <a href="/index.html" class="btn btn-primary" role="button">landing</a>
-            </div>
         </div>
-        <div class="row searchResultBox">
-            <div class="col-sm-4">
-                <p class="headersSearch">dinner @</p>
-                <p id="localRestaurants"></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="headersSearch">movie @</p>
-                <p id="movieTheater"></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="headersSearch">drinks @</p>
-                <p id="localBar"></p>
-            </div>
-        </div>
-        <!-- <form class="inputBox">
-        <h2>DEV PURPOSES</h2>
-        <div class="form-group">
-        <input type="text" class="form-control" id="startTime2" placeholder="default start time">
-        <input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
-        <input type="text" class="form-control" id="dateLoc2" placeholder="location">
+        <!-- <div class="col-sm-4 profileBox">
+        <div class="profilePic text-center">
+        <p id="googlePic"></p>
+        <p id="googleName"></p>
+        <p id="googleEmail"></p>
+    </div> -->
+</div>
+<div class="row searchResultBox">
+    <div class="col-md-3">
+        <p class="headersSearch">dinner @</p>
+        <p id="localRestaurants"></p>
     </div>
-    <button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
+    <div class="col-md-3">
+        <p class="headersSearch">movie @</p>
+        <p id="movieTheater"></p>
+    </div>
+    <div class="col-md-3">
+        <p class="headersSearch">drinks @</p>
+        <p id="localBar"></p>
+    </div>
+    <div class="col-md-2">
+        <button type="button" id="grabDetails" data-toggle="modal" data-target="#confirmModal" class="btn btn-primary">confirm plans</button>
+    </div>
+</div>
+<!-- <form class="inputBox">
+<h2>DEV PURPOSES</h2>
+<div class="form-group">
+<input type="text" class="form-control" id="startTime2" placeholder="default start time">
+<input type="email" class="form-control" id="dateEmail2" placeholder="date's email">
+<input type="text" class="form-control" id="dateLoc2" placeholder="location">
+</div>
+<button type="button" id="updateEvents" class="btn btn-primary">update a date</button>
 </form> -->
 </div>
+<div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
 <!-- Details Modal -->
 <div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

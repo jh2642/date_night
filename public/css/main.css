@@ -212,6 +212,14 @@ body {
   margin-left: 5px;
 }
 
+.searchTopper {
+  margin-top: 300px;
+}
+
+.searchButtonSched {
+  margin-top: 36px;
+}
+
 .searchResultBox,
 .form-inline {
   margin-top: 20px;
