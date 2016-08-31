@@ -1,3 +1,4 @@
+
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com';
@@ -300,3 +301,7 @@ function checkAuth() {
                 console.log(resp3)
             });
         }
+
+function toggleDiv(searchBoxHide) {
+   $("#"+searchBoxHide).toggle();
+}
