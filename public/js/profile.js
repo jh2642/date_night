@@ -92,9 +92,11 @@ window.addEventListener('googlesignin', function() {
                 eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
                 if(moment(item.event_at) >= moment()) {
+                    document.getElementById('noEventsMessage').classList.add('hidden')
                     document.getElementById('calendarEventsDb').appendChild(div)
                 }
                 if(moment(item.event_at) < moment()) {
+                    document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
             })

@@ -28,7 +28,6 @@
                 <h1>date night</h1>
             </div>
             <div class="col-md-6 text-right">
-                <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>
                 <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
             </div>
         </div>
@@ -36,9 +35,11 @@
             <div class="col-md-10 calendarBox">
                 <div class="col-md-10 col-md-offset-1">
                     <h1 id="calendarEvents">upcoming events...</h1>
+                    <p id="noEventsMessage" class="lead">why so lonely? click "schedule date" to get started.</p>
+                    <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>                
                     <p id="calendarEventsDb"></p>
                 </div>
-                <div class="col-md-10 col-md-offset-1 pastEventBox">
+                <div class="col-md-10 col-md-offset-1 pastEventBox hidden">
                     <h1 id="calendarEvents">past events...</h1>
                     <p id="pastCalendarEventsDb"></p>
                 </div>
