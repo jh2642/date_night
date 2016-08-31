@@ -69,7 +69,7 @@ function checkAuth() {
     // *
     // * @param {Event} event Button click event.
     // */
-    function handleAuthClick(event) {
+    function handleAuthClick() {
         gapi.auth.authorize(
             {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
             handleAuthResult);

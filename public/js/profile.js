@@ -109,7 +109,7 @@ $(document).ready(function(){
         calId = $(this).attr('calendar-id')
 
         checkAuth();
-        handleAuthClick(event);
+        handleAuthClick();
         gapi.client.load('calendar', 'v3', deleteEvents);
         // deleteEvents();
     })
