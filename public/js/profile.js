@@ -40,16 +40,16 @@ window.addEventListener('googlesignin', function() {
         var featureImage = document.createElement('img')
         featureImage.setAttribute('src', response.image_url)
         featureImage.classList.add('img-circle')
-        var individualName = document.getElementById('googleName2')
+        var individualName = document.getElementById('googleName')
         individualName.innerHTML = "Welcome, " + response.name
-        var individualEmail = document.getElementById('googleEmail2')
+        var individualEmail = document.getElementById('googleEmail')
         individualEmail.innerHTML = response.email
 
-        document.getElementById('googlePic2').innerHTML = ''
-        document.getElementById('googlePic2').appendChild(featureImage)
+        document.getElementById('googlePic').innerHTML = ''
+        document.getElementById('googlePic').appendChild(featureImage)
 
-        document.getElementById('dateInformation2').innerHTML = response.date_name
-        document.getElementById('datesEmail2').innerHTML = response.date_email
+        document.getElementById('dateInformation').innerHTML = response.date_name
+        document.getElementById('datesEmail').innerHTML = response.date_email
     })
     .then(function() {
         fetch(api+'/events/datenight?id=' + user_id, {
