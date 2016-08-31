@@ -132,12 +132,29 @@ app.get('/users/profile', function (request, response) {
 
 //add a date to events db
 app.post('/events/datenight', function (request, response) {
-    knex('events').insert(request.body).then(function(ids) {
+    knex('users')
+    .where('id', request.body.user_id)
+    .then(function(users) {
+        if(users[0].date_email === '' || users[0].date_email === null) {
+            knex('users')
+            .where('id', request.body.user_id)
+            .update({date_name: request.body.date_name, date_email: request.body.date_name})
+            .then(function(){
+                addEvent(request, response)
+            })
+        }
+        else {
+            addEvent(request, response)
+        }
+    })
+    function addEvent(request, response) {
+        knex('events').insert(request.body).then(function(ids) {
         // request.session.user_id=ids[0]
         // request.session.save(function() {
             response.json(ids[0])
         // })
-    })
+        })
+    }
 })
 
 //get data from events db
