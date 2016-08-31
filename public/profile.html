@@ -84,15 +84,17 @@
     <!-- Small modal -->
     <div class="modal fade dateModal container-fluid" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm row" role="document">
-            <div class="modal-content col-md-10 col-md-offset-1 text-center">
+            <div class="modal-content col-md-10 col-md-offset-2 text-center">
                 <h2>add/update your date's info:</h2>
                 <div class="form-group text-center">
                     <input type="text" class="form-control addToProfile" id="datesNameUpdate" placeholder="your date's name">
                     <input type="email" class="form-control addToProfile" id="datesEmailUpdate" placeholder="your date's email">
                     <!-- <input type="text" class="form-control addToProfile" id="datesPhoneUpdate" placeholder="your date's phone #"> -->
                 </div>
-                <button type="button" class="btn btn-primary text-center" data-dismiss="modal">cancel</button>
-                <a href="/profile.html" type="button"><button class="btn btn-primary" id="addDateInfo">update</button></a>
+                <div class="dateModalFooter">
+                    <button type="button" class="btn btn-primary text-center" data-dismiss="modal">cancel</button>
+                    <a href="/profile.html" type="button"><button class="btn btn-primary" id="addDateInfo">update</button></a>
+                </div>
             </div>
         </div>
     </div>
