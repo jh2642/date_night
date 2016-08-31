@@ -48,6 +48,7 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
 
+        // document.getElementById('dateProfileBox').classList.remove('hidden')
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
     })

@@ -36,7 +36,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <h1 id="calendarEvents">upcoming events...</h1>
                     <p id="noEventsMessage" class="lead">why so lonely? click "schedule date" to get started.</p>
-                    <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>                
+                    <a href="/schedule.html" class="btn btn-primary" role="button">schedule date</a>
                     <p id="calendarEventsDb"></p>
                 </div>
                 <div class="col-md-10 col-md-offset-1 pastEventBox hidden">
@@ -52,9 +52,11 @@
 
                 <div class="dateInfoProfile">
                     <h3>your date:</h3>
-                    <h3 id="dateInformation"></h3>
-                    <p class="hidden">@</p>
-                    <p id="datesEmail" class="hidden"></p>
+                    <div id="dateProfileBox">
+                        <h3 id="dateInformation"></h3>
+                        <p class="hidden">@</p>
+                        <p id="datesEmail" class="hidden"></p>
+                    </div>
                 </div>
                 <div>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update info</button>

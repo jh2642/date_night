@@ -11,6 +11,11 @@ var locationId
 var dateName
 var dateNight
 
+document.body.addEventListener('click', function(e) {
+    if(e.target.className.includes('selectDetail')) {
+        document.getElementById('grabDetails').classList.remove('hidden')
+    }
+})
 
 document.getElementById('getDetails').addEventListener('click', function() {
 
