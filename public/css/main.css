@@ -173,7 +173,8 @@ body {
 .btn-lg {
   background: #393e41;
   border: 1px white solid;
-  font-size: 20px;
+  font-size: 40px;
+  font-family: "Syncopate", sans-serif;
   padding: 10px;
   margin: 5px;
   color: #2ec4b6;
