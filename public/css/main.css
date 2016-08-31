@@ -122,6 +122,22 @@ body {
   height: 70px;
 }
 
+.profileTopper {
+  background-color: #e94f37;
+  color: #2ec4b6;
+  height: 100%;
+}
+
+.profilePic {
+  padding: 10px;
+}
+
+.pastEventBox {
+  opacity: 0.4;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 #calendarEvents h1 {
   color: #e94f37;
 }
@@ -192,24 +208,8 @@ body {
 }
 
 .selectLabel {
-  color: #e94f37;
+  color: #011627;
   margin-left: 5px;
-}
-
-.profileTopper {
-  background-color: #e94f37;
-  color: #2ec4b6;
-  height: 100%;
-}
-
-.profilePic {
-  padding: 10px;
-}
-
-.pastEventBox {
-  opacity: 0.4;
-  margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 .searchResultBox,

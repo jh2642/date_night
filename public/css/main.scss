@@ -135,6 +135,26 @@ body {
     height: 70px;
 }
 
+.profileTopper {
+    background-color: $color4;
+    color: $color2;
+    height: 100%;
+}
+
+.profilePic {
+    padding: 10px;
+}
+
+// .dateNightEvent {
+//     height: 250px;
+// }
+
+.pastEventBox {
+    opacity: 0.4;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 // .calendarBox {
 //     overflow: scroll;
 // }
@@ -212,29 +232,12 @@ body {
 }
 
 .selectLabel {
-    color: $color4;
+    color: $color1;
     margin-left: 5px;
 }
 
-.profileTopper {
-    background-color: $color4;
-    color: $color2;
-    height: 100%;
-}
 
-.profilePic {
-    padding: 10px;
-}
 
-// .dateNightEvent {
-//     height: 250px;
-// }
-
-.pastEventBox {
-    opacity: 0.4;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
 
 .searchResultBox,
 .form-inline {
