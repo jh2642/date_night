@@ -132,13 +132,13 @@ body {
 .profileNav {
     background-color: $color1;
     color: $color2;
-    height: 70px;
+    height: 10vh;
 }
 
 .profileTopper {
     background-color: $color4;
     color: $color2;
-    height: 100%;
+    height: 100vh;
     padding-top: 50px;
 }
 
@@ -158,7 +158,7 @@ body {
 
 .calendarBox {
     overflow: scroll;
-    height: 70vh;
+    height: 80vh;
 }
 
 #calendarEvents {
