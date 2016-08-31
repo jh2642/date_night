@@ -165,6 +165,11 @@ body {
   margin-bottom: 30px;
 }
 
+.g-signin2 {
+  display: inline-block;
+  text-align: center;
+}
+
 .btn-lg {
   background: #393e41;
   border: 1px white solid;
