@@ -32,10 +32,14 @@ body {
     margin-top: 30px;
 }
 
+.navBox {
+    padding-top: 25px;
+}
 .navLinks {
     margin-right: 30px;
     font-size: 20px;
-    color: $color1;
+    color: $color3;
+    margin-top: 20px;
 }
 
 
@@ -46,7 +50,7 @@ body {
     background-color: transparent;
     // opacity: 0.8;
     font-family: $headlineFont;
-    margin-top: 70px;
+    margin-top: 150px;
     h1 {
         font-size: 170px;
         color: $color1;
