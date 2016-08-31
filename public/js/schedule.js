@@ -135,6 +135,20 @@ function checkAuth() {
                     var dateName = nameInstead
                 }
 
+                fetch(api+'/users/update', {
+                    method: 'PATCH',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: user_id,
+                        date_name: nameInstead,
+                        date_email: emailInstead,
+                        // date_phone_number: document.getElementById('datesPhoneUpdate').value
+                    })
+                })
+
                 var request2 = gapi.client.calendar.events.insert({
                     calendarId: 'primary',
                     start: {
