@@ -161,6 +161,10 @@ body {
     height: 80vh;
 }
 
+::-webkit-scrollbar {
+   display: none;
+}
+
 #calendarEvents {
     h1 {
         color: $color4;

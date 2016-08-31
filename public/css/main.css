@@ -143,6 +143,10 @@ body {
   height: 80vh;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #calendarEvents h1 {
   color: #e94f37;
 }
