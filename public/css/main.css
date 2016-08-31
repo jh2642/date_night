@@ -315,6 +315,10 @@ body {
   margin-top: 30px;
 }
 
+.detailsForDate h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
 .dateNightEvent {
   background-color: #011627;
   padding: 20px;

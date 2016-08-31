@@ -331,6 +331,9 @@ body {
 
 .detailsForDate {
     margin-top: 30px;
+    h3 {
+        font-family: $mainFont;
+    }
 }
 
 .dateNightEvent {
