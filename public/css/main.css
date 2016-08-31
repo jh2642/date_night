@@ -20,17 +20,13 @@ body {
 }
 
 .headerRow {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
   color: #011627;
-}
-
-.navbar-fixed-bottom {
-  padding-top: 0px;
 }
 
 .jumbotron {
