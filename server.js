@@ -28,6 +28,7 @@ var knex = require('knex') ( {
 })
 
 app.get('/googlesignin', function (request, response) {
+    console.log(process.env.GOOGLE_PLACES_KEY)
     try {
         https.get('https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=' + request.query.id_token, function (err, data, body) {
             response.json(JSON.parse(body));
