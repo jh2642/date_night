@@ -121,7 +121,6 @@ $(document).ready(function(){
             },
         })
     })
-    location.reload();
 })
 
 //retrieve data from events db
