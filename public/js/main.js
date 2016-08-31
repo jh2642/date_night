@@ -14,6 +14,7 @@ var dateNight
 document.body.addEventListener('click', function(e) {
     if(e.target.className.includes('selectDetail')) {
         document.getElementById('grabDetails').classList.remove('hidden')
+        window.scrollTo(0,0);
     }
 })
 
@@ -26,7 +27,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeTwo = "restaurant"
     var typeThree = "bar"
     var getId1 = "localRestaurants"
-    window.scrollTo(0,0);
+
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
 
