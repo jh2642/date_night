@@ -1,4 +1,4 @@
-var api = 'https://serene-hamlet-75445.herokuapp.com'
+
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com';
@@ -123,38 +123,16 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
-                // var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
+                var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
 
                 if (emailInstead.length) {
                     var dateEmail = emailInstead
-                    fetch(api+'/users/update', {
-                        method: 'PATCH',
-                        credentials: 'include',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            id: user_id,
-                            date_email: emailInstead,
-                        })
-                    })
                 }
 
                 if (nameInstead.length) {
                     var dateName = nameInstead
-                    fetch(api+'/users/update', {
-                        method: 'PATCH',
-                        credentials: 'include',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            id: user_id,
-                            date_name: nameInstead,
-                        })
-                    })
                 }
 
                 var request2 = gapi.client.calendar.events.insert({
