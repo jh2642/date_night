@@ -119,6 +119,9 @@ $(document).ready(function(){
             headers: {
                 'Content-Type': 'application/json'
             },
+        .then(function() {
+            location.reload();
+        })
         })
     })
 })
