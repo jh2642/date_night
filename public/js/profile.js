@@ -112,7 +112,6 @@ $(document).ready(function(){
         handleAuthClick(event);
         gapi.client.load('calendar', 'v3', deleteEvents);
         deleteEvents();
-        location.reload();
         fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
             method: 'DELETE',
             credentials: 'include',
