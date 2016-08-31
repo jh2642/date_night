@@ -301,7 +301,3 @@ function checkAuth() {
                 console.log(resp3)
             });
         }
-
-function toggleDiv(searchBoxHide) {
-   $("#"+searchBoxHide).toggle();
-}
