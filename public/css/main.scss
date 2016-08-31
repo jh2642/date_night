@@ -182,10 +182,6 @@ body {
     margin-bottom: 30px;
 }
 
-// .signInButton {
-//     margin-right: 20px;
-// }
-
 .g-signin2 {
     display: inline-block;
     text-align: center;
@@ -193,38 +189,38 @@ body {
 
 .btn-lg {
     background: $color5;
-    border: 1px white solid;
+    border: 1px $color3 solid;
     font-size: 40px;
     font-family: $headlineFont;
     padding: 10px;
     margin: 5px;
-    color:$color2;
+    color:$color1;
 }
 
 .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
     background: $color2;
     color: $color5;
-    border: 1px white solid;
+    border: 1px $color3 solid;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
     background: $color5;
     color: $color1;
-    border: 1px white solid;
+    border: 1px $color3 solid;
 }
 
 .btn-primary,
 .btn-secondary {
     width: 125px;
     background: transparent;
-    border: 1px white solid;
+    border: 1px $color3 solid;
     padding: 5px;
     margin-top: 20px;
     font-size: 16px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: white;
+    background: $color3;
     color: black;
 }
 
@@ -268,23 +264,23 @@ body {
     color: $color2;
     background-color: $color5;
     font-family: $mainFont;
-    // border: 2px rgb(17, 164, 210) solid;
+
     a {
-        color:rgb(17, 164, 210);
+        color:$color3;
     }
     .mapURLbox {
         margin-bottom: 120px;
-        color: rgb(17, 164, 210);
+        color: $color5;
     }
 }
 
 .reviewAuthor {
-    border-bottom: 2px rgb(181, 180, 177) solid;
+    border-bottom: 2px $color5 solid;
 }
 
 .mapURLbox {
     margin-bottom: 120px;
-    color: rgb(17, 164, 210);
+    color: $color4;
 }
 
 .modal-header {
@@ -302,7 +298,7 @@ body {
 }
 
 .radiusMessage {
-    color: white;
+    color: $color3;
 }
 
 .googleLogo {
@@ -310,7 +306,7 @@ body {
 }
 
 .inputBox {
-    background-color: rgb(17, 164, 210);
+    background-color: $color3;
 }
 
 .addToProfile {
@@ -325,10 +321,10 @@ body {
     margin-top: 30px;
 }
 
-.messageToDate {
-    color: black;
-    min-width: 400px;
-}
+// .messageToDate {
+//     color: black;
+//     min-width: 400px;
+// }
 
 .location-id {
     border: none;
