@@ -57,88 +57,89 @@
         </div>
     </div>
     <!-- <div class="col-sm-4 profileBox">
-    <div class="profilePic text-center">
-    <p id="googlePic"></p>
-    <p id="googleName"></p>
-    <p id="googleEmail"></p>
-</div> -->
-<div class="row searchResultBox hidden">
-    <div class="col-md-4 text-center">
-        <p class="headersSearch">dinner @</p>
-        <p id="localRestaurants"></p>
-    </div>
-    <div class="col-md-4 text-center">
-        <p class="headersSearch">movie @</p>
-        <p id="movieTheater"></p>
-    </div>
-    <div class="col-md-4 text-center">
-        <p class="headersSearch">drinks @</p>
-        <p id="localBar"></p>
-    </div>
-</div>
-<div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
-<!-- Details Modal -->
-<div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content modalBox">
-            <div class="modal-header">
-                <button type="button" class="close modalX" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="detailModal">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+        <div class="profilePic text-center">
+            <p id="googlePic"></p>
+            <p id="googleName"></p>
+            <p id="googleEmail"></p>
+        </div>
+    </div> -->
+    <div class="row searchResultBox hidden">
+        <div class="col-md-4 text-center">
+            <p class="headersSearch">dinner @</p>
+            <p id="localRestaurants"></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <p class="headersSearch">movie @</p>
+            <p id="movieTheater"></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <p class="headersSearch">drinks @</p>
+            <p id="localBar"></p>
         </div>
     </div>
-</div>
-
-<!--  Confirmation Modal -->
-<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h1 class="modal-title" id="myModalLabel">you're all set</h1>
-            </div>
-            <div class="modal-body container-fluid">
-                <div class="row text-center">
-                    <div class="detailsForDate">
-                        <p>you'll be going to...</p>
-                        <p id="dateLoc1"></p>
-                        <p>on</p>
-                        <p id="dateTime"></p>
-                        <p>with</p>
-                        <p id="dateName"></p> @ <p id=dateEmail></p>
-                        <p>or enter information for one-time use:</p>
-                        <input type="text" class="form-control" id="newName" placeholder="enter name">
-                        <input type="text" class="form-control" id="newEmail" placeholder=" enter email address">
-                    </div>
-                    <div>
-                        <h4>how will you meet your date:</h4>
-                        <p><input type="radio" id="pickUp" name="meetDate" value="I'll pick you up! ">I'll pick them up!</p>
-                        <p><input type="radio" id="meetRestaurant" name="meetDate" value="I'll meet you there! ">I'll meet them there!</p>
-                    </div>
+    <div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <!-- Details Modal -->
+    <div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modalBox">
+                <div class="modal-header">
+                    <button type="button" class="close modalX" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="row text-center">
-                    <h4>send a message with your invite:</h4>
-                    <input type="text" class="text-center messageToDate form-control" id="messageBox" placeholder="(optional)">
+                <div class="modal-body" id="detailModal">
                 </div>
-                <div class="modal-footer row">
-                    <button type="button" class="btn" data-dismiss="modal">cancel</button>
-                    <button type="button" href="/profile.html" id="createEvents" data-dismiss="modal" class="btn">send invite</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!--  Confirmation Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="myModalLabel">you're all set</h1>
+                </div>
+                <div class="modal-body container-fluid">
+                    <div class="row text-center">
+                        <div class="detailsForDate">
+                            <p>you'll be going to...</p>
+                            <p id="dateLoc1"></p>
+                            <p>on</p>
+                            <p id="dateTime"></p>
+                            <p>with</p>
+                            <p id="dateName"></p> @ <p id=dateEmail></p>
+                            <p>or enter information for one-time use:</p>
+                            <input type="text" class="form-control" id="newName" placeholder="enter name">
+                            <input type="text" class="form-control" id="newEmail" placeholder=" enter email address">
+                        </div>
+                        <div>
+                            <h4>how will you meet your date:</h4>
+                            <p><input type="radio" id="pickUp" name="meetDate" value="I'll pick you up! ">I'll pick them up!</p>
+                            <p><input type="radio" id="meetRestaurant" name="meetDate" value="I'll meet you there! ">I'll meet them there!</p>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <h4>send a message with your invite:</h4>
+                        <input type="text" class="text-center messageToDate form-control" id="messageBox" placeholder="(optional)">
+                    </div>
+                    <div class="modal-footer row">
+                        <button type="button" class="btn" data-dismiss="modal">cancel</button>
+                        <button type="button" href="/profile.html" id="createEvents" data-dismiss="modal" class="btn">send invite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js/flatpickr.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/flatpickr.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
