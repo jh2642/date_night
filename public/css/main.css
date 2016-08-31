@@ -261,6 +261,7 @@ body {
 .modal-content .mapURLbox {
   margin-bottom: 120px;
   color: #e94f37;
+  padding-bottom: 20px;
 }
 
 .reviewAuthor {
@@ -268,8 +269,12 @@ body {
 }
 
 .mapURLbox {
-  margin-bottom: 120px;
+  padding-bottom: 20px;
   color: #e94f37;
+}
+
+.reviewText {
+  margin-top: 10px;
 }
 
 .modal-header {

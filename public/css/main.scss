@@ -279,6 +279,7 @@ body {
     .mapURLbox {
         margin-bottom: 120px;
         color: $color4;
+        padding-bottom: 20px;
     }
 }
 
@@ -287,10 +288,13 @@ body {
 }
 
 .mapURLbox {
-    margin-bottom: 120px;
+    padding-bottom: 20px;
     color: $color4;
 }
 
+.reviewText {
+    margin-top: 10px;
+}
 .modal-header {
         border: none;
         height: 10px;
