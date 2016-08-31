@@ -40,8 +40,8 @@ window.addEventListener('googlesignin', function() {
         var featureImage = document.createElement('img')
         featureImage.setAttribute('src', response.image_url)
         featureImage.classList.add('img-circle')
-        var individualName = "Welcome, " + document.getElementById('googleName')
-        individualName.innerHTML = response.name
+        var individualName = document.getElementById('googleName')
+        individualName.innerHTML = "Welcome, " + response.name
         var individualEmail = document.getElementById('googleEmail')
         individualEmail.innerHTML = response.email
 
