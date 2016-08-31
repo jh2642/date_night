@@ -135,6 +135,9 @@ body {
     height: 70px;
 }
 
+.calendarBox {
+    overflow: scroll;
+}
 #calendarEvents {
     h1 {
         color: $color4;
@@ -208,7 +211,7 @@ body {
 }
 
 .selectLabel {
-    color: rgb(17, 164, 210);
+    color: $color4;
     margin-left: 5px;
 }
 

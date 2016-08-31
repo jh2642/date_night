@@ -122,6 +122,10 @@ body {
   height: 70px;
 }
 
+.calendarBox {
+  overflow: scroll;
+}
+
 #calendarEvents h1 {
   color: #e94f37;
 }
@@ -192,7 +196,7 @@ body {
 }
 
 .selectLabel {
-  color: #11a4d2;
+  color: #e94f37;
   margin-left: 5px;
 }
 
