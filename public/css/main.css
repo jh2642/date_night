@@ -122,10 +122,6 @@ body {
   height: 70px;
 }
 
-.calendarBox {
-  overflow: scroll;
-}
-
 #calendarEvents h1 {
   color: #e94f37;
 }
