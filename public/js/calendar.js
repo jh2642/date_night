@@ -265,6 +265,9 @@ function checkAuth() {
                         'Content-Type': 'application/json'
                     },
                 })
+                .then(function() {
+                    location.reload();
+                })
             });
         }
 
