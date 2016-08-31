@@ -303,6 +303,11 @@ body {
   margin-top: 30px;
 }
 
+.dateNightEvent {
+  background-color: #f6f7eb;
+  color: #011627;
+}
+
 .location-id {
   border: none;
   background-color: transparent;
