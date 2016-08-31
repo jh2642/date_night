@@ -206,6 +206,18 @@ body {
   color: black;
 }
 
+.btn-default {
+  width: 125px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-primary {
+  background: #e94f37;
+  color: #f6f7eb;
+}
+
 .foodPic {
   width: 100%;
   margin: 10px;
