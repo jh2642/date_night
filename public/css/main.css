@@ -199,6 +199,7 @@ body {
   border: 1px #f6f7eb solid;
   padding: 5px;
   font-size: 16px;
+  margin-top: 20px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
