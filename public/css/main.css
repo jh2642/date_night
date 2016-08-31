@@ -140,6 +140,7 @@ body {
 
 .calendarBox {
   overflow: scroll;
+  height: 70vh;
 }
 
 #calendarEvents h1 {
