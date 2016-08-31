@@ -40,7 +40,7 @@ app.get('/googlesignin', function (request, response) {
 
 //this locates the lat and long of an address
 app.get('/api/v1/geoloc', function (request, response) {
-    https.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + request.query.address +  '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
+    https.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + request.query.address +  '&key=' + process.env.GOOGLE_PLACES_KEY, function (err, data, body) {
         response.json(JSON.parse(body));
         data.on('data', (d) => {
             response.json(d)
@@ -51,7 +51,7 @@ app.get('/api/v1/geoloc', function (request, response) {
 
 //this is the api to get google places data//
 app.get('/api/v1/places', function (request, response) {
-    https.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + request.query.location + '&radius=16094&type=' + request.query.type + '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
+    https.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + request.query.location + '&radius=16094&type=' + request.query.type + '&key=' + process.env.GOOGLE_PLACES_KEY, function (err, data, body) {
         var body = JSON.parse(body)
         body.results = body.results.filter(function(place) {
             return (
@@ -72,7 +72,7 @@ app.get('/api/v1/places', function (request, response) {
 //this is the api to get the details of a specific location
 app.get('/api/v1/details', function (request, response) {
     https.get('https://maps.googleapis.com/maps/api/place/details/json?placeid=' + request.query.placeid +
-    '&key=AIzaSyCHYYAP2pKpLvN6kcCO8W9zkM-Oct2d2A4', function (err, data, body) {
+    '&key=' + process.env.GOOGLE_PLACES_KEY, function (err, data, body) {
         response.json(JSON.parse(body));
         data.on('data', (d) => {
             response.json(d)
