@@ -21,10 +21,10 @@ $color5: rgba(57, 62, 65, 1);
 }
 
 body {
-    // background-image: url('/assets/date-night.jpeg');
+    background-image: url('/assets/city-scape.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.9;
+    // opacity: 0.6;
     background-color: $color4;
 }
 
@@ -52,13 +52,13 @@ body {
     margin-top: 70px;
     h1 {
         font-size: 170px;
-        color: $color1;
+        color: $color4;
     }
     p {
         font-size: 75px;
     }
     .motto {
-        color: $color3;
+        color: $color1;
         font-style: italic;
         font-size: 45px;
     }

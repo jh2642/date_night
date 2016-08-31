@@ -14,9 +14,9 @@
 }
 
 body {
+  background-image: url("/assets/city-scape.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
   background-color: #e94f37;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .jumbotron h1 {
   font-size: 170px;
-  color: #011627;
+  color: #e94f37;
 }
 
 .jumbotron p {
@@ -53,7 +53,7 @@ body {
 }
 
 .jumbotron .motto {
-  color: #f6f7eb;
+  color: #011627;
   font-style: italic;
   font-size: 45px;
 }
