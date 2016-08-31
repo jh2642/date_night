@@ -25,6 +25,9 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeThree = "bar"
     var getId1 = "localRestaurants"
 
+    document.querySelector('.searchTopper').classList.add('searched')
+    document.querySelector('.searchResultBox').classList.remove('hidden')
+
     fetch(api+'/api/v1/geoloc?address=' + address , {
         method: 'GET'
     })
