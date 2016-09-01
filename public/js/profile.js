@@ -52,12 +52,12 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('datesEmail').innerHTML = response.date_email
 
         console.log(response.date_email)
-    })
-    .then(function(response2) {
-        if(response2.date_name === 'null' || response2.date_email === 'null') {
-            document.getElementById('dateProfileBox2').classList.remove('hidden')
-            document.getElementById('dateProfileBox').classList.add('hidden')
-        }
+        .then(function() {
+            if(response.date_name === 'null' || response.date_email === 'null') {
+                document.getElementById('dateProfileBox2').classList.remove('hidden')
+                document.getElementById('dateProfileBox').classList.add('hidden')
+            }
+        })
     })
     .then(function() {
         fetch(api+'/events/datenight?id=' + user_id, {
