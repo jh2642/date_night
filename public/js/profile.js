@@ -49,9 +49,8 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('googlePic').appendChild(featureImage)
          console.log(response.date_name)
         if(response.date_name === 'null') {
-            .then(function() {
             document.getElementById('dateProfileBox2').classList.remove('hidden')
-            })
+            }
         }
         else {
         document.getElementById('dateProfileBox').classList.remove('hidden')
