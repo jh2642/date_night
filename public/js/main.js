@@ -18,6 +18,8 @@ document.body.addEventListener('click', function(e) {
     }
 })
 
+
+
 $().button('toggle')
 
 document.getElementById('getDetails').addEventListener('click', function() {

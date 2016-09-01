@@ -48,20 +48,39 @@ body {
     font-weight: bolder;
     font-size-adjust: auto;
     background-color: transparent;
-    // opacity: 0.8;
     font-family: $headlineFont;
     margin-top: 150px;
     h1 {
-        font-size: 170px;
-        color: $color1;
+    font-size: 170px;
+    color: $color1;
     }
+}
+.mottoBox {
     p {
-        font-size: 75px;
+    font-size: 75px;
     }
     .motto {
         color: $color3;
         font-style: italic;
         font-size: 45px;
+        margin-bottom: 80px;
+    }
+}
+
+.glyphicon {
+    color: $color3;
+    font-size: 45px;
+}
+
+.downArrow {
+    padding-top: 40px;
+    button {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+        border: 0;
+        background: transparent;
     }
 }
 
@@ -81,8 +100,8 @@ body {
 }
 
 .wwd {
-    padding-top: 15px;
-    height: 40vh;
+    padding-top: 10px;
+    height: 38vh;
     background-color: $color3;
     color: $color1;
     h1,h2 {
@@ -94,33 +113,6 @@ body {
     margin-bottom: 30px;
 }
 
-.wwd2 {
-    padding-top: 15px;
-    height: 40vh;
-    background-color: $color1;
-    color: $color3;
-    h1,h2 {
-        color: $color3;
-    }
-}
-
-.wwdMessage2 {
-    margin-bottom: 30px;
-}
-
-.wwd3 {
-    padding-top: 15px;
-    height: 20vh;
-    background-color: $color5;
-    color: $color3;
-    h1,h2 {
-        color: $color3;
-    }
-}
-
-.wwdMessage3 {
-    margin-bottom: 30px;
-}
 
 .plate {
     width: 7vw;
@@ -139,6 +131,19 @@ body {
 .reel {
     width: 7vw;
     height: 10vh;
+}
+.wwd2 {
+    padding-top: 10px;
+    height: 35vh;
+    background-color: $color1;
+    color: $color3;
+    h1,h2 {
+        color: $color3;
+    }
+}
+
+.wwdMessage2 {
+    margin-bottom: 30px;
 }
 
 .calendar {
@@ -165,6 +170,19 @@ body {
     color: $color3;
 }
 
+.wwd3 {
+    padding-top: 10px;
+    height: 27vh;
+    background-color: $color5;
+    color: $color3;
+    h1,h2 {
+        color: $color3;
+    }
+}
+
+.wwdMessage3 {
+    margin-bottom: 30px;
+}
 .contactFooter {
     margin-top: 30px;
 }
@@ -175,40 +193,40 @@ body {
     width: 100px;
 }
 .header-distributed{
-	background-color: black;
-	width: 100%;
+    background-color: black;
+    width: 100%;
     color:  $color5;
 }
 
 .footer-distributed{
-	background-color: $color1;
-	width: 100%;
+    background-color: $color1;
+    width: 100%;
     color:  $color5;
     padding-bottom: 10px;
 }
 
 /* Footer social icons */
 
- .footer-icons{
-	// margin-top: 10px;
+.footer-icons{
+    // margin-top: 10px;
 }
 
- .footer-icons a{
-	display: inline-block;
-	border-radius: 2px;
-	font-size: 16px;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
-	margin: 20px;
-	margin-bottom: 10px;
+.footer-icons a{
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin: 20px;
+    margin-bottom: 10px;
 }
 
 .footer-right p{
-	display: inline-block;
-	// vertical-align: top;
-	// margin: 15px 42px 0 0;
-	color: #ffffff;
+    display: inline-block;
+    // vertical-align: top;
+    // margin: 15px 42px 0 0;
+    color: #ffffff;
 }
 
 .centerNav {
@@ -266,7 +284,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-   display: none;
+    display: none;
 }
 
 #calendarEvents {
@@ -403,8 +421,8 @@ body {
     margin-top: 10px;
 }
 .modal-header {
-        border: none;
-        height: 10px;
+    border: none;
+    height: 10px;
 }
 
 .modal-footer {
@@ -463,17 +481,86 @@ body {
 }
 
 // media query
-// @media screen and (min-width:600px) {
-//   nav {
-//     float: left;
-//     width: 25%;
-//   }
-//   section {
-//     margin-left: 25%;
-//   }
-// }
-// @media screen and (max-width:599px) {
-//   nav li {
-//     display: inline;
-//   }
-// }
+/* Small Devices, Tablets */
+@media only screen and (min-width : 200px) and (max-width : 992px){
+    .indexPage {
+        height: 85vh;
+    }
+    .jumbotron {
+        font-size: 50px;
+        margin-top: 0px;
+        h1 {
+            font-size: 150px;
+        }
+    }
+    .mottoBox {
+        .motto {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+    }
+    .downArrow {
+        padding-top: 0px;
+    }
+    .wwd {
+        padding-top: 5px;
+        height: 35vh;
+    }
+    .wwdMessage {
+        margin-bottom: 20px;
+    }
+    .wwdH1 {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .plate {
+        width: 5vw;
+        height: 7vh;
+    }
+    .martini {
+        width: 5vw;
+        height: 7vh;
+    }
+    .reel {
+        width: 5vw;
+        height: 7vh;
+    }
+    .calendar {
+        width: 6vw;
+        height: 7vh;
+    }
+    .soul {
+        width: 6vw;
+        height: 7vh;
+    }
+
+    .clock {
+        width: 6vw;
+        height: 7vh;
+    }
+
+    .charge {
+        width: 6vw;
+        height: 7vh;
+    }
+    .wwd2 {
+        height: 28vh;
+        h1 {
+            font-size: 30px;
+        },
+        h2 {
+            font-size: 16px;
+        }
+    }
+    .wwd3 {
+        height: 20vh;
+    }
+};
+
+/* Medium Devices, Desktops */
+// @media only screen and (min-width : 992px) and (max-width : 1200px){
+//
+// };
+
+/* XS Devices */
