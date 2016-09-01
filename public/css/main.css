@@ -345,7 +345,7 @@ body {
 .dateNightEvent {
   background-color: #011627;
   margin: 10px;
-  height: 250px;
+  min-height: 250px;
 }
 
 .location-id {
