@@ -47,17 +47,15 @@ window.addEventListener('googlesignin', function() {
 
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
-         console.log(response.date_name)
-        if(response.date_name === 'null') {
-            document.getElementById('dateProfileBox2').classList.remove('hidden')
-            }
-        }
-        else {
-        document.getElementById('dateProfileBox').classList.remove('hidden')
+
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
-        }
 
+        console.log(response.date_name)
+        if(response.date_name === 'null') {
+            document.getElementById('dateProfileBox2').classList.remove('hidden')
+            document.getElementById('dateProfileBox').classList.add('hidden')
+        }
 
     })
     .then(function() {
