@@ -124,8 +124,13 @@ body {
 }
 
 .centerNav {
-    padding-top: 10px;
+    padding-top: 25px;
 }
+
+.copyright {
+    width: 1vw;
+}
+
 .profilePage {
     background-color: $color5;
 }
@@ -364,4 +369,20 @@ body {
     border: none;
     background-color: transparent;
     font-size: 14px;
+}
+
+// media query
+@media screen and (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
 }
