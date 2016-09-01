@@ -110,7 +110,7 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
-})
+// })
 
 //delete scheduled events
 $(document).ready(function(){
