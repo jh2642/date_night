@@ -32,6 +32,9 @@ body {
     margin-top: 30px;
 }
 
+.indexPage {
+    height: 90vh;
+}
 
 .navLinks {
     margin-right: 30px;
@@ -75,6 +78,91 @@ body {
 
 .contactInfo {
     color: $color1;
+}
+
+.wwd {
+    padding-top: 15px;
+    height: 40vh;
+    background-color: $color3;
+    color: $color1;
+    h1,h2 {
+        color: $color1;
+    }
+}
+
+.wwdMessage {
+    margin-bottom: 30px;
+}
+
+.wwd2 {
+    padding-top: 15px;
+    height: 40vh;
+    background-color: $color1;
+    color: $color3;
+    h1,h2 {
+        color: $color3;
+    }
+}
+
+.wwdMessage2 {
+    margin-bottom: 30px;
+}
+
+.wwd3 {
+    padding-top: 15px;
+    height: 20vh;
+    background-color: $color5;
+    color: $color3;
+    h1,h2 {
+        color: $color3;
+    }
+}
+
+.wwdMessage3 {
+    margin-bottom: 30px;
+}
+
+.plate {
+    width: 7vw;
+    height: 10vh;
+}
+
+.martini {
+    width: 5vw;
+    height: 10vh;
+}
+
+.ddm {
+    color: $color1;
+}
+
+.reel {
+    width: 7vw;
+    height: 10vh;
+}
+
+.calendar {
+    width: 7vw;
+    height: 12vh;
+    color: $color3;
+}
+
+.soul {
+    width: 7vw;
+    height: 12vh;
+    color: $color3;
+}
+
+.clock {
+    width: 6vw;
+    height: 12vh;
+    color: $color3;
+}
+
+.charge {
+    width: 6vw;
+    height: 12vh;
+    color: $color3;
 }
 
 .contactFooter {
