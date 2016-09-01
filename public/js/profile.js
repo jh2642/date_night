@@ -51,6 +51,10 @@ window.addEventListener('googlesignin', function() {
         // document.getElementById('dateProfileBox').classList.remove('hidden')
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
+        if(response.date_name.length === '') {
+            document.getElementById('dateProfileBox').classList.add('hidden')
+            document.getElementById('dateProfileBox2').classList.remove('hidden')
+        }
     })
     .then(function() {
         fetch(api+'/events/datenight?id=' + user_id, {
@@ -100,14 +104,6 @@ window.addEventListener('googlesignin', function() {
                     document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
-                if(item.date_name.length === '') {
-                    document.getElementById('dateProfileBox').classList.add('hidden')
-                    document.getElementById('dateProfileBox2').classList.remove('hidden')
-                }
-                // if(item.date_name.length === '') ||  (item.date_email.length === '') {
-                //     document.getElementById('dateProfileBox').classList.add('hidden')
-                //     document.getElementById('dateProfileBox2').classList.remove('hidden')
-                // }
             })
         })
     })
