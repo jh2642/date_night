@@ -23,16 +23,10 @@ body {
   margin-top: 30px;
 }
 
-.navBox {
-  padding-top: 25px;
-  margin-left: 30px;
-}
-
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
   color: #f6f7eb;
-  margin-top: 20px;
 }
 
 .jumbotron {
@@ -98,6 +92,7 @@ body {
 /* Footer social icons */
 .footer-icons a {
   display: inline-block;
+  border-radius: 2px;
   font-size: 30px;
   color: #ffffff;
   text-align: center;

@@ -32,15 +32,11 @@ body {
     margin-top: 30px;
 }
 
-.navBox {
-    padding-top: 25px;
-    margin-left: 30px;
-}
+
 .navLinks {
     margin-right: 30px;
     font-size: 20px;
     color: $color3;
-    margin-top: 20px;
 }
 
 
@@ -111,7 +107,7 @@ body {
 
  .footer-icons a{
 	display: inline-block;
-	// border-radius: 2px;
+	border-radius: 2px;
 	font-size: 30px;
 	color: #ffffff;
 	text-align: center;
