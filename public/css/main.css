@@ -258,6 +258,12 @@ body {
   padding-bottom: 10px;
 }
 
+#dateProfileBox2 {
+  background-color: #2ec4b6;
+  color: #011627;
+  padding: 30px;
+}
+
 .pastEventBox {
   opacity: 0.4;
   margin-bottom: 20px;

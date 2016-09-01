@@ -47,19 +47,21 @@
             <div class="col-md-2 profileTopper text-center">
                 <h3 id="googleName"></h3>
                 <p id="googlePic"></p>
-                <p id="googleName" class="hidden"></p>
                 <p id="googleEmail" class="hidden"></p>
 
                 <div class="dateInfoProfile">
-                    <h3>your date:</h3>
+                    <h3>you're dating:</h3>
                     <div id="dateProfileBox">
                         <h3 id="dateInformation"></h3>
-                        <p class="hidden">@</p>
-                        <p id="datesEmail" class="hidden"></p>
+                        <p>@</p>
+                        <p id="datesEmail"></p>
+                    </div>
+                    <div id="dateProfileBox2" class="hidden">
+                        <h3>please update</h3>
                     </div>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update info</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update</button>
                 </div>
             </div>
         </div>
@@ -86,11 +88,20 @@
     <div class="modal fade dateModal container-fluid" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm row" role="document">
             <div class="modal-content col-md-10 col-md-offset-2 text-center">
-                <h3>add/update your date's info:</h3>
                 <div class="form-group text-center">
-                    <input type="text" class="form-control addToProfile text-center" id="datesNameUpdate" placeholder="your date's name">
-                    <input type="email" class="form-control addToProfile text-center" id="datesEmailUpdate" placeholder="your date's email">
-                    <!-- <input type="text" class="form-control addToProfile" id="datesPhoneUpdate" placeholder="your date's phone #"> -->
+                    <div id="dateProfileBox3">
+                        <h3>add your date's info below</h3>
+                        <input type="text" class="form-control addToProfile text-center" id="datesNameUpdate" placeholder="your date's name">
+                        <input type="email" class="form-control addToProfile text-center" id="datesEmailUpdate" placeholder="your date's email">
+                    </div>
+                    <div id="dateProfileBox3" class="hidden">
+                        <h3>here's who's on file:</h3>
+                        <h3 id="dateInformation"></h3>
+                        <p id="datesEmail"></p>
+                        <h3>need to update?</h3>
+                        <input type="text" class="form-control addToProfile text-center" id="datesNameUpdate" placeholder="your date's name">
+                        <input type="email" class="form-control addToProfile text-center" id="datesEmailUpdate" placeholder="your date's email">
+                    </div>
                 </div>
                 <div class="dateModalFooter">
                     <a href="/profile.html" type="button"><button class="btn btn-primary" id="addDateInfo">update</button></a>
