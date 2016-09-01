@@ -48,13 +48,12 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
 
-        // document.getElementById('dateProfileBox').classList.remove('hidden')
-        document.getElementById('dateInformation').innerHTML = response.date_name
-        document.getElementById('datesEmail').innerHTML = response.date_email
-        if(response.date_name.length === '') {
+        if(response.date_name.length === '' || response.date_name.length === 'null') {
             document.getElementById('dateProfileBox').classList.add('hidden')
             document.getElementById('dateProfileBox2').classList.remove('hidden')
         }
+        document.getElementById('dateInformation').innerHTML = response.date_name
+        document.getElementById('datesEmail').innerHTML = response.date_email
     })
     .then(function() {
         fetch(api+'/events/datenight?id=' + user_id, {
