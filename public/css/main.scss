@@ -108,7 +108,7 @@ body {
  .footer-icons a{
 	display: inline-block;
 	border-radius: 2px;
-	font-size: 30px;
+	font-size: 20px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
@@ -123,6 +123,9 @@ body {
 	color: #ffffff;
 }
 
+.centerNav {
+    padding-top: 10px;
+}
 .profilePage {
     background-color: $color5;
 }
