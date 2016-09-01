@@ -1,5 +1,4 @@
-var emailInstead
-var nameInstead
+
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '528488731677-j7s7n0s15ju9b6h8h2u97kkmpidhp12f.apps.googleusercontent.com';
@@ -122,8 +121,8 @@ function checkAuth() {
                 var dateLoc = dateNight;
                 var dateSum = 'Date Night';
                 var descriptionDate = document.getElementById('messageBox').value
-                emailInstead = document.getElementById('newEmail').value
-                nameInstead = document.getElementById('newName').value
+                var emailInstead = document.getElementById('newEmail').value
+                var nameInstead = document.getElementById('newName').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
