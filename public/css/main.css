@@ -104,7 +104,6 @@ body {
 .footer-right p {
   display: inline-block;
   vertical-align: top;
-  margin: 15px 42px 0 0;
   color: #ffffff;
 }
 
@@ -114,6 +113,10 @@ body {
 
 .copyright {
   width: 1vw;
+}
+
+.contactJames {
+  padding-top: 27px;
 }
 
 .profilePage {
@@ -352,20 +355,4 @@ body {
   border: none;
   background-color: transparent;
   font-size: 14px;
-}
-
-@media screen and (min-width: 600px) {
-  nav {
-    float: left;
-    width: 25%;
-  }
-  section {
-    margin-left: 25%;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  nav li {
-    display: inline;
-  }
 }
