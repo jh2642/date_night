@@ -100,7 +100,7 @@ window.addEventListener('googlesignin', function() {
                     document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
-                if(item.date_name.length === '') && (item.date_email.length === '') {
+                if(item.date_name.length === '') {
                     document.getElementById('dateProfileBox').classList.add('hidden')
                     document.getElementById('dateProfileBox2').classList.remove('hidden')
                 }
