@@ -51,11 +51,11 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
 
-        console.log(response.date_email)
-        .then(function() {
+
             if(response.date_name === 'null' || response.date_email === 'null') {
-                document.getElementById('dateProfileBox2').classList.remove('hidden')
-                document.getElementById('dateProfileBox').classList.add('hidden')
+                console.log(response.date_email)
+                // document.getElementById('dateProfileBox2').classList.remove('hidden')
+                // document.getElementById('dateProfileBox').classList.add('hidden')
             }
         })
     })
