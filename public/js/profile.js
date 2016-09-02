@@ -54,6 +54,8 @@ window.addEventListener('googlesignin', function() {
             console.log('OMG')
             document.getElementById('dateProfileBox2').classList.remove('hidden')
             document.getElementById('dateProfileBox').classList.add('hidden')
+            document.getElementById('dateProfileBox3').classList.remove('hidden')
+            document.getElementById('dateProfileBox4').classList.add('hidden')
         }
 
     })
