@@ -27,7 +27,7 @@ function checkAuth() {
         if (authResult && !authResult.error) {
             // Hide auth UI, then load client library.
             authorizeDiv.style.display = 'none';
-            // location="/schedule.html"
+            searchBoxHide.style.display = 'inline';
             loadCalendarApi();
 
             //get profile information from db
