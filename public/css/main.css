@@ -409,7 +409,12 @@ body {
 }
 
 .searchTopper {
+  margin-top: 300px;
   transition: 0.5s ease all;
+}
+
+.searchTopper.searched {
+  margin-top: 30px;
 }
 
 #authorize-div {
