@@ -29,7 +29,7 @@
                 <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
             </div>
         </div>
-        <div class="row searchTopper">
+        <div id="searchBoxHide" class="row searchTopper">
             <div class="col-md-10 col-md-offset-2 searchTopper2">
                 <div class="col-md-4">
                     <h3>where</h3>
@@ -49,7 +49,7 @@
             <div id="authorize-div" style="display: none">
                 <h4>Authorize access to Google Calendar API</h4>
                 <!--Button for the user to click to initiate auth sequence -->
-                <button class="btn btn-warning" id="authorize-button" onclick="handleAuthClick(event)">
+                <button class="btn btn-lg" id="authorize-button" onclick="handleAuthClick(event)">
                     Authorize
                 </button>
             </div>
