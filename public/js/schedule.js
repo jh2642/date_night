@@ -54,7 +54,7 @@ function checkAuth() {
                 // document.getElementById('googlePic').appendChild(featureImage)
 
 
-                if(response.date_name.value === '' || response.date_email.value === '') {
+                if(response.date_name === null || response.date_email === null) {
                     console.log('OMG')
                     document.getElementById('formDetailsNew').classList.remove('hidden')
                     document.getElementById('formDetailsOld').classList.add('hidden')
