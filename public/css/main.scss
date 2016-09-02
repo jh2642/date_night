@@ -425,6 +425,10 @@ margin-top: 10px;
     transition: 0.5s ease all;
 }
 
+.searchTopper.searched {
+    margin-top: 30px;
+}
+
 #authorize-div {
     font-size: 20px;
     margin-top: 300px;
@@ -432,11 +436,6 @@ margin-top: 10px;
 
 .authBox {
     margin-top: 300px;
-}
-
-
-.searchTopper.searched {
-    margin-top: 30px;
 }
 
 .searchButtonSched {
