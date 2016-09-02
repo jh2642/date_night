@@ -30,6 +30,13 @@
             </div>
         </div>
         <div class="row searchTopper">
+            <div id="authorize-div" style="display: none">
+                <span>Authorize access to Google Calendar API</span>
+                <!--Button for the user to click to initiate auth sequence -->
+                <button class="btn btn-lg" id="authorize-button" onclick="handleAuthClick(event)">
+                    Authorize
+                </button>
+            </div>
             <div class="col-md-10 col-md-offset-2 searchTopper2">
                 <div class="col-md-4">
                     <h3>where</h3>
@@ -43,13 +50,6 @@
                 <div class="col-md-2 searchButtonSched">
                     <button type="button" id="getDetails" class="btn btn-primary">search venues</button>
                 </div>
-            </div>
-            <div id="authorize-div" style="display: none">
-                <span>Authorize access to Google Calendar API</span>
-                <!--Button for the user to click to initiate auth sequence -->
-                <button class="btn btn-lg" id="authorize-button" onclick="handleAuthClick(event)">
-                    Authorize
-                </button>
             </div>
         </div>
     </div>

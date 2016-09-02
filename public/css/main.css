@@ -414,7 +414,8 @@ body {
 }
 
 #authorize-div {
-  padding-left: 60px;
+  padding-left: 100px;
+  font-size: 20px;
 }
 
 .searchTopper.searched {
