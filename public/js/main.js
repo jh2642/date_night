@@ -225,6 +225,10 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     phone.innerHTML = response.result.formatted_phone_number
                     div.appendChild(phone)
 
+                    var rating = document.createElement('p')
+                    rating.innerHTML = "Rating: " + response.result.rating
+                    div.appendChild(rating)
+
                     var mapURL = document.createElement('a')
                     mapURL.innerHTML = 'Click Here to open Google Maps'
                     mapURL.setAttribute('href', response.result.url)
