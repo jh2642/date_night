@@ -15,7 +15,6 @@ document.getElementById('addDateInfo').addEventListener('click', function() {
             id: user_id,
             date_name: document.getElementById('datesNameUpdate').value,
             date_email: document.getElementById('datesEmailUpdate').value,
-            // date_phone_number: document.getElementById('datesPhoneUpdate').value
         })
     })
     .then(function(response) {
