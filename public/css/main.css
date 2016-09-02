@@ -63,6 +63,17 @@ body {
   font-size: 45px;
 }
 
+.martini2 {
+  width: 4vw;
+  height: 7vh;
+}
+
+.dateNightHeader {
+  font-family: "Syncopate", sans-serif;
+  font-size: 45px;
+  margin-top: 10px;
+}
+
 .downArrow {
   padding-top: 40px;
 }
@@ -273,7 +284,7 @@ body {
 
 #dateProfileBox {
   color: #f6f7eb;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
 
