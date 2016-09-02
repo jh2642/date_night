@@ -413,6 +413,10 @@ body {
   transition: 0.5s ease all;
 }
 
+#authorize-div {
+  padding-left: 60px;
+}
+
 .searchTopper.searched {
   margin-top: 30px;
 }
