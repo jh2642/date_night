@@ -320,6 +320,10 @@ margin-top: 10px;
 .calendarBox {
     overflow: scroll;
     height: 80vh;
+    h1 {
+        color: $color1;
+        padding: 12px;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -327,9 +331,8 @@ margin-top: 10px;
 }
 
 #calendarEvents {
-    h1 {
-        color: $color4;
-    }
+    height: 60px;
+    background-color: $color2;
 }
 
 #googlePic {

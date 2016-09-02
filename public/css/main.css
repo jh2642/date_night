@@ -312,12 +312,18 @@ body {
   height: 80vh;
 }
 
+.calendarBox h1 {
+  color: #011627;
+  padding: 12px;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
 
-#calendarEvents h1 {
-  color: #e94f37;
+#calendarEvents {
+  height: 60px;
+  background-color: #2ec4b6;
 }
 
 #googlePic {
