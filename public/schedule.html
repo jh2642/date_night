@@ -44,12 +44,14 @@
                     <button type="button" id="getDetails" class="btn btn-primary">search venues</button>
                 </div>
             </div>
-            <div id="authorize-div" style="display: none">
-                <h4>Authorize access to Google Calendar API</h4>
-                <!--Button for the user to click to initiate auth sequence -->
-                <button class="btn btn-lg" id="authorize-button" onclick="handleAuthClick(event)">
-                    Authorize
-                </button>
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <div id="authorize-div" style="display: none">
+                    <h4>Authorize access to Google Calendar API</h4>
+                    <!--Button for the user to click to initiate auth sequence -->
+                    <button class="btn btn-lg" id="authorize-button" onclick="handleAuthClick(event)">
+                        Authorize
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -77,20 +79,20 @@
     <footer class="navbar-fixed-bottom">
         <div class="container-fluid">
             <div class="row profileNav">
-            <div class="col-md-4 text-left navBox footer-right footer-icons">
-                <a href="https://medium.com/@jh2642" type="button" class="navLinks">blog</a>
-                <a href="#" type="button" class="navLinks">about us</a>
-                <a href="#" type="button" class="navLinks">faq</a>
-                <a href="mailto:date.night.indy@gmail.com">email us</a>
+                <div class="col-md-4 text-left navBox footer-right footer-icons">
+                    <a href="https://medium.com/@jh2642" type="button" class="navLinks">blog</a>
+                    <a href="#" type="button" class="navLinks">about us</a>
+                    <a href="#" type="button" class="navLinks">faq</a>
+                    <a href="mailto:date.night.indy@gmail.com">email us</a>
+                </div>
+                <div class="col-md-4 text-center centerNav">
+                    <img class="google" src="/assets/google2.png">
+                </div>
+                <div class="col-md-4 text-right centerNav">
+                    <img class="copyright" src="/assets/copyright2.png">
+                    <span>hildreth inc.</span>
+                </div>
             </div>
-            <div class="col-md-4 text-center centerNav">
-                <img class="google" src="/assets/google2.png">
-            </div>
-            <div class="col-md-4 text-right centerNav">
-                <img class="copyright" src="/assets/copyright2.png">
-                <span>hildreth inc.</span>
-            </div>
-        </div>
         </div>
     </footer>
     <!-- Details Modal -->
@@ -139,12 +141,12 @@
                         <div class="col-md-10 col-md-offset-1">
                             <h2>and you'll</h2>
                             <div class="btn-group" data-toggle="buttons">
-                              <label class="btn btn-primary">
-                                <input type="radio" name="meetDate" id="pickUp" value="I'll pick you up! " autocomplete="off">pick them up
-                              </label>
-                              <label class="btn btn-primary active">
-                                <input type="radio" name="meetDate" id="meetRestaurant" value="I'll meet you there! " autocomplete="off" checked>meet them
-                              </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="meetDate" id="pickUp" value="I'll pick you up! " autocomplete="off">pick them up
+                                </label>
+                                <label class="btn btn-primary active">
+                                    <input type="radio" name="meetDate" id="meetRestaurant" value="I'll meet you there! " autocomplete="off" checked>meet them
+                                </label>
                             </div>
                         </div>
                     </div>
