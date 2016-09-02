@@ -324,24 +324,21 @@ body {
 
 .btn-lg {
     background: $color5;
-    border: 1px $color3 solid;
     font-size: 40px;
     font-family: $headlineFont;
-    padding: 10px;
     margin: 5px;
     color:$color3;
 }
 
 .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-    background: $color4;
+    background: $color2;
     color: $color5;
-    border: 1px $color3 solid;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
     background: $color5;
     color: $color1;
-    border: 1px $color3 solid;
+    border: 1px $color1 solid;
 }
 
 .btn-primary,
@@ -356,7 +353,7 @@ body {
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     background: $color3;
-    color: black;
+    color: $color1;
 }
 
 .btn-default {

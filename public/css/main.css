@@ -312,24 +312,21 @@ body {
 
 .btn-lg {
   background: #393e41;
-  border: 1px #f6f7eb solid;
   font-size: 40px;
   font-family: "Syncopate", sans-serif;
-  padding: 10px;
   margin: 5px;
   color: #f6f7eb;
 }
 
 .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-  background: #e94f37;
+  background: #2ec4b6;
   color: #393e41;
-  border: 1px #f6f7eb solid;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
   background: #393e41;
   color: #011627;
-  border: 1px #f6f7eb solid;
+  border: 1px #011627 solid;
 }
 
 .btn-primary,
@@ -344,7 +341,7 @@ body {
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   background: #f6f7eb;
-  color: black;
+  color: #011627;
 }
 
 .btn-default {
