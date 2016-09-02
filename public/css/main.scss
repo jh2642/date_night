@@ -10,7 +10,7 @@ $color5: rgba(57, 62, 65, 1);
 
 * {
     font-family: $mainFont;
-    color: white;
+    color: $color3;
     font-size: 16px;
     h1 {
         font-family: $headlineFont;
@@ -511,7 +511,7 @@ margin-top: 10px;
     background-color: $color1;
     margin: 10px;
     min-height: 250px;
-    max-height: 350px;
+    max-height: 250px;
     min-width: 410px;
     max-width: 410px;
 }

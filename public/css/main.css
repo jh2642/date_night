@@ -1,7 +1,7 @@
 /* RGB */
 * {
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: #f6f7eb;
   font-size: 16px;
 }
 
@@ -499,7 +499,7 @@ body {
   background-color: #011627;
   margin: 10px;
   min-height: 250px;
-  max-height: 350px;
+  max-height: 250px;
   min-width: 410px;
   max-width: 410px;
 }
