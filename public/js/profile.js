@@ -49,9 +49,10 @@ window.addEventListener('googlesignin', function() {
 
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
+        document.getElementById('dateInformation2').innerHTML = response.date_name
+        document.getElementById('datesEmail2').innerHTML = response.date_email
 
         if(document.getElementById('dateInformation').innerHTML === '') {
-            console.log('OMG')
             document.getElementById('dateProfileBox2').classList.remove('hidden')
             document.getElementById('dateProfileBox').classList.add('hidden')
             document.getElementById('dateProfileBox3').classList.remove('hidden')
