@@ -417,6 +417,10 @@ body {
   margin-top: 30px;
 }
 
+.selectOne h1 {
+  color: #2ec4b6;
+}
+
 #authorize-div {
   font-size: 20px;
   margin-top: 300px;
