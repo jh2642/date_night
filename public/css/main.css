@@ -438,6 +438,10 @@ body {
   margin-top: 36px;
 }
 
+.searchResultBox {
+  margin-top: 400px;
+}
+
 .eventDate {
   max-width: 150px;
 }
@@ -546,21 +550,5 @@ body {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width: 200px) and (max-width: 790px) {
-  .btn-primary,
-  .btn-secondary {
-    margin-top: 30px;
-  }
-  .searchTopper {
-    margin-top: 150px;
-    transition: 0.5s ease all;
-  }
-  .profileNav {
-    background-color: #011627;
-    color: #2ec4b6;
-    height: 80px;
-  }
-}
-
 /* Medium Devices, Desktops */
 /* XS Devices */
