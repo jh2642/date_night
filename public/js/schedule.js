@@ -50,8 +50,8 @@ function checkAuth() {
                 var individualEmail = document.getElementById('googleEmail')
                 individualEmail.innerHTML = response.email
 
-                document.getElementById('googlePic').innerHTML = ''
-                document.getElementById('googlePic').appendChild(featureImage)
+                // document.getElementById('googlePic').innerHTML = ''
+                // document.getElementById('googlePic').appendChild(featureImage)
                 document.getElementById('dateName').innerHTML = response.date_name
                 document.getElementById('dateEmail').innerHTML = response.date_email
 
