@@ -547,6 +547,10 @@ body {
   .wwd3 {
     height: 20vh;
   }
+  .profileTopper {
+    color: #2ec4b6;
+    height: 30vh;
+  }
 }
 
 /* Medium Devices, Desktops */
