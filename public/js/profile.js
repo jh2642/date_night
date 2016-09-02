@@ -116,9 +116,7 @@ window.addEventListener('googlesignin', function() {
 //delete scheduled events
 $(document).ready(function(){
     $('body').on('click', '.calendar-id', function(){
-
         calId = $(this).attr('calendar-id')
-
         checkAuth();
         handleAuthClick();
         gapi.client.load('calendar', 'v3', deleteEvents);

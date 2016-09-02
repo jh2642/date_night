@@ -61,6 +61,7 @@ function signOut() {
         location="/index.html"
     });
 }
+
 document.getElementById('downArrow').addEventListener('click', function() {
             window.scrollTo(0,1200);
 })
