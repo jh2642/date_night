@@ -258,6 +258,7 @@ body {
 
 .dateInfoProfile {
   margin-top: 50px;
+  color: #2ec4b6;
 }
 
 .dateModalFooter {
@@ -298,7 +299,7 @@ body {
 }
 
 #googleName {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .schedulePage {
