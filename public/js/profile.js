@@ -36,13 +36,6 @@ window.addEventListener('googlesignin', function() {
         return response.json()
     })
     .then(function(response) {
-        if(response.date_name === 'NULL') {
-            console.log(response.date_email)
-            // document.getElementById('dateProfileBox2').classList.remove('hidden')
-            // document.getElementById('dateProfileBox').classList.add('hidden')
-        }
-        else {
-
         var featureImage = document.createElement('img')
         featureImage.setAttribute('src', response.image_url)
         featureImage.classList.add('img-circle')
@@ -57,6 +50,10 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('dateInformation').innerHTML = response.date_name
         document.getElementById('datesEmail').innerHTML = response.date_email
 
+        if(document.getElementById('dateInformation').innerHTML === 'NULL') {
+            console.log('OMG')
+            // document.getElementById('dateProfileBox2').classList.remove('hidden')
+            // document.getElementById('dateProfileBox').classList.add('hidden')
         }
 
     })
