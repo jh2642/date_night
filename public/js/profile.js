@@ -52,7 +52,7 @@ window.addEventListener('googlesignin', function() {
         document.getElementById('datesEmail').innerHTML = response.date_email
 
 
-            if(response.date_name === 'null' || response.date_email === 'null') {
+            if(response.date_name === 'null') {
                 console.log(response.date_email)
                 // document.getElementById('dateProfileBox2').classList.remove('hidden')
                 // document.getElementById('dateProfileBox').classList.add('hidden')
