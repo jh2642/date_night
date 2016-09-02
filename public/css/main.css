@@ -272,9 +272,14 @@ body {
 }
 
 #dateProfileBox {
-  color: #2ec4b6;
+  color: #f6f7eb;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.solidBar {
+  background-color: #2ec4b6;
+  height: 20px;
 }
 
 .pastEventBox {
