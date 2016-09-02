@@ -420,13 +420,17 @@ margin-top: 10px;
     margin-left: 5px;
 }
 
+.navRight {
+    margin-right: 20px;
+}
+
 .searchTopper {
     margin-top: 300px;
     transition: 0.5s ease all;
 }
 
 .searchTopper.searched {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .selectOne {
