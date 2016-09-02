@@ -537,7 +537,9 @@ margin-top: 10px;
 
 .glyphicon {
     font-size: inherit;
-    padding: 5px;
+    position:relative;
+    top: -20px;
+    left: 20px;
 }
 
 .location-id {
