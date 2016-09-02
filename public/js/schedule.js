@@ -55,7 +55,7 @@ function checkAuth() {
                 document.getElementById('dateName2').innerHTML = response.date_name
                 document.getElementById('dateEmail2').innerHTML = response.date_email
 
-                if(document.getElementById('dateEmail2').innerHTML === '') {
+                if(response.date_email === '') {
                     document.getElementById('formDetailsNew').classList.remove('hidden')
                     document.getElementById('formDetailsOld').classList.add('hidden')
                 }
