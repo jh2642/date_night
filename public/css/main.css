@@ -277,6 +277,7 @@ body {
 .calendarBox {
   overflow: scroll;
   height: 80vh;
+  padding-left: 20px;
 }
 
 ::-webkit-scrollbar {
