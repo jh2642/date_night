@@ -79,7 +79,7 @@ window.addEventListener('googlesignin', function() {
 
                 var eventDetails = document.createElement('i')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
-                eventDetails.classList.add('glyphicon', 'glyphicon-remove', 'calendar-id')
+                eventDetails.classList.add('glyphicon', 'glyphicon-remove', 'calendar-id', 'text-right')
                 // eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
 

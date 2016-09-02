@@ -523,6 +523,11 @@ body {
   max-width: 410px;
 }
 
+.glyphicon {
+  font-size: inherit;
+  padding: 3px;
+}
+
 .location-id {
   border: none;
   background-color: transparent;
