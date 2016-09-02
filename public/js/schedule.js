@@ -31,7 +31,7 @@ function checkAuth() {
             loadCalendarApi();
 
             //get profile information from db
-            fetch(api+'/users/profile?id=' + id, {
+            fetch(api+'/users/profile?id=' + user_id, {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
