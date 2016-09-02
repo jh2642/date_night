@@ -204,6 +204,10 @@ body {
   color: #393e41;
 }
 
+.fa {
+  font-size: 30px;
+}
+
 .footer-distributed {
   background-color: #011627;
   width: 100%;
