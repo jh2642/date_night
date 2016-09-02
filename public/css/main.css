@@ -259,7 +259,7 @@ body {
 .profileNav {
   background-color: #011627;
   color: #2ec4b6;
-  height: 10vh;
+  height: 100px;
 }
 
 .profileTopper {
@@ -546,5 +546,21 @@ body {
 }
 
 /* Small Devices, Tablets */
+@media only screen and (min-width: 200px) and (max-width: 790px) {
+  .btn-primary,
+  .btn-secondary {
+    margin-top: 30px;
+  }
+  .searchTopper {
+    margin-top: 150px;
+    transition: 0.5s ease all;
+  }
+  .profileNav {
+    background-color: #011627;
+    color: #2ec4b6;
+    height: 80px;
+  }
+}
+
 /* Medium Devices, Desktops */
 /* XS Devices */

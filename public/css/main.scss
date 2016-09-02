@@ -270,7 +270,7 @@ margin-top: 10px;
 .profileNav {
     background-color: $color1;
     color: $color2;
-    height: 10vh;
+    height: 100px;
 }
 
 .profileTopper {
@@ -559,9 +559,23 @@ margin-top: 10px;
 
 // media query
 /* Small Devices, Tablets */
-// @media only screen and (min-width : 200px) and (max-width : 768px){
-//
-// };
+@media only screen and (min-width : 200px) and (max-width : 790px){
+    .btn-primary,
+    .btn-secondary {
+        margin-top: 30px;
+    }
+
+    .searchTopper {
+    margin-top: 150px;
+    transition: 0.5s ease all;
+    }
+
+    .profileNav {
+        background-color: $color1;
+        color: $color2;
+        height: 80px;
+    }
+};
 
 /* Medium Devices, Desktops */
 // @media only screen and (min-width : 992px) and (max-width : 1200px){
