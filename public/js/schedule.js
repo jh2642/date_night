@@ -61,7 +61,6 @@ function checkAuth() {
                 }
                 else {
                     document.getElementById('dateName2').innerHTML = response.date_name
-                    document.getElementById('dateEmail2').innerHTML = response.date_email
                 }
             })
         }
