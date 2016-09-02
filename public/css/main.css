@@ -249,6 +249,7 @@ body {
 .insideProfileBox {
   background-color: #393e41;
   height: 68vh;
+  color: #2ec4b6;
 }
 
 .profilePic {
@@ -294,6 +295,7 @@ body {
 
 #googlePic2 {
   width: 25%;
+  margin-top: 10px;
 }
 
 .schedulePage {
