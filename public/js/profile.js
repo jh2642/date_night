@@ -58,7 +58,7 @@ window.addEventListener('googlesignin', function() {
                 // document.getElementById('dateProfileBox').classList.add('hidden')
             }
         })
-    })
+    // })
     .then(function() {
         fetch(api+'/events/datenight?id=' + user_id, {
             method: 'GET',
@@ -110,7 +110,7 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
-// })
+})
 
 //delete scheduled events
 $(document).ready(function(){
