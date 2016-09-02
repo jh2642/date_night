@@ -246,6 +246,11 @@ body {
   padding-top: 50px;
 }
 
+.insideProfileBox {
+  background-color: #393e41;
+  height: 68vh;
+}
+
 .profilePic {
   padding: 10px;
 }
