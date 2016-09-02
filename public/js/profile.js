@@ -52,8 +52,8 @@ window.addEventListener('googlesignin', function() {
 
         if(document.getElementById('dateInformation').innerHTML === '') {
             console.log('OMG')
-            // document.getElementById('dateProfileBox2').classList.remove('hidden')
-            // document.getElementById('dateProfileBox').classList.add('hidden')
+            document.getElementById('dateProfileBox2').classList.remove('hidden')
+            document.getElementById('dateProfileBox').classList.add('hidden')
         }
 
     })
