@@ -27,7 +27,7 @@ function checkAuth() {
         if (authResult && !authResult.error) {
             // Hide auth UI, then load client library.
             authorizeDiv.style.display = 'none';
-            searchBoxHide.style.display = 'inline';
+            // searchBoxHide.style.display = 'inline';
             loadCalendarApi();
 
             //get profile information from db
@@ -67,7 +67,7 @@ function checkAuth() {
             // Show auth UI, allowing the user to initiate authorization by
             // clicking authorize button.
             authorizeDiv.style.display = 'inline';
-            searchBoxHide.style.display = 'none';
+            // searchBoxHide.style.display = 'none';
         }
     }
 
