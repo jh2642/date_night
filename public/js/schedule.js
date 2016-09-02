@@ -52,10 +52,10 @@ function checkAuth() {
 
                 document.getElementById('googlePic').innerHTML = ''
                 document.getElementById('googlePic').appendChild(featureImage)
-                document.getElementById('dateName2').innerHTML = response.date_name
-                document.getElementById('dateEmail2').innerHTML = response.date_email
+                document.getElementById('dateName').innerHTML = response.date_name
+                document.getElementById('dateEmail').innerHTML = response.date_email
 
-                if(response.date_email === '') {
+                if(document.getElementById('dateEmail').innerHTML === '') {
                     console.log('OMG')
                     document.getElementById('formDetailsNew').classList.remove('hidden')
                     document.getElementById('formDetailsOld').classList.add('hidden')
