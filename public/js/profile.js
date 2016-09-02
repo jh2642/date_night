@@ -93,12 +93,12 @@ window.addEventListener('googlesignin', function() {
                 dateDate.innerHTML = 'on ' + moment(item.event_at).format('LLLL')
                 div.appendChild(dateDate)
 
-                var eventDetails = document.createElement('button')
+                var eventDetails = document.createElement('i')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
-                eventDetails.setAttribute('href', '/profile.html')
-                eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
-                eventDetails.innerHTML = 'delete event'
+                eventDetails.classList.add('glyphicon', 'glyphicon-remove', 'calendar-id')
+                // eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
+
                 if(moment(item.event_at) >= moment()) {
                     document.getElementById('noEventsMessage').classList.add('hidden')
                     document.getElementById('calendarEventsDb').appendChild(div)
