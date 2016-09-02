@@ -42,16 +42,16 @@ function checkAuth() {
                 return response.json()
             })
             .then(function(response) {
-                // var featureImage = document.createElement('img')
-                // featureImage.setAttribute('src', response.image_url)
-                // featureImage.classList.add('img-circle')
-                // var individualName = document.getElementById('googleName')
-                // individualName.innerHTML = response.name
-                // var individualEmail = document.getElementById('googleEmail')
-                // individualEmail.innerHTML = response.email
-                //
-                // document.getElementById('googlePic').innerHTML = ''
-                // document.getElementById('googlePic').appendChild(featureImage)
+                var featureImage = document.createElement('img')
+                featureImage.setAttribute('src', response.image_url)
+                featureImage.classList.add('img-circle')
+                var individualName = document.getElementById('googleName')
+                individualName.innerHTML = response.name
+                var individualEmail = document.getElementById('googleEmail')
+                individualEmail.innerHTML = response.email
+
+                document.getElementById('googlePic').innerHTML = ''
+                document.getElementById('googlePic').appendChild(featureImage)
                 document.getElementById('dateName2').innerHTML = response.date_name
                 document.getElementById('dateEmail2').innerHTML = response.date_email
 
