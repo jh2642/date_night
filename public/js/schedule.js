@@ -55,7 +55,6 @@ function checkAuth() {
 
 
                 if(response.date_name === null || response.date_email === null) {
-                    console.log('OMG')
                     document.getElementById('formDetailsNew').classList.remove('hidden')
                     document.getElementById('formDetailsOld').classList.add('hidden')
                 }
