@@ -524,7 +524,7 @@ body {
 
 .dateNightEvent {
   background-color: #011627;
-  margin-right: 25px;
+  margin: 15px;
   min-height: 250px;
   max-height: 250px;
   min-width: 410px;
