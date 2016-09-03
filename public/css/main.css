@@ -545,6 +545,20 @@ body {
   font-size: 14px;
 }
 
+.mobileIndex {
+  margin-top: 70px;
+}
+
+.mobileIndex h1 {
+  font-size: 100px;
+  margin-bottom: 100px;
+  color: #011627;
+}
+
+.mobileIndex h3 {
+  font-size: 50px;
+}
+
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */
 /* XS Devices */

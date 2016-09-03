@@ -558,6 +558,19 @@ margin-top: 10px;
     font-size: 14px;
 }
 
+
+.mobileIndex {
+    margin-top: 70px;
+    h1 {
+        font-size: 100px;
+        margin-bottom: 100px;
+        color: $color1;
+    }
+    h3 {
+        font-size: 50px;
+    }
+}
+
 // media query
 /* Small Devices, Tablets */
 // @media only screen and (min-width : 200px) and (max-width : 992px){
