@@ -16,105 +16,108 @@
     <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </head>
 <body class="profilePage">
-    <div id="authorize-div" style="display: none">
-        <span>Authorize access to Google Calendar API</span>
-        <!--Button for the user to click to initiate auth sequence -->
-        <button class="btn btn-primary" id="authorize-button" onclick="handleAuthClick(event)">
-            Authorize
-        </button>
-    </div>
-    <div class=container-fluid>
-        <div class="row profileNav">
-            <div class="col-md-6 dateNightHeader">
+    <div class="container-fluid">
+    <div class="row profileNav">
+            <div class="col-xs-12 col-sm-6 dateNightHeader">
                 <img class="martini2" src="assets/martini2.png" alt="">
                 <span class="dateNightHeader">date night</span>
             </div>
-            <div class="col-md-6 text-right">
+            <div class="hidden-xs col-sm-6 text-right">
                 <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
             </div>
         </div>
+    </div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10 calendarBox">
-                <div class="col-sm-12 col-md-12">
+            <div class="col-xs-12 col-md-10 calendarBox">
+                <div class="col-xs-12 col-md-12">
                     <h1 id="calendarEvents">upcoming events...</h1>
                     <p id="noEventsMessage" class="lead">you do not have anything on the schedule. click "schedule date" to get started.</p>
                     <a href="/schedule.html" class="btn btn-primary schedDate" role="button">schedule date</a>
                     <p class="text-center" id="calendarEventsDb"></p>
                 </div>
-                <div class="col-sm-12 col-md-12 pastEventBox hidden">
+            </div>
+            <div class="col-xs-12 col-md-10 pastEventBox hidden">
+                <div class="col-xs-12 col-md-12">
                     <h1 id="calendarEvents">past events...</h1>
                     <p class="text-center" id="pastCalendarEventsDb"></p>
                 </div>
             </div>
-            <div class="col-md-2 profileTopper text-center">
-                <div class="col-md-10 col-md-offset-1 insideProfileBox">
-                <h3>welcome,</h3>
-                <h3 id="googleName"></h3>
-                <p id="googlePic"></p>
-                <p id="googleEmail" class="hidden"></p>
-
-                <div class="dateInfoProfile">
-                    <div class="col-md-12 solidBar"></div>
-                    <div id="dateProfileBox">
-                        <h3>you're dating,</h3>
-                        <h3 id="dateInformation"></h3>
-                        <p id="datesEmail" class="hidden"></p>
-                    </div>
-                    <div id="dateProfileBox2" class="hidden">
-                        <h3>please add your date</h3>
-                    </div>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update</button>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
-
-        <div class="row profileNav">
-            <div class="col-md-4 text-left navBox footer-right footer-icons">
-                <a href="https://medium.com/@jh2642" type="button" class="navLinks">blog</a>
-                <!-- <a href="#" type="button" class="navLinks">about us</a> -->
-                <a href="#" type="button" class="navLinks">faq</a>
-                <a href="mailto:date.night.indy@gmail.com">email us</a>
-            </div>
-            <div class="col-md-4 text-center centerNav">
-            <img class="google" src="/assets/google2.png">
-            </div>
-            <div class="col-md-4 text-right centerNav">
-                <img class="copyright" src="/assets/copyright2.png">
-                <span>hildreth inc.</span>
-            </div>
-        </div>
-    </div>
-    <!-- Small modal -->
-    <div class="modal fade dateModal container-fluid" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-        <div class="modal-dialog modal-sm row" role="document">
-            <div class="modal-content col-md-10 col-md-offset-2 text-center">
-                <div class="form-group text-center">
-                    <div id="dateProfileBox4">
-                        <h3>here's who's on file:</h3>
-                        <h3 id="dateInformation2"></h3>
-                        <p>@</p>
-                        <p id="datesEmail2"></p>
-                        <h3>need to update?</h3>
-                    </div>
-                    <div id="dateProfileBox3" class="hidden">
-                        <h3>add your date's info below</h3>
+            <div class="hidden-xs col-sm-2 profileTopper text-center">
+                <div class="col-xs-10 col-md-10 col-md-offset-1 insideProfileBox">
+                    <div class="col-xs-12">
+                    <h3>welcome,</h3>
+                    <h3 id="googleName"></h3>
+                    <p id="googlePic"></p>
+                    <p id="googleEmail" class="hidden"></p>
+                    <div class="dateInfoProfile">
+                        <div class="col-xs-12 solidBar"></div>
+                        <div id="dateProfileBox">
+                            <h3>you're dating,</h3>
+                            <h3 id="dateInformation"></h3>
+                            <p id="datesEmail" class="hidden"></p>
+                        </div>
+                        <div id="dateProfileBox2" class="hidden">
+                            <h3>please add your date</h3>
+                        </div>
                     </div>
                     <div>
-                        <input type="text" class="form-control addToProfile text-center" id="datesNameUpdate" placeholder="your date's name">
-                        <input type="email" class="form-control addToProfile text-center" id="datesEmailUpdate" placeholder="your date's email">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update</button>
                     </div>
                 </div>
-                <div class="dateModalFooter">
-                    <a href="/profile.html" type="button"><button class="btn btn-primary" id="addDateInfo">update</button></a>
-                    <button type="button" class="btn btn-primary text-center" data-dismiss="modal">cancel</button>
                 </div>
+            </div>
+<!-- mobile -->
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+                <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
             </div>
         </div>
     </div>
+    <div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+    <div class="row profileNav hidden-xs">
+        <div class="col-sm-4 text-left navBox footer-right footer-icons">
+            <a href="https://medium.com/@jh2642" type="button" class="navLinks">blog</a>
+            <!-- <a href="#" type="button" class="navLinks">about us</a> -->
+            <a href="#" type="button" class="navLinks">faq</a>
+            <a href="mailto:date.night.indy@gmail.com">email us</a>
+        </div>
+        <div class="col-sm-4 text-center centerNav">
+            <img class="google" src="/assets/google2.png">
+        </div>
+        <div class="col-sm-4 text-right centerNav">
+            <img class="copyright" src="/assets/copyright2.png">
+            <span>hildreth inc.</span>
+        </div>
+    </div>
+</div>
+<!-- Small modal -->
+<div class="modal fade dateModal container-fluid" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm row" role="document">
+        <div class="modal-content col-md-10 col-md-offset-2 text-center">
+            <div class="form-group text-center">
+                <div id="dateProfileBox4">
+                    <h3>here's who's on file:</h3>
+                    <h3 id="dateInformation2"></h3>
+                    <p>@</p>
+                    <p id="datesEmail2"></p>
+                    <h3>need to update?</h3>
+                </div>
+                <div id="dateProfileBox3" class="hidden">
+                    <h3>add your date's info below</h3>
+                </div>
+                <div>
+                    <input type="text" class="form-control addToProfile text-center" id="datesNameUpdate" placeholder="your date's name">
+                    <input type="email" class="form-control addToProfile text-center" id="datesEmailUpdate" placeholder="your date's email">
+                </div>
+            </div>
+            <div class="dateModalFooter">
+                <a href="/profile.html" type="button"><button class="btn btn-primary" id="addDateInfo">update</button></a>
+                <button type="button" class="btn btn-primary text-center" data-dismiss="modal">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -243,6 +243,10 @@ margin-top: 10px;
 }
 .profilePage {
     background-color: $color5;
+    // .row {
+    //     margin-right: 0px;
+    //     margin-left: 0px;
+    // }
 }
 
 .profileNav {
@@ -586,6 +590,11 @@ margin-top: 10px;
 
     .mobileButtonBox {
         margin-top: 25px;
+    }
+
+    .profileNav {
+        background-color: $color1;
+        height: 300px;
     }
 
 }

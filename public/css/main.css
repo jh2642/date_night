@@ -561,6 +561,10 @@ body {
   .mobileButtonBox {
     margin-top: 25px;
   }
+  .profileNav {
+    background-color: #011627;
+    height: 300px;
+  }
 }
 
 /* Medium Devices, Desktops */
