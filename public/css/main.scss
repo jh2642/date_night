@@ -85,6 +85,7 @@ margin-top: 10px;
 
 .downArrow {
     padding-top: 40px;
+    padding-bottom: 25px;
     button {
         appearance: none;
         -webkit-appearance: none;
@@ -96,7 +97,6 @@ margin-top: 10px;
 }
 
 .getStarted {
-    margin-top: 50px;
     a {
         font-size: 25px;
         color: $color2;
@@ -564,17 +564,10 @@ margin-top: 10px;
 
 // media query
 /* Small Devices, Tablets */
-@media only screen and (min-width : 0px) and (max-width : 425px){
+@media only screen and (max-width : 767px){
     .mobileIndex {
-        margin-top: 40px;
-        padding-top: 100px;
-        padding-bottom: 100px;
-
-        h1 {
-            font-size: 65px;
-            color: $color4;
-            padding: 10px;
-        }
+        margin-top: 30px;
+        padding-bottom: 30px;
         h3 {
             font-size: 20px;
             font-style: italic;
@@ -590,7 +583,16 @@ margin-top: 10px;
 
     .innerMobile {
         background-color: $color5;
-        height: 150px;
+        height: 100px;
+        h1 {
+            font-size: 35px;
+            color: $color4;
+            padding: 10px;
+        }
+    }
+
+    .googleBoxMobile {
+        padding-top: 40px;
     }
 
     .motto {
@@ -598,7 +600,7 @@ margin-top: 10px;
     }
 
     .mobileButtonBox {
-        margin-top: 125px;
+        margin-top: 25px;
     }
 
 }

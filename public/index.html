@@ -16,59 +16,54 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-    </header>
-    <div class="container-fluid indexPage">
+    <div class="container-fluid indexPage hidden-xs">
         <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="hidden-xs jumbotron text-center">
-                    <h1 class="logoOne">date night</h1>
-                </div>
-                <div class="hidden-xs text-center mottoBox">
-                    <p class="motto">making date night a priority has never been easier</p>
-                    <div class="hidden-xs getStarted">
-                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
-                        </div>
-                    </div>
-                </div>
-                <div class="visible-xs hidden-sm hidden-md hidden-lg hidden-xl text-center mobileIndex col-xs-12">
-                    <div class="decBar">
-                    </div>
-                    <div class="innerMobile">
-                    <h1 class="logoOne">date night</h1>
-                </div>
-                <div class="decBar">
-                </div>
-                    <div class="container mobileButtonBox">
-                        <div class="row">
-                        <div class="col-xs-12 text-center">
-                            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden-xs text-center downArrow">
-                    <img class="google" src="/assets/google2.png">
-                    <!-- <button id="downArrow"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button> -->
-                </div>
+            <div class="col-sm-12">
+            <div class="jumbotron text-center">
+                <h1 class="logoOne">date night</h1>
             </div>
-        </div>
+            </div>
+            </div>
+            <div class="row text-center mottoBox">
+                <div class="col-sm-12">
+                <p class="motto">making date night a priority has never been easier</p>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center GetStarted">
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
+                    </div>
+                    </div>
+                </div>
+                <div class="row downArrow">
+                    <div class="col-sm-12">
+                        <div class=" text-center">
+                            <img class="google" src="/assets/google2.png">
+                            <!-- <button id="downArrow"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button> -->
+                        </div>
+                    </div>
+                </div>
     </div>
     <div class="container-fluid hidden-xs wwd">
-        <h1 class="text-center wwdMessage">what do we do?</h1>
         <div class="row">
-            <div class="food col-sm-4 col-md-2 col-md-offset-3 text-center">
-                <img class="plate" src="assets/plate.svg" alt="">
-                <h2 class="ddm">dinner</h2>
+            <div class="col-md-12">
+                <h1 class="text-center wwdMessage">what do we do?</h1>
             </div>
-            <div class="drink col-sm-4 col-md-2 text-center">
-                <img class="martini" src="assets/martini.png" alt="">
-                <h2 class="ddm2">drinks</h2>
-            </div>
-            <div class="movie col-sm-4 col-md-2 text-center">
-                <img class="reel" src="assets/movie.svg" alt="">
-                <h2 class="ddm">movies</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="food col-sm-4 col-md-2 col-md-offset-3 text-center">
+                    <img class="plate" src="assets/plate.svg" alt="">
+                    <h2 class="ddm">dinner</h2>
+                </div>
+                <div class="drink col-sm-4 col-md-2 text-center">
+                    <img class="martini" src="assets/martini.png" alt="">
+                    <h2 class="ddm2">drinks</h2>
+                </div>
+                <div class="movie col-sm-4 col-md-2 text-center">
+                    <img class="reel" src="assets/movie.svg" alt="">
+                    <h2 class="ddm">movies</h2>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -78,7 +73,11 @@
         </div>
     </div>
     <div class="container-fluid hidden-xs wwd2">
-        <h1 class="text-center wwdMessage2">why we do it?</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center wwdMessage2">why we do it?</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-3 col-md-3 text-center">
                 <img class="calendar" src="assets/calendar.png" alt="">
@@ -104,11 +103,47 @@
                 <h3 class="text-center wwdMessage3">sign in with google to get started</h3>
             </div>
         </div>
-        <div id+"bottomIndex" class="text-center">
-            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
+        <div class="row">
+            <div id="bottomIndex" class="col-md-12 text-center">
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- mobile version -->
+    <div class="container-fluid mobileIndex visible-xs hidden-sm hidden-md hidden-lg hidden-xl">
+        <div class="row">
+            <div class="text-center mobileIndex col-xs-12">
+                <div class="decBar">
+                </div>
+            </div>
+        </div>
+        <div class="row innerMobile">
+            <div class="col-xs-12 text-center">
+                <h1 class="logoOne">date night</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center mobileIndex col-xs-12">
+                <div class="decBar">
+                </div>
+            </div>
+        </div>
+        <div class="row mobileButtonBox">
+            <div class="col-xs-12 text-center">
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-xs-12 googleBoxMobile text-center">
+                    <img class="google" src="/assets/google2.png">
+                </div>
+            </div>
+        </div>
+
+    <!-- footer -->
     <footer class="navbar-fixed-bottom hidden-xs hidden-sm hidden-md">
         <div class="container-fluid">
             <div class="row profileNav">
