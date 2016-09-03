@@ -23,10 +23,6 @@ body {
   margin-top: 30px;
 }
 
-.indexPage {
-  height: 90vh;
-}
-
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
@@ -100,8 +96,7 @@ body {
 }
 
 .wwd {
-  padding-top: 10px;
-  height: 38vh;
+  height: 325px;
   background-color: #f6f7eb;
   color: #011627;
 }
@@ -115,13 +110,11 @@ body {
 }
 
 .plate {
-  width: 7vw;
-  height: 10vh;
+  height: 100px;
 }
 
 .martini {
-  width: 5vw;
-  height: 10vh;
+  height: 100px;
 }
 
 .ddm {
@@ -129,13 +122,11 @@ body {
 }
 
 .reel {
-  width: 7vw;
-  height: 10vh;
+  height: 100px;
 }
 
 .wwd2 {
-  padding-top: 10px;
-  height: 35vh;
+  height: 290px;
   background-color: #011627;
   color: #f6f7eb;
 }
@@ -149,32 +140,27 @@ body {
 }
 
 .calendar {
-  width: 7vw;
-  height: 12vh;
+  height: 100px;
   color: #f6f7eb;
 }
 
 .soul {
-  width: 7vw;
-  height: 12vh;
+  height: 100px;
   color: #f6f7eb;
 }
 
 .clock {
-  width: 6vw;
-  height: 12vh;
+  height: 100px;
   color: #f6f7eb;
 }
 
 .charge {
-  width: 6vw;
-  height: 12vh;
+  height: 100px;
   color: #f6f7eb;
 }
 
 .wwd3 {
-  padding-top: 10px;
-  height: 27vh;
+  height: 225px;
   background-color: #393e41;
   color: #f6f7eb;
 }
@@ -580,9 +566,6 @@ body {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
-  .indexPage {
-    height: 100vh;
-  }
   .jumbotron {
     margin-top: 0px;
   }
@@ -595,17 +578,16 @@ body {
     padding: 15px;
   }
   .getStarted {
-    margin-top: 60px;
+    margin-top: 25px;
   }
   .wwd {
     padding-top: 5px;
-    height: 40vh;
+    height: 290px;
   }
   .wwd h1 {
     font-size: 30px;
   }
   .wwdMessage {
-    margin-top: 30px;
     margin-bottom: 10px;
   }
   .wwdMessage h1 {
@@ -623,13 +605,12 @@ body {
   .wwd2 {
     padding-top: 0px;
     padding-bottom: 20px;
-    height: 40vh;
+    height: 210px;
   }
   .wwd2 h1 {
     font-size: 30px;
   }
   .wwdMessage2 {
-    margin-top: 30px;
     padding-bottom: 10px;
     margin-bottom: 5px;
   }
@@ -639,9 +620,6 @@ body {
   .wwdMessage2,
   .wwdMessage2 h2 {
     font-size: 17px;
-  }
-  .wwd2MessageBox {
-    margin-top: 30px;
   }
   .calendar {
     width: 80px;
@@ -660,10 +638,11 @@ body {
     height: 80px;
   }
   .wwd3 {
-    height: 20vh;
+    padding-top: 20px;
+    height: 140px;
   }
   .wwdMessage3 {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 25px;
   }
 }
