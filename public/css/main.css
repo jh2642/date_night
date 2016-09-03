@@ -23,6 +23,10 @@ body {
   margin-top: 30px;
 }
 
+.indexPage {
+  height: 90vh;
+}
+
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
@@ -576,6 +580,9 @@ body {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
+  .indexPage {
+    height: 100vh;
+  }
   .jumbotron {
     margin-top: 0px;
   }
@@ -588,16 +595,17 @@ body {
     padding: 15px;
   }
   .getStarted {
-    margin-top: 25px;
+    margin-top: 60px;
   }
   .wwd {
     padding-top: 5px;
-    height: 290px;
+    height: 40vh;
   }
   .wwd h1 {
     font-size: 30px;
   }
   .wwdMessage {
+    margin-top: 30px;
     margin-bottom: 10px;
   }
   .wwdMessage h1 {
@@ -615,12 +623,13 @@ body {
   .wwd2 {
     padding-top: 0px;
     padding-bottom: 20px;
-    height: 210px;
+    height: 40vh;
   }
   .wwd2 h1 {
     font-size: 30px;
   }
   .wwdMessage2 {
+    margin-top: 30px;
     padding-bottom: 10px;
     margin-bottom: 5px;
   }
@@ -630,6 +639,9 @@ body {
   .wwdMessage2,
   .wwdMessage2 h2 {
     font-size: 17px;
+  }
+  .wwd2MessageBox {
+    margin-top: 30px;
   }
   .calendar {
     width: 80px;
@@ -648,11 +660,10 @@ body {
     height: 80px;
   }
   .wwd3 {
-    padding-top: 20px;
-    height: 140px;
+    height: 20vh;
   }
-  .wwd3 .wwdMessage3 {
-    margin-top: 0px;
+  .wwdMessage3 {
+    margin-top: 30px;
     margin-bottom: 25px;
   }
 }
