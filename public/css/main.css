@@ -23,10 +23,6 @@ body {
   margin-top: 30px;
 }
 
-.indexPage {
-  height: 90vh;
-}
-
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
@@ -546,7 +542,7 @@ body {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width: 200px) and (max-width: 425px) {
+@media only screen and (min-width: 0px) and (max-width: 425px) {
   .mobileIndex {
     margin-top: 40px;
     padding-top: 100px;

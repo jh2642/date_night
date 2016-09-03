@@ -33,7 +33,7 @@ body {
 }
 
 .indexPage {
-    height: 90vh;
+    // height: 90vh;
 }
 
 .navLinks {
@@ -564,7 +564,7 @@ margin-top: 10px;
 
 // media query
 /* Small Devices, Tablets */
-@media only screen and (min-width : 200px) and (max-width : 425px){
+@media only screen and (min-width : 0px) and (max-width : 425px){
     .mobileIndex {
         margin-top: 40px;
         padding-top: 100px;
