@@ -403,6 +403,10 @@ body {
   width: 800px;
 }
 
+.selectOne h1 {
+  padding: 20px;
+}
+
 #authorize-div {
   font-size: 20px;
   margin-top: 300px;
