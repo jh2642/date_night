@@ -60,8 +60,8 @@ body {
 }
 
 .martini2 {
-  width: 4vw;
-  height: 7vh;
+  width: 50px;
+  height: 70px;
 }
 
 .dateNightHeader {
@@ -233,19 +233,19 @@ body {
 
 .profileNav {
   background-color: #011627;
-  height: 10vh;
+  height: 100px;
 }
 
 .profileTopper {
   background-color: #e94f37;
   color: #2ec4b6;
-  height: 80vh;
+  height: 700px;
   padding-top: 50px;
 }
 
 .insideProfileBox {
   background-color: #393e41;
-  height: 68vh;
+  height: 600px;
   color: #2ec4b6;
 }
 
@@ -356,11 +356,10 @@ body {
 
 .btn-primary,
 .btn-secondary {
-  width: 125px;
   background: transparent;
   border: 1px #f6f7eb solid;
-  padding: 5px;
-  font-size: 16px;
+  padding: 15px;
+  font-size: 20px;
   margin-top: 20px;
 }
 
@@ -370,7 +369,6 @@ body {
 }
 
 .btn-default {
-  width: 125px;
   background: transparent;
   border: none;
   font-size: 16px;
@@ -562,8 +560,12 @@ body {
     margin-top: 25px;
   }
   .profileNav {
-    background-color: #011627;
+    background-color: #2ec4b6;
     height: 300px;
+  }
+  .martini2 {
+    width: 20px;
+    height: 80px;
   }
 }
 
@@ -647,5 +649,433 @@ body {
   .wwdMessage3 {
     margin-top: 0px;
     margin-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  * {
+    font-family: "Open Sans", sans-serif;
+    color: #f6f7eb;
+    font-size: 16px;
+  }
+  * h1 {
+    font-family: "Syncopate", sans-serif;
+  }
+  * h3 {
+    font-family: "Syncopate", sans-serif;
+  }
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e94f37;
+  }
+  .headerRow {
+    margin-top: 30px;
+  }
+  .navLinks {
+    margin-right: 30px;
+    font-size: 20px;
+    color: #f6f7eb;
+  }
+  .jumbotron {
+    font-size: 50px;
+    font-weight: bolder;
+    font-size-adjust: auto;
+    background-color: transparent;
+    font-family: "Syncopate", sans-serif;
+    margin-top: 150px;
+  }
+  .jumbotron h1 {
+    font-size: 170px;
+    color: #011627;
+  }
+  .mottoBox p {
+    font-size: 75px;
+  }
+  .mottoBox .motto {
+    color: #f6f7eb;
+    font-style: italic;
+    font-size: 45px;
+    margin-bottom: 80px;
+  }
+  .glyphicon {
+    color: #f6f7eb;
+    font-size: 45px;
+  }
+  .martini2 {
+    width: 4vw;
+    height: 7vh;
+  }
+  .dateNightHeader {
+    font-family: "Syncopate", sans-serif;
+    font-size: 45px;
+    margin-top: 10px;
+  }
+  .downArrow {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+  .downArrow button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: 0;
+    background: transparent;
+  }
+  .getStarted a {
+    font-size: 25px;
+    color: #2ec4b6;
+    border: 2px #f6f7eb solid;
+    background-color: #393e41;
+  }
+  .contactInfo {
+    color: #011627;
+  }
+  .wwd {
+    height: 325px;
+    background-color: #f6f7eb;
+    color: #011627;
+  }
+  .wwd h1, .wwd h2 {
+    color: #011627;
+  }
+  .wwdMessage {
+    margin-bottom: 30px;
+  }
+  .plate {
+    height: 100px;
+  }
+  .martini {
+    height: 100px;
+  }
+  .ddm {
+    color: #011627;
+  }
+  .reel {
+    height: 100px;
+  }
+  .wwd2 {
+    height: 290px;
+    background-color: #011627;
+    color: #f6f7eb;
+  }
+  .wwd2 h1, .wwd2 h2 {
+    color: #f6f7eb;
+  }
+  .wwdMessage2 {
+    margin-bottom: 30px;
+  }
+  .calendar {
+    height: 100px;
+    color: #f6f7eb;
+  }
+  .soul {
+    height: 100px;
+    color: #f6f7eb;
+  }
+  .clock {
+    height: 100px;
+    color: #f6f7eb;
+  }
+  .charge {
+    height: 100px;
+    color: #f6f7eb;
+  }
+  .wwd3 {
+    height: 225px;
+    background-color: #393e41;
+    color: #f6f7eb;
+  }
+  .wwd3 h1, .wwd3 h2 {
+    color: #f6f7eb;
+  }
+  .wwdMessage3 {
+    margin-bottom: 30px;
+  }
+  .contactFooter {
+    margin-top: 30px;
+  }
+  .jamesPic {
+    width: 100px;
+  }
+  .header-distributed {
+    background-color: black;
+    width: 100%;
+    color: #393e41;
+  }
+  .fa {
+    font-size: 30px;
+  }
+  .footer-distributed {
+    background-color: #011627;
+    width: 100%;
+    color: #393e41;
+    padding-bottom: 10px;
+  }
+  /* Footer social icons */
+  .footer-icons a {
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin: 20px;
+    margin-bottom: 10px;
+  }
+  .footer-right p {
+    display: inline-block;
+    color: #ffffff;
+  }
+  .centerNav {
+    padding-top: 30px;
+  }
+  .copyright {
+    width: 1vw;
+  }
+  .contactJames {
+    padding-top: 27px;
+  }
+  .profilePage {
+    background-color: #393e41;
+  }
+  .profileNav {
+    background-color: #011627;
+    height: 10vh;
+  }
+  .profileTopper {
+    background-color: #e94f37;
+    color: #2ec4b6;
+    height: 80vh;
+    padding-top: 50px;
+  }
+  .insideProfileBox {
+    background-color: #393e41;
+    height: 68vh;
+    color: #2ec4b6;
+  }
+  .profilePic {
+    padding: 10px;
+  }
+  .dateInfoProfile {
+    margin-top: 35px;
+    color: #2ec4b6;
+  }
+  .dateModalFooter {
+    padding-bottom: 10px;
+  }
+  #dateProfileBox2 {
+    background-color: #2ec4b6;
+    color: #011627;
+    padding: 30px;
+  }
+  #dateProfileBox {
+    color: #2ec4b6;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .solidBar {
+    background-color: #2ec4b6;
+    height: 20px;
+  }
+  .pastEventBox {
+    opacity: 0.4;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .smIcons {
+    padding-top: 25px;
+  }
+  .calendarBox {
+    overflow: scroll;
+    height: 80vh;
+  }
+  .calendarBox h1 {
+    color: #011627;
+    padding: 12px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  #calendarEvents {
+    height: 60px;
+    background-color: #2ec4b6;
+  }
+  #googlePic {
+    margin-top: 30px;
+  }
+  #googleName {
+    margin-top: 20px;
+  }
+  .schedulePage {
+    background-color: #e94f37;
+  }
+  .headersSearch {
+    font-family: "Syncopate", sans-serif;
+    font-size: 40px;
+    color: #011627;
+  }
+  .confirmPlansBox {
+    margin-bottom: 30px;
+  }
+  .g-signin2 {
+    display: inline-block;
+    text-align: center;
+  }
+  .btn-lg {
+    background: #393e41;
+    font-size: 40px;
+    font-family: "Syncopate", sans-serif;
+    margin: 5px;
+    color: #f6f7eb;
+  }
+  .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
+    background: #2ec4b6;
+    color: #393e41;
+  }
+  .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
+    background: #393e41;
+    color: #011627;
+    border: 1px #011627 solid;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 125px;
+    background: transparent;
+    border: 1px #f6f7eb solid;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #f6f7eb;
+    color: #011627;
+  }
+  .btn-default {
+    width: 125px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #e94f37;
+  }
+  .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-primary {
+    color: #e94f37;
+  }
+  .schedDate {
+    margin-bottom: 20px;
+  }
+  .selectLabel {
+    color: #011627;
+    margin-left: 5px;
+  }
+  .navRight {
+    padding-right: 20px;
+  }
+  .searchTopper {
+    margin-top: 300px;
+    transition: 0.5s ease all;
+  }
+  .searchTopper.searched {
+    margin-top: 80px;
+  }
+  .selectOne h1 {
+    color: #2ec4b6;
+  }
+  #authorize-div {
+    font-size: 20px;
+    margin-top: 300px;
+  }
+  .authBox {
+    margin-top: 300px;
+  }
+  .searchButtonSched {
+    margin-top: 36px;
+  }
+  .eventDate {
+    max-width: 150px;
+  }
+  .modalBox,
+  .modal-content {
+    color: #2ec4b6;
+    background-color: #393e41;
+    font-family: "Open Sans", sans-serif;
+  }
+  .modalBox a,
+  .modal-content a {
+    color: #f6f7eb;
+  }
+  .modalBox .mapURLbox,
+  .modal-content .mapURLbox {
+    margin-bottom: 120px;
+    color: #e94f37;
+    padding-bottom: 20px;
+  }
+  .reviewAuthor {
+    border-bottom: 2px #393e41 solid;
+  }
+  .mapURLbox {
+    padding-bottom: 20px;
+    color: #e94f37;
+  }
+  .reviewText {
+    margin-top: 10px;
+  }
+  .modal-header {
+    border: none;
+    height: 10px;
+  }
+  .modal-footer {
+    border: none;
+    margin-top: 10px;
+  }
+  .establishment {
+    margin: 5px;
+    padding: 5px;
+  }
+  .radiusMessage {
+    color: #f6f7eb;
+  }
+  .messageToDateBox {
+    margin-bottom: 15px;
+  }
+  .googleLogo {
+    margin-top: 200px;
+  }
+  .inputBox {
+    background-color: #f6f7eb;
+  }
+  .addToProfile {
+    margin-bottom: 5px;
+  }
+  .updateBox {
+    margin-top: 50px;
+  }
+  .detailsForDate {
+    margin-top: 30px;
+  }
+  .detailsForDate h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+  .dateNightEvent {
+    background-color: #011627;
+    margin: 15px;
+    min-height: 250px;
+    max-height: 250px;
+    min-width: 410px;
+    max-width: 410px;
+  }
+  .glyphicon {
+    font-size: inherit;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 375px;
+  }
+  .location-id {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
   }
 }
