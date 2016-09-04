@@ -341,7 +341,7 @@ body {
 }
 
 .signOutMobile {
-  margin-right: 5px;
+  padding-right: 5px;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
