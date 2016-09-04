@@ -66,7 +66,13 @@ body {
 
 .dateNightHeader {
   font-family: "Syncopate", sans-serif;
-  font-size: 45px;
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+.dateNightHeader2 {
+  font-family: "Syncopate", sans-serif;
+  font-size: 30px;
   margin-top: 10px;
 }
 
@@ -351,7 +357,7 @@ body {
   background: transparent;
   border: 1px #f6f7eb solid;
   padding: 15px;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 20px;
 }
 
@@ -525,49 +531,6 @@ body {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width: 767px) {
-  .mobileIndex {
-    margin-top: 30px;
-    padding-bottom: 30px;
-  }
-  .mobileIndex h3 {
-    font-size: 20px;
-    font-style: italic;
-  }
-  .decBar {
-    background-color: #f6f7eb;
-    height: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .innerMobile {
-    background-color: #393e41;
-    height: 100px;
-  }
-  .innerMobile h1 {
-    font-size: 35px;
-    color: #e94f37;
-    padding: 10px;
-  }
-  .googleBoxMobile {
-    padding-top: 40px;
-  }
-  .motto {
-    margin-top: 40px;
-  }
-  .mobileButtonBox {
-    margin-top: 25px;
-  }
-  .profileNav {
-    background-color: #2ec4b6;
-    height: 300px;
-  }
-  .martini2 {
-    width: 20px;
-    height: 80px;
-  }
-}
-
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
   .jumbotron {
