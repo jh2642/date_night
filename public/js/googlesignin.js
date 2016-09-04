@@ -62,6 +62,6 @@ function signOut() {
     });
 }
 
-document.getElementById('downArrow').addEventListener('click', function() {
-            window.scrollTo(0,1200);
-})
+// document.getElementById('downArrow').addEventListener('click', function() {
+//             window.scrollTo(0,1200);
+// })
