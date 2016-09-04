@@ -398,12 +398,10 @@ body {
 }
 
 .selectOne {
-  background-color: #011627;
-  padding: 20px;
-}
-
-.selectOne h1 {
   color: #f6f7eb;
+  background-color: #011627;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #authorize-div {
@@ -979,9 +977,6 @@ body {
   }
   .searchTopper.searched {
     margin-top: 80px;
-  }
-  .selectOne h1 {
-    color: #2ec4b6;
   }
   #authorize-div {
     font-size: 20px;

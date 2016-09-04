@@ -417,11 +417,10 @@ margin-top: 10px;
 }
 
 .selectOne {
-    h1 {
-        color: $color3;
-    }
+    color: $color3;
     background-color: $color1;
-    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #authorize-div {
@@ -1106,12 +1105,6 @@ margin-top: 10px;
 
 .searchTopper.searched {
     margin-top: 80px;
-}
-
-.selectOne {
-    h1 {
-        color: $color2;
-    }
 }
 
 #authorize-div {
