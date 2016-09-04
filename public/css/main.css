@@ -400,11 +400,7 @@ body {
 .selectOne {
   color: #f6f7eb;
   background-color: #011627;
-  width: 800px;
-}
-
-.selectOne h1 {
-  padding: 20px;
+  height: 40px;
 }
 
 #authorize-div {
