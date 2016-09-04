@@ -571,7 +571,7 @@ body {
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1200px) {
   * {
     font-family: "Open Sans", sans-serif;
     color: #f6f7eb;
