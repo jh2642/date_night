@@ -289,18 +289,9 @@ body {
   padding-top: 25px;
 }
 
-.calendarBox {
-  overflow: scroll;
-  height: 80vh;
-}
-
 .calendarBox h1 {
   color: #011627;
   padding: 12px;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 #calendarEvents {
