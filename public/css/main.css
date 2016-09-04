@@ -340,6 +340,10 @@ body {
   color: #f6f7eb;
 }
 
+.signOutMobile {
+  margin-right: 10px;
+}
+
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
   background: #393e41;
   color: #011627;
