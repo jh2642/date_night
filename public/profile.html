@@ -18,17 +18,17 @@
 </head>
 <body class="profilePage">
     <div class="container-fluid">
-        <div class="row profileNav hidden-sm hidden-xs">
-            <div class="col-md-6 dateNightHeader">
+        <div class="row profileNav hidden-md hidden-sm hidden-xs">
+            <div class="col-lg-6 dateNightHeader">
                 <img class="martini2" src="assets/martini2.png" alt="">
                 <span class="dateNightHeader">date night</span>
             </div>
-            <div class="col-md-6 text-right">
+            <div class="col-lg-6 text-right">
                 <a href="/index.html" type="button" class="btn btn-primary" onclick="signOut();">sign out</a>
             </div>
         </div>
         <!-- mobile header start-->
-        <div class="row profileNav hidden-md hidden-lg">
+        <div class="row profileNav hidden-lg">
             <div class="col-xs-6 dateNightHeader">
                 <img class="martini2" src="assets/martini2.png" alt="">
                 <span class="dateNightHeader">date night</span>
@@ -39,7 +39,7 @@
         </div>
         <!-- mobile header end -->
         <div class="row">
-            <div class="col-xs-12 col-md-10 calendarBox">
+            <div class="col-xs-12 col-lg-10 calendarBox">
                 <div class="col-xs-12">
                     <h1 id="calendarEvents">upcoming events...</h1>
                     <p id="noEventsMessage" class="lead">it's lonely over here. click "schedule date" to get started.</p>
@@ -51,9 +51,9 @@
                     <p class="text-center" id="pastCalendarEventsDb"></p>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-2 profileTopper text-center">
-                <div class="col-xs-6 col-xs-offset-3 col-md-10 col-md-offset-1 insideProfileBox">
-                    <div class="col-xs-12 col-md-12 text-center">
+            <div class="col-xs-12 col-lg-2 profileTopper text-center">
+                <div class="col-xs-6 col-xs-offset-3 col-lg-10 col-lg-offset-1 insideProfileBox">
+                    <div class="col-xs-12 col-lg-12 text-center">
                         <h3>welcome,</h3>
                         <h3 id="googleName"></h3>
                         <p id="googlePic"></p>
@@ -72,7 +72,7 @@
                         <div class="hidden-xs hidden-sm">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dateModal">update</button>
                         </div>
-                        <div class="mobileUpdate col-xs-6 col-xs-offset-3 hidden-md hidden-lg">
+                        <div class="mobileUpdate col-xs-6 col-xs-offset-3 hidden-lg hidden-lg">
                             <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target=".dateModal">update</button>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
         <!-- Small modal -->
         <div class="modal fade dateModal container-fluid" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
             <div class="modal-dialog modal-sm row" role="document">
-                <div class="modal-content col-md-10 col-md-offset-2 text-center">
+                <div class="modal-content col-lg-10 col-lg-offset-2 text-center">
                     <div class="form-group text-center">
                         <div id="dateProfileBox4">
                             <h3>here's who's on file:</h3>
