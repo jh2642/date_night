@@ -250,6 +250,11 @@ margin-top: 10px;
     height: 100px;
 }
 
+.profileNav2 {
+    background-color: $color1;
+    height: 100px;
+}
+
 .profileTopper {
     background-color: $color4;
     color: $color2;
@@ -412,9 +417,7 @@ margin-top: 10px;
 }
 
 .selectOne {
-    h1 {
-        color: $color2;
-    }
+    color: $color1
 }
 
 #authorize-div {

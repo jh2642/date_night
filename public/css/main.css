@@ -236,6 +236,11 @@ body {
   height: 100px;
 }
 
+.profileNav2 {
+  background-color: #011627;
+  height: 100px;
+}
+
 .profileTopper {
   background-color: #e94f37;
   color: #2ec4b6;
@@ -392,8 +397,8 @@ body {
   margin-top: 80px;
 }
 
-.selectOne h1 {
-  color: #2ec4b6;
+.selectOne {
+  color: #011627;
 }
 
 #authorize-div {
