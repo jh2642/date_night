@@ -559,143 +559,96 @@ margin-top: 10px;
 
 
 // media query
-/* Small Devices, Tablets */
-// @media only screen and (max-width : 767px){
-//     .mobileIndex {
-//         margin-top: 30px;
-//         padding-bottom: 30px;
-//         h3 {
-//             font-size: 20px;
-//             font-style: italic;
-//         }
-//     }
-//
-//     .decBar {
-//         background-color: $color3;
-//         height: 20px;
-//         margin-top: 20px;
-//         margin-bottom: 20px;
-//     }
-//
-//     .innerMobile {
-//         background-color: $color5;
-//         height: 100px;
-//         h1 {
-//             font-size: 35px;
-//             color: $color4;
-//             padding: 10px;
-//         }
-//     }
-//
-//     .googleBoxMobile {
-//         padding-top: 40px;
-//     }
-//
-//     .motto {
-//         margin-top: 40px;
-//     }
-//
-//     .mobileButtonBox {
-//         margin-top: 25px;
-//     }
-// }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 426px) and (max-width : 1024px){
-    .jumbotron {
-        margin-top: 0px;
-    }
-    .mottoBox {
-        .motto {
-            font-size: 30px;
-            margin-bottom: 0px;
-            margin-top: -50px;
-        }
-    }
-    .downArrow {
-        padding: 15px;
-    }
+// @media only screen and (min-width : 426px) and (max-width : 1024px){
+//     .jumbotron {
+//         margin-top: 0px;
+//     }
+//     .mottoBox {
+//         .motto {
+//             font-size: 30px;
+//             margin-bottom: 0px;
+//             margin-top: -50px;
+//         }
+//     }
+//     .downArrow {
+//         padding: 15px;
+//     }
+//
+//     .getStarted {
+//     margin-top: 25px;
+//     }
+//
+//     .wwd {
+//         padding-top: 5px;
+//         height: 290px;
+//         h1 {
+//             font-size: 30px;
+//         }
+//     }
+//     .wwdMessage {
+//         margin-bottom: 10px;
+//         h1 {
+//             padding-top: -100px;
+//         }
+//     }
+//     .plate {
+//         width: 100px;
+//     }
+//     .martini {
+//         width: 100px;
+//     }
+//     .reel {
+//         width: 100px;
+//     }
+//     .wwd2 {
+//         padding-top: 0px;
+//         padding-bottom: 20px;
+//         height: 210px;
+//         h1 {
+//             font-size: 30px;
+//         }
+//     }
+//
+//     .wwdMessage2 {
+//         padding-bottom: 10px;
+//         margin-bottom: 5px;
+//         h1 {
+//             font-size: 30px;
+//         },
+//         h2 {
+//             font-size: 17px;
+//         }
+//     }
+//     .calendar {
+//         width: 80px;
+//         height: 80px;
+//     }
+//     .soul {
+//         width: 80px;
+//         height: 80px;
+//     }
+//     .clock {
+//         width: 80px;
+//         height: 80px;
+//     }
+//     .charge {
+//         width: 80px;
+//         height: 80px;
+//     }
+//     .wwd3 {
+//         padding-top: 20px;
+//         height: 140px;
+//     }
+//     .wwdMessage3 {
+//         margin-top: 0px;
+//         margin-bottom: 25px;
+//     }
+// };
+//
 
-    .getStarted {
-    margin-top: 25px;
-    }
-
-    .wwd {
-        padding-top: 5px;
-        height: 290px;
-        h1 {
-            font-size: 30px;
-        }
-    }
-    .wwdMessage {
-        margin-bottom: 10px;
-        h1 {
-            padding-top: -100px;
-        }
-    }
-    .plate {
-        width: 100px;
-    }
-    .martini {
-        width: 100px;
-    }
-    .reel {
-        width: 100px;
-    }
-    .wwd2 {
-        padding-top: 0px;
-        padding-bottom: 20px;
-        height: 210px;
-        h1 {
-            font-size: 30px;
-        }
-    }
-
-    .wwdMessage2 {
-        padding-bottom: 10px;
-        margin-bottom: 5px;
-        h1 {
-            font-size: 30px;
-        },
-        h2 {
-            font-size: 17px;
-        }
-    }
-    .calendar {
-        width: 80px;
-        height: 80px;
-    }
-    .soul {
-        width: 80px;
-        height: 80px;
-    }
-    .clock {
-        width: 80px;
-        height: 80px;
-    }
-    .charge {
-        width: 80px;
-        height: 80px;
-    }
-    .wwd3 {
-        padding-top: 20px;
-        height: 140px;
-    }
-    .wwdMessage3 {
-        margin-top: 0px;
-        margin-bottom: 25px;
-    }
-};
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width : 992px) {
 
     * {
     font-family: $mainFont;
