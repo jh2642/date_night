@@ -417,9 +417,11 @@ margin-top: 10px;
 }
 
 .selectOne {
-    color: $color3;
+    h1 {
+        color: $color3;
+    }
     background-color: $color1;
-    height: 50px;
+    padding: 20px;
 }
 
 #authorize-div {
