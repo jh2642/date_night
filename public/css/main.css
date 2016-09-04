@@ -322,10 +322,6 @@ body {
   color: #011627;
 }
 
-.confirmPlansBox {
-  margin-bottom: 30px;
-}
-
 .g-signin2 {
   display: inline-block;
   text-align: center;
@@ -918,9 +914,6 @@ body {
     font-family: "Syncopate", sans-serif;
     font-size: 40px;
     color: #011627;
-  }
-  .confirmPlansBox {
-    margin-bottom: 30px;
   }
   .g-signin2 {
     display: inline-block;
