@@ -75,7 +75,7 @@ window.addEventListener('googlesignin', function() {
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
-                div.classList.add('dateNightEvent', 'col-sm-12', 'col-md-4', 'text-center')
+                div.classList.add('dateNightEvent', 'col-xs-12', 'col-md-4', 'text-center')
 
                 var eventDetails = document.createElement('i')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
