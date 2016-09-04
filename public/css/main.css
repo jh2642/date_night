@@ -398,7 +398,9 @@ body {
 }
 
 .selectOne {
-  color: #011627;
+  color: #f6f7eb;
+  background-color: #011627;
+  width: 400px;
 }
 
 #authorize-div {
