@@ -292,6 +292,10 @@ body {
   padding: 30px;
 }
 
+#dateProfileBox2 h3 {
+  font-size: 30px;
+}
+
 #dateProfileBox {
   color: #2ec4b6;
   padding-top: 40px;
@@ -595,6 +599,9 @@ body {
   .profileTopper {
     height: 80vh;
     padding-top: 50px;
+  }
+  .profileTopper h3 {
+    font-size: 20px;
   }
   .insideProfileBox {
     height: 68vh;

@@ -295,6 +295,9 @@ body {
     background-color: $color2;
     color: $color1;
     padding: 30px;
+    h3 {
+        font-size: 30px;
+    }
 }
 
 #dateProfileBox {
@@ -613,6 +616,9 @@ body {
     .profileTopper {
         height: 80vh;
         padding-top: 50px;
+        h3 {
+            font-size: 20px;
+        }
     }
 
     .insideProfileBox {
