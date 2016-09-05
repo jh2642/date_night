@@ -341,6 +341,7 @@ body {
     margin-top: 20px;
 }
 
+
 .schedulePage {
     background-color: $color4;
 }
@@ -623,6 +624,12 @@ body {
 
     .insideProfileBox {
         height: 68vh;
+    }
+
+    #dateProfileBox {
+        color: $color2;
+        padding-top: 40px;
+        padding-bottom: 0px;
     }
 
     .calendarBox {

@@ -606,6 +606,11 @@ body {
   .insideProfileBox {
     height: 68vh;
   }
+  #dateProfileBox {
+    color: #2ec4b6;
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
   .calendarBox {
     overflow: scroll;
     height: 80vh;
