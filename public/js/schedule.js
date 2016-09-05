@@ -157,11 +157,11 @@ function checkAuth() {
                         },
                     ],
                     location: dateLoc,
-                    description: pickupInfo + descriptionDate,
+                    description: descriptionDate,
                     reminders: {
                         useDefault: false
                     },
-                    summary: dateSum,
+                    summary: dateSum + pickupInfo,
                     //   send-notification: 'true',
                 })
 
