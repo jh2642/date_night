@@ -186,6 +186,16 @@ body {
     margin-bottom: 30px;
 }
 
+.wwd4 {
+    height: 290px;
+    background-color: $color2;
+    color: $color5;
+    h1,h2 {
+        color: $color5;
+        font-size: 28px;
+    }
+}
+
 .contactFooter {
     margin-top: 30px;
 }
@@ -627,5 +637,5 @@ body {
     .btn-default {
         width: 125px;
     }
-    
+
 }

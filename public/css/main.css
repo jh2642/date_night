@@ -181,6 +181,17 @@ body {
   margin-bottom: 30px;
 }
 
+.wwd4 {
+  height: 290px;
+  background-color: #2ec4b6;
+  color: #393e41;
+}
+
+.wwd4 h1, .wwd4 h2 {
+  color: #393e41;
+  font-size: 28px;
+}
+
 .contactFooter {
   margin-top: 30px;
 }
