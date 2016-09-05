@@ -26,6 +26,9 @@ function onSignIn(googleUser) {
     // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function() {
         //   console.log('Signed in as: ' + xhr.responseText);
+        if(!location.href.includes('profile.html') && !location.href.includes('schedule.html')) {
+             location="/profile.html"
+        }
     };
     xhr.send();
 
