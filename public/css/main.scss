@@ -21,10 +21,8 @@ $color5: rgba(57, 62, 65, 1);
 }
 
 body {
-    // background-image: url('/assets/city-scape.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    // opacity: 0.6;
     background-color: $color4;
 }
 
@@ -47,13 +45,13 @@ body {
     font-family: $headlineFont;
     margin-top: 100px;
     h1 {
-    font-size: 170px;
-    color: $color1;
+        font-size: 170px;
+        color: $color1;
     }
 }
 .mottoBox {
     p {
-    font-size: 75px;
+        font-size: 75px;
     }
     .motto {
         color: $color3;
@@ -74,18 +72,16 @@ body {
 }
 
 .dateNightHeader {
-font-family: $headlineFont;
-font-size: 35px;
-margin-top: 10px;
+    font-family: $headlineFont;
+    font-size: 35px;
+    margin-top: 10px;
 }
 
 .dateNightHeader2 {
-font-family: $headlineFont;
-font-size: 30px;
-margin-top: 10px;
+    font-family: $headlineFont;
+    font-size: 30px;
+    margin-top: 10px;
 }
-
-
 
 .downArrow {
     padding-top: 40px;
@@ -105,7 +101,6 @@ margin-top: 10px;
         font-size: 25px;
         color: $color2;
         border: 2px $color3 solid;
-        // padding: 10px;
         background-color: $color5;
     }
 }
@@ -190,13 +185,13 @@ margin-top: 10px;
 .wwdMessage3 {
     margin-bottom: 30px;
 }
+
 .contactFooter {
     margin-top: 30px;
 }
 
 .jamesPic {
-    // margin-right: 10px;
-    // margin-top: 10px;
+
     width: 100px;
 }
 .header-distributed{
@@ -218,9 +213,6 @@ margin-top: 10px;
 
 /* Footer social icons */
 
-.footer-icons{
-    // margin-top: 10px;
-}
 
 .footer-icons a{
     display: inline-block;
@@ -235,8 +227,6 @@ margin-top: 10px;
 
 .footer-right p{
     display: inline-block;
-    // vertical-align: top;
-    // margin: 15px 42px 0 0;
     color: #ffffff;
 }
 
@@ -437,22 +427,9 @@ margin-top: 10px;
     padding-bottom: 15px;
 }
 
-#authorize-div {
-    font-size: 20px;
-    margin-top: 300px;
-}
-
-.authBox {
-    margin-top: 300px;
-}
-
 .searchButtonSched {
     margin-top: 36px;
 }
-
-// .searchResultBox {
-//     margin-top: 400px;
-// }
 
 .eventDate {
     max-width: 150px;
@@ -555,10 +532,6 @@ margin-top: 10px;
     background-color: transparent;
     font-size: 14px;
 }
-
-
-
-
 
 // media query
 /* Small Devices, Tablets */
@@ -602,619 +575,57 @@ margin-top: 10px;
     }
 }
 
-/* Medium Devices, Desktops */
-// @media only screen and (min-width : 426px) and (max-width : 1024px){
-//     .jumbotron {
-//         margin-top: 0px;
-//     }
-//     .mottoBox {
-//         .motto {
-//             font-size: 30px;
-//             margin-bottom: 0px;
-//             margin-top: -50px;
-//         }
-//     }
-//     .downArrow {
-//         padding: 15px;
-//     }
-//
-//     .getStarted {
-//     margin-top: 25px;
-//     }
-//
-//     .wwd {
-//         padding-top: 5px;
-//         height: 290px;
-//         h1 {
-//             font-size: 30px;
-//         }
-//     }
-//     .wwdMessage {
-//         margin-bottom: 10px;
-//         h1 {
-//             padding-top: -100px;
-//         }
-//     }
-//     .plate {
-//         width: 100px;
-//     }
-//     .martini {
-//         width: 100px;
-//     }
-//     .reel {
-//         width: 100px;
-//     }
-//     .wwd2 {
-//         padding-top: 0px;
-//         padding-bottom: 20px;
-//         height: 210px;
-//         h1 {
-//             font-size: 30px;
-//         }
-//     }
-//
-//     .wwdMessage2 {
-//         padding-bottom: 10px;
-//         margin-bottom: 5px;
-//         h1 {
-//             font-size: 30px;
-//         },
-//         h2 {
-//             font-size: 17px;
-//         }
-//     }
-//     .calendar {
-//         width: 80px;
-//         height: 80px;
-//     }
-//     .soul {
-//         width: 80px;
-//         height: 80px;
-//     }
-//     .clock {
-//         width: 80px;
-//         height: 80px;
-//     }
-//     .charge {
-//         width: 80px;
-//         height: 80px;
-//     }
-//     .wwd3 {
-//         padding-top: 20px;
-//         height: 140px;
-//     }
-//     .wwdMessage3 {
-//         margin-top: 0px;
-//         margin-bottom: 25px;
-//     }
-// };
-//
 
 @media only screen and (min-width : 1200px) {
-
-    * {
-    font-family: $mainFont;
-    color: $color3;
-    font-size: 16px;
-    h1 {
-        font-family: $headlineFont;
+    .jumbotron {
+        margin-top: 150px;
     }
-    h3 {
-        font-family: $headlineFont;
+
+    .martini2 {
+        width: 4vw;
+        height: 7vh;
     }
-}
 
-body {
-    // background-image: url('/assets/city-scape.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    // opacity: 0.6;
-    background-color: $color4;
-}
-
-.headerRow {
-    margin-top: 30px;
-}
-
-.navLinks {
-    margin-right: 30px;
-    font-size: 20px;
-    color: $color3;
-}
-
-
-.jumbotron {
-    font-size: 50px;
-    font-weight: bolder;
-    font-size-adjust: auto;
-    background-color: transparent;
-    font-family: $headlineFont;
-    margin-top: 150px;
-    h1 {
-    font-size: 170px;
-    color: $color1;
-    }
-}
-.mottoBox {
-    p {
-    font-size: 75px;
-    }
-    .motto {
-        color: $color3;
-        font-style: italic;
+    .dateNightHeader {
         font-size: 45px;
-        margin-bottom: 80px;
     }
-}
 
-.glyphicon {
-    color: $color3;
-    font-size: 45px;
-}
-
-.martini2 {
-    width: 4vw;
-    height: 7vh;
-}
-
-.dateNightHeader {
-font-family: $headlineFont;
-font-size: 45px;
-margin-top: 10px;
-}
-
-.downArrow {
-    padding-top: 40px;
-    padding-bottom: 25px;
-    button {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        outline: none;
-        border: 0;
-        background: transparent;
+    .wwd3 {
+        height: 225px;
     }
-}
 
-.getStarted {
-    a {
-        font-size: 25px;
-        color: $color2;
-        border: 2px $color3 solid;
-        // padding: 10px;
-        background-color: $color5;
+    /* Footer social icons */
+
+    .profileNav {
+        height: 10vh;
     }
-}
 
-.contactInfo {
-    color: $color1;
-}
-
-.wwd {
-    height: 325px;
-    background-color: $color3;
-    color: $color1;
-    h1,h2 {
-        color: $color1;
+    .profileTopper {
+        height: 80vh;
+        padding-top: 50px;
     }
-}
 
-.wwdMessage {
-    margin-bottom: 30px;
-}
-
-
-.plate {
-    height: 100px;
-}
-
-.martini {
-    height: 100px;
-}
-
-.ddm {
-    color: $color1;
-}
-
-.reel {
-    height: 100px;
-}
-.wwd2 {
-    height: 290px;
-    background-color: $color1;
-    color: $color3;
-    h1,h2 {
-        color: $color3;
+    .insideProfileBox {
+        height: 68vh;
     }
-}
 
-.wwdMessage2 {
-    margin-bottom: 30px;
-}
-
-.calendar {
-    height: 100px;
-    color: $color3;
-}
-
-.soul {
-    height: 100px;
-    color: $color3;
-}
-
-.clock {
-    height: 100px;
-    color: $color3;
-}
-
-.charge {
-    height: 100px;
-    color: $color3;
-}
-
-.wwd3 {
-    height: 225px;
-    background-color: $color5;
-    color: $color3;
-    h1,h2 {
-        color: $color3;
+    .calendarBox {
+        overflow: scroll;
+        height: 80vh;
     }
-}
 
-.wwdMessage3 {
-    margin-bottom: 30px;
-}
-.contactFooter {
-    margin-top: 30px;
-}
-
-.jamesPic {
-    // margin-right: 10px;
-    // margin-top: 10px;
-    width: 100px;
-}
-.header-distributed{
-    background-color: black;
-    width: 100%;
-    color:  $color5;
-}
-
-.fa {
-    font-size: 30px;
-}
-
-.footer-distributed{
-    background-color: $color1;
-    width: 100%;
-    color:  $color5;
-    padding-bottom: 10px;
-}
-
-/* Footer social icons */
-
-.footer-icons{
-    // margin-top: 10px;
-}
-
-.footer-icons a{
-    display: inline-block;
-    border-radius: 2px;
-    font-size: 16px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 35px;
-    margin: 20px;
-    margin-bottom: 10px;
-}
-
-.footer-right p{
-    display: inline-block;
-    // vertical-align: top;
-    // margin: 15px 42px 0 0;
-    color: #ffffff;
-}
-
-.centerNav {
-    padding-top: 30px;
-}
-
-.copyright {
-    width: 1vw;
-}
-
-.contactJames {
-    padding-top: 27px;
-}
-.profilePage {
-    background-color: $color5;
-}
-
-.profileNav {
-    background-color: $color1;
-    height: 10vh;
-}
-
-.profileTopper {
-    background-color: $color4;
-    color: $color2;
-    height: 80vh;
-    padding-top: 50px;
-}
-
-.insideProfileBox {
-    background-color: $color5;
-    height: 68vh;
-    color: $color2;
-}
-
-.profilePic {
-    padding: 10px;
-}
-
-.dateInfoProfile {
-    margin-top: 35px;
-    color: $color2;
-}
-
-.dateModalFooter {
-    padding-bottom: 10px;
-}
-
-#dateProfileBox2 {
-    background-color: $color2;
-    color: $color1;
-    padding: 30px;
-}
-
-#dateProfileBox {
-    color: $color2;
-    padding-top: 40px;
-    padding-bottom: 30px;
-}
-
-.solidBar {
-    background-color: $color2;
-    height: 20px;
-}
-
-.pastEventBox {
-    opacity: 0.4;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.smIcons {
-    padding-top: 25px;
-}
-.calendarBox {
-    overflow: scroll;
-    height: 80vh;
-    h1 {
-        color: $color1;
-        padding: 12px;
+    ::-webkit-scrollbar {
+        display: none;
     }
-}
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-#calendarEvents {
-    height: 60px;
-    background-color: $color2;
-}
-
-#googlePic {
-    margin-top: 30px;
-}
-
-#googleName {
-    margin-top: 20px;
-}
-
-.schedulePage {
-    background-color: $color4;
-}
-
-.headersSearch {
-    font-family: $headlineFont;
-    font-size: 40px;
-    color: $color1;
-}
-
-.g-signin2 {
-    display: inline-block;
-    text-align: center;
-}
-
-.btn-lg {
-    background: $color2;
-    font-size: 40px;
-    font-family: $headlineFont;
-    margin: 5px;
-    color:$color3;
-}
-
-.btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-    background: $color5;
-    color: $color3;
-}
-
-
-
-
-.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
-    background: $color5;
-    color: $color1;
-    border: 1px $color1 solid;
-}
-
-.btn-primary,
-.btn-secondary {
-    width: 125px;
-    background: transparent;
-    border: 1px $color3 solid;
-    padding: 5px;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: $color3;
-    color: $color1;
-}
-
-.btn-default {
-    width: 125px;
-    background: transparent;
-    border: none;
-    font-size: 16px;
-    color: $color4;
-}
-
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-primary {
-    color: $color4;
-}
-
-
-.schedDate {
-    margin-bottom: 20px;
-}
-
-.selectLabel {
-    color: $color1;
-    margin-left: 5px;
-}
-
-.navRight {
-    padding-right: 20px;
-}
-
-.searchTopper {
-    margin-top: 300px;
-    transition: 0.5s ease all;
-}
-
-.searchTopper.searched {
-    margin-top: 80px;
-}
-
-#authorize-div {
-    font-size: 20px;
-    margin-top: 300px;
-}
-
-.authBox {
-    margin-top: 300px;
-}
-
-.searchButtonSched {
-    margin-top: 36px;
-}
-
-// .searchResultBox {
-//     margin-top: 400px;
-// }
-
-.eventDate {
-    max-width: 150px;
-}
-
-.modalBox,
-.modal-content {
-    color: $color2;
-    background-color: $color5;
-    font-family: $mainFont;
-
-    a {
-        color:$color3;
+    .btn-primary,
+    .btn-secondary {
+        width: 125px;
+        padding: 5px;
     }
-    .mapURLbox {
-        margin-bottom: 120px;
-        color: $color4;
-        padding-bottom: 20px;
+
+    .btn-default {
+        width: 125px;
     }
-}
-
-.reviewAuthor {
-    border-bottom: 2px $color5 solid;
-}
-
-.mapURLbox {
-    padding-bottom: 20px;
-    color: $color4;
-}
-
-.reviewText {
-    margin-top: 10px;
-}
-.modal-header {
-    border: none;
-    height: 10px;
-}
-
-.modal-footer {
-    border: none;
-    margin-top: 10px;
-}
-
-.establishment {
-    margin: 5px;
-    padding: 5px;
-}
-
-.radiusMessage {
-    color: $color3;
-}
-
-.messageToDateBox {
-    margin-bottom: 15px;
-}
-
-.googleLogo {
-    margin-top: 200px;
-}
-
-.inputBox {
-    background-color: $color3;
-}
-
-.addToProfile {
-    margin-bottom: 5px;
-}
-
-.updateBox {
-    margin-top: 50px;
-}
-
-.detailsForDate {
-    margin-top: 30px;
-    h3 {
-        font-family: $mainFont;
-        font-size: 20px;
-    }
-}
-
-.dateNightEvent {
-    background-color: $color1;
-    margin: 15px;
-    min-height: 250px;
-    max-height: 250px;
-    min-width: 410px;
-    max-width: 410px;
-}
-
-.glyphicon {
-    font-size: inherit;
-    position:relative;
-    top: 10px;
-    left: 10px;
-    width: 375px;
-}
-
-.location-id {
-    border: none;
-    background-color: transparent;
-    font-size: 14px;
-}
+    
 }
