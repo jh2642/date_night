@@ -161,7 +161,7 @@ function checkAuth() {
                     reminders: {
                         useDefault: false
                     },
-                    summary: dateSum + ' ' + pickupInfo,
+                    summary: dateSum + ' - ' + pickupInfo,
                     //   send-notification: 'true',
                 })
 
