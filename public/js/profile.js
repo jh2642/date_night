@@ -44,7 +44,7 @@ window.addEventListener('googlesignin', function() {
         var individualEmail = document.getElementById('googleEmail')
         individualEmail.innerHTML = response.email
 
-        var dateCalendar = response.date_email
+        dateCalendar = response.email
 
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
