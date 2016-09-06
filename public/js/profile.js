@@ -127,6 +127,7 @@ window.addEventListener('googlesignin', function() {
         .then(function(response) {
             console.log(response)
         })
+    })
 })
 
 
