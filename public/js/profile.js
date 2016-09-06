@@ -113,20 +113,20 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
-    .then(function() {
-        fetch(api+'/events/datenight/datee?date_email=' + dateCalendar, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(response) {
-            console.log(response)
-        })
-    })
+    // .then(function() {
+    //     fetch(api+'/events/datenight/datee?date_email=' + dateCalendar, {
+    //         method: 'GET',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     })
+    //     .then(function(response) {
+    //         return response.json()
+    //     })
+    //     .then(function(response) {
+    //         console.log(response)
+    //     })
+    // })
 })
 
 
