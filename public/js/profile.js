@@ -111,7 +111,7 @@ window.addEventListener('googlesignin', function() {
         })
     })
     .then(function() {
-        fetch(api+'/events/datenight?date_email=' + response.date_email, {
+        fetch(api+'/events/datenight?date_email=' + date_email, {
             method: 'GET',
             credentials: 'include',
             headers: {
