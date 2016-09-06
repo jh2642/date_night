@@ -110,6 +110,9 @@ window.addEventListener('googlesignin', function() {
                     document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
+                if (date_email === dateCalendar) function(response2) {
+                    console.log(response2)
+                }
             })
         })
     })
