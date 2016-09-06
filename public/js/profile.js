@@ -63,7 +63,7 @@ window.addEventListener('googlesignin', function() {
 
     })
     .then(function() {
-        fetch(api+'/events/datenight?' + 'id=' + user_id, {
+        fetch(api+'/events/datenight?id=' + user_id, {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -74,7 +74,7 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
-            console.log(response)
+
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
@@ -113,7 +113,23 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
+    .then(function() {
+        fetch(api+'/events/datenight/datee?date_email=' + dateCalendar, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(response) {
+            console.log(response)
+        })
 })
+
+
 
 //delete scheduled events
 $(document).ready(function(){
