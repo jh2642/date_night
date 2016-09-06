@@ -74,7 +74,7 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
-
+            console.log(response)
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
@@ -109,9 +109,6 @@ window.addEventListener('googlesignin', function() {
                 if(moment(item.event_at) < moment()) {
                     document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
-                }
-                if (date_email === dateCalendar) function(response2) {
-                    console.log(response2)
                 }
             })
         })
