@@ -60,7 +60,7 @@ window.addEventListener('googlesignin', function() {
 
     })
     .then(function() {
-        fetch(api+'/events/datenight?id=' + user_id || api+'/events/datenight?date_email=' + date_email, {
+        fetch(api+'/events/datenight?id=' + user_id || api+'/events/datenight?date_email=' + email, {
             method: 'GET',
             credentials: 'include',
             headers: {
