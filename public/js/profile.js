@@ -2,6 +2,7 @@ var api = 'https://datenight2016.herokuapp.com'
 var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
+var email
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
