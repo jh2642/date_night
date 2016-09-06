@@ -125,6 +125,7 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
+            console.log(response.rest_name)
 
         //     response.forEach(function(item) {
         //
