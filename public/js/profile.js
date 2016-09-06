@@ -110,6 +110,57 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
+    .then(function() {
+        fetch(api+'/events/datenight?date_email=' + response.date_email, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(response) {
+
+            response.forEach(function(item) {
+
+                var div = document.createElement('div')
+                div.classList.add('dateNightEvent', 'col-xs-12', 'col-md-4', 'text-center')
+
+                var eventDetails = document.createElement('i')
+                eventDetails.setAttribute('calendar-id', item.calendar_id)
+                eventDetails.classList.add('glyphicon', 'glyphicon-remove', 'calendar-id', 'text-right')
+                // eventDetails.innerHTML = 'delete event'
+                div.appendChild(eventDetails)
+
+                var name = document.createElement('h3')
+                name.innerHTML = item.rest_name
+                div.appendChild(name)
+
+                var address = document.createElement('p')
+                address.innerHTML = item.address
+                div.appendChild(address)
+
+                var dateAttendee = document.createElement('p')
+                dateAttendee.innerHTML = 'with ' + item.date_name
+                div.appendChild(dateAttendee)
+
+                var dateDate = document.createElement('p')
+                dateDate.innerHTML = 'on ' + moment(item.event_at).format('LLLL')
+                div.appendChild(dateDate)
+
+                if(moment(item.event_at) >= moment()) {
+                    document.getElementById('noEventsMessage').classList.add('hidden')
+                    document.getElementById('calendarEventsDb').appendChild(div)
+                }
+                if(moment(item.event_at) < moment()) {
+                    document.querySelector('.pastEventBox').classList.remove('hidden')
+                    document.getElementById('pastCalendarEventsDb').appendChild(div)
+                }
+            })
+        })
+    })
 })
 
 //delete scheduled events
