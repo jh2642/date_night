@@ -2,6 +2,7 @@ var api = 'https://datenight2016.herokuapp.com'
 var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
+var dateCalendar
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
@@ -42,6 +43,8 @@ window.addEventListener('googlesignin', function() {
         individualName.innerHTML = response.name
         var individualEmail = document.getElementById('googleEmail')
         individualEmail.innerHTML = response.email
+
+        var dateCalendar = response.date_email
 
         document.getElementById('googlePic').innerHTML = ''
         document.getElementById('googlePic').appendChild(featureImage)
@@ -111,7 +114,7 @@ window.addEventListener('googlesignin', function() {
         })
     })
     .then(function() {
-        fetch(api+'/events/datenight?date_name=' + date_name, {
+        fetch(api+'/events/datenight?date_name=' + dateCalendar, {
             method: 'GET',
             credentials: 'include',
             headers: {
