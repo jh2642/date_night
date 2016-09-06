@@ -164,6 +164,16 @@ app.get('/events/datenight', function (request, response) {
     })
 })
 
+//get data from events db where you are someone else's date
+app.get('/events/datenight/datee', function (request, response) {
+    knex('events')
+    .select()
+    .where('date_email', request.query.email)
+    .then(function(details) {
+        response.json(details)
+    })
+})
+
 //delete event from events db
 app.delete('/events/deletedatenight', function (request, response) {
    knex('events')
