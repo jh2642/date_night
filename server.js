@@ -158,7 +158,7 @@ app.post('/events/datenight', function (request, response) {
 app.get('/events/datenight', function (request, response) {
     knex('events')
     .select()
-    .where('user_id', request.query.id) || ('date_email', request.query.dateCalendar)
+    .where('user_id', request.query.id)
     .then(function(details) {
         response.json(details)
     })
