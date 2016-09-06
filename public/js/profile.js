@@ -2,7 +2,6 @@ var api = 'https://datenight2016.herokuapp.com'
 var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
-var email
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
@@ -61,7 +60,7 @@ window.addEventListener('googlesignin', function() {
 
     })
     .then(function() {
-        fetch(api+'/events/datenight?id=' + user_id && api+'/events/datenight?date_email=' + email, {
+        fetch(api+'/events/datenight?id=' + user_id, {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -123,48 +122,3 @@ $(document).ready(function(){
         // deleteEvents();
     })
 })
-
-//retrieve data from events db
-// document.getElementById('retrieveEvent').addEventListener('click', function() {
-// fetch(api+'/events/datenight?id=' + user_id, {
-//     method: 'GET',
-//     credentials: 'include',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     }
-// })
-// .then(function(response) {
-//     return response.json()
-// })
-// .then(function(response) {
-//     // console.log(response)
-//     response.forEach(function(item) {
-//
-//         var div = document.createElement('div')
-//         div.classList.add('dateNightEvent')
-//
-//         var name = document.createElement('h2')
-//         name.innerHTML = item.event_at
-//         div.appendChild(name)
-//
-//         var address = document.createElement('p')
-//         address.innerHTML = item.address
-//         div.appendChild(address)
-//
-//         var dateAttendee = document.createElement('p')
-//         dateAttendee.innerHTML = 'with: ' + item.date_name
-//         div.appendChild(dateAttendee)
-//
-//         var eventDetails = document.createElement('button')
-//         eventDetails.setAttribute('calendar-id', item.calendar_id)
-//         eventDetails.classList.add('btn', 'btn-primary', 'calendar-id')
-//         eventDetails.innerHTML = 'delete event'
-//         div.appendChild(eventDetails)
-//
-//         document.getElementById('calendarEventsDb').appendChild(div)
-//         console.log(item.calendar_id)
-//     })
-// })
-// })
-
-// document.getElementById("dateReminder").flatpickr();
