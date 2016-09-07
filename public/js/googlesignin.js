@@ -5,21 +5,6 @@ var googlesignin = new Event('googlesignin')
 function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     var profile = googleUser.getBasicProfile();
-    // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    // console.log('Name: ' + profile.getName());
-    // console.log('Image URL: ' + profile.getImageUrl());
-    // console.log('Email: ' + profile.getEmail());
-
-    // var featureImage = document.createElement('img')
-    //     featureImage.setAttribute('src', profile.getImageUrl())
-    //     featureImage.classList.add('img-circle')
-    // var individualName = document.getElementById('googleName')
-    //       individualName.innerHTML = profile.getName()
-    // var individualEmail = document.getElementById('googleEmail')
-    //     individualEmail.innerHTML = profile.getEmail()
-    //
-    // document.getElementById('googlePic').innerHTML = ''
-    // document.getElementById('googlePic').appendChild(featureImage)
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '/googlesignin?id_token=' + id_token);
@@ -64,7 +49,3 @@ function signOut() {
         location="/index.html"
     });
 }
-
-// document.getElementById('downArrow').addEventListener('click', function() {
-//             window.scrollTo(0,1200);
-// })

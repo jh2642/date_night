@@ -41,17 +41,6 @@ function checkAuth() {
                 return response.json()
             })
             .then(function(response) {
-                // var featureImage = document.createElement('img')
-                // featureImage.setAttribute('src', response.image_url)
-                // featureImage.classList.add('img-circle')
-                // var individualName = document.getElementById('googleName')
-                // individualName.innerHTML = response.name
-                // var individualEmail = document.getElementById('googleEmail')
-                // individualEmail.innerHTML = response.email
-
-                // document.getElementById('googlePic2').innerHTML = ''
-                // document.getElementById('googlePic2').appendChild(featureImage)
-
 
                 if(response.date_name === null || response.date_email === null) {
                     document.getElementById('formDetailsNew').classList.remove('hidden')
@@ -94,10 +83,6 @@ function checkAuth() {
             });
             // document.getElementById('scheduleReminder').addEventListener('click', function() {
             //     gapi.client.load('calendar', 'v3', scheduleReminder);
-            // });
-            // document.getElementById('calendar-id').addEventListener('click', function() {
-            //     console.log('calendar-id')
-            //     gapi.client.load('calendar', 'v3', deleteEvents);
             // });
             // document.getElementById('updateEvents').addEventListener('click', function() {
             //     console.log('updateEvents')
@@ -162,7 +147,6 @@ function checkAuth() {
                         useDefault: false
                     },
                     summary: dateSum + ' - ' + pickupInfo,
-                    //   send-notification: 'true',
                 })
 
 
@@ -255,15 +239,13 @@ function checkAuth() {
         //delete event here
         function deleteEvents() {
 
-            // var deleteId = document.getElementById('deleteId').value;
-
             var request3 = gapi.client.calendar.events.delete({
                 calendarId: 'primary',
                 eventId: calId,
             });
 
             request3.execute(function(resp3) {
-                // var events2 = resp2.items;
+    
                 fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
                     method: 'DELETE',
                     credentials: 'include',

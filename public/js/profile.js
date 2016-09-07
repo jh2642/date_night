@@ -83,7 +83,6 @@ window.addEventListener('googlesignin', function() {
                 var eventDetails = document.createElement('i')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
                 eventDetails.classList.add('glyphicon', 'glyphicon-remove', 'calendar-id', 'text-right')
-                // eventDetails.innerHTML = 'delete event'
                 div.appendChild(eventDetails)
 
                 var name = document.createElement('h3')
@@ -113,20 +112,6 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
-    // .then(function() {
-    //     fetch(api+'/events/datenight/datee?date_email=' + dateCalendar, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     })
-    //     .then(function(response) {
-    //         return response.json()
-    //     })
-    //     .then(function(response) {
-    //         console.log(response)
-    //     })
-    // })
 })
 
 
@@ -138,6 +123,5 @@ $(document).ready(function(){
         checkAuth();
         handleAuthClick();
         gapi.client.load('calendar', 'v3', deleteEvents);
-        // deleteEvents();
     })
 })
