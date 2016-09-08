@@ -228,7 +228,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(rating)
 
                     var mapURL = document.createElement('a')
-                    mapURL.innerHTML = 'click here to open google maps with additional details of this venue'
+                    mapURL.innerHTML = 'click here to get additional details'
                     mapURL.setAttribute('href', response.result.url)
                     mapURL.setAttribute('target', '_blank')
                     mapURL.classList.add('mapURLbox')
