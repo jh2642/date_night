@@ -224,11 +224,11 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(phone)
 
                     var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + response.result.rating
+                    rating.innerHTML = "rating: " + response.result.rating
                     div.appendChild(rating)
 
                     var mapURL = document.createElement('a')
-                    mapURL.innerHTML = 'Click Here to open Google Maps'
+                    mapURL.innerHTML = 'click here to open google maps'
                     mapURL.setAttribute('href', response.result.url)
                     mapURL.setAttribute('target', '_blank')
                     mapURL.classList.add('mapURLbox')
