@@ -153,7 +153,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
         .then(function(response) {
             document.getElementById('localBar').innerHTML = ''
             response.results.forEach(function(item) {
-                if (item.types[0] === typeThree) {
+                // if (item.types[0] === typeThree) {
                     var div = document.createElement('div')
                     div.classList.add('establishment')
 
@@ -187,7 +187,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     details.classList.add('btn', 'location-id')
                     details.innerHTML = 'reviews'
                     div.appendChild(details)
-                }
+                // }
             })
         })
 
