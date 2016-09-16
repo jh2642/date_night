@@ -105,7 +105,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
             document.getElementById('localRestaurants').innerHTML = ''
             response.results.forEach(function(item) {
-                if (item.types[0] === typeTwo) {
+                // if (item.types[0] === typeTwo) {
                     var div = document.createElement('div')
                     div.classList.add('establishment')
 
@@ -139,7 +139,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     details.classList.add('btn', 'location-id')
                     details.innerHTML = 'reviews'
                     div.appendChild(details)
-                }
+                // }
             })
         })
 
