@@ -48,7 +48,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
         //search fetch
 
-        fetch(api+'/api/v1/search?query=' + typeSearch + '&location=' + newAddress, {
+        fetch(api+'/api/v1/search?query=' + typeSearch + '&location=' + newAddress , {
             method: 'GET'
         })
         .then(function(response) {
