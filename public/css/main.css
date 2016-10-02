@@ -19,6 +19,12 @@ body {
   background-color: #e94f37;
 }
 
+.searchPage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #2ec4b6;
+}
+
 .headerRow {
   margin-top: 30px;
 }
