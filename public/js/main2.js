@@ -27,6 +27,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeTwo = "restaurant"
     var typeThree = "bar"
     var getId1 = "localRestaurants"
+    var typeSearch = document.getElementById('searchTerm').value
 
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
@@ -44,66 +45,18 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
         var newAddress = latitude + ',' + longitude
 
-        //movie fetch
-        fetch(api+'/api/v1/places?type=' + typeOne + '&location=' + newAddress , {
+        //search fetch
+
+        fetch(api+'/api/v1/places?type=' + typeSearch + '&location=' + newAddress , {
             method: 'GET'
         })
         .then(function(response) {
             return response.json()
         })
         .then(function(response) {
-            document.getElementById('movieTheater').innerHTML = ''
-            response.results.forEach(function(item) {
-                if (item.types[0] === typeOne) {
-                    var div = document.createElement('div')
-                    div.classList.add('establishment')
+            console.log(response)
 
-                    var name = document.createElement('h2')
-                    name.innerHTML = item.name
-                    div.appendChild(name)
-
-                    var address = document.createElement('p')
-                    address.innerHTML = item.vicinity
-                    div.appendChild(address)
-
-                    var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
-                    div.appendChild(rating)
-
-                    var checkbox = document.createElement('input');
-                    checkbox.type = 'radio';
-                    checkbox.name = 'venueSelected';
-                    checkbox.value = item.place_id;
-                    checkbox.classList = 'selectDetail';
-                    var label = document.createElement('label')
-                    label.htmlFor = 'checkbox-id';
-                    label.classList = 'selectLabel';
-                    label.appendChild(document.createTextNode('select for date'));
-                    div.appendChild(checkbox);
-                    div.appendChild(label);
-                    document.getElementById('movieTheater').appendChild(div)
-
-                    var details = document.createElement('button')
-                    details.setAttribute('location-id', item.place_id)
-                    details.classList.add('btn', 'location-id')
-                    details.innerHTML = 'reviews'
-                    div.appendChild(details)
-                }
-            })
-        })
-
-
-
-        //restaurant fetch
-        fetch(api+'/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
-            method: 'GET'
-        })
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(response) {
-
-            document.getElementById('localRestaurants').innerHTML = ''
+            document.getElementById('searchLocation').innerHTML = ''
             response.results.forEach(function(item) {
                 // if (item.types[0] === typeTwo) {
                     var div = document.createElement('div')
@@ -132,7 +85,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     label.appendChild(document.createTextNode('select for date'));
                     div.appendChild(checkbox);
                     div.appendChild(label);
-                    document.getElementById('localRestaurants').appendChild(div)
+                    document.getElementById('searchLocation').appendChild(div)
 
                     var details = document.createElement('button')
                     details.setAttribute('location-id', item.place_id)
@@ -143,53 +96,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
             })
         })
 
-        //bar fetch
-        fetch(api+'/api/v1/places?type=' + typeThree + '&location=' + newAddress , {
-            method: 'GET'
-        })
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(response) {
-            document.getElementById('localBar').innerHTML = ''
-            response.results.forEach(function(item) {
-                // if (item.types[0] === typeThree) {
-                    var div = document.createElement('div')
-                    div.classList.add('establishment')
-
-                    var name = document.createElement('h2')
-                    name.innerHTML = item.name
-                    div.appendChild(name)
-
-                    var address = document.createElement('p')
-                    address.innerHTML = item.vicinity
-                    div.appendChild(address)
-
-                    var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
-                    div.appendChild(rating)
-
-                    var checkbox = document.createElement('input');
-                    checkbox.type = 'radio';
-                    checkbox.name = 'venueSelected';
-                    checkbox.value = item.place_id;
-                    checkbox.classList = 'selectDetail';
-                    var label = document.createElement('label')
-                    label.htmlFor = 'checkbox-id';
-                    label.classList = 'selectLabel';
-                    label.appendChild(document.createTextNode('select for date'));
-                    div.appendChild(checkbox);
-                    div.appendChild(label);
-                    document.getElementById('localBar').appendChild(div)
-
-                    var details = document.createElement('button')
-                    details.setAttribute('location-id', item.place_id)
-                    details.classList.add('btn', 'location-id')
-                    details.innerHTML = 'reviews'
-                    div.appendChild(details)
-                // }
-            })
-        })
 
         //this is the modal information
         $(document).ready(function(){
