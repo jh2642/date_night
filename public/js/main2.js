@@ -10,6 +10,7 @@ var selectedVenue
 var locationId
 var dateName
 var dateNight
+var typeSearch
 
 document.body.addEventListener('click', function(e) {
     if(e.target.className.includes('selectDetail')) {
@@ -27,7 +28,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
     var typeTwo = "restaurant"
     var typeThree = "bar"
     var getId1 = "localRestaurants"
-    var typeSearch = document.getElementById('searchTerm').value
+    typeSearch = document.getElementById('searchTerm').value
 
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
