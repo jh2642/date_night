@@ -200,6 +200,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
+            console.log(response)
 
             document.getElementById('searchLocation').innerHTML = ''
             response.results.forEach(function(item) {
