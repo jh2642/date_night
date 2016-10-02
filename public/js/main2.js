@@ -48,7 +48,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
         //search fetch
 
-        fetch(api+'/api/v1/search?query=' + typeSearch + '&location=' + newAddress, {
+        fetch(api+'/api/v1/search?type=' + typeSearch + '&location=' + newAddress, {
             method: 'GET'
         })
         .then(function(response) {
@@ -61,7 +61,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
             response.results.forEach(function(item) {
                 var div = document.createElement('div')
                 div.classList.add('establishment')
-                
+
                 var name = document.createElement('h2')
                 name.innerHTML = item.name
                 div.appendChild(name)
