@@ -33,18 +33,18 @@ document.getElementById('getDetails').addEventListener('click', function() {
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
 
-    // fetch(api+'/api/v1/geoloc?address=' + address , {
-    //     method: 'GET'
-    // })
-    // .then(function(response) {
-    //     return response.json()
-    // })
-    // .then(function(response) {
-    //
-    //     latitude = response.results[0].geometry.location.lat
-    //     longitude = response.results[0].geometry.location.lng
-    //
-    //     var newAddress = latitude + ',' + longitude
+    fetch(api+'/api/v1/geoloc?address=' + address , {
+        method: 'GET'
+    })
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(response) {
+
+        latitude = response.results[0].geometry.location.lat
+        longitude = response.results[0].geometry.location.lng
+
+        var newAddress = latitude + ',' + longitude
 
         //search fetch
 
@@ -158,7 +158,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 })
             })
         }) //closing modal
-    // })
+    })
 })
 
 
