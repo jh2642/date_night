@@ -192,7 +192,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
         })
 
         //search fetch
-        typeSearch = document.getElementById('searchTerms')
+        typeSearch = document.getElementById('searchTerm').value
         fetch(api+'/api/v1/places?type=' + typeSearch + '&location=' + newAddress , {
             method: 'GET'
         })
