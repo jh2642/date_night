@@ -35,7 +35,7 @@ function onSignIn(googleUser) {
     .then(function(response) {
         user_id=response
         window.dispatchEvent(googlesignin)
-        if(!location.href.includes('profile.html') && !location.href.includes('schedule.html')) {
+        if(!location.href.includes('profile.html') && !location.href.includes('schedule.html') && !location.href.includes('search.html')) {
              location="/profile.html"
         }
     })
