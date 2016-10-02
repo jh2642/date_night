@@ -230,7 +230,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     label.appendChild(document.createTextNode('select for date'));
                     div.appendChild(checkbox);
                     div.appendChild(label);
-                    document.getElementById('localRestaurants').appendChild(div)
+                    document.getElementById('searchLocation').appendChild(div)
 
                     var details = document.createElement('button')
                     details.setAttribute('location-id', item.place_id)
