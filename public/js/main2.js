@@ -35,7 +35,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 
         //search fetch
 
-        fetch(api+'/api/v1/places/search' + typeSearch , {
+        fetch(api+'/api/v1/search' + typeSearch , {
             method: 'GET'
         })
         .then(function(response) {
