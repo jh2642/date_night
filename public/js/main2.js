@@ -23,10 +23,10 @@ $().button('toggle')
 
 document.getElementById('getDetails').addEventListener('click', function() {
 
-    // var address = document.getElementById('address').value
-    // var typeOne = "movie_theater"
-    // var typeTwo = "restaurant"
-    // var typeThree = "bar"
+    var address = document.getElementById('address').value
+    var typeOne = "movie_theater"
+    var typeTwo = "restaurant"
+    var typeThree = "bar"
     var getId1 = "localRestaurants"
     typeSearch = document.getElementById('searchTerm').value
 
