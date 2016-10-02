@@ -33,117 +33,131 @@ document.getElementById('getDetails').addEventListener('click', function() {
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
 
-    //search fetch
-
-    fetch(api+'/api/v1/search?query=' + typeSearch , {
+    fetch(api+'/api/v1/geoloc?address=' + address , {
         method: 'GET'
     })
     .then(function(response) {
         return response.json()
     })
     .then(function(response) {
-        console.log(response)
 
-        // document.getElementById('searchLocation').innerHTML = ''
-        // response.results.forEach(function(item) {
-        //     // if (item.types[0] === typeTwo) {
-        //         var div = document.createElement('div')
-        //         div.classList.add('establishment')
-        //
-        //         var name = document.createElement('h2')
-        //         name.innerHTML = item.name
-        //         div.appendChild(name)
-        //
-        //         var address = document.createElement('p')
-        //         address.innerHTML = item.vicinity
-        //         div.appendChild(address)
-        //
-        //         var rating = document.createElement('p')
-        //         rating.innerHTML = "Rating: " + item.rating
-        //         div.appendChild(rating)
-        //
-        //         var checkbox = document.createElement('input');
-        //         checkbox.type = 'radio';
-        //         checkbox.name = 'venueSelected';
-        //         checkbox.value = item.place_id;
-        //         checkbox.classList = 'selectDetail';
-        //         var label = document.createElement('label')
-        //         label.htmlFor = 'checkbox-id';
-        //         label.classList = 'selectLabel';
-        //         label.appendChild(document.createTextNode('select for date'));
-        //         div.appendChild(checkbox);
-        //         div.appendChild(label);
-        //         document.getElementById('searchLocation').appendChild(div)
-        //
-        //         var details = document.createElement('button')
-        //         details.setAttribute('location-id', item.place_id)
-        //         details.classList.add('btn', 'location-id')
-        //         details.innerHTML = 'reviews'
-        //         div.appendChild(details)
-        //     // }
-        // })
+        latitude = response.results[0].geometry.location.lat
+        longitude = response.results[0].geometry.location.lng
+
+        var newAddress = latitude + ',' + longitude
+
+        //search fetch
+
+        fetch(api+'/api/v1/search?query=' + typeSearch , {
+            method: 'GET'
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(response) {
+            console.log(response)
+
+            // document.getElementById('searchLocation').innerHTML = ''
+            // response.results.forEach(function(item) {
+            //     // if (item.types[0] === typeTwo) {
+            //         var div = document.createElement('div')
+            //         div.classList.add('establishment')
+            //
+            //         var name = document.createElement('h2')
+            //         name.innerHTML = item.name
+            //         div.appendChild(name)
+            //
+            //         var address = document.createElement('p')
+            //         address.innerHTML = item.vicinity
+            //         div.appendChild(address)
+            //
+            //         var rating = document.createElement('p')
+            //         rating.innerHTML = "Rating: " + item.rating
+            //         div.appendChild(rating)
+            //
+            //         var checkbox = document.createElement('input');
+            //         checkbox.type = 'radio';
+            //         checkbox.name = 'venueSelected';
+            //         checkbox.value = item.place_id;
+            //         checkbox.classList = 'selectDetail';
+            //         var label = document.createElement('label')
+            //         label.htmlFor = 'checkbox-id';
+            //         label.classList = 'selectLabel';
+            //         label.appendChild(document.createTextNode('select for date'));
+            //         div.appendChild(checkbox);
+            //         div.appendChild(label);
+            //         document.getElementById('searchLocation').appendChild(div)
+            //
+            //         var details = document.createElement('button')
+            //         details.setAttribute('location-id', item.place_id)
+            //         details.classList.add('btn', 'location-id')
+            //         details.innerHTML = 'reviews'
+            //         div.appendChild(details)
+            //     // }
+            // })
 
 
-        //this is the modal information
-        $(document).ready(function(){
-            $('body').on('click', '.location-id', function(){
+            //this is the modal information
+            $(document).ready(function(){
+                $('body').on('click', '.location-id', function(){
 
-                $("#location-id").modal('show');
+                    $("#location-id").modal('show');
 
-                var id = $(this).attr('location-id')
+                    var id = $(this).attr('location-id')
 
-                //details fetch
-                fetch(api+'/api/v1/details?placeid=' + id, {
-                    method: 'GET'
-                })
-                .then(function(response) {
-                    return response.json()
-                })
-                .then(function(response) {
-
-                    var div = document.createElement('div')
-                    div.classList.add('modalEstablishment')
-
-                    var name = document.createElement('h2')
-                    name.innerHTML = response.result.name
-                    div.appendChild(name)
-
-                    var address = document.createElement('p')
-                    address.innerHTML = response.result.formatted_address
-                    div.appendChild(address)
-
-                    var phone = document.createElement('p')
-                    phone.innerHTML = response.result.formatted_phone_number
-                    div.appendChild(phone)
-
-                    var rating = document.createElement('p')
-                    rating.innerHTML = "rating: " + response.result.rating
-                    div.appendChild(rating)
-
-                    var mapURL = document.createElement('a')
-                    mapURL.innerHTML = 'click here to open google maps'
-                    mapURL.setAttribute('href', response.result.url)
-                    mapURL.setAttribute('target', '_blank')
-                    mapURL.classList.add('mapURLbox')
-                    div.appendChild(mapURL)
-
-                    response.result.reviews.forEach(function(reviewArray){
-                        var review = document.createElement('p')
-                        review.classList.add('reviewText')
-                        review.innerHTML = reviewArray.text
-
-                        var reviewAuthor = document.createElement('p')
-                        reviewAuthor.classList.add('reviewAuthor', 'text-right')
-                        reviewAuthor.innerHTML = reviewArray.author_name
-                        div.appendChild(review)
-                        div.appendChild(reviewAuthor)
+                    //details fetch
+                    fetch(api+'/api/v1/details?placeid=' + id, {
+                        method: 'GET'
                     })
+                    .then(function(response) {
+                        return response.json()
+                    })
+                    .then(function(response) {
 
-                    document.getElementById('detailModal').innerHTML = ''
-                    document.getElementById('detailModal').appendChild(div)
+                        var div = document.createElement('div')
+                        div.classList.add('modalEstablishment')
+
+                        var name = document.createElement('h2')
+                        name.innerHTML = response.result.name
+                        div.appendChild(name)
+
+                        var address = document.createElement('p')
+                        address.innerHTML = response.result.formatted_address
+                        div.appendChild(address)
+
+                        var phone = document.createElement('p')
+                        phone.innerHTML = response.result.formatted_phone_number
+                        div.appendChild(phone)
+
+                        var rating = document.createElement('p')
+                        rating.innerHTML = "rating: " + response.result.rating
+                        div.appendChild(rating)
+
+                        var mapURL = document.createElement('a')
+                        mapURL.innerHTML = 'click here to open google maps'
+                        mapURL.setAttribute('href', response.result.url)
+                        mapURL.setAttribute('target', '_blank')
+                        mapURL.classList.add('mapURLbox')
+                        div.appendChild(mapURL)
+
+                        response.result.reviews.forEach(function(reviewArray){
+                            var review = document.createElement('p')
+                            review.classList.add('reviewText')
+                            review.innerHTML = reviewArray.text
+
+                            var reviewAuthor = document.createElement('p')
+                            reviewAuthor.classList.add('reviewAuthor', 'text-right')
+                            reviewAuthor.innerHTML = reviewArray.author_name
+                            div.appendChild(review)
+                            div.appendChild(reviewAuthor)
+                        })
+
+                        document.getElementById('detailModal').innerHTML = ''
+                        document.getElementById('detailModal').appendChild(div)
+                    })
                 })
-            })
-        }) //closing modal
+            }) //closing modal
+        })
     })
 })
 
