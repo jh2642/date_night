@@ -33,19 +33,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
 
-    fetch(api+'/api/v1/geoloc?address=' + address , {
-        method: 'GET'
-    })
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(response) {
-
-        latitude = response.results[0].geometry.location.lat
-        longitude = response.results[0].geometry.location.lng
-
-        var newAddress = latitude + ',' + longitude
-
         //search fetch
 
         fetch(api+'/api/v1/places/search' + typeSearch , {
@@ -95,7 +82,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
             //         div.appendChild(details)
             //     // }
             // })
-        })
 
 
         //this is the modal information
