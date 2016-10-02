@@ -69,24 +69,24 @@ app.get('/api/v1/places', function (request, response) {
     })
 })
 
-// //this is the api to get google places data using SEARCH CRITERIA//
-// app.get('/api/v1/places/search', function (request, response) {
-//     https.get('https://maps.googleapis.com/maps/api/place/textsearch/output?parameters=' + request.query.searchTerm + '&key=' + process.env.GOOGLE_PLACES_KEY, function (err, data, body) {
-//         var body = JSON.parse(body)
-//         body.results = body.results.filter(function(place) {
-//             return (
-//                 // !place.name.includes('Subway')
-//                 // &&
-//                 // !place.name.includes('McDonalds')
-//             )
-//         })
-//         response.json(body);
-//         // data.on('data', (d) => {
-//         //     response.json(d)
-//         // })
-//
-//     })
-// })
+//this is the api to get google places data using SEARCH CRITERIA//
+app.get('/api/v1/places/search', function (request, response) {
+    https.get('https://maps.googleapis.com/maps/api/place/textsearch/output?=' + request.query.searchTerm + '&key=' + process.env.GOOGLE_PLACES_KEY, function (err, data, body) {
+        var body = JSON.parse(body)
+        body.results = body.results.filter(function(place) {
+            return (
+                // !place.name.includes('Subway')
+                // &&
+                // !place.name.includes('McDonalds')
+            )
+        })
+        response.json(body);
+        // data.on('data', (d) => {
+        //     response.json(d)
+        // })
+
+    })
+})
 
 
 //this is the api to get the details of a specific location
