@@ -21,7 +21,7 @@ document.body.addEventListener('click', function(e) {
 
 $().button('toggle')
 
-document.getElementById('getDetails').addEventListener('click', function() {
+document.getElementById('getDetails2').addEventListener('click', function() {
 
     var address = document.getElementById('address2').value
     // var typeOne = "movie_theater"
@@ -186,11 +186,11 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
             dateNight = eachLoc
 
             document.getElementById('dateLoc1').innerHTML = dateNight;
-            document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
+            document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime2').value).format('LLLL');
 
         })
     })
 })
 
 
-document.getElementById("startTime").flatpickr();
+document.getElementById("startTime2").flatpickr();
