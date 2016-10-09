@@ -23,12 +23,12 @@ $().button('toggle')
 
 document.getElementById('getDetails').addEventListener('click', function() {
 
-    var address = document.getElementById('address').value
+    var address = document.getElementById('address2').value
     // var typeOne = "movie_theater"
     // var typeTwo = "restaurant"
     // var typeThree = "bar"
     var getId1 = "localRestaurants"
-    typeSearch = document.getElementById('searchTerm').value
+    typeSearch = document.getElementById('searchTerm2').value
 
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
@@ -57,7 +57,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
         .then(function(response) {
             console.log(response)
 
-            document.getElementById('searchLocation').innerHTML = ''
+            document.getElementById('searchLocation2').innerHTML = ''
             response.results.forEach(function(item) {
                 var div = document.createElement('div')
                 div.classList.add('establishment')
@@ -85,7 +85,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                 label.appendChild(document.createTextNode('select for date'));
                 div.appendChild(checkbox);
                 div.appendChild(label);
-                document.getElementById('searchLocation').appendChild(div)
+                document.getElementById('searchLocation2').appendChild(div)
 
                 var details = document.createElement('button')
                 details.setAttribute('location-id', item.place_id)
@@ -160,7 +160,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
 })
 
 
-document.getElementById('grabDetails').addEventListener('click', function() {
+document.getElementById('grabDetails2').addEventListener('click', function() {
 
     var checkboxes = document.querySelectorAll('.selectDetail:checked')
 
