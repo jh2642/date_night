@@ -67,17 +67,13 @@ app.get('/api/v1/places', function (request, response) {
 
 //this is the api to get google places data using SEARCH CRITERIA//
 app.get('/api/v1/search', function (request, response) {
-    https.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + request.query.searchTerm + '&location=' + request.query.location + '&radius=16094' + '&key=' + process.env.GOOGLE_PLACES_KEY,
-
-    // https.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants' + '&location=' + request.query.location + '&radius=16094' + '&key=' + process.env.GOOGLE_PLACES_KEY,
-
-    function (err, data, body) {
+    https.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + request.query.searchTerm + '&location=' + request.query.location + '&radius=16094' + '&key=' + process.env.GOOGLE_PLACES_KEY, function (err, data, body) {
         response.json(JSON.parse(body));
         data.on('data', (d) => {
             response.json(d)
         })
-    }
-}
+    })
+})
 
 
 //this is the api to get the details of a specific location
