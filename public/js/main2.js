@@ -162,7 +162,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
 
 document.getElementById('grabDetails2').addEventListener('click', function() {
 
-    var checkboxes = document.querySelectorAll('.selectDetail:checked')
+    var checkboxes = document.querySelectorAll('.selectDetail2:checked')
 
     checkboxes.forEach(function(id) {
         var eventPlaces = id.value
