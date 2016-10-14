@@ -60,7 +60,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
         .then(function(response) {
             console.log(response)
 
-            document.getElementById('searchLocation').innerHTML = ''
+            document.getElementById('searchLocation2').innerHTML = ''
             response.results.forEach(function(item) {
                 var div = document.createElement('div')
                 div.classList.add('establishment')
@@ -88,7 +88,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                 label.appendChild(document.createTextNode('select for date'));
                 div.appendChild(checkbox);
                 div.appendChild(label);
-                document.getElementById('searchLocation').appendChild(div)
+                document.getElementById('searchLocation2').appendChild(div)
 
                 var details = document.createElement('button')
                 details.setAttribute('location-id', item.place_id)
