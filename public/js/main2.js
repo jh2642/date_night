@@ -14,7 +14,7 @@ var typeSearch
 
 document.body.addEventListener('click', function(e) {
     if(e.target.className.includes('selectDetail2')) {
-        document.getElementById('grabDetails').classList.remove('hidden')
+        document.getElementById('grabDetails2').classList.remove('hidden')
         window.scrollTo(0,0);
     }
 })
