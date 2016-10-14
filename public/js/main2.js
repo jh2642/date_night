@@ -13,7 +13,7 @@ var dateNight
 var typeSearch
 
 document.body.addEventListener('click', function(e) {
-    if(e.target.className.includes('selectDetail')) {
+    if(e.target.className.includes('selectDetail2')) {
         document.getElementById('grabDetails').classList.remove('hidden')
         window.scrollTo(0,0);
     }
