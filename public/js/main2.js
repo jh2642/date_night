@@ -23,7 +23,7 @@ document.body.addEventListener('click', function(e) {
 
 document.getElementById('getDetails2').addEventListener('click', function() {
 
-    var address = document.getElementById('address2').value
+    var address = document.getElementById('address').value
     // var typeOne = "movie_theater"
     // var typeTwo = "restaurant"
     // var typeThree = "bar"
