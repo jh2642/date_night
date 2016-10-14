@@ -28,7 +28,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
     // var typeTwo = "restaurant"
     // var typeThree = "bar"
     var getId1 = "localRestaurants"
-    typeSearch = document.getElementById('searchTerm2').value
+    typeSearch = document.getElementById('searchTerm').value
 
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
