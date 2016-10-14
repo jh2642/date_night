@@ -189,11 +189,11 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
             dateNight = eachLoc
 
             document.getElementById('dateLoc1').innerHTML = dateNight;
-            document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime2').value).format('LLLL');
+            document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
         })
     })
 })
 
 
-document.getElementById("startTime2").flatpickr();
+document.getElementById("startTime").flatpickr();
