@@ -70,7 +70,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                 div.appendChild(name)
 
                 var address = document.createElement('p')
-                address.innerHTML = item.vicinity
+                address.innerHTML = item.formatted_address
                 div.appendChild(address)
 
                 var rating = document.createElement('p')
