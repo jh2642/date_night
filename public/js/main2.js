@@ -63,7 +63,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
             document.getElementById('searchLocation2').innerHTML = ''
             response.results.forEach(function(item) {
                 var div = document.createElement('div')
-                div.classList.add('establishment', 'col-md-3')
+                div.classList.add('establishment', 'col-md-4')
 
                 var name = document.createElement('h2')
                 name.innerHTML = item.name
