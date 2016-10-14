@@ -29,6 +29,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
     // var typeThree = "bar"
     var getId1 = "localRestaurants"
     typeSearch = document.getElementById('searchTerm').value
+    console.log(typeSearch)
 
     document.querySelector('.searchTopper').classList.add('searched')
     document.querySelector('.searchResultBox').classList.remove('hidden')
@@ -45,6 +46,8 @@ document.getElementById('getDetails2').addEventListener('click', function() {
         longitude = response.results[0].geometry.location.lng
 
         var newAddress = latitude + ',' + longitude
+
+        console.log(newAddress)
 
         //search fetch
 
