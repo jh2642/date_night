@@ -28,7 +28,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
     // var typeTwo = "restaurant"
     // var typeThree = "bar"
     var getId1 = "localRestaurants"
-    typeSearch = document.getElementById('searchTerm').value
+    var typeSearch = document.getElementById('searchTerm').value
 
 
     document.querySelector('.searchTopper').classList.add('searched')
@@ -51,7 +51,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
         console.log(typeSearch)
         //search fetch
 
-        fetch(api+'/api/v1/search' + '?query=' + typeSearch + '&location=' + newAddress , {
+        fetch(api+'/api/v1/search?query=' + typeSearch + '&location=' + newAddress , {
             method: 'GET'
         })
         .then(function(response) {
