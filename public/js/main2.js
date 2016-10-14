@@ -130,9 +130,9 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         phone.innerHTML = response.result.formatted_phone_number
                         div.appendChild(phone)
 
-                        var rating = document.createElement('p')
-                        rating.innerHTML = "rating: " + response.result.rating
-                        div.appendChild(rating)
+                        var hours = document.createElement('p')
+                        hours.innerHTML = "rating: " + response.opening_hours
+                        div.appendChild(hours)
 
                         var mapURL = document.createElement('a')
                         mapURL.innerHTML = 'click here to open google maps'
