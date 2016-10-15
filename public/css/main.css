@@ -25,6 +25,10 @@ body {
   background-color: #2ec4b6;
 }
 
+.betaTag {
+  color: #011627;
+}
+
 .headerRow {
   margin-top: 30px;
 }
