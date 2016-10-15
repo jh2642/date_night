@@ -47,8 +47,6 @@ document.getElementById('getDetails2').addEventListener('click', function() {
 
         var newAddress = latitude + ',' + longitude
 
-        console.log(newAddress)
-        console.log(typeSearch)
         //search fetch
 
         fetch(api+'/api/v1/search?query=' + typeSearch + '&location=' + newAddress , {
@@ -58,7 +56,6 @@ document.getElementById('getDetails2').addEventListener('click', function() {
             return response.json()
         })
         .then(function(response) {
-            console.log(response)
 
             document.getElementById('searchLocation2').innerHTML = ''
             response.results.forEach(function(item) {
