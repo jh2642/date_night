@@ -196,7 +196,7 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
 document.getElementById('addFriends').addEventListener('click', function() {
 
     // document.querySelector('.friendsTopper').classList.add('searched')
-    document.querySelector('.friendsTopper').classList.remove('hidden')
+    document.getElementById('friendsTopper').classList.remove('hidden')
 })
 
 
