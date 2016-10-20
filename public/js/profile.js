@@ -78,7 +78,7 @@ window.addEventListener('googlesignin', function() {
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
-                div.classList.add('dateNightEvent', 'col-xs-12', 'col-md-4', 'text-center')
+                div.classList.add('dateNightEvent', 'col-xs-12', 'col-md-4', 'text-center', 'eventBoxesProfile')
 
                 var eventDetails = document.createElement('i')
                 eventDetails.setAttribute('calendar-id', item.calendar_id)
@@ -105,6 +105,9 @@ window.addEventListener('googlesignin', function() {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest1
                     div.appendChild(guests)
+                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent')
+                    document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent3')
+
                 }
                 if(item.guest2 != item.your_email) {
                     var guests = document.createElement('p')

@@ -553,14 +553,24 @@ body {
 .dateNightEvent {
     background-color: $color1;
     margin: 15px;
-    // min-height: 250px;
-    // max-height: 250px;
+    min-height: 250px;
+    max-height: 250px;
     min-width: 410px;
     max-width: 410px;
 }
 
 .dateNightEvent2 {
+    min-height: 350px;
+    max-height: 350px;
+    min-width: 410px;
+    max-width: 410px;
+}
 
+.dateNightEvent3 {
+    min-height: 450px;
+    max-height: 450px;
+    min-width: 410px;
+    max-width: 410px;
 }
 
 
