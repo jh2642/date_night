@@ -100,6 +100,7 @@ window.addEventListener('googlesignin', function() {
                 if(item.guest1 != item.your_email) {
                     var guestsTag = document.createElement('p')
                     guestsTag.innerHTML = 'you also invited...'
+                    guestsTag.classList.add('text-left')
                     div.appendChild(guestsTag)
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest1
