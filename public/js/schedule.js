@@ -123,6 +123,22 @@ function checkAuth() {
 
                 var meetingDate
 
+                if (guest1Email.length === '') {
+                    var guest1Email = yourEmail
+                }
+                if (guest2Email.length === '') {
+                    var guest2Email = yourEmail
+                }
+                if (guest3Email.length === '') {
+                    var guest3Email = yourEmail
+                }
+                if (guest4Email.length === '') {
+                    var guest4Email = yourEmail
+                }
+                if (guest5Email.length === '') {
+                    var guest5Email = yourEmail
+                }
+
                 if (emailInstead.length) {
                     var dateEmail = emailInstead
                 }
