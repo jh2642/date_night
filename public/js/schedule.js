@@ -115,6 +115,10 @@ function checkAuth() {
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
                 var guest1Email = document.getElementById('guest1Email').value
+                // var guest2Email = document.getElementById('guest2Email').value
+                // var guest3Email = document.getElementById('guest3Email').value
+                // var guest4Email = document.getElementById('guest4Email').value
+                // var guest5Email = document.getElementById('guest5Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
@@ -141,9 +145,9 @@ function checkAuth() {
                         },
                         {email: yourEmail
                         },
-                        // {
-                        //     email: guest1Email
-                        // },
+                        {
+                            email: guest1Email
+                        },
                     ],
                     location: dateLoc,
                     description: descriptionDate,
