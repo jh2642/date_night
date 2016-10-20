@@ -99,27 +99,28 @@ window.addEventListener('googlesignin', function() {
 
                 if(item.guest1 != item.your_email) {
                     var guests = document.createElement('p')
-                    guests.innerHTML = '& guests: ' + item.guest1
+                    guests.innerHTML = 'your guest emails: '
+                    guests.innerHTML = item.guest1
                     div.appendChild(guests)
                 }
                 if(item.guest2 != item.your_email) {
                     var guests = document.createElement('p')
-                    guests.innerHTML = '& guests: ' + item.guest2
+                    guests.innerHTML = item.guest2
                     div.appendChild(guests)
                 }
                 if(item.guest3 != item.your_email) {
                     var guests = document.createElement('p')
-                    guests.innerHTML = '& guests: ' + item.guest3
+                    guests.innerHTML = item.guest3
                     div.appendChild(guests)
                 }
                 if(item.guest4 != item.your_email) {
                     var guests = document.createElement('p')
-                    guests.innerHTML = '& guests: ' + item.guest4
+                    guests.innerHTML = item.guest4
                     div.appendChild(guests)
                 }
                 if(item.guest5 != item.your_email) {
                     var guests = document.createElement('p')
-                    guests.innerHTML = '& guests: ' + item.guest5
+                    guests.innerHTML = item.guest5
                     div.appendChild(guests)
                 }
 
