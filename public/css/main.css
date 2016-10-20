@@ -426,6 +426,18 @@ body {
   transition: 0.5s ease all;
 }
 
+.btn-lg2 {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  background: #e94f37;
+  font-size: 40px;
+  font-family: "Syncopate", sans-serif;
+  margin: 5px;
+  color: #f6f7eb;
+}
+
 .searchTopper.searched {
   margin-top: 80px;
 }
