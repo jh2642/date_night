@@ -134,9 +134,65 @@
         </div>
     </div>
 </div>
-
 <!--  Confirmation Modal -->
 <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="modal-title text-center" id="myModalLabel">you're all set</h1>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="row text-center">
+                    <div class="detailsForDate col-md-10 col-md-offset-1">
+                        <h4>you'll be going to...</h4>
+                        <h3 id="dateLoc1"></h3>
+                        <h4>on</h4>
+                        <h3 id="dateTime"></h3>
+                        <h4>with</h4>
+                        <div id="formDetailsOld">
+                            <h1 id="dateName2"></h1>
+                        </div>
+                        <div id="formDetailsNew" class="hidden">
+                            <input type="text" class="form-control" id="newName" placeholder="enter name">
+                            <input type="text" class="form-control" id="newEmail" placeholder="enter email address">
+                            <p class="text-left">*we'll add this contact to your profile</p>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <h2>and you'll</h2>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="radio" name="meetDate" id="pickUp" value="I'll pick you up! " autocomplete="off">pick them up
+                            </label>
+                            <label class="btn btn-primary active">
+                                <input type="radio" name="meetDate" id="meetRestaurant" value="I'll meet you there! " autocomplete="off" checked>meet them
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class"col-md-10 col-md-offset-1 addToProfile2">
+                    <h4>add up to 5 guests for this event:</h4>
+                    <input type="email" class="form-control text-center" id="guest1Email" placeholder="additional guest">
+                    <input type="email" class="form-control text-center" id="guest2Email" placeholder="additional guest">
+                    <input type="email" class="form-control text-center" id="guest3Email" placeholder="additional guest">
+                    <input type="email" class="form-control text-center" id="guest4Email" placeholder="additional guest">
+                    <input type="email" class="form-control text-center" id="guest5Email" placeholder="additional guest">
+                </div>
+                <div class="text-left col-md-10 col-md-offset-1 messageToDateBox">
+                    <h4>send a message with your invite:</h4>
+                    <input type="text" class="text-center messageToDate form-control" id="messageBox" placeholder="(optional)">
+                </div>
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">cancel</button>
+                    <button type="button" href="/profile.html" id="createEvents" data-dismiss="modal" class="btn btn-primary">send invite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  Confirmation Modal -->
+<!-- <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -191,7 +247,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/flatpickr.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
