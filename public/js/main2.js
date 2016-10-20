@@ -19,6 +19,11 @@ document.body.addEventListener('click', function(e) {
     }
 })
 
+document.getElementById('addFriends').addEventListener('click', function() {
+
+    document.querySelector('.friendsTopper').classList.remove('hidden')
+})
+
 // $().button('toggle')
 
 document.getElementById('getDetails2').addEventListener('click', function() {
@@ -192,12 +197,5 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
         })
     })
 })
-
-document.getElementById('addFriends').addEventListener('click', function() {
-
-    // document.querySelector('.friendsTopper').classList.add('searched')
-    document.getElementById('friendsTopper').classList.remove('hidden')
-})
-
 
 document.getElementById("startTime").flatpickr();
