@@ -47,7 +47,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
 
         var newAddress = latitude + ',' + longitude
 
-        //search fetch - on the server.js file I have to add query becayse that is what I typed below after the ? 
+        //search fetch - on the server.js file I have to add query becayse that is what I typed below after the ?
 
         fetch(api+'/api/v1/search?query=' + typeSearch + '&location=' + newAddress , {
             method: 'GET'
@@ -191,6 +191,12 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
 
         })
     })
+})
+
+document.getElementById('addFriends').addEventListener('click', function() {
+
+    // document.querySelector('.friendsTopper').classList.add('searched')
+    document.querySelector('.friendsTopper').classList.remove('hidden')
 })
 
 
