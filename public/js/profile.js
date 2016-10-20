@@ -97,8 +97,12 @@ window.addEventListener('googlesignin', function() {
                 dateAttendee.innerHTML = 'with ' + item.date_name
                 div.appendChild(dateAttendee)
 
+                // var guests = document.createElement('p')
+                // guests.innerHTML = '& guests: ' + item.guest1
+                // div.appendChild(guests)
+
                 var guests = document.createElement('p')
-                guests.innerHTML = 'guests ' + item.guest1 
+                guests.innerHTML = 'guestlist coming soon'
                 div.appendChild(guests)
 
                 var dateDate = document.createElement('p')
