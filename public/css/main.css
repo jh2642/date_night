@@ -520,8 +520,8 @@ body {
   width: 400px;
 }
 
-.addToProfile2 h4 {
-  color: #e94f37;
+.addToProfile2 h3 {
+  margin-top: 20px;
 }
 
 .margin-topBox {
