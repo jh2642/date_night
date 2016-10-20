@@ -524,6 +524,10 @@ body {
   color: #e94f37;
 }
 
+.margin-topBox {
+  margin-top: 20px;
+}
+
 .updateBox {
   margin-top: 50px;
 }
