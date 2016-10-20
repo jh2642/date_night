@@ -124,6 +124,7 @@ window.addEventListener('googlesignin', function() {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest4
                     div.appendChild(guests)
+                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent')
                     document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent2')
                     document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent3')
                 }
@@ -131,6 +132,7 @@ window.addEventListener('googlesignin', function() {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest5
                     div.appendChild(guests)
+                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent')
                     document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent2')
                     document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent3')
                 }
