@@ -520,6 +520,10 @@ body {
   width: 400px;
 }
 
+.addToProfile2 h4 {
+  color: #e94f37;
+}
+
 .updateBox {
   margin-top: 50px;
 }
