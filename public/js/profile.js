@@ -105,31 +105,34 @@ window.addEventListener('googlesignin', function() {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest1
                     div.appendChild(guests)
-                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent')
-                    document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent2')
-
                 }
                 if(item.guest2 != item.your_email) {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest2
                     div.appendChild(guests)
+                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent')
+                    document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent2')
                 }
                 if(item.guest3 != item.your_email) {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest3
                     div.appendChild(guests)
-                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent2')
-                    document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent3')
+                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent')
+                    document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent2')
                 }
                 if(item.guest4 != item.your_email) {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest4
                     div.appendChild(guests)
+                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent2')
+                    document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent3')
                 }
                 if(item.guest5 != item.your_email) {
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest5
                     div.appendChild(guests)
+                    document.querySelector('.eventBoxesProfile').classList.remove('dateNightEvent2')
+                    document.querySelector('.eventBoxesProfile').classList.add('dateNightEvent3')
                 }
 
                 var dateDate = document.createElement('p')
