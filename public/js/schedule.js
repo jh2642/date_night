@@ -114,11 +114,11 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
-                var guest1Email
-                var guest2Email
-                var guest3Email
-                var guest4Email
-                var guest5Email
+                var guest1Email = document.getElementById('guest1Email').value
+                var guest2Email = document.getElementById('guest2Email').value
+                var guest3Email = document.getElementById('guest3Email').value
+                var guest4Email = document.getElementById('guest4Email').value
+                var guest5Email = document.getElementById('guest5Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
