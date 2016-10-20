@@ -196,7 +196,7 @@ function checkAuth() {
                         }
                     ],
                     location: dateLoc,
-                    description: descriptionDate + ' This was scheduled using https://datenight2016.herokuapp.com/index.html',
+                    description: descriptionDate + ' This event was scheduled using Date Night - https://datenight2016.herokuapp.com/index.html',
                     reminders: {
                         useDefault: false
                     },
