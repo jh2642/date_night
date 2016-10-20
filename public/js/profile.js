@@ -3,13 +3,6 @@ var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
 var dateCalendar
-var guest1
-var guest2
-var guest3
-var guest4
-var guest5
-
-
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
@@ -104,27 +97,6 @@ window.addEventListener('googlesignin', function() {
                 dateAttendee.innerHTML = 'with ' + item.date_name
                 div.appendChild(dateAttendee)
 
-                if(item.guest2 != item.your_email) {
-                    var guest2 = "," + item.guest2
-                    // guest2.innerHTML = item.guest2
-                    // div.appendChild(guest2)
-                }
-                if(item.guest3 != item.your_email) {
-                    var guest3 = "," + item.guest3
-                    // guest3.innerHTML = item.guest3
-                    // div.appendChild(guest3)
-                }
-                if(item.guest4 != item.your_email) {
-                    var guest4 = "," + item.guest4
-                    // guest4.innerHTML = item.guest4
-                    // div.appendChild(guest4)
-                }
-                if(item.guest5 != item.your_email) {
-                    var guest5 = "," + item.guest5
-                    // guest5.innerHTML = item.guest5
-                    // div.appendChild(guest5)
-                }
-
                 if(item.guest1 != item.your_email) {
                     var guestsTag = document.createElement('p')
                     guestsTag.innerHTML = 'you also invited...'
@@ -132,8 +104,28 @@ window.addEventListener('googlesignin', function() {
                     div.appendChild(guestsTag)
 
                     var guests = document.createElement('p')
-                    guests.innerHTML = item.guest1 + guest2 + guest3 + guest4 + guest5
+                    guests.innerHTML = item.guest1
                     div.appendChild(guests)
+                }
+                if(item.guest2 != item.your_email) {
+                    var guest2 = document.createElement('p')
+                    guest2.innerHTML = item.guest2
+                    div.appendChild(guest2)
+                }
+                if(item.guest3 != item.your_email) {
+                    var guest3 = document.createElement('p')
+                    guest3.innerHTML = item.guest3
+                    div.appendChild(guest3)
+                }
+                if(item.guest4 != item.your_email) {
+                    var guest4 = document.createElement('p')
+                    guest4.innerHTML = item.guest4
+                    div.appendChild(guest4)
+                }
+                if(item.guest5 != item.your_email) {
+                    var guest5 = document.createElement('p')
+                    guest5.innerHTML = item.guest5
+                    div.appendChild(guest5)
                 }
 
                 var dateDate = document.createElement('p')
