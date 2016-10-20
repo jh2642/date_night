@@ -114,6 +114,7 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
+                var guest1Email = document.getElementById('guest1Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
@@ -140,6 +141,9 @@ function checkAuth() {
                         },
                         {email: yourEmail
                         },
+                        // {
+                        //     email: guest1Email
+                        // },
                     ],
                     location: dateLoc,
                     description: descriptionDate,
@@ -245,7 +249,7 @@ function checkAuth() {
             });
 
             request3.execute(function(resp3) {
-    
+
                 fetch(api+'/events/deletedatenight?calendar_id=' + calId, {
                     method: 'DELETE',
                     credentials: 'include',
