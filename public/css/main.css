@@ -438,6 +438,10 @@ body {
   color: #f6f7eb;
 }
 
+.addFriendButton {
+  padding-top: 15px;
+}
+
 .searchTopper.searched {
   margin-top: 80px;
 }
