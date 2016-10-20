@@ -34,20 +34,20 @@
             <!-- mobile header start-->
             <div class="row profileNav hidden-lg">
                 <div class="col-xs-12">
-                <div class="col-xs-12 col-sm-6 dateNightHeader">
-                    <img class="martini2" src="assets/martini2.png" alt="">
-                    <span class="dateNightHeader2 hidden-sm hidden-md">date night</span>
-                    <span class="dateNightHeader hidden-xs">date night</span>
-                </div>
-                <div class="col-xs-4 col-sm-2 profileNav text-center">
-                    <a href="/search.html" class="btn btn-primary btn-lg btn-block" role="button">search (beta)</a>
-                </div>
-                <div class="col-xs-4 col-sm-2 profileNav text-center signOutMobile">
-                    <a href="/profile.html" class="btn btn-primary btn-lg btn-block">profile</a>
-                </div>
-                <div class="col-xs-4 col-sm-2 profileNav text-center signOutMobile">
-                    <a href="/index.html" type="button" class="btn btn-primary btn-lg btn-block" onclick="signOut();">sign out</a>
-                </div>
+                    <div class="col-xs-12 col-sm-6 dateNightHeader">
+                        <img class="martini2" src="assets/martini2.png" alt="">
+                        <span class="dateNightHeader2 hidden-sm hidden-md">date night</span>
+                        <span class="dateNightHeader hidden-xs">date night</span>
+                    </div>
+                    <div class="col-xs-4 col-sm-2 profileNav text-center">
+                        <a href="/search.html" class="btn btn-primary btn-lg btn-block" role="button">search (beta)</a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2 profileNav text-center signOutMobile">
+                        <a href="/profile.html" class="btn btn-primary btn-lg btn-block">profile</a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2 profileNav text-center signOutMobile">
+                        <a href="/index.html" type="button" class="btn btn-primary btn-lg btn-block" onclick="signOut();">sign out</a>
+                    </div>
                 </div>
             </div>
             <!-- mobile header end -->
@@ -93,86 +93,87 @@
     </div>
     <div class="g-signin2 hidden" data-onsuccess="onSignIn" data-theme="dark"></div>
     <!-- <footer class="navbar-fixed-bottom">
-        <div class="container-fluid">
-            <div class="row profileNav">
-                <div class="hidden-xs hidden-sm col-md-4 text-left navBox footer-right footer-icons">
-                    <a href="https://medium.com/@jh2642" type="button" class="navLinks">blog</a>
-                    <a href="mailto:date.night.indy@gmail.com">email us</a>
-                </div>
-                <div class="col-xs-12 col-md-4 text-center centerNav">
-                    <img class="google" src="/assets/google2.png">
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4 text-right centerNav">
-                    <img class="copyright" src="/assets/copyright2.png">
-                    <span>hildreth inc.</span>
-                </div>
+    <div class="container-fluid">
+    <div class="row profileNav">
+    <div class="hidden-xs hidden-sm col-md-4 text-left navBox footer-right footer-icons">
+    <a href="https://medium.com/@jh2642" type="button" class="navLinks">blog</a>
+    <a href="mailto:date.night.indy@gmail.com">email us</a>
+</div>
+<div class="col-xs-12 col-md-4 text-center centerNav">
+<img class="google" src="/assets/google2.png">
+</div>
+<div class="hidden-xs hidden-sm col-md-4 text-right centerNav">
+<img class="copyright" src="/assets/copyright2.png">
+<span>hildreth inc.</span>
+</div>
+</div>
+</div>
+</footer> -->
+<div class="col-md-10 col-md-offset-1 authBox text-center">
+    <div id="authorize-div" style="display: none">
+        <h4>in order to use this feature, you must authorize access to google calendar</h4>
+        <!--Button for the user to click to initiate auth sequence -->
+        <button class="btn btn-lg" id="authorize-button" onclick="handleAuthClick(event)">
+            Authorize
+        </button>
+    </div>
+</div>
+<!-- Details Modal -->
+<div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modalBox">
+            <div class="modal-header">
+                <button type="button" class="close modalX" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="detailModal">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
-    </footer> -->
-    <div class="col-md-10 col-md-offset-1 authBox text-center">
-        <div id="authorize-div" style="display: none">
-            <h4>in order to use this feature, you must authorize access to google calendar</h4>
-            <!--Button for the user to click to initiate auth sequence -->
-            <button class="btn btn-lg" id="authorize-button" onclick="handleAuthClick(event)">
-                Authorize
-            </button>
-        </div>
     </div>
-    <!-- Details Modal -->
-    <div class="modal fade" id="location-id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content modalBox">
-                <div class="modal-header">
-                    <button type="button" class="close modalX" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="detailModal">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 
-    <!--  Confirmation Modal -->
-    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h1 class="modal-title text-center" id="myModalLabel">you're all set</h1>
-                </div>
-                <div class="modal-body container-fluid">
-                    <div class="row text-center">
-                        <div class="detailsForDate col-md-10 col-md-offset-1">
-                            <h4>you'll be going to...</h4>
-                            <h3 id="dateLoc1"></h3>
-                            <h4>on</h4>
-                            <h3 id="dateTime"></h3>
-                            <h4>with</h4>
-                            <div id="formDetailsOld">
-                                <h1 id="dateName2"></h1>
-                            </div>
-                            <div id="formDetailsNew" class="hidden">
-                                <input type="text" class="form-control" id="newName" placeholder="enter name">
-                                <input type="text" class="form-control" id="newEmail" placeholder="enter email address">
-                                <p class="text-left">*we'll add this contact to your profile</p>
-                            </div>
+<!--  Confirmation Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="modal-title text-center" id="myModalLabel">you're all set</h1>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="row text-center">
+                    <div class="detailsForDate col-md-10 col-md-offset-1">
+                        <h4>you'll be going to...</h4>
+                        <h3 id="dateLoc1"></h3>
+                        <h4>on</h4>
+                        <h3 id="dateTime"></h3>
+                        <h4>with</h4>
+                        <div id="formDetailsOld">
+                            <h1 id="dateName2"></h1>
                         </div>
-                        <div class="col-md-10 col-md-offset-1 toggleBoxInModal">
-                            <h2>and you'll</h2>
-                            <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-primary">
-                                    <input type="radio" name="meetDate" id="pickUp" value="I'll pick you up! " autocomplete="off">pick them up
-                                </label>
-                                <label class="btn btn-primary active">
-                                    <input type="radio" name="meetDate" id="meetRestaurant" value="I'll meet you there! " autocomplete="off" checked>meet them
-                                </label>
-                            </div>
+                        <div id="formDetailsNew" class="hidden">
+                            <input type="text" class="form-control" id="newName" placeholder="enter name">
+                            <input type="text" class="form-control" id="newEmail" placeholder="enter email address">
+                            <p class="text-left">*we'll add this contact to your profile</p>
                         </div>
                     </div>
+                    <div class="col-md-10 col-md-offset-1 toggleBoxInModal">
+                        <h2>and you'll</h2>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary">
+                                <input type="radio" name="meetDate" id="pickUp" value="I'll pick you up! " autocomplete="off">pick them up
+                            </label>
+                            <label class="btn btn-primary active">
+                                <input type="radio" name="meetDate" id="meetRestaurant" value="I'll meet you there! " autocomplete="off" checked>meet them
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggleBoxInModal">
                     <div class"col-md-10 col-md-offset-1 addToProfile2 text-center">
                         <h3 class="text-center addToProfile2">night out with friends ?</h3>
                         <h5 class="text-center addToProfile2">you can add up to 5 guests for this event:</h5>
@@ -182,21 +183,22 @@
                         <input type="email" class="form-control addToProfile2 text-center" id="guest4Email" placeholder="additional guest">
                         <input type="email" class="form-control addToProfile2 text-center" id="guest5Email" placeholder="additional guest">
                     </div>
-                    <div class="col-md-10 col-md-offset-1 messageToDateBox">
-                        <h4 class="text-center">send a message with your invite:</h4>
-                        <input type="text" class="text-center messageToDate form-control" id="messageBox" placeholder="(optional)">
-                    </div>
-                    <div class="modal-footer row">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">cancel</button>
-                        <button type="button" href="/profile.html" id="createEvents" data-dismiss="modal" class="btn btn-primary">send invite</button>
-                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1 messageToDateBox">
+                    <h4 class="text-center">send a message with your invite:</h4>
+                    <input type="text" class="text-center messageToDate form-control" id="messageBox" placeholder="(optional)">
+                </div>
+                <div class="modal-footer row">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">cancel</button>
+                    <button type="button" href="/profile.html" id="createEvents" data-dismiss="modal" class="btn btn-primary">send invite</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/flatpickr.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/flatpickr.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
