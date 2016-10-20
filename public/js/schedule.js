@@ -123,19 +123,19 @@ function checkAuth() {
 
                 var meetingDate
 
-                if (guest1Email.length === '') {
+                if (guest1Email.length) {
                     var guest1Email = document.getElementById('guest1Email').value
                 }
-                if (guest2Email.length === '') {
+                if (guest2Email.length) {
                     var guest2Email = document.getElementById('guest2Email').value
                 }
-                if (guest3Email.length === '') {
+                if (guest3Email.length) {
                     var guest3Email = document.getElementById('guest3Email').value
                 }
-                if (guest4Email.length === '') {
+                if (guest4Email.length) {
                     var guest4Email = document.getElementById('guest4Email').value
                 }
-                if (guest5Email.length === '') {
+                if (guest5Email.length) {
                     var guest5Email = document.getElementById('guest5Email').value
                 }
 
