@@ -105,22 +105,22 @@ window.addEventListener('googlesignin', function() {
                 div.appendChild(dateAttendee)
 
                 if(item.guest2 != item.your_email) {
-                    var guest2 = item.guest2
+                    var guest2 = "," + item.guest2
                     // guest2.innerHTML = item.guest2
                     // div.appendChild(guest2)
                 }
                 if(item.guest3 != item.your_email) {
-                    var guest3 = item.guest3
+                    var guest3 = "," + item.guest3
                     // guest3.innerHTML = item.guest3
                     // div.appendChild(guest3)
                 }
                 if(item.guest4 != item.your_email) {
-                    var guest4 = item.guest4
+                    var guest4 = "," + item.guest4
                     // guest4.innerHTML = item.guest4
                     // div.appendChild(guest4)
                 }
                 if(item.guest5 != item.your_email) {
-                    var guest5 = item.guest5
+                    var guest5 = "," + item.guest5
                     // guest5.innerHTML = item.guest5
                     // div.appendChild(guest5)
                 }
@@ -132,7 +132,7 @@ window.addEventListener('googlesignin', function() {
                     div.appendChild(guestsTag)
 
                     var guests = document.createElement('p')
-                    guests.innerHTML = guest1 + guest2 + guest3 + guest4 + guest5
+                    guests.innerHTML = item.guest1 + guest2 + guest3 + guest4 + guest5
                     div.appendChild(guests)
                 }
 
