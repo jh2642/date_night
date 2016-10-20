@@ -440,6 +440,8 @@ body {
 
 .addFriendButton {
   margin-top: 20px;
+  background: #e94f37;
+  color: #f6f7eb;
 }
 
 .searchTopper.searched {
@@ -538,6 +540,10 @@ body {
 .addToProfile2 {
   margin: auto;
   width: 425px;
+}
+
+.addToProfile2 h5 {
+  color: #e94f37;
 }
 
 .margin-topBox {
