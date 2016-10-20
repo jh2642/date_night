@@ -114,29 +114,29 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
-                var guest1Email = document.getElementById('guest1Email').value
-                var guest2Email = document.getElementById('guest2Email').value
-                var guest3Email = document.getElementById('guest3Email').value
-                var guest4Email = document.getElementById('guest4Email').value
-                var guest5Email = document.getElementById('guest5Email').value
+                var guest1Email = yourEmail
+                var guest2Email = yourEmail
+                var guest3Email = yourEmail
+                var guest4Email = yourEmail
+                var guest5Email = yourEmail
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
 
                 if (guest1Email.length === '') {
-                    var guest1Email = yourEmail
+                    var guest1Email = document.getElementById('guest1Email').value
                 }
                 if (guest2Email.length === '') {
-                    var guest2Email = yourEmail
+                    var guest2Email = document.getElementById('guest2Email').value
                 }
                 if (guest3Email.length === '') {
-                    var guest3Email = yourEmail
+                    var guest3Email = document.getElementById('guest3Email').value
                 }
                 if (guest4Email.length === '') {
-                    var guest4Email = yourEmail
+                    var guest4Email = document.getElementById('guest4Email').value
                 }
                 if (guest5Email.length === '') {
-                    var guest5Email = yourEmail
+                    var guest5Email = document.getElementById('guest5Email').value
                 }
 
                 if (emailInstead.length) {
