@@ -20,6 +20,13 @@ document.body.addEventListener('click', function(e) {
 
 $().button('toggle')
 
+document.getElementById('addFriends').addEventListener('click', function() {
+
+    document.querySelector('.friendsTopper').classList.remove('hidden')
+    document.querySelector('.addFriendButton').classList.add('hidden')
+
+})
+
 document.getElementById('getDetails').addEventListener('click', function() {
 
     var address = document.getElementById('address').value
