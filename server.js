@@ -73,9 +73,9 @@ app.get('/api/v1/search', function (request, response) {
         var body = JSON.parse(body)
         body.results = body.results.filter(function(place) {
             return (
-                // !place.name.includes('Subway')
-                // &&
-                // !place.name.includes('McDonalds')
+                !place.name.includes('Subway')
+                &&
+                !place.name.includes('McDonalds')
             )
         })
         response.json(body);
