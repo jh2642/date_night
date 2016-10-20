@@ -121,17 +121,12 @@ function checkAuth() {
                 var guest5Email = document.getElementById('guest5Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
-                if (document.getElementById('guest1Email').length) {
-                    dateSum = 'Group Date Night Event'
-                }
-                else {
-                    dateSum = 'Date Night'
-                }
 
                 var meetingDate
 
                 if (guest1Email.length) {
                     guest1Email = document.getElementById('guest1Email').value
+                    dateSum = 'Group Date Night Event'
                 }
                 else {
                     guest1Email = yourEmail
@@ -201,7 +196,7 @@ function checkAuth() {
                         }
                     ],
                     location: dateLoc,
-                    description: descriptionDate + ' This was scheduled using the datenight site @ https://datenight2016.herokuapp.com/index.html developed by James Hildreth @ hildreth.james@gmail.com',
+                    description: descriptionDate + ' This was scheduled using https://datenight2016.herokuapp.com/index.html',
                     reminders: {
                         useDefault: false
                     },

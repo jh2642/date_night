@@ -517,15 +517,15 @@ body {
 
 .addToProfile2 {
   margin: auto;
+  width: 400px;
+}
+
+.addToProfile2 h4 {
+  color: #e94f37;
 }
 
 .margin-topBox {
   margin-top: 20px;
-  width: 400px;
-}
-
-.margin-topBox h4 {
-  color: #e94f37;
 }
 
 .updateBox {
