@@ -22,6 +22,8 @@ document.body.addEventListener('click', function(e) {
 document.getElementById('addFriends').addEventListener('click', function() {
 
     document.querySelector('.friendsTopper').classList.remove('hidden')
+    document.querySelector('.addFriendButton').classList.add('hidden')
+
 })
 
 // $().button('toggle')
