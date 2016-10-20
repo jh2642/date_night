@@ -159,7 +159,7 @@ function checkAuth() {
                         },
                         {
                             email: guest5Email
-                        },
+                        }
                     ],
                     location: dateLoc,
                     description: descriptionDate,
