@@ -102,29 +102,30 @@ window.addEventListener('googlesignin', function() {
                     guestsTag.innerHTML = 'you also invited...'
                     guestsTag.classList.add('invitedText')
                     div.appendChild(guestsTag)
+
                     var guests = document.createElement('p')
                     guests.innerHTML = item.guest1
                     div.appendChild(guests)
                 }
                 if(item.guest2 != item.your_email) {
-                    var guests = document.createElement('p')
-                    guests.innerHTML = item.guest2
-                    div.appendChild(guests)
+                    var guest2 = document.createElement('p')
+                    guest2.innerHTML = item.guest2
+                    div.appendChild(guest2)
                 }
                 if(item.guest3 != item.your_email) {
-                    var guests = document.createElement('p')
-                    guests.innerHTML = item.guest3
-                    div.appendChild(guests)
+                    var guest3 = document.createElement('p')
+                    guest3.innerHTML = item.guest3
+                    div.appendChild(guest3)
                 }
                 if(item.guest4 != item.your_email) {
-                    var guests = document.createElement('p')
-                    guests.innerHTML = item.guest4
-                    div.appendChild(guests)
+                    var guest4 = document.createElement('p')
+                    guest4.innerHTML = item.guest4
+                    div.appendChild(guest4)
                 }
                 if(item.guest5 != item.your_email) {
-                    var guests = document.createElement('p')
-                    guests.innerHTML = item.guest5
-                    div.appendChild(guests)
+                    var guest5 = document.createElement('p')
+                    guest5.innerHTML = item.guest5
+                    div.appendChild(guest5)
                 }
 
                 var dateDate = document.createElement('p')
