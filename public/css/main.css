@@ -554,14 +554,6 @@ body {
   max-width: 410px;
 }
 
-.dateNightEvent p {
-  width: 295px;
-  /* Required for text-overflow */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .glyphicon {
   font-size: inherit;
   position: relative;
