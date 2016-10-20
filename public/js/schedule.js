@@ -115,10 +115,10 @@ function checkAuth() {
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
                 var guest1Email = document.getElementById('guest1Email').value
-                // var guest2Email = document.getElementById('guest2Email').value
-                // var guest3Email = document.getElementById('guest3Email').value
-                // var guest4Email = document.getElementById('guest4Email').value
-                // var guest5Email = document.getElementById('guest5Email').value
+                var guest2Email = document.getElementById('guest2Email').value
+                var guest3Email = document.getElementById('guest3Email').value
+                var guest4Email = document.getElementById('guest4Email').value
+                var guest5Email = document.getElementById('guest5Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
@@ -147,6 +147,18 @@ function checkAuth() {
                         },
                         {
                             email: guest1Email
+                        },
+                        {
+                            email: guest2Email
+                        },
+                        {
+                            email: guest3Email
+                        },
+                        {
+                            email: guest4Email
+                        },
+                        {
+                            email: guest5Email
                         },
                     ],
                     location: dateLoc,
@@ -179,7 +191,12 @@ function checkAuth() {
                             rest_name: locationName,
                             date_email: dateEmail,
                             special_comments: pickupInfo + descriptionDate,
-                            calendar_id: idForEvent
+                            calendar_id: idForEvent,
+                            guest1: guest1Email,
+                            guest2: guest2Email,
+                            guest3: guest3Email,
+                            guest4: guest4Email,
+                            guest5: guest5Email
                         })
                     })
                     .then(function() {
