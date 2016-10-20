@@ -557,13 +557,13 @@ body {
     max-height: 250px;
     min-width: 410px;
     max-width: 410px;
-    // p {
-    //     width: 295px;
-    //     /* Required for text-overflow */
-    //     white-space: nowrap;
-    //     overflow: hidden;
-    //     text-overflow: ellipsis;
-    // }
+    p {
+        width: 405px;
+        /* Required for text-overflow */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 .glyphicon {

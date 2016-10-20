@@ -89,11 +89,11 @@ window.addEventListener('googlesignin', function() {
                 name.innerHTML = item.rest_name
                 div.appendChild(name)
 
-                var address = document.createElement('p')
+                var address = document.createElement('h5')
                 address.innerHTML = item.address
                 div.appendChild(address)
 
-                var dateAttendee = document.createElement('p')
+                var dateAttendee = document.createElement('h5')
                 dateAttendee.innerHTML = 'with ' + item.date_name
                 div.appendChild(dateAttendee)
 
@@ -127,7 +127,7 @@ window.addEventListener('googlesignin', function() {
                     div.appendChild(guests)
                 }
 
-                var dateDate = document.createElement('p')
+                var dateDate = document.createElement('h5')
                 dateDate.innerHTML = 'on ' + moment(item.event_at).format('LLLL')
                 div.appendChild(dateDate)
 
