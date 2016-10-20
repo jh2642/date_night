@@ -114,29 +114,44 @@ function checkAuth() {
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
                 var nameInstead = document.getElementById('newName').value
-                var guest1Email = yourEmail
-                var guest2Email = yourEmail
-                var guest3Email = yourEmail
-                var guest4Email = yourEmail
-                var guest5Email = yourEmail
+                var guest1Email
+                var guest2Email
+                var guest3Email
+                var guest4Email
+                var guest5Email
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
 
                 var meetingDate
 
                 if (guest1Email.length) {
-                    var guest1Email = document.getElementById('guest1Email').value
+                    guest1Email = document.getElementById('guest1Email').value
+                }
+                else {
+                    guest1Email = yourEmail
                 }
                 if (guest2Email.length) {
-                    var guest2Email = document.getElementById('guest2Email').value
+                    guest2Email = document.getElementById('guest2Email').value
+                }
+                else {
+                    guest2Email = yourEmail
                 }
                 if (guest3Email.length) {
-                    var guest3Email = document.getElementById('guest3Email').value
+                    guest3Email = document.getElementById('guest3Email').value
+                }
+                else {
+                    guest3Email = yourEmail
                 }
                 if (guest4Email.length) {
-                    var guest4Email = document.getElementById('guest4Email').value
+                    guest4Email = document.getElementById('guest4Email').value
+                }
+                else {
+                    guest4Email = yourEmail
                 }
                 if (guest5Email.length) {
-                    var guest5Email = document.getElementById('guest5Email').value
+                    guest5Email = document.getElementById('guest5Email').value
+                }
+                else {
+                    guest5Email = yourEmail
                 }
 
                 if (emailInstead.length) {
