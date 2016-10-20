@@ -296,6 +296,10 @@ body {
   padding-bottom: 10px;
 }
 
+.invitedText {
+  color: #e94f37;
+}
+
 #dateProfileBox2 {
   background-color: #2ec4b6;
   color: #011627;
