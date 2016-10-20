@@ -126,7 +126,7 @@ function checkAuth() {
 
                 if (guest1Email.length) {
                     guest1Email = document.getElementById('guest1Email').value
-                    dateSum = 'Group Meeting'
+                    dateSum = 'Night Out'
                 }
                 else {
                     guest1Email = yourEmail
