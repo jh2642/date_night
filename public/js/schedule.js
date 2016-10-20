@@ -230,7 +230,8 @@ function checkAuth() {
                             guest2: guest2Email,
                             guest3: guest3Email,
                             guest4: guest4Email,
-                            guest5: guest5Email
+                            guest5: guest5Email,
+                            your_email: yourEmail
                         })
                     })
                     .then(function() {

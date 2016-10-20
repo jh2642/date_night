@@ -148,7 +148,7 @@ app.post('/events/datenight', function (request, response) {
         if(users[0].date_email === '' || users[0].date_email === null) {
             knex('users')
             .where('id', request.body.user_id)
-            .update({date_name: request.body.date_name, date_email: request.body.date_email, guest1: request.body.guest1Email,guest2: request.body.guest2Email,guest3: request.body.guest3Email,guest4: request.body.guest4Email,guest5: request.body.guest5Email})
+            .update({date_name: request.body.date_name, date_email: request.body.date_email, guest1: request.body.guest1Email,guest2: request.body.guest2Email,guest3: request.body.guest3Email,guest4: request.body.guest4Email,guest5: request.body.guest5Email, your_email: request.body.yourEmail})
             .then(function(){
                 addEvent(request, response)
             })
