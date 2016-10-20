@@ -519,6 +519,10 @@ body {
   margin: 10px;
 }
 
+.form-control {
+  padding: 0px;
+}
+
 .updateBox {
   margin-top: 50px;
 }
