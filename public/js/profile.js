@@ -93,6 +93,10 @@ window.addEventListener('googlesignin', function() {
                 address.innerHTML = item.address
                 div.appendChild(address)
 
+                var dateDate = document.createElement('p')
+                dateDate.innerHTML = 'on ' + moment(item.event_at).format('LLLL')
+                div.appendChild(dateDate)
+
                 var dateAttendee = document.createElement('p')
                 dateAttendee.innerHTML = 'with ' + item.date_name
                 div.appendChild(dateAttendee)
@@ -127,10 +131,6 @@ window.addEventListener('googlesignin', function() {
                     guest5.innerHTML = item.guest5
                     div.appendChild(guest5)
                 }
-
-                var dateDate = document.createElement('p')
-                dateDate.innerHTML = 'on ' + moment(item.event_at).format('LLLL')
-                div.appendChild(dateDate)
 
                 if(moment(item.event_at) >= moment()) {
                     document.getElementById('noEventsMessage').classList.add('hidden')
