@@ -193,7 +193,7 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
 
             dateNight = eachLoc
 
-            document.getElementById('dateLoc1').innerHTML = dateNight;
+            document.getElementById('dateLoc1').innerHTML = locationName;
             document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
         })

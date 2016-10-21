@@ -11,6 +11,7 @@ var locationId
 var dateName
 var dateNight
 
+
 document.body.addEventListener('click', function(e) {
     if(e.target.className.includes('selectDetail')) {
         document.getElementById('grabDetails').classList.remove('hidden')
@@ -287,7 +288,7 @@ document.getElementById('grabDetails').addEventListener('click', function() {
 
             dateNight = eachLoc
 
-            document.getElementById('dateLoc1').innerHTML = dateNight;
+            document.getElementById('dateLoc1').innerHTML = locationName;
             document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
 
         })
