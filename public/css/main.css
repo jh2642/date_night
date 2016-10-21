@@ -25,10 +25,6 @@ body {
   background-color: #2ec4b6;
 }
 
-.confirmPlansBox2 {
-  margin-top: 20px;
-}
-
 .betaTag {
   color: #011627;
 }
@@ -443,7 +439,7 @@ body {
   background: #393e41;
   font-size: 40px;
   font-family: "Syncopate", sans-serif;
-  margin: 5px;
+  margin-top: 25px;
   color: #e94f37;
 }
 
