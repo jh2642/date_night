@@ -377,6 +377,11 @@ body {
   color: #f6f7eb;
 }
 
+.btn-lg2:hover, .btn-lg2:focus, .btn-lg2:active, .btn-lg2.active, .open > .dropdown-toggle.btn-primary {
+  background: #393e41;
+  color: #f6f7eb;
+}
+
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
   background: #393e41;
   color: #011627;

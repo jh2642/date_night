@@ -385,6 +385,11 @@ body {
     color: $color3;
 }
 
+.btn-lg2:hover, .btn-lg2:focus, .btn-lg2:active, .btn-lg2.active, .open > .dropdown-toggle.btn-primary {
+    background: $color5;
+    color: $color3;
+}
+
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
     background: $color5;
