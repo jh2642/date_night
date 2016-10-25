@@ -11,6 +11,7 @@ var locationId
 var dateName
 var dateNight
 var typeSearch
+var ratingPlace
 
 document.body.addEventListener('click', function(e) {
     if(e.target.className.includes('selectDetail2')) {
@@ -77,16 +78,6 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                 address.innerHTML = item.formatted_address
                 div.appendChild(address)
 
-                if(item.rating === null || item.rating === '') {
-                    var rating = document.createElement('p')
-                    rating.innerHTML = "Rating not available"
-                    div.appendChild(rating)
-                }
-                else {
-                    var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
-                    div.appendChild(rating)
-                }
                 // var rating = document.createElement('p')
                 // rating.innerHTML = "Rating: " + item.rating
                 // div.appendChild(rating)
@@ -109,6 +100,17 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                 details.classList.add('btn', 'location-id')
                 details.innerHTML = 'reviews'
                 div.appendChild(details)
+
+                if(item.rating === null || item.rating === ratingPlace) {
+                    var rating = document.createElement('p')
+                    rating.innerHTML = "Rating not available"
+                    div.appendChild(rating)
+                }
+                else {
+                    var rating = document.createElement('p')
+                    rating.innerHTML = "Rating: " + item.rating
+                    div.appendChild(rating)
+                }
             })
 
 
