@@ -77,9 +77,19 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                 address.innerHTML = item.formatted_address
                 div.appendChild(address)
 
-                var rating = document.createElement('p')
-                rating.innerHTML = "Rating: " + item.rating
-                div.appendChild(rating)
+                if(item.rating === null || item.rating === 'undefined') {
+                    var rating = document.createElement('p')
+                    rating.innerHTML = "Rating not available"
+                    div.appendChild(rating)
+                }
+                else {
+                    var rating = document.createElement('p')
+                    rating.innerHTML = "Rating: " + item.rating
+                    div.appendChild(rating)
+                }
+                // var rating = document.createElement('p')
+                // rating.innerHTML = "Rating: " + item.rating
+                // div.appendChild(rating)
 
                 var checkbox = document.createElement('input');
                 checkbox.type = 'radio';
@@ -119,7 +129,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                     })
                     .then(function(response) {
                         console.log(response)
-                        
+
                         var div = document.createElement('div')
                         div.classList.add('modalEstablishment')
 
