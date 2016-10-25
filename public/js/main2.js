@@ -77,7 +77,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                 address.innerHTML = item.formatted_address
                 div.appendChild(address)
 
-                if(item.rating === null || item.rating === 'undefined') {
+                if(item.rating === null || item.rating === '') {
                     var rating = document.createElement('p')
                     rating.innerHTML = "Rating not available"
                     div.appendChild(rating)
