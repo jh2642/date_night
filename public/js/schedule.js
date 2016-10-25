@@ -111,6 +111,7 @@ function checkAuth() {
                 var dateName = response.date_name;
                 var yourEmail = response.email;
                 var dateLoc = dateNight;
+                var locationLink = locationUrl;
                 var dateSum = 'Date Night';
                 var descriptionDate = document.getElementById('messageBox').value
                 var emailInstead = document.getElementById('newEmail').value
@@ -197,7 +198,7 @@ function checkAuth() {
                         }
                     ],
                     location: dateLoc,
-                    description: descriptionDate + ' This event was scheduled using Date Night beta version- https://datenight2016.herokuapp.com/index.html',
+                    description: descriptionDate + ' ' + locationLink + ' This event was scheduled using Date Night beta version- https://datenight2016.herokuapp.com/index.html',
                     reminders: {
                         useDefault: false
                     },
