@@ -198,7 +198,7 @@ function checkAuth() {
                         }
                     ],
                     location: dateLoc,
-                    description: descriptionDate + ' ' + locationLink + ' This event was scheduled using Date Night beta version- https://datenight2016.herokuapp.com/index.html',
+                    description: descriptionDate + ' ' + 'Google Maps Link: ' + locationLink + ' This event was scheduled using Date Night beta version- https://datenight2016.herokuapp.com/index.html',
                     reminders: {
                         useDefault: false
                     },
