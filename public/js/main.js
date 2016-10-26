@@ -75,7 +75,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(address)
 
                     var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
+                    rating.innerHTML = "rating: " + item.rating
                     div.appendChild(rating)
 
                     var checkbox = document.createElement('input');
@@ -126,7 +126,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(address)
 
                     var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
+                    rating.innerHTML = "rating: " + item.rating
                     div.appendChild(rating)
 
                     var checkbox = document.createElement('input');
@@ -174,7 +174,7 @@ document.getElementById('getDetails').addEventListener('click', function() {
                     div.appendChild(address)
 
                     var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
+                    rating.innerHTML = "rating: " + item.rating
                     div.appendChild(rating)
 
                     var checkbox = document.createElement('input');
