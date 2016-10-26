@@ -158,35 +158,17 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         mapURL.classList.add('mapURLbox')
                         div.appendChild(mapURL)
 
-                        if(response.result.reviews === null || response.result.reviews === ratingPlace) {
+                        response.result.reviews.forEach(function(reviewArray){
                             var review = document.createElement('p')
                             review.classList.add('reviewText')
-                            review.innerHTML = "Reviews not available"
-                        }
-                        else {
-                            response.result.reviews.forEach(function(reviewArray){
-                                var review = document.createElement('p')
-                                review.classList.add('reviewText')
-                                review.innerHTML = reviewArray.text
+                            review.innerHTML = reviewArray.text
 
-                                var reviewAuthor = document.createElement('p')
-                                reviewAuthor.classList.add('reviewAuthor', 'text-right')
-                                reviewAuthor.innerHTML = reviewArray.author_name
-                                div.appendChild(review)
-                                div.appendChild(reviewAuthor)
-                        }
-                    }
-                        // response.result.reviews.forEach(function(reviewArray){
-                        //     var review = document.createElement('p')
-                        //     review.classList.add('reviewText')
-                        //     review.innerHTML = reviewArray.text
-                        //
-                        //     var reviewAuthor = document.createElement('p')
-                        //     reviewAuthor.classList.add('reviewAuthor', 'text-right')
-                        //     reviewAuthor.innerHTML = reviewArray.author_name
-                        //     div.appendChild(review)
-                        //     div.appendChild(reviewAuthor)
-                        // })
+                            var reviewAuthor = document.createElement('p')
+                            reviewAuthor.classList.add('reviewAuthor', 'text-right')
+                            reviewAuthor.innerHTML = reviewArray.author_name
+                            div.appendChild(review)
+                            div.appendChild(reviewAuthor)
+                        })
 
                         document.getElementById('detailModal').innerHTML = ''
                         document.getElementById('detailModal').appendChild(div)
