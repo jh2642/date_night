@@ -80,7 +80,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
 
                 if(item.rating === null || item.rating === ratingPlace) {
                     var rating = document.createElement('p')
-                    rating.innerHTML = "rating: " + "rating not available"
+                    rating.innerHTML = "rating not available"
                     div.appendChild(rating)
                 }
                 else {
