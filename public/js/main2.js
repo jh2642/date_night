@@ -164,7 +164,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                             review.innerHTML = reviewArray.text
 
                             var reviewRating = document.createElement('p')
-                            reviewRating.classList.add('reviewRating')
+                            reviewRating.classList.add('reviewRating', 'text-right')
                             reviewRating.innerHTML = 'customer rating: ' + reviewArray.rating
 
                             var reviewAuthor = document.createElement('p')
