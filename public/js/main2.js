@@ -147,9 +147,9 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         phone.innerHTML = response.result.formatted_phone_number
                         div.appendChild(phone)
 
-                        var hours = document.createElement('p')
-                        hours.innerHTML = "rating: " + response.opening_hours
-                        div.appendChild(hours)
+                        var rating = document.createElement('p')
+                        rating.innerHTML = "rating: " + response.rating
+                        div.appendChild(rating)
 
                         var mapURL = document.createElement('a')
                         mapURL.innerHTML = 'click here to open google maps'
@@ -158,16 +158,34 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         mapURL.classList.add('mapURLbox')
                         div.appendChild(mapURL)
 
-                        response.result.reviews.forEach(function(reviewArray){
+                        if(response.result.reviews === null || response.result.reviews === ratingPlace) {
                             var review = document.createElement('p')
                             review.classList.add('reviewText')
-                            review.innerHTML = reviewArray.text
+                            review.innerHTML = "Reviews not available"
+                        }
+                        else {
+                            response.result.reviews.forEach(function(reviewArray){
+                                var review = document.createElement('p')
+                                review.classList.add('reviewText')
+                                review.innerHTML = reviewArray.text
 
-                            var reviewAuthor = document.createElement('p')
-                            reviewAuthor.classList.add('reviewAuthor', 'text-right')
-                            reviewAuthor.innerHTML = reviewArray.author_name
-                            div.appendChild(review)
-                            div.appendChild(reviewAuthor)
+                                var reviewAuthor = document.createElement('p')
+                                reviewAuthor.classList.add('reviewAuthor', 'text-right')
+                                reviewAuthor.innerHTML = reviewArray.author_name
+                                div.appendChild(review)
+                                div.appendChild(reviewAuthor)
+                        }
+                    }
+                        // response.result.reviews.forEach(function(reviewArray){
+                        //     var review = document.createElement('p')
+                        //     review.classList.add('reviewText')
+                        //     review.innerHTML = reviewArray.text
+                        //
+                        //     var reviewAuthor = document.createElement('p')
+                        //     reviewAuthor.classList.add('reviewAuthor', 'text-right')
+                        //     reviewAuthor.innerHTML = reviewArray.author_name
+                        //     div.appendChild(review)
+                        //     div.appendChild(reviewAuthor)
                         })
 
                         document.getElementById('detailModal').innerHTML = ''
