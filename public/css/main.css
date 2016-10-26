@@ -502,6 +502,7 @@ body {
 
 .reviewAuthor {
   border-bottom: 2px #393e41 solid;
+  margin-bottom: 20px;
 }
 
 .mapURLbox {
