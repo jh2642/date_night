@@ -186,7 +186,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         //     reviewAuthor.innerHTML = reviewArray.author_name
                         //     div.appendChild(review)
                         //     div.appendChild(reviewAuthor)
-                        })
+                        // })
 
                         document.getElementById('detailModal').innerHTML = ''
                         document.getElementById('detailModal').appendChild(div)
