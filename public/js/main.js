@@ -247,12 +247,28 @@ document.getElementById('getDetails').addEventListener('click', function() {
                         review.classList.add('reviewText')
                         review.innerHTML = reviewArray.text
 
+                        var reviewRating = document.createElement('p')
+                        reviewRating.classList.add('reviewRating', 'text-right')
+                        reviewRating.innerHTML = 'customer rating: ' + reviewArray.rating
+
                         var reviewAuthor = document.createElement('p')
                         reviewAuthor.classList.add('reviewAuthor', 'text-right')
                         reviewAuthor.innerHTML = reviewArray.author_name
                         div.appendChild(review)
+                        div.appendChild(reviewRating)
                         div.appendChild(reviewAuthor)
                     })
+                    // response.result.reviews.forEach(function(reviewArray){
+                    //     var review = document.createElement('p')
+                    //     review.classList.add('reviewText')
+                    //     review.innerHTML = reviewArray.text
+                    //
+                    //     var reviewAuthor = document.createElement('p')
+                    //     reviewAuthor.classList.add('reviewAuthor', 'text-right')
+                    //     reviewAuthor.innerHTML = reviewArray.author_name
+                    //     div.appendChild(review)
+                    //     div.appendChild(reviewAuthor)
+                    // })
 
                     document.getElementById('detailModal').innerHTML = ''
                     document.getElementById('detailModal').appendChild(div)
