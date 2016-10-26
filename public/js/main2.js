@@ -80,12 +80,12 @@ document.getElementById('getDetails2').addEventListener('click', function() {
 
                 if(item.rating === null || item.rating === ratingPlace) {
                     var rating = document.createElement('p')
-                    rating.innerHTML = "Rating not available"
+                    rating.innerHTML = "rating: " + "rating not available"
                     div.appendChild(rating)
                 }
                 else {
                     var rating = document.createElement('p')
-                    rating.innerHTML = "Rating: " + item.rating
+                    rating.innerHTML = "rating: " + item.rating
                     div.appendChild(rating)
                 }
                 // var rating = document.createElement('p')
@@ -147,9 +147,19 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         phone.innerHTML = response.result.formatted_phone_number
                         div.appendChild(phone)
 
-                        var rating = document.createElement('p')
-                        rating.innerHTML = "rating: " + response.result.rating
-                        div.appendChild(rating)
+                        if(response.result.rating === null || response.result.rating === ratingPlace) {
+                            var rating = document.createElement('p')
+                            rating.innerHTML = "rating not available"
+                            div.appendChild(rating)
+                        }
+                        else {
+                            var rating = document.createElement('p')
+                            rating.innerHTML = "rating: " + response.result.rating
+                            div.appendChild(rating)
+                        }
+                        // var rating = document.createElement('p')
+                        // rating.innerHTML = "rating: " + response.result.rating
+                        // div.appendChild(rating)
 
                         var mapURL = document.createElement('a')
                         mapURL.innerHTML = 'click here to open google maps'
