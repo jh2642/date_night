@@ -148,7 +148,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         div.appendChild(phone)
 
                         var rating = document.createElement('p')
-                        // rating.innerHTML = "rating: " + response.rating
+                        rating.innerHTML = "rating: " + response.result.rating
                         div.appendChild(rating)
 
                         var mapURL = document.createElement('a')
