@@ -171,6 +171,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                             reviewAuthor.classList.add('reviewAuthor', 'text-right')
                             reviewAuthor.innerHTML = reviewArray.author_name
                             div.appendChild(review)
+                            div.appendChild(reviewRating)
                             div.appendChild(reviewAuthor)
                         })
 
