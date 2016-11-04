@@ -136,7 +136,7 @@ window.addEventListener('googlesignin', function() {
                     document.getElementById('noEventsMessage').classList.add('hidden')
                     document.getElementById('calendarEventsDb').appendChild(div)
                 }
-                if(moment(item.event_at) < moment()) && moment(item.event_at) < moment().subtract(7, 'days')) {
+                if(moment(item.event_at) < moment()) {
                     document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
