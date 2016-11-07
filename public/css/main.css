@@ -311,6 +311,8 @@ body {
 
 #dateProfileBox {
   color: #2ec4b6;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .solidBar {
@@ -652,9 +654,6 @@ body {
   }
   .profileTopper h3 {
     font-size: 20px;
-  }
-  .insideProfileBox {
-    height: 68vh;
   }
   #dateProfileBox {
     color: #2ec4b6;
