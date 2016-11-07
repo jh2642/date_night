@@ -280,7 +280,6 @@ body {
   background-color: #393e41;
   height: 600px;
   color: #2ec4b6;
-  margin: auto;
 }
 
 .profilePic {
@@ -658,7 +657,6 @@ body {
   }
   .insideProfileBox {
     height: 68vh;
-    margin: auto;
   }
   #dateProfileBox {
     color: #2ec4b6;
