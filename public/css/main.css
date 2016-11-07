@@ -655,6 +655,9 @@ body {
   .profileTopper h3 {
     font-size: 20px;
   }
+  .insideProfileBox {
+    height: 600px;
+  }
   #dateProfileBox {
     color: #2ec4b6;
     padding-top: 40px;
