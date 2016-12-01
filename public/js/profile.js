@@ -143,20 +143,19 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
-    .then(function() {
-        fetch(api+'/events/datenight/datee?dateemail=' + your_email, {
-            method: 'GET',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(response) {
-            console.log(response)
-        })
+    fetch(api+'/events/datenight/datee?dateemail=' + your_email, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(response) {
+        console.log(response)
+    })
 })
 
 
