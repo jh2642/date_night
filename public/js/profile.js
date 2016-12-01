@@ -179,6 +179,7 @@ window.addEventListener('googlesignin', function() {
                     div.appendChild(dateDate)
 
                     var dateAttendee = document.createElement('h4')
+                    dateAttendee.classList.add('invitedText')
                     dateAttendee.innerHTML = 'invited by: ' + item.your_email
                     div.appendChild(dateAttendee)
 
