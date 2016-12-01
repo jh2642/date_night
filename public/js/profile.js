@@ -75,7 +75,7 @@ window.addEventListener('googlesignin', function() {
         })
         .then(function(response) {
             var yourEmailAddress = response.your_email
-            console.log(response)
+            console.log(response[0].your_email)
 
             response.forEach(function(item) {
 
