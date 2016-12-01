@@ -141,6 +141,7 @@ window.addEventListener('googlesignin', function() {
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
                 console.log(item.guest1)
+                console.log(item.rest_name)
             })
         })
     })
