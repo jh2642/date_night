@@ -158,7 +158,70 @@ window.addEventListener('googlesignin', function() {
             })
             .then(function(response) {
                 response.forEach(function(item) {
-                    console.log(item)
+
+                    var div = document.createElement('div')
+                    div.classList.add('dateNightEvent', 'col-xs-12', 'col-md-4', 'text-center', 'eventBoxesProfile')
+
+                    var eventDetails = document.createElement('i')
+                    eventDetails.setAttribute('calendar-id', item.calendar_id)
+                    eventDetails.classList.add('glyphicon', 'glyphicon-remove', 'calendar-id', 'text-right')
+                    div.appendChild(eventDetails)
+
+                    var name = document.createElement('h3')
+                    name.innerHTML = item.rest_name
+                    div.appendChild(name)
+
+                    var address = document.createElement('p')
+                    address.innerHTML = item.address
+                    div.appendChild(address)
+
+                    var dateDate = document.createElement('p')
+                    dateDate.innerHTML = 'on ' + moment(item.event_at).format('LLLL')
+                    div.appendChild(dateDate)
+
+                    var dateAttendee = document.createElement('h3')
+                    dateAttendee.innerHTML = 'with ' + item.date_name
+                    div.appendChild(dateAttendee)
+
+                    if(item.guest1 != item.your_email) {
+                        var guestsTag = document.createElement('p')
+                        guestsTag.innerHTML = 'you also invited...'
+                        guestsTag.classList.add('invitedText')
+                        div.appendChild(guestsTag)
+
+                        var guests = document.createElement('p')
+                        guests.innerHTML = item.guest1
+                        div.appendChild(guests)
+                    }
+                    if(item.guest2 != item.your_email) {
+                        var guest2 = document.createElement('p')
+                        guest2.innerHTML = item.guest2
+                        div.appendChild(guest2)
+                    }
+                    if(item.guest3 != item.your_email) {
+                        var guest3 = document.createElement('p')
+                        guest3.innerHTML = item.guest3
+                        div.appendChild(guest3)
+                    }
+                    if(item.guest4 != item.your_email) {
+                        var guest4 = document.createElement('p')
+                        guest4.innerHTML = item.guest4
+                        div.appendChild(guest4)
+                    }
+                    if(item.guest5 != item.your_email) {
+                        var guest5 = document.createElement('p')
+                        guest5.innerHTML = item.guest5
+                        div.appendChild(guest5)
+                    }
+
+                    if(moment(item.event_at) >= moment()) {
+                        document.getElementById('noEventsMessage').classList.add('hidden')
+                        document.getElementById('calendarEventsDb').appendChild(div)
+                    }
+                    if(moment(item.event_at) < moment()) {
+                        document.querySelector('.pastEventBox').classList.remove('hidden')
+                        document.getElementById('pastCalendarEventsDb').appendChild(div)
+                    }
                 })
             })
         })
