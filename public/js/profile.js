@@ -140,8 +140,7 @@ window.addEventListener('googlesignin', function() {
                     document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
-                console.log(item.guest1)
-                console.log(item.rest_name)
+                console.log(item.guest1, item.rest_name)
             })
         })
     })
