@@ -76,7 +76,7 @@ window.addEventListener('googlesignin', function() {
         })
         .then(function(response) {
             yourEmailAddress = response[0].your_email
-            
+
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
@@ -100,7 +100,7 @@ window.addEventListener('googlesignin', function() {
                 div.appendChild(dateDate)
 
                 var dateAttendee = document.createElement('h3')
-                dateAttendee.innerHTML = 'with ' + item.date_name
+                dateAttendee.innerHTML = 'with ' + item.your_email
                 div.appendChild(dateAttendee)
 
                 if(item.guest1 != item.your_email) {
