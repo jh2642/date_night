@@ -179,12 +179,12 @@ window.addEventListener('googlesignin', function() {
                     div.appendChild(dateDate)
 
                     var dateAttendee = document.createElement('h4')
-                    dateAttendee.innerHTML = 'with ' + item.your_email
+                    dateAttendee.innerHTML = 'invited by: ' + item.your_email
                     div.appendChild(dateAttendee)
 
                     if(item.guest1 != item.your_email) {
                         var guestsTag = document.createElement('p')
-                        guestsTag.innerHTML = 'you also invited...'
+                        guestsTag.innerHTML = 'also invited...'
                         guestsTag.classList.add('invitedText')
                         div.appendChild(guestsTag)
 
