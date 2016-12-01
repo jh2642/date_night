@@ -76,8 +76,7 @@ window.addEventListener('googlesignin', function() {
         })
         .then(function(response) {
             yourEmailAddress = response[0].your_email
-            console.log(response[0].your_email)
-
+            
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
@@ -158,7 +157,7 @@ window.addEventListener('googlesignin', function() {
             })
             .then(function(response) {
                 response.forEach(function(item) {
-
+                    console.log(item)
                     var div = document.createElement('div')
                     div.classList.add('dateNightEvent', 'col-xs-12', 'col-md-4', 'text-center', 'eventBoxesProfile')
 
