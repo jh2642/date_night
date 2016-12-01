@@ -159,7 +159,7 @@ window.addEventListener('googlesignin', function() {
                 response.forEach(function(item) {
                     console.log(item)
                     var div = document.createElement('div')
-                    div.classList.add('dateNightEvent', 'col-xs-12', 'col-md-4', 'text-center', 'eventBoxesProfile')
+                    div.classList.add('dateNightEvent2', 'col-xs-12', 'col-md-4', 'text-center', 'eventBoxesProfile')
 
                     var eventDetails = document.createElement('i')
                     eventDetails.setAttribute('calendar-id', item.calendar_id)

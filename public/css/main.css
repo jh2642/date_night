@@ -577,6 +577,16 @@ body {
   padding-bottom: 15px;
 }
 
+.dateNightEvent2 {
+  background-color: #f6f7eb;
+  color: #011627;
+  margin: 15px;
+  min-height: 250px;
+  min-width: 410px;
+  max-width: 410px;
+  padding-bottom: 15px;
+}
+
 .glyphicon {
   font-size: inherit;
   position: relative;
