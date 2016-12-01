@@ -75,7 +75,8 @@ window.addEventListener('googlesignin', function() {
         })
         .then(function(response) {
             var yourEmailAddress = response.your_email
-            
+            console.log(yourEmailAddress)
+
             response.forEach(function(item) {
 
                 var div = document.createElement('div')
@@ -144,7 +145,7 @@ window.addEventListener('googlesignin', function() {
             })
         })
     })
-    fetch(api+'/events/datenight/datee?dateemail=' + your_email, {
+    fetch(api+'/events/datenight/datee?dateemail=' + yourEmailAddress, {
         method: 'GET',
         credentials: 'include',
         headers: {
