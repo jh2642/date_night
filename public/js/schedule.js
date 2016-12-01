@@ -122,6 +122,8 @@ function checkAuth() {
                 var guest4Email = document.getElementById('guest4Email').value
                 var guest5Email = document.getElementById('guest5Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
+                var dateMessage = document.getElementById('dateMessage').value
+
 
 
                 var meetingDate

@@ -100,8 +100,6 @@ document.getElementById('getDetails').addEventListener('click', function() {
             })
         })
 
-
-
         //restaurant fetch
         fetch(api+'/api/v1/places?type=' + typeTwo + '&location=' + newAddress , {
             method: 'GET'
