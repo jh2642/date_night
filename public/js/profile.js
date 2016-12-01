@@ -100,7 +100,7 @@ window.addEventListener('googlesignin', function() {
                 div.appendChild(dateDate)
 
                 var dateAttendee = document.createElement('h3')
-                dateAttendee.innerHTML = 'with ' + item.your_email
+                dateAttendee.innerHTML = 'with ' + item.date_name
                 div.appendChild(dateAttendee)
 
                 if(item.guest1 != item.your_email) {
@@ -178,8 +178,8 @@ window.addEventListener('googlesignin', function() {
                     dateDate.innerHTML = 'on ' + moment(item.event_at).format('LLLL')
                     div.appendChild(dateDate)
 
-                    var dateAttendee = document.createElement('h3')
-                    dateAttendee.innerHTML = 'with ' + item.date_name
+                    var dateAttendee = document.createElement('h4')
+                    dateAttendee.innerHTML = 'with ' + item.your_email
                     div.appendChild(dateAttendee)
 
                     if(item.guest1 != item.your_email) {
