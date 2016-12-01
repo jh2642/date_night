@@ -3,6 +3,7 @@ var user_id = null
 var calId
 var googlesignin = new Event('googlesignin')
 var dateCalendar
+var yourEmailAddress
 
 //change info for existing user
 document.getElementById('addDateInfo').addEventListener('click', function() {
@@ -74,7 +75,7 @@ window.addEventListener('googlesignin', function() {
             return response.json()
         })
         .then(function(response) {
-            var yourEmailAddress = response.your_email
+            yourEmailAddress = response[0].your_email
             console.log(response[0].your_email)
 
             response.forEach(function(item) {
