@@ -587,6 +587,10 @@ body {
   padding-bottom: 15px;
 }
 
+.dateNightEvent2 p {
+  color: #011627;
+}
+
 .glyphicon {
   font-size: inherit;
   position: relative;
