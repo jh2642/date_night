@@ -140,10 +140,21 @@ window.addEventListener('googlesignin', function() {
                     document.querySelector('.pastEventBox').classList.remove('hidden')
                     document.getElementById('pastCalendarEventsDb').appendChild(div)
                 }
-                console.log(item.date_email, item.rest_name)
             })
         })
     })
+    .then(function() {
+        fetch(api+'/events/datenight/datee?dateemail=' + your_email, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(response) {
 })
 
 
