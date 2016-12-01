@@ -574,7 +574,7 @@ body {
   min-height: 300px;
   max-height: 450px;
   width: 410px;
-  padding: 15px;
+  padding-bottom: 15px;
 }
 
 .dateNightEvent2 {
