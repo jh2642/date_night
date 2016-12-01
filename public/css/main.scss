@@ -585,17 +585,14 @@ body {
 }
 
 .dateNightEvent2 {
-    background-color: $color3;
-    color: $color1;
+    background-color: $color5;
+    // color: $color1;
     margin: 15px;
     min-height: 250px;
     // max-height: 450px;
     min-width: 410px;
     max-width: 410px;
     padding-bottom: 15px;
-    p {
-        color: $color1;
-    }
 }
 
 .glyphicon {
