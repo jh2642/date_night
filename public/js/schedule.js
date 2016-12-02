@@ -122,15 +122,22 @@ function checkAuth() {
                 var guest4Email = document.getElementById('guest4Email').value
                 var guest5Email = document.getElementById('guest5Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
+                var isDateGoing = document.querySelector('input[name="isDateGoing"]:checked').value;
                 // var dateMessage = document.getElementById('dateMessage').value
 
-
+                if (isDateGoing = 'yes') {
+                    dateEmail = dateEmail
+                }
+                else (isDategoing = 'no') {
+                    dateEmail = yourEmail
+                }
+                
 
                 var meetingDate
 
                 if (guest1Email.length) {
                     guest1Email = document.getElementById('guest1Email').value
-                    dateSum = 'Night out with friends'
+                    dateSum = 'Friend Date'
                 }
                 else {
                     guest1Email = yourEmail
