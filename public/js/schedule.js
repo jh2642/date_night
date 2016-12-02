@@ -127,10 +127,11 @@ function checkAuth() {
 
                 if (isDateGoing === 'yes') {
                     dateEmail = dateEmail
-                    console.log(isDateGoing)
+                    dateName = dateName
                 }
                 else {
                     dateEmail = yourEmail
+                    dateName = 'your date is not going'
                     console.log(isDateGoing)
                 }
 
