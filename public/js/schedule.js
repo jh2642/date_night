@@ -125,13 +125,13 @@ function checkAuth() {
                 var isDateGoing = document.querySelector('input[name="isDateGoing"]:checked').value;
                 // var dateMessage = document.getElementById('dateMessage').value
 
-                if (isDateGoing = 'yes') {
+                if (isDateGoing === 'yes') {
                     dateEmail = dateEmail
                 }
-                else (isDategoing = 'no') {
+                else (isDategoing === 'no') {
                     dateEmail = yourEmail
                 }
-                
+
 
                 var meetingDate
 
