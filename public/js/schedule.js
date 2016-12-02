@@ -122,7 +122,7 @@ function checkAuth() {
                 var guest4Email = document.getElementById('guest4Email').value
                 var guest5Email = document.getElementById('guest5Email').value
                 var pickupInfo = document.querySelector('input[name="meetDate"]:checked').value;
-                var isDateGoing = document.querySelector('input[name="isDateGoing"]:checked').value;
+                // var isDateGoing = document.querySelector('input[name="isDateGoing"]:checked').value;
                 // var dateMessage = document.getElementById('dateMessage').value
 
                 // if (isDateGoing === 'yes') {
