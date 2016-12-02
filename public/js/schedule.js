@@ -126,11 +126,11 @@ function checkAuth() {
                 // var dateMessage = document.getElementById('dateMessage').value
 
                 if (isDateGoing === 'yes') {
-                    // dateEmail = dateEmail
+                    dateEmail = dateEmail
                     console.log(isDateGoing)
                 }
-                else (isDategoing === 'no') {
-                    // dateEmail = yourEmail
+                else {
+                    dateEmail = yourEmail
                     console.log(isDateGoing)
                 }
 
