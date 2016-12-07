@@ -1,7 +1,7 @@
 /* RGB */
 * {
   font-family: "Open Sans", sans-serif;
-  color: #f6f7eb;
+  color: #f0c808;
   font-size: 16px;
 }
 
@@ -16,17 +16,17 @@
 body {
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #e94f37;
+  background-color: #fff1d0;
 }
 
 .searchPage {
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #2ec4b6;
+  background-color: #07a0c3;
 }
 
 .betaTag {
-  color: #011627;
+  color: #086788;
 }
 
 .headerRow {
@@ -36,7 +36,7 @@ body {
 .navLinks {
   margin-right: 30px;
   font-size: 20px;
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .jumbotron {
@@ -50,7 +50,7 @@ body {
 
 .jumbotron h1 {
   font-size: 170px;
-  color: #011627;
+  color: #086788;
 }
 
 .mottoBox p {
@@ -58,14 +58,14 @@ body {
 }
 
 .mottoBox .motto {
-  color: #f6f7eb;
+  color: #f0c808;
   font-style: italic;
   font-size: 45px;
   margin-bottom: 80px;
 }
 
 .glyphicon {
-  color: #f6f7eb;
+  color: #f0c808;
   font-size: 45px;
 }
 
@@ -102,23 +102,23 @@ body {
 
 .getStarted a {
   font-size: 25px;
-  color: #2ec4b6;
-  border: 2px #f6f7eb solid;
-  background-color: #393e41;
+  color: #07a0c3;
+  border: 2px #f0c808 solid;
+  background-color: #dd1c1a;
 }
 
 .contactInfo {
-  color: #011627;
+  color: #086788;
 }
 
 .wwd {
   height: 325px;
-  background-color: #f6f7eb;
-  color: #011627;
+  background-color: #f0c808;
+  color: #086788;
 }
 
 .wwd h1, .wwd h2 {
-  color: #011627;
+  color: #086788;
   font-size: 30px;
 }
 
@@ -135,7 +135,7 @@ body {
 }
 
 .ddm {
-  color: #011627;
+  color: #086788;
 }
 
 .reel {
@@ -144,12 +144,12 @@ body {
 
 .wwd2 {
   height: 290px;
-  background-color: #011627;
-  color: #f6f7eb;
+  background-color: #086788;
+  color: #f0c808;
 }
 
 .wwd2 h1, .wwd2 h2 {
-  color: #f6f7eb;
+  color: #f0c808;
   font-size: 28px;
 }
 
@@ -159,32 +159,32 @@ body {
 
 .calendar {
   height: 100px;
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .soul {
   height: 100px;
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .clock {
   height: 100px;
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .charge {
   height: 100px;
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .wwd3 {
   height: 140px;
-  background-color: #393e41;
-  color: #f6f7eb;
+  background-color: #dd1c1a;
+  color: #f0c808;
 }
 
 .wwd3 h1, .wwd3 h2 {
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .wwdMessage3 {
@@ -193,12 +193,12 @@ body {
 
 .wwd4 {
   height: 290px;
-  background-color: #2ec4b6;
-  color: #393e41;
+  background-color: #07a0c3;
+  color: #dd1c1a;
 }
 
 .wwd4 h1, .wwd4 h2 {
-  color: #393e41;
+  color: #dd1c1a;
   font-size: 28px;
 }
 
@@ -213,7 +213,7 @@ body {
 .header-distributed {
   background-color: black;
   width: 100%;
-  color: #393e41;
+  color: #dd1c1a;
 }
 
 .fa {
@@ -221,9 +221,9 @@ body {
 }
 
 .footer-distributed {
-  background-color: #011627;
+  background-color: #086788;
   width: 100%;
-  color: #393e41;
+  color: #dd1c1a;
   padding-bottom: 10px;
 }
 
@@ -257,29 +257,29 @@ body {
 }
 
 .profilePage {
-  background-color: #393e41;
+  background-color: #dd1c1a;
 }
 
 .profileNav {
-  background-color: #011627;
+  background-color: #086788;
   height: 100px;
 }
 
 .profileNav2 {
-  background-color: #011627;
+  background-color: #086788;
   height: 100px;
 }
 
 .profileTopper {
-  background-color: #e94f37;
-  color: #2ec4b6;
+  background-color: #fff1d0;
+  color: #07a0c3;
   padding-top: 50px;
 }
 
 .insideProfileBox {
-  background-color: #393e41;
+  background-color: #dd1c1a;
   height: 600px;
-  color: #2ec4b6;
+  color: #07a0c3;
 }
 
 .profilePic {
@@ -288,7 +288,7 @@ body {
 
 .dateInfoProfile {
   margin-top: 35px;
-  color: #2ec4b6;
+  color: #07a0c3;
 }
 
 .dateModalFooter {
@@ -296,12 +296,12 @@ body {
 }
 
 .invitedText {
-  color: #e94f37;
+  color: #fff1d0;
 }
 
 #dateProfileBox2 {
-  background-color: #2ec4b6;
-  color: #011627;
+  background-color: #07a0c3;
+  color: #086788;
   padding: 30px;
 }
 
@@ -310,13 +310,13 @@ body {
 }
 
 #dateProfileBox {
-  color: #2ec4b6;
+  color: #07a0c3;
   padding-top: 40px;
   padding-bottom: 30px;
 }
 
 .solidBar {
-  background-color: #2ec4b6;
+  background-color: #07a0c3;
   height: 20px;
 }
 
@@ -331,13 +331,13 @@ body {
 }
 
 .calendarBox h1 {
-  color: #011627;
+  color: #086788;
   padding: 12px;
 }
 
 #calendarEvents {
   height: 60px;
-  background-color: #2ec4b6;
+  background-color: #07a0c3;
 }
 
 #googlePic {
@@ -349,13 +349,13 @@ body {
 }
 
 .schedulePage {
-  background-color: #e94f37;
+  background-color: #fff1d0;
 }
 
 .headersSearch {
   font-family: "Syncopate", sans-serif;
   font-size: 40px;
-  color: #011627;
+  color: #086788;
 }
 
 .g-signin2 {
@@ -364,52 +364,52 @@ body {
 }
 
 .btn-lg {
-  background: #2ec4b6;
+  background: #07a0c3;
   font-size: 40px;
   font-family: "Syncopate", sans-serif;
   margin: 5px;
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .btn-lg:hover, .btn-lg:focus, .btn-lg:active, .btn-lg.active, .open > .dropdown-toggle.btn-primary {
-  background: #393e41;
-  color: #f6f7eb;
+  background: #dd1c1a;
+  color: #f0c808;
 }
 
 .btn-lg2:hover, .btn-lg2:focus, .btn-lg2:active, .btn-lg2.active, .open > .dropdown-toggle.btn-primary {
-  background: #393e41;
-  color: #f6f7eb;
+  background: #dd1c1a;
+  color: #f0c808;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-primary {
-  background: #393e41;
-  color: #011627;
-  border: 1px #011627 solid;
+  background: #dd1c1a;
+  color: #086788;
+  border: 1px #086788 solid;
 }
 
 .btn-primary,
 .btn-secondary {
   background: transparent;
-  border: 1px #f6f7eb solid;
+  border: 1px #f0c808 solid;
   padding: 15px;
   font-size: 16px;
   margin-top: 20px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  background: #f6f7eb;
-  color: #011627;
+  background: #f0c808;
+  color: #086788;
 }
 
 .btn-default {
   background: transparent;
   border: none;
   font-size: 16px;
-  color: #e94f37;
+  color: #fff1d0;
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-primary {
-  color: #e94f37;
+  color: #fff1d0;
 }
 
 .schedDate {
@@ -417,7 +417,7 @@ body {
 }
 
 .selectLabel {
-  color: #011627;
+  color: #086788;
   margin-left: 5px;
 }
 
@@ -435,16 +435,16 @@ body {
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
-  background: #393e41;
+  background: #dd1c1a;
   font-size: 40px;
   font-family: "Syncopate", sans-serif;
   margin-top: 25px;
-  color: #e94f37;
+  color: #fff1d0;
 }
 
 .addFriendButton {
   margin-top: 20px;
-  background: #e94f37;
+  background: #fff1d0;
   color: #f6f7eb;
 }
 
@@ -453,16 +453,16 @@ body {
 }
 
 .selectOne {
-  color: #f6f7eb;
+  color: #f0c808;
   margin-bottom: 15px;
 }
 
 .flatpickr-input {
-  color: #393e41;
+  color: #dd1c1a;
 }
 
 .selectOne2 {
-  background-color: #011627;
+  background-color: #086788;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -477,36 +477,36 @@ body {
 
 .modalBox,
 .modal-content {
-  color: #2ec4b6;
-  background-color: #393e41;
+  color: #07a0c3;
+  background-color: #dd1c1a;
   font-family: "Open Sans", sans-serif;
 }
 
 .modalBox a,
 .modal-content a {
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .modalBox .mapURLbox,
 .modal-content .mapURLbox {
   margin-bottom: 120px;
-  color: #e94f37;
+  color: #fff1d0;
   padding-bottom: 20px;
 }
 
 .modalBox .reviewRating,
 .modal-content .reviewRating {
-  color: #2ec4b6;
+  color: #07a0c3;
 }
 
 .reviewAuthor {
-  border-bottom: 2px #393e41 solid;
+  border-bottom: 2px #dd1c1a solid;
   margin-bottom: 25px;
 }
 
 .mapURLbox {
   padding-bottom: 20px;
-  color: #e94f37;
+  color: #fff1d0;
 }
 
 .reviewText {
@@ -528,7 +528,7 @@ body {
 }
 
 .radiusMessage {
-  color: #f6f7eb;
+  color: #f0c808;
 }
 
 .messageToDateBox {
@@ -540,7 +540,7 @@ body {
 }
 
 .inputBox {
-  background-color: #f6f7eb;
+  background-color: #f0c808;
 }
 
 .addToProfile {
@@ -549,7 +549,7 @@ body {
 
 .addToProfile2 {
   margin: auto;
-  color: #e94f37;
+  color: #fff1d0;
 }
 
 .margin-topBox {
@@ -569,7 +569,7 @@ body {
 }
 
 .dateNightEvent {
-  background-color: #011627;
+  background-color: #086788;
   margin: 15px;
   min-height: 300px;
   max-height: 450px;
@@ -578,7 +578,7 @@ body {
 }
 
 .dateNightEvent2 {
-  background-color: #393e41;
+  background-color: #dd1c1a;
   margin: 15px;
   min-height: 250px;
   min-width: 410px;
@@ -611,18 +611,18 @@ body {
     font-style: italic;
   }
   .decBar {
-    background-color: #f6f7eb;
+    background-color: #f0c808;
     height: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
   .innerMobile {
-    background-color: #393e41;
+    background-color: #dd1c1a;
     height: 100px;
   }
   .innerMobile h1 {
     font-size: 35px;
-    color: #e94f37;
+    color: #fff1d0;
     padding: 10px;
   }
   .googleBoxMobile {
@@ -668,7 +668,7 @@ body {
     height: 68vh;
   }
   #dateProfileBox {
-    color: #2ec4b6;
+    color: #07a0c3;
     padding-top: 40px;
     padding-bottom: 10px;
   }
