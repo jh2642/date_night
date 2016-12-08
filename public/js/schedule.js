@@ -139,7 +139,7 @@ function checkAuth() {
                 var meetingDate
 
                 if(dateEmail = yourEmail) {
-                    dateEmail='a Friend'
+                    dateName='a Friend'
                 }
                 else {
                     dateEmail = dateEmail
