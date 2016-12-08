@@ -138,12 +138,12 @@ function checkAuth() {
 
                 var meetingDate
 
-                if(dateEmail = yourEmail) {
-                    dateName='a Friend'
-                }
-                else {
-                    dateEmail = dateEmail
-                }
+                // if(dateEmail = yourEmail) {
+                //     dateName='a Friend'
+                // }
+                // else {
+                //     dateEmail = dateEmail
+                // }
 
                 if (guest1Email.length) {
                     guest1Email = document.getElementById('guest1Email').value
