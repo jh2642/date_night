@@ -138,6 +138,13 @@ function checkAuth() {
 
                 var meetingDate
 
+                if(dateEmail = yourEmail) {
+                    dateEmail='a Friend'
+                }
+                else {
+                    dateEmail = dateEmail
+                }
+
                 if (guest1Email.length) {
                     guest1Email = document.getElementById('guest1Email').value
                     dateSum = 'Friend Date'
