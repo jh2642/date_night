@@ -223,6 +223,7 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
             return response.json()
         })
         .then(function(selectedVenue) {
+            console.log(selectedVenue)
             locationType = selectedVenue.result.types[0]
             locationName = selectedVenue.result.name
             locationId = selectedVenue.result.id
