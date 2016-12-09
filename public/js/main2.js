@@ -130,7 +130,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         return response.json()
                     })
                     .then(function(response) {
-                        console.log(response)
+                        // console.log(response)
 
                         var div = document.createElement('div')
                         div.classList.add('modalEstablishment')
