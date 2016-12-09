@@ -186,19 +186,6 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                             div.appendChild(reviewAuthor)
                         })
                         }
-                        var checkbox = document.createElement('input');
-                        checkbox.type = 'radio';
-                        checkbox.name = 'venueSelected';
-                        checkbox.value = response.place_id;
-                        checkbox.classList = 'selectDetail2';
-                        var label = document.createElement('label')
-                        label.htmlFor = 'checkbox-id';
-                        label.classList = 'selectLabel';
-                        label.appendChild(document.createTextNode('select for date'));
-                        div.appendChild(checkbox);
-                        div.appendChild(label);
-                        document.getElementById('detailModal').appendChild(div)
-
                         document.getElementById('detailModal').innerHTML = ''
                         document.getElementById('detailModal').appendChild(div)
                     })
@@ -223,39 +210,6 @@ document.getElementById('grabDetails2').addEventListener('click', function() {
             return response.json()
         })
         .then(function(selectedVenue) {
-            locationType = selectedVenue.result.types[0]
-            locationName = selectedVenue.result.name
-            locationId = selectedVenue.result.id
-            locationAddress = selectedVenue.result.formatted_address
-            locationPhoneNumber = selectedVenue.result.formatted_phone_number
-            locationUrl = selectedVenue.result.url
-
-            eachLoc = locationName + ', ' + locationAddress + ', ' + locationPhoneNumber
-
-            dateNight = eachLoc
-
-            document.getElementById('dateLoc1').innerHTML = locationName;
-            document.getElementById('dateTime').innerHTML = moment(document.getElementById('startTime').value).format('LLLL');
-
-        })
-    })
-})
-
-document.getElementById('modalButton').addEventListener('click', function() {
-
-    var checkboxes = document.querySelectorAll('.selectDetail2:checked')
-
-    checkboxes.forEach(function(id) {
-        var eventPlaces = id.value
-
-        fetch(api+'/api/v1/details?placeid=' + eventPlaces, {
-            method: 'GET'
-        })
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(selectedVenue) {
-            console.log(selectedVenue)
             locationType = selectedVenue.result.types[0]
             locationName = selectedVenue.result.name
             locationId = selectedVenue.result.id
