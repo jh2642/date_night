@@ -167,7 +167,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         mapURL.setAttribute('target', '_blank')
                         mapURL.classList.add('mapURLbox')
                         div.appendChild(mapURL)
-
+                        if (response.result.reviews.length) {
                         response.result.reviews.forEach(function(reviewArray){
                             var review = document.createElement('p')
                             review.classList.add('reviewText')
@@ -184,6 +184,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                             div.appendChild(reviewRating)
                             div.appendChild(reviewAuthor)
                         })
+                        }
 
                         document.getElementById('detailModal').innerHTML = ''
                         document.getElementById('detailModal').appendChild(div)
