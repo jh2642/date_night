@@ -189,7 +189,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         var checkbox = document.createElement('input');
                         checkbox.type = 'radio';
                         checkbox.name = 'venueSelected';
-                        checkbox.value = item.place_id;
+                        checkbox.value = response.place_id;
                         checkbox.classList = 'selectDetail2';
                         var label = document.createElement('label')
                         label.htmlFor = 'checkbox-id';
