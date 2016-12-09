@@ -167,6 +167,7 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                         mapURL.setAttribute('target', '_blank')
                         mapURL.classList.add('mapURLbox')
                         div.appendChild(mapURL)
+
                         if (response.result.reviews.length) {
                         response.result.reviews.forEach(function(reviewArray){
                             var review = document.createElement('p')
@@ -185,6 +186,18 @@ document.getElementById('getDetails2').addEventListener('click', function() {
                             div.appendChild(reviewAuthor)
                         })
                         }
+                        var checkbox = document.createElement('input');
+                        checkbox.type = 'radio';
+                        checkbox.name = 'venueSelected';
+                        checkbox.value = item.place_id;
+                        checkbox.classList = 'selectDetail2';
+                        var label = document.createElement('label')
+                        label.htmlFor = 'checkbox-id';
+                        label.classList = 'selectLabel';
+                        label.appendChild(document.createTextNode('select for date'));
+                        div.appendChild(checkbox);
+                        div.appendChild(label);
+                        document.getElementById('detailModal').appendChild(div)
 
                         document.getElementById('detailModal').innerHTML = ''
                         document.getElementById('detailModal').appendChild(div)
